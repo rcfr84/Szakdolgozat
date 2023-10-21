@@ -14,12 +14,12 @@ class City extends Model
 
     protected $fillable = [
         'city_id',
-        'state_id',
+        'county_id',
         'name',
     ];
 
-    public function state()
+    public function county()
     {
-        return $this->belongsTo(State::class, 'state_id', 'state_id');
+        return $this->belongsTo(County::class, 'county_id', 'county_id');
     }
 }

@@ -11,14 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::dropIfExists('cities');
-        Schema::create('cities', function (Blueprint $table) {
-            $table->id('city_id');
-            $table->unsignedBigInteger('county_id');
-            $table->string('name');
+        Schema::create('foreign_keys', function (Blueprint $table) {
+            $table->id();
+            $table->unsignedBigInteger('mobile_number_id')->nullable();
             $table->timestamps();
 
-            $table->foreign('county_id')->references('county_id')->on('counties');
+            $table->foreign('mobile_number_id')->references('mobile_number_id')->on('mobile_numbers')->onDelete('cascade');
+
         });
     }
 
@@ -27,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('cities');
+        Schema::dropIfExists('foreign_keys');
     }
 };
