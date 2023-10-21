@@ -5,15 +5,15 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class State extends Model
+class County extends Model
 {
     use HasFactory;
 
-    protected $table = 'states';
-    protected $primaryKey = 'state_id';
+    protected $table = 'county';
+    protected $primaryKey = 'county_id';
 
     protected $fillable = [
-        'state_id',
+        'county_id',
         'name',
     ];
 }

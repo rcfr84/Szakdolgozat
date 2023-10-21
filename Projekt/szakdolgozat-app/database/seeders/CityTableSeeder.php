@@ -1987,18 +1987,19 @@ class CityTableSeeder extends Seeder
 
         ];
     
-        $stateId = 1;
+        $countyId = 1;
 
-        foreach ($cities as $cityGroup) {
-            foreach ($cityGroup as $cityName) {
-                DB::table('cities')->insert([
-                    'state_id' => $stateId,
-                    'name' => $cityName,
-                    'created_at' => now(),
-                    'updated_at' => now(),
-                ]);
-                $stateId++;
+       
+             // Növeli a megye számát az új városokhoz
+             foreach ($cities as $countyId => $cityGroup) {
+                foreach ($cityGroup as $cityName) {
+                    DB::table('cities')->insert([
+                        'county_id' => $countyId + 1, // Mivel a tömb index 0-tól kezdődik, hozzá kell adni 1-et
+                        'name' => $cityName,
+                        'created_at' => now(),
+                        'updated_at' => now(),
+                    ]);
+                }
             }
-        }
     }
 }

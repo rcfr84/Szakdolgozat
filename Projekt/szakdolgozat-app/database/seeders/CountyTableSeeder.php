@@ -6,14 +6,14 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
-class StateTableSeeder extends Seeder
+class CountyTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
      */
     public function run(): void
     {
-        $states = 
+        $counties = 
         [
             ['name' => 'Bács-Kiskun vármegye', 'created_at' => now(), 'updated_at' => now()],
             ['name' => 'Baranya vármegye', 'created_at' => now(), 'updated_at' => now()],
@@ -36,7 +36,6 @@ class StateTableSeeder extends Seeder
             ['name' => 'Zala vármegye', 'created_at' => now(), 'updated_at' => now()],
         ];
         
-        DB::table('states')->insert($states);
+        DB::table('counties')->insert($counties);
     }
 }
-    
