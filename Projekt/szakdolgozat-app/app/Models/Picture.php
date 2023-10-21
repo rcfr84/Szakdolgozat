@@ -16,4 +16,9 @@ class Picture extends Model
         'picture_id',
         'src',
     ];
+
+    public function advertisement()
+    {
+        return $this->belongsTo(Advertisement::class, 'advertisement_id', 'advertisement_id');
+    }
 }
