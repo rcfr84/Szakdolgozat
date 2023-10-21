@@ -4,8 +4,9 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use Database\Seeders\StatesTableSeeder;
-use Database\Seeders\CitiesTableSeeder;
+use Database\Seeders\StateTableSeeder;
+use Database\Seeders\CityTableSeeder;
+use Database\Seeders\CategoryTableSeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -15,8 +16,9 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         $this->call(
-            [StatesTableSeeder::class],
-            [CitiesTableSeeder::class]
+            [StateTableSeeder::class],
+            [CityTableSeeder::class],
+            [CategoryTableSeeder::class]
         );
 
     }
