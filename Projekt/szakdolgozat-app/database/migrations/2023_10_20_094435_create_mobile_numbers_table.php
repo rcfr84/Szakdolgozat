@@ -13,9 +13,11 @@ return new class extends Migration
     {
         Schema::create('mobile_numbers', function (Blueprint $table) {
             $table->id('mobile_number_id');
-            $table->unsignedBigInteger('advertisements_id');
+            $table->unsignedBigInteger('advertisement_id');
             $table->string('number')->nullable();
             $table->timestamps();
+
+            $table->foreign('advertisement_id')->references('advertisement_id')->on('advertisements')->onDelete('cascade');
         });
     }
 

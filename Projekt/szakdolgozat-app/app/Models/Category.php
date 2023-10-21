@@ -16,4 +16,9 @@ class Category extends Model
         'category_id',
         'name',
     ];
+
+    public function advertisements()
+    {
+        return $this->hasMany(Advertisement::class, 'category_id', 'category_id');
+    }
 }
