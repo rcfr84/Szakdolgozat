@@ -38,7 +38,7 @@ class Advertisement extends Model
 
     public function mobile_numbers()
     {
-        return $this->belongsTo(MobileNumber::class, 'advertisement_id', 'advertisement_id');
+        return $this->belongsTo(MobileNumber::class, 'mobile_number_id', 'mobile_number_id');
     }
 
     public function pictures()
