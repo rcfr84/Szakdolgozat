@@ -11,13 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('foreign_keys', function (Blueprint $table) {
+        Schema::create('advertisement_mobile_number', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('mobile_number_id')->nullable();
+            $table->unsignedBigInteger('advertisement_id');
+            $table->unsignedBigInteger('mobile_number_id');
             $table->timestamps();
 
+            $table->foreign('advertisement_id')->references('advertisement_id')->on('advertisements')->onDelete('cascade');
             $table->foreign('mobile_number_id')->references('mobile_number_id')->on('mobile_numbers')->onDelete('cascade');
-
         });
     }
 
@@ -26,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('foreign_keys');
+        Schema::dropIfExists('advertisement_mobile_number');
     }
 };
