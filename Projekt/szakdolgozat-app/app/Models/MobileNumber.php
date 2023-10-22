@@ -13,12 +13,11 @@ class MobileNumber extends Model
     protected $primaryKey = 'mobile_numbers_id';
 
     protected $fillable = [
-        'mobile_numbers_id',
-        'advertisements_id',
+        'number',
     ];
 
-    public function advertisement()
+    public function advertisements()
     {
-        return $this->belongsTo(Advertisement::class, 'advertisement_id', 'advertisement_id');
+        return $this->belongsToMany(Advertisement::class, 'advertisement_mobile_number', 'mobile_number_id', 'advertisement_id');
     }
 }

@@ -13,7 +13,6 @@ class Advertisement extends Model
     protected $primaryKey = 'advertisement_id';
 
     protected $fillable = [
-        'advertisement_id',
         'user_id',
         'city_id',
         'category_id',
@@ -36,9 +35,9 @@ class Advertisement extends Model
         return $this->belongsTo(Category::class, 'category_id', 'category_id');
     }
 
-    public function mobile_numbers()
+    public function mobileNumbers()
     {
-        return $this->belongsTo(MobileNumber::class, 'mobile_number_id', 'mobile_number_id');
+        return $this->belongsToMany(MobileNumber::class, 'advertisement_mobile_number', 'advertisement_id', 'mobile_number_id');
     }
 
     public function pictures()
