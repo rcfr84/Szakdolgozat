@@ -22,6 +22,7 @@ return new class extends Migration
             $table->string('title');
             $table->string('price');
             $table->text('description');
+            $table->string('mobile_number')->nullable();
             $table->timestamps();
 
             $table->foreign('user_id')->references('user_id')->on('users')->onDelete('cascade');
