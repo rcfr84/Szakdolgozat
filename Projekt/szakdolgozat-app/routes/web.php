@@ -35,6 +35,8 @@ Route::middleware('auth')->group(function () {
     //Megye
     Route::get('counties', [CountyController::class, 'index'])->name('counties.index');
 
+    //Város
+    Route::get('cities', [CityController::class, 'index'])->name('cities.index');
 });
 
 
