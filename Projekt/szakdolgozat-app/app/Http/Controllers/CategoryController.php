@@ -17,6 +17,12 @@ class CategoryController extends Controller
     public function index()
     {
         $categories = Category::all();
+        
+        if (!$categories) 
+        {
+            return redirect()->route('/dashboard')->with('status', 'Category not found!');
+        }
+
         return view('categories.index', compact('categories'));
     }
 
@@ -58,6 +64,12 @@ class CategoryController extends Controller
     public function edit($id)
     {
         $category = Category::find($id);
+
+        if (!$category) 
+        {
+            return redirect()->route('/dashboard')->with('status', 'Category not found!');
+        }
+
         return view('categories.edit', compact('category'));
     }
 
@@ -67,6 +79,11 @@ class CategoryController extends Controller
     public function update(Request $request, $id)
     {
         $category = Category::find($id);
+
+        if (!$category) 
+        {
+            return redirect()->route('/dashboard')->with('status', 'Category not found!');
+        }
 
         $request->validate([
             'name' => 'required',
@@ -84,6 +101,12 @@ class CategoryController extends Controller
     public function destroy($id)
     {
         $category = Category::find($id);
+
+        if (!$category) 
+        {
+            return redirect()->route('/dashboard')->with('status', 'Category not found!');
+        }
+
         $category->delete();
 
         return redirect()->route('categories.index')->with('status', 'Category deleted successfully!');
