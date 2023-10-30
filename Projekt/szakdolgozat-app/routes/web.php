@@ -29,11 +29,13 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
+    //Kategória
     Route::get('/categories', [CategoryController::class, 'index'])->name('categories.index');
 
-});
+    //Megye
+    Route::get('counties', [CountyController::class, 'index'])->name('counties.index');
 
-Route::get('/categories', [CategoryController::class, 'index'])->name('categories.index');
+});
 
 
 Route::middleware(['CheckRole:admin'])->group(function (){
