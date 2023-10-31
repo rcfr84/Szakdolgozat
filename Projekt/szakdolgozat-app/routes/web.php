@@ -57,6 +57,12 @@ Route::middleware('auth')->group(function () {
     Route::get('/messages/{messageId}/edit', [MessageController::class, 'edit'])->name('messages.edit');
     Route::put('/messages/{messageId}', [MessageController::class, 'update'])->name('messages.update');
     Route::delete('/messages/{messageId}', [MessageController::class, 'destroy'])->name('messages.destroy');
+
+    //PICTURE
+    Route::get('/pictures', [PictureController::class, 'index'])->name('pictures.index');
+    Route::get('/pictures/create', [PictureController::class, 'create'])->name('pictures.create');
+    Route::post('/pictures', [PictureController::class, 'store'])->name('pictures.store');
+    Route::delete('/pictures/{pictureId}', [PictureController::class, 'destroy'])->name('pictures.destroy');
 });
 
 Route::middleware(['CheckRole:admin'])->group(function (){
@@ -77,6 +83,10 @@ Route::middleware(['CheckRole:admin'])->group(function (){
     Route::get('/messages/{messageId}/edit', [MessageController::class, 'edit'])->name('messages.edit');
     Route::put('/messages/{messageId}', [MessageController::class, 'update'])->name('messages.update');
     Route::delete('/messages/{messageId}', [MessageController::class, 'destroy'])->name('messages.destroy');
+
+    //PICTURE
+    Route::delete('/pictures/{pictureId}', [PictureController::class, 'destroy'])->name('pictures.destroy');
+
 });
 
 require __DIR__.'/auth.php';

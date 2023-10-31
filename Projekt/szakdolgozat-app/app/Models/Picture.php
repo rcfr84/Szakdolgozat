@@ -13,7 +13,6 @@ class Picture extends Model
     protected $primaryKey = 'picture_id';
 
     protected $fillable = [
-        'picture_id',
         'src',
     ];
 
