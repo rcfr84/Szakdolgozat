@@ -55,6 +55,11 @@ class AdvertisementController extends Controller
             $newAdvertisement->picture_id = $request->picture_id;
         }
 
+        if ($request->has('mobile_number')) 
+        {
+            $newAdvertisement->mobile_number = $request->mobile_number;
+        }
+
         $newAdvertisement->save();
 
         return redirect()->route('advertisements.index')->with('status', 'Advertisement created successfully!');
@@ -131,6 +136,11 @@ class AdvertisementController extends Controller
         if($request->has('picture_id'))
         {
             $advertisement->picture_id = $request->picture_id;
+        }
+
+        if ($request->has('mobile_number')) 
+        {
+            $advertisement->mobile_number = $request->mobile_number;
         }
 
         $advertisement->update();

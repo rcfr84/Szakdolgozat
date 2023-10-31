@@ -36,10 +36,10 @@ Route::middleware('auth')->group(function () {
     Route::get('/categories', [CategoryController::class, 'index'])->name('categories.index');
 
     //COUNTY
-    Route::get('counties', [CountyController::class, 'index'])->name('counties.index');
+    Route::get('/counties', [CountyController::class, 'index'])->name('counties.index');
 
     //CITY
-    Route::get('cities', [CityController::class, 'index'])->name('cities.index');
+    Route::get('/cities', [CityController::class, 'index'])->name('cities.index');
 
     //ADVERTISEMENT
     Route::get('/advertisements', [AdvertisementController::class, 'index'])->name('advertisements.index');
@@ -50,7 +50,6 @@ Route::middleware('auth')->group(function () {
     Route::delete('/advertisements/{advertisementId}', [AdvertisementController::class, 'destroy'])->name('advertisements.destroy');
 
 });
-
 
 Route::middleware(['CheckRole:admin'])->group(function (){
 
