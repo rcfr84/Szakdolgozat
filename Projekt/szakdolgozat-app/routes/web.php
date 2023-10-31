@@ -7,6 +7,7 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CountyController;
 use App\Http\Controllers\CityController;
 use App\Http\Controllers\AdvertisementController;
+use App\Http\Controllers\MessageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -49,6 +50,13 @@ Route::middleware('auth')->group(function () {
     Route::put('/advertisements/{advertisementId}', [AdvertisementController::class, 'update'])->name('advertisements.update');
     Route::delete('/advertisements/{advertisementId}', [AdvertisementController::class, 'destroy'])->name('advertisements.destroy');
 
+    //MESSAGE
+    Route::get('/messages/get', [MessageController::class, 'index'])->name('messages.index');
+    Route::get('/messages/create', [MessageController::class, 'create'])->name('messages.create');
+    Route::post('/messages/send', [MessageController::class, 'store'])->name('messages.store');
+    Route::get('/messages/{messageId}/edit', [MessageController::class, 'edit'])->name('messages.edit');
+    Route::put('/messages/{messageId}', [MessageController::class, 'update'])->name('messages.update');
+    Route::delete('/messages/{messageId}', [MessageController::class, 'destroy'])->name('messages.destroy');
 });
 
 Route::middleware(['CheckRole:admin'])->group(function (){
@@ -64,6 +72,11 @@ Route::middleware(['CheckRole:admin'])->group(function (){
     Route::get('/advertisements/{advertisementId}/edit', [AdvertisementController::class, 'edit'])->name('advertisements.edit');
     Route::put('/advertisements/{advertisementId}', [AdvertisementController::class, 'update'])->name('advertisements.update');
     Route::delete('/advertisements/{advertisementId}', [AdvertisementController::class, 'destroy'])->name('advertisements.destroy');
+
+    //MESSAGE
+    Route::get('/messages/{messageId}/edit', [MessageController::class, 'edit'])->name('messages.edit');
+    Route::put('/messages/{messageId}', [MessageController::class, 'update'])->name('messages.update');
+    Route::delete('/messages/{messageId}', [MessageController::class, 'destroy'])->name('messages.destroy');
 });
 
 require __DIR__.'/auth.php';
