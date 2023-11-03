@@ -35,14 +35,9 @@ class Advertisement extends Model
         return $this->belongsTo(Category::class, 'category_id', 'category_id');
     }
 
-    public function mobileNumbers()
-    {
-        return $this->belongsToMany(MobileNumber::class, 'advertisement_mobile_number', 'advertisement_id', 'mobile_number_id');
-    }
-
     public function pictures()
     {
-        return $this->hasMany(Picture::class, 'advertisement_id', 'advertisement_id');
+        return $this->hasMany(Picture::class, 'picture_id', 'advertisement_id');
     }
     
     

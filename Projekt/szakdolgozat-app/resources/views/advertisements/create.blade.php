@@ -49,7 +49,10 @@
                                 <label class="form-label">Leírás</label>
                                 <textarea class="form-control" rows="10" name="description">{{old('description', '')}}</textarea>
                             </div>
-                            
+                            <div class="mb-3">
+                                <label class="form-label">Telefonszám</label>
+                                <input type="text" class="form-control" name="mobile_number" value="{{old('mobile_number', '')}}">
+                            </div>
                             <div class="mb-3">
                                 <button type="submit" class="btn btn-primary">Add</button>
                             </div>

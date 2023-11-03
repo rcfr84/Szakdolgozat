@@ -21,6 +21,7 @@
                                     <th>Cím</th>
                                     <th>Ár</th>
                                     <th>Leírás</th>
+                                    <th>Telefonszám</th>
                                 </tr>
                             </thead>
                             @foreach ($advertisements as $advertisement)
@@ -31,16 +32,16 @@
                                         <td>{{ $advertisement->city->county->name }}</td>
                                         <td>{{ $advertisement->category->name }}</td>
                                         <td>
-                                            @if ($advertisement->picture)
-                                                <img src="{{ asset('storage/images/' . $advertisement->picture->src) }}">
+                                            @if ($advertisement->picture_id != null)
+                                                <img src="{{ asset('storage/images/' . $advertisement->pictures->first()->src) }}">
                                             @else
                                                 Nincs kép
                                             @endif
-                                            
                                         </td>
                                         <td>{{ $advertisement->title }}</td>
                                         <td>{{ $advertisement->price }}</td>
                                         <td>{{ $advertisement->description }}</td>
+                                        <td>{{ $advertisement->mobile_number }} </td>
                                     </tr>
                                 </tbody>
                             @endforeach
