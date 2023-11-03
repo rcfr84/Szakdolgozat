@@ -17,6 +17,7 @@ class Advertisement extends Model
         'category_id',
         'title',
         'price',
+        'description',
     ];
 
     public function user()
@@ -43,4 +44,9 @@ class Advertisement extends Model
     {
         return $this->hasMany(Picture::class, 'advertisement_id', 'advertisement_id');
     }
+    
+    
+
+    
+
 }

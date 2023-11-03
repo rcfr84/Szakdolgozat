@@ -6,7 +6,7 @@
                 <div class="card">
                     <div class="card-header">{{ __('Add a new advertisement') }}</div>
                     <div class="card-body">
-                        <form accept="{{route('advertisements.store')}}" method="POST">
+                        <form accept="{{route('advertisements.store')}}" method="POST" enctype="multipart/form-data">
                             @csrf
                             <div class="mb-3">
                                 <label class="form-label">Vármegye</label>
@@ -35,8 +35,8 @@
                             </div>
                             <div class="mb-3">
                                 <label class="form-label">Kép</label>
-                                <input type="image" class="form-control" name="picture" value="{{old('picture', '')}}">
-                            </div>
+                                <input type="file" class="form-control" name="picture">
+                            </div>                            
                             <div class="mb-3">
                                 <label class="form-label">Cím</label>
                                 <input type="text" class="form-control" name="title" value="{{old('title', '')}}">

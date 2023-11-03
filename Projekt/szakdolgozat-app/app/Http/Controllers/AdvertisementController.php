@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use App\Models\County;
 use App\Models\City;
 use Illuminate\Support\Facades\Auth;
+use App\Models\Picture;
 
 class AdvertisementController extends Controller
 {
@@ -53,6 +54,7 @@ class AdvertisementController extends Controller
             'title' => 'required',
             'price' => 'required',
             'description' => 'required',
+            'picture' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
 
         $newAdvertisement = new Advertisement();
@@ -63,10 +65,17 @@ class AdvertisementController extends Controller
         $newAdvertisement->price = $request->price;
         $newAdvertisement->description = $request->description;
 
-        if($request->has('picture_id'))
-        {
-            $newAdvertisement->picture_id = $request->picture_id;
+        if ($request->hasFile('picture')) {
+            $picturePath = $request->file('picture')->store('public/images');
+    
+            $picture = new Picture();
+            $picture->src = $picturePath;
+            $picture->save();
+    
+            $newAdvertisement->picture_id = $picture->picture_id;
         }
+    
+        
 
         if ($request->has('mobile_number')) 
         {

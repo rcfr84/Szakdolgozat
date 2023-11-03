@@ -20,4 +20,9 @@ class Picture extends Model
     {
         return $this->belongsTo(Advertisement::class, 'advertisement_id', 'advertisement_id');
     }
+
+   
+
+  
+
 }

@@ -19,19 +19,28 @@
                                     <th>Kategória</th>
                                     <th>Kép</th>
                                     <th>Cím</th>
+                                    <th>Ár</th>
                                     <th>Leírás</th>
                                 </tr>
                             </thead>
                             @foreach ($advertisements as $advertisement)
                                 <tbody>
                                     <tr>
-                                        <td>{{ $advertisement->user_id }}</td>
-                                        <td>{{ $advertisement->city_id }}</td>
-                                        <td>{{ $advertisement->county_id }}</td>
-                                        <td>{{ $advertisement->category_id }}</td>
-                                        <td>{{ $advertisement->picture_id }}</td>
+                                        <td>{{ $advertisement->user->name }}</td>
+                                        <td>{{ $advertisement->city->name}}</td>
+                                        <td>{{ $advertisement->city->county->name }}</td>
+                                        <td>{{ $advertisement->category->name }}</td>
+                                        <td>
+                                            @if ($advertisement->picture)
+                                                <img src="{{ asset('storage/images/' . $advertisement->picture->src) }}">
+                                            @else
+                                                Nincs kép
+                                            @endif
+                                            
+                                        </td>
                                         <td>{{ $advertisement->title }}</td>
                                         <td>{{ $advertisement->price }}</td>
+                                        <td>{{ $advertisement->description }}</td>
                                     </tr>
                                 </tbody>
                             @endforeach
