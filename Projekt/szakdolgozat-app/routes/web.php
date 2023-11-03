@@ -44,8 +44,9 @@ Route::middleware('auth')->group(function () {
 
     //ADVERTISEMENT
     Route::get('/advertisements', [AdvertisementController::class, 'index'])->name('advertisements.index');
+    Route::get('get-cities-by-county/{countyId}', [AdvertisementController::class, 'getCitiesByCounty'])->name('get-cities-by-county');
     Route::get('/advertisements/create', [AdvertisementController::class, 'create'])->name('advertisements.create');
-    Route::post('/advertisements', [AdvertisementController::class, 'store'])->name('advertisements.store');
+    Route::post('/advertisements/create', [AdvertisementController::class, 'store'])->name('advertisements.store');
     Route::get('/advertisements/{advertisementId}/edit', [AdvertisementController::class, 'edit'])->name('advertisements.edit');
     Route::put('/advertisements/{advertisementId}', [AdvertisementController::class, 'update'])->name('advertisements.update');
     Route::delete('/advertisements/{advertisementId}', [AdvertisementController::class, 'destroy'])->name('advertisements.destroy');
@@ -64,6 +65,7 @@ Route::middleware('auth')->group(function () {
     Route::post('/pictures', [PictureController::class, 'store'])->name('pictures.store');
     Route::delete('/pictures/{pictureId}', [PictureController::class, 'destroy'])->name('pictures.destroy');
 });
+
 
 Route::middleware(['CheckRole:admin'])->group(function (){
 

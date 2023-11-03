@@ -3,7 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\Advertisement;
+use App\Models\Category;
 use Illuminate\Http\Request;
+use App\Models\County;
+use App\Models\City;
+use Illuminate\Support\Facades\Auth;
 
 class AdvertisementController extends Controller
 {
@@ -17,7 +21,7 @@ class AdvertisementController extends Controller
     public function index()
     {
         $advertisements = Advertisement::all()->sortByDesc('created_at');
-        return view('advertisements.index', compact('advertisements'));
+        return view('advertisements.list', compact('advertisements'));
     }
 
     /**
@@ -25,8 +29,18 @@ class AdvertisementController extends Controller
      */
     public function create()
     {
-        return view('advertisements.create');
+        $categories = Category::all();
+        $counties = County::all();
+        $cities = [];
+
+        return view('advertisements.create', compact('categories', 'counties', 'cities'));
     }
+    public function getCitiesByCounty($countyId)
+    {
+        $cities = City::where('county_id', $countyId)->get();
+        return response()->json($cities);
+    }
+
 
     /**
      * Store a newly created resource in storage.
@@ -34,7 +48,6 @@ class AdvertisementController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'user_id' => 'required',
             'city_id' => 'required',
             'category_id' => 'required',
             'title' => 'required',
@@ -43,7 +56,7 @@ class AdvertisementController extends Controller
         ]);
 
         $newAdvertisement = new Advertisement();
-        $newAdvertisement->user_id = $request->user_id;
+        $newAdvertisement->user_id = Auth::user()->user_id;
         $newAdvertisement->city_id = $request->city_id;
         $newAdvertisement->category_id = $request->category_id;
         $newAdvertisement->title = $request->title;

@@ -13,7 +13,6 @@ class Advertisement extends Model
     protected $primaryKey = 'advertisement_id';
 
     protected $fillable = [
-        'user_id',
         'city_id',
         'category_id',
         'title',

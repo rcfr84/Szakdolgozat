@@ -18,10 +18,10 @@
             @if (Route::has('login'))
                 <div class="fixed top-0 left-0">
                     <img src="{{ asset('images\welcome_blade_logo.png') }}" class="mr-4" width="100">
-                    <div class="mt-4 flex justify-center"> <!-- Módosított sor -->
+                    <div class="mt-4 flex justify-center">
                         <div class="flex items-center">
                             @auth
-                                <a href="{{ route('advertisements.store') }}" class="px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 mr-2">Hirdetés feladása</a>
+                                <a href="{{ route('advertisements.create') }}" class="px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 mr-2">Hirdetés feladása</a>
                             @else
                                 <a href="{{ route('login') }}" class="px-4 py-2 bg-red-500 text-white rounded-lg hover-bg-red-600 mr-2">Hirdetés feladása</a>
                             @endauth
@@ -44,5 +44,9 @@
                 </div>
             @endif
         </div>
+
+        <main class="py-4">
+            @yield('content')
+        </main>
     </body>
 </html>
