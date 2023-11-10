@@ -25,6 +25,12 @@ class AdvertisementController extends Controller
         return view('advertisements.list', compact('advertisements'));
     }
 
+    public function ownAdvertisements()
+    {
+        $advertisements = Advertisement::where('user_id', Auth::user()->user_id)->get();
+        return view('advertisements.list', compact('advertisements'));
+    }
+
     /**
      * Show the form for creating a new resource.
      */

@@ -45,6 +45,7 @@ Route::middleware('auth')->group(function () {
     //ADVERTISEMENT
     Route::get('/advertisements', [AdvertisementController::class, 'index'])->name('advertisements.index');
     Route::get('get-cities-by-county/{countyId}', [AdvertisementController::class, 'getCitiesByCounty'])->name('get-cities-by-county');
+    Route::get('/advertisements/own', [AdvertisementController::class, 'ownAdvertisements'])->name('advertisements.own');
     Route::get('/advertisements/create', [AdvertisementController::class, 'create'])->name('advertisements.create');
     Route::post('/advertisements/create', [AdvertisementController::class, 'store'])->name('advertisements.store');
     Route::get('/advertisements/{advertisementId}/edit', [AdvertisementController::class, 'edit'])->name('advertisements.edit');
