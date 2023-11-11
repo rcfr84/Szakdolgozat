@@ -27,8 +27,9 @@ class AdvertisementController extends Controller
 
     public function ownAdvertisements()
     {
+        
         $advertisements = Advertisement::where('user_id', Auth::user()->user_id)->get();
-        return view('advertisements.list', compact('advertisements'));
+        return view('advertisements.ownList', compact('advertisements'));
     }
 
     /**
@@ -115,14 +116,14 @@ class AdvertisementController extends Controller
     {
         if (auth()->user()->user_id != Advertisement::find($id)->user_id) 
         {
-            return redirect()->route('advertisements.index')->with('error', 'You can only edit your own advertisements!');
+            return redirect()->route('advertisements.own')->with('error', 'You can only edit your own advertisements!');
         }
 
         $advertisement = Advertisement::find($id);
 
         if (!$advertisement) 
         {
-            return redirect()->route('advertisements.index')->with('error', 'Advertisement not found!');
+            return redirect()->route('advertisements.own')->with('error', 'Advertisement not found!');
         }
 
         return view('advertisements.edit', compact('advertisement'));
@@ -135,14 +136,14 @@ class AdvertisementController extends Controller
     {
         if (auth()->user()->user_id != Advertisement::find($id)->user_id) 
         {
-            return redirect()->route('advertisements.index')->with('error', 'You can only edit your own advertisements!');
+            return redirect()->route('advertisements.own')->with('error', 'You can only edit your own advertisements!');
         }
 
         $advertisement = Advertisement::find($id);
 
         if (!$advertisement) 
         {
-            return redirect()->route('advertisements.index')->with('error', 'Advertisement not found!');
+            return redirect()->route('advertisements.own')->with('error', 'Advertisement not found!');
         }
 
         $request->validate([
@@ -183,6 +184,7 @@ class AdvertisementController extends Controller
      */
     public function destroy($id)
     {
+
         if (auth()->user()->user_id != Advertisement::find($id)->user_id) 
         {
             return redirect()->route('advertisements.index')->with('error', 'You can only delete your own advertisements!');

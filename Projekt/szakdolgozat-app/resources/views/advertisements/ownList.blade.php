@@ -7,8 +7,6 @@
                     <div class="alert alert-success">{{ session('status') }}</div>
                 @endif
                 <div class="card">
-                    <div class="card-header">{{ __('List of own advertisements') }}</div>
-                   
                     <div class="card-body">
                         <table class="table">
                             <thead>
@@ -21,36 +19,46 @@
                                     <th>Ár</th>
                                     <th>Leírás</th>
                                     <th>Telefonszám</th>
+                                    <th>Módosítás</th>
+                                    <th>Törlés</th>
                                 </tr>
                             </thead>
-                            @foreach ($advertisements as $advertisement)
-                                @if ($advertisement->user_id == Auth::user->user_id)
-                                    <tbody>
-                                        <tr>
-                                            <td>{{ $advertisement->city->name}}</td>
-                                            <td>{{ $advertisement->city->county->name }}</td>
-                                            <td>{{ $advertisement->category->name }}</td>
-                                            <td>
-                                                @if ($advertisement->picture_id != null)
-                                                    <img src="{{ asset('storage/images/' . $advertisement->pictures->first()->src) }}">
-                                                @else
-                                                    Nincs kép
-                                                @endif
-                                            </td>
-                                            <td>{{ $advertisement->title }}</td>
-                                            <td>{{ $advertisement->price }}</td>
-                                            <td>{{ $advertisement->description }}</td>
-                                            <td>{{ $advertisement->mobile_number }} </td>
-                                        </tr>
-                                    </tbody>
-                                @else
-                                    <tbody>
-                                        <tr>
-                                            <td>Nincs hirdetés</td>
-                                        </tr>
-                                    </tbody>    
-                                @endif
-                            @endforeach
+                            @forelse ($advertisements as $advertisement)
+                                <tbody>
+                                    <tr>
+                                        <td>{{ $advertisement->city->name}}</td>
+                                        <td>{{ $advertisement->city->county->name }}</td>
+                                        <td>{{ $advertisement->category->name }}</td>
+                                        <td>
+                                            @if ($advertisement->picture_id != null)
+                                                <img src="{{ asset('storage/images/' . $advertisement->pictures->first()->src) }}">
+                                            @else
+                                                Nincs kép
+                                            @endif
+                                        </td>
+                                        <td>{{ $advertisement->title }}</td>
+                                        <td>{{ $advertisement->price }}</td>
+                                        <td>{{ $advertisement->description }}</td>
+                                        <td>{{ $advertisement->mobile_number }} </td>
+                                        <td>
+                                            <a href="{{ route('advertisements.edit', $advertisement->advertisement_id) }}" class="btn btn-primary">Módosítás</a>
+                                        </td>
+                                        <td>
+                                            <form method="POST" action="{{ route('advertisements.destroy', $advertisement->advertisement_id) }}">
+                                                @csrf
+                                                @method('DELETE')
+                                                <button type="submit" class="btn btn-danger">Törlés</button>
+                                            </form>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            @empty
+                                <tbody>
+                                    <tr>
+                                        <td colspan="10">Nincs hirdetés</td>
+                                    </tr>
+                                </tbody>
+                            @endforelse
                         </table>
                     </div>
                 </div>

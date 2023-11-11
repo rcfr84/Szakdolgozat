@@ -7,8 +7,6 @@
                     <div class="alert alert-success">{{ session('status') }}</div>
                 @endif
                 <div class="card">
-                    <div class="card-header">{{ __('List of advertisements') }}</div>
-                   
                     <div class="card-body">
                         <table class="table">
                             <thead>
@@ -22,6 +20,7 @@
                                     <th>Ár</th>
                                     <th>Leírás</th>
                                     <th>Telefonszám</th>
+                                    
                                 </tr>
                             </thead>
                             @foreach ($advertisements as $advertisement)
@@ -42,6 +41,7 @@
                                         <td>{{ $advertisement->price }}</td>
                                         <td>{{ $advertisement->description }}</td>
                                         <td>{{ $advertisement->mobile_number }} </td>
+                                        
                                     </tr>
                                 </tbody>
                             @endforeach
