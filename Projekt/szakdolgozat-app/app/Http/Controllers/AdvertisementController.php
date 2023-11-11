@@ -12,10 +12,7 @@ use App\Models\Picture;
 
 class AdvertisementController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('CheckRole:admin')->only(['edit', 'update', 'destroy']);
-    }
+    
     /**
      * Display a listing of the resource.
      */
@@ -120,13 +117,16 @@ class AdvertisementController extends Controller
         }
 
         $advertisement = Advertisement::find($id);
+        $categories = Category::all();
+        $counties = County::all();
+        $cities = City::where('county_id', $advertisement->county_id)->get();
 
         if (!$advertisement) 
         {
             return redirect()->route('advertisements.own')->with('error', 'Advertisement not found!');
         }
 
-        return view('advertisements.edit', compact('advertisement'));
+        return view('advertisements.edit', compact('advertisement', 'counties', 'cities', 'categories'));
     }
 
     /**
@@ -140,6 +140,7 @@ class AdvertisementController extends Controller
         }
 
         $advertisement = Advertisement::find($id);
+        $this->authorize('update', $advertisement);
 
         if (!$advertisement) 
         {
@@ -147,7 +148,6 @@ class AdvertisementController extends Controller
         }
 
         $request->validate([
-            'user_id' => 'required',
             'city_id' => 'required',
             'category_id' => 'required',
             'title' => 'required',
@@ -155,7 +155,7 @@ class AdvertisementController extends Controller
             'description' => 'required',
         ]);
 
-        $advertisement->user_id = $request->user_id;
+        $advertisement->user_id = Auth::user()->user_id;
         $advertisement->city_id = $request->city_id;
         $advertisement->category_id = $request->category_id;
         $advertisement->title = $request->title;
@@ -174,8 +174,7 @@ class AdvertisementController extends Controller
 
         $advertisement->update();
 
-        return redirect()->route('advertisements.index')->with('status', 'Advertisement updated successfully!');
-
+        return redirect()->route('advertisements.own')->with('status', 'Advertisement updated successfully!');
 
     }
 
@@ -184,21 +183,24 @@ class AdvertisementController extends Controller
      */
     public function destroy($id)
     {
+        
 
         if (auth()->user()->user_id != Advertisement::find($id)->user_id) 
         {
-            return redirect()->route('advertisements.index')->with('error', 'You can only delete your own advertisements!');
+            return redirect()->route('advertisements.own')->with('error', 'You can only delete your own advertisements!');
         }
 
         $advertisement = Advertisement::find($id);
 
+        $this->authorize('delete', $advertisement);
+
         if (!$advertisement) 
         {
-            return redirect()->route('advertisements.index')->with('error', 'Advertisement not found!');
+            return redirect()->route('advertisements.own')->with('error', 'Advertisement not found!');
         }
 
         $advertisement->delete();
 
-        return redirect()->route('advertisements.index')->with('status', 'Advertisement deleted successfully!');
+        return redirect()->route('advertisements.own')->with('status', 'Advertisement deleted successfully!');
     }
 }
