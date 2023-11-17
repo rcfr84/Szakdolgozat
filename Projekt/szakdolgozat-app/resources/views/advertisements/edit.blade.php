@@ -1,10 +1,9 @@
 @extends('layouts.app')
 @section('content')
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="card">
-                    <div class="card-body">
+    <div class="container mx-auto mt-8">
+        <div class="flex justify-center">
+            <div class="w-1/2">
+                    <div class="bg-white p-6 rounded-lg shadow-md">
                         <form action="{{ route('advertisements.update', $advertisement->advertisement_id) }}" method="POST" enctype="multipart/form-data">
                             @csrf
                             @method('PUT')
@@ -53,12 +52,12 @@
                                 <input type="text" class="form-control" name="mobile_number" value="{{$advertisement->mobile_number}}">
                             </div>
                             <div class="mb-3">
-                                <button type="submit" class="btn btn-primary">Módosítás</button>
+                                <button type="submit" class="bg-blue-500 text-white p-2 rounded">Módosítás</button>
                             </div>
                         </form>
                         @if ($errors->any())
                         <div class="alert alert-danger">
-                            <strong>Whoops!</strong> There were some problems with your inputs.<br><br>
+                            <strong>Hiba!</strong> Problámák vannak az adatokkal.<br><br>
                             <ul>
                                 @foreach ($errors->all() as $error)
                                     <li>{{$error}}</li>
@@ -67,7 +66,6 @@
                         </div>
                         @endif
                     </div>
-                </div>
             </div>
         </div>
         <script>
