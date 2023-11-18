@@ -40,7 +40,7 @@
                                         <td class="px-4 py-2">{{ $advertisement->description }}</td>
                                         <td class="px-4 py-2">{{ $advertisement->mobile_number }} </td>
                                         <td class="px-4 py-2">
-                                            <a href="{{ route('advertisements.edit', $advertisement->advertisement_id) }}" class="bg-blue-500 text-white p-2 rounded">Módosítás</a>
+                                            <a href="{{ route('advertisements.edit', $advertisement->advertisement_id) }}" class="bg-red-500 text-white p-2 rounded">Módosítás</a>
                                         </td>
                                         <td class="px-4 py-2">
                                             <form method="POST" action="{{ route('advertisements.destroy', $advertisement->advertisement_id) }}">

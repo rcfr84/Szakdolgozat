@@ -25,7 +25,7 @@
                         </div>
                         <div class="mb-4">
                             <label for="categorySelect" class="form-label">Kategória</label>
-                            <select class="form-select" name="category_id">
+                            <select class="form-select" name="category_id" id="category">
                                 <option value="">Válassz kategóriát</option>
                                 @foreach ($categories as $category)
                                     <option value="{{ $category->category_id }}">{{ $category->name }}</option>
@@ -38,22 +38,22 @@
                         </div>                            
                         <div class="mb-4">
                             <label for="title" class="form-label">Cím</label>
-                            <input type="text" class="form-input" name="title" value="{{ old('title', '') }}">
+                            <input type="text" class="form-input" name="title" id="title" value="{{ old('title', '') }}">
                         </div>
                         <div class="mb-4">
                             <label for="price" class="form-label">Ár</label>
-                            <input type="text" class="form-input" name="price" value="{{ old('price', '') }}">
+                            <input type="text" class="form-input" name="price" id="price" value="{{ old('price', '') }}">
                         </div>
                         <div class="mb-4">
-                            <label for="description" class="form-label">Leírás</label>
-                            <textarea class="form-input" rows="10" name="description">{{ old('description', '') }}</textarea>
+                            <label for="description" class="form-label" id="description">Leírás</label>
+                            <textarea class="form-input" rows="10" id="description" name="description">{{ old('description', '') }}</textarea>
                         </div>
                         <div class="mb-4">
                             <label for="mobile_number" class="form-label">Telefonszám</label>
-                            <input type="text" class="form-input" name="mobile_number" value="{{ old('mobile_number', '') }}">
+                            <input type="text" class="form-input" name="mobile_number" id="mobile_number" value="{{ old('mobile_number', '') }}">
                         </div>
                         <div class="mb-4">
-                            <button type="submit" class="bg-blue-500 text-white p-2 rounded">Hozzáadás</button>
+                            <button type="submit" class="bg-red-500 text-white p-2 rounded">Hozzáadás</button>
                         </div>
                     </form>
                     @if ($errors->any())

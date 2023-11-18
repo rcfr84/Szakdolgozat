@@ -52,7 +52,7 @@
                                 <input type="text" class="form-control" name="mobile_number" value="{{$advertisement->mobile_number}}">
                             </div>
                             <div class="mb-3">
-                                <button type="submit" class="bg-blue-500 text-white p-2 rounded">Módosítás</button>
+                                <button type="submit" class="bg-red-500 text-white p-2 rounded">Módosítás</button>
                             </div>
                         </form>
                         @if ($errors->any())
