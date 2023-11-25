@@ -19,13 +19,13 @@
                             
                             <div class="mb-3">
                                 <label class="form-label">Város</label>
-                                <select class="form-control" name="city_id">
+                                <select class="form-control" name="city_id" id="citySelect">
                                     <option value="">Válassz várost</option>
                                 </select>
                             </div>
                             <div class="mb-3">
                                 <label class="form-label">Kategória</label>
-                                <select class="form-control" name="category_id" value={{$advertisement->category}}>
+                                <select class="form-control" name="category_id" id="category" value={{$advertisement->category}}>
                                     @foreach ($categories as $category)
                                         <option value="{{ $category->category_id }}">{{ $category->name }}</option>
                                     @endforeach
@@ -33,23 +33,23 @@
                             </div>
                             <div class="mb-3">
                                 <label class="form-label">Kép</label>
-                                <input type="file" class="form-control" name="picture">
+                                <input type="file" class="form-control" name="picture" id="picture">
                             </div>                            
                             <div class="mb-3">
                                 <label class="form-label">Cím</label>
-                                <input type="text" class="form-control" name="title" value="{{$advertisement->title}}">
+                                <input type="text" class="form-control" name="title" id="title" value="{{$advertisement->title}}">
                             </div>
                             <div class="mb-3">
                                 <label class="form-label">Ár</label>
-                                <input type="text" class="form-control" name="price" value="{{$advertisement->price}}">
+                                <input type="text" class="form-control" name="price" id="price" value="{{$advertisement->price}}">
                             </div>
                             <div class="mb-3">
                                 <label class="form-label">Leírás</label>
-                                <textarea class="form-control" rows="10" name="description">{{$advertisement->description}}</textarea>
+                                <textarea class="form-control" rows="10" id="description" name="description">{{$advertisement->description}}</textarea>
                             </div>
                             <div class="mb-3">
                                 <label class="form-label">Telefonszám</label>
-                                <input type="text" class="form-control" name="mobile_number" value="{{$advertisement->mobile_number}}">
+                                <input type="text" class="form-control" name="mobile_number" id="mobile_number" value="{{$advertisement->mobile_number}}">
                             </div>
                             <div class="mb-3">
                                 <button type="submit" class="bg-red-500 text-white p-2 rounded">Módosítás</button>

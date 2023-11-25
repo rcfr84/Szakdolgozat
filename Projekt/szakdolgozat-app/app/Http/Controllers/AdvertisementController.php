@@ -25,7 +25,7 @@ class AdvertisementController extends Controller
     public function ownAdvertisements()
     {
         
-        $advertisements = Advertisement::where('user_id', Auth::user()->user_id)->get();
+        $advertisements = Advertisement::where('user_id', Auth::user()->user_id)->get()->sortByDesc('created_at');
         return view('advertisements.ownList', compact('advertisements'));
     }
 

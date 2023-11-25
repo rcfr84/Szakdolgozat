@@ -34,7 +34,7 @@
                         </div>
                         <div class="mb-4">
                             <label for="picture" class="form-label">Kép</label>
-                            <input type="file" class="form-input" name="picture">
+                            <input type="file" class="form-input" name="picture" id="picture">
                         </div>                            
                         <div class="mb-4">
                             <label for="title" class="form-label">Cím</label>
