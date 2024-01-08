@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.12)  8 JAN 2024 10:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.12)  8 JAN 2024 11:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -660,7 +660,7 @@ Package: inputenc 2021/02/14 v1.3d Input encoding file
 LaTeX Info: Redefining \cal on input line 577.
 LaTeX Info: Redefining \mit on input line 578.
 )
-<eszterhazy-logo-hu.pdf, id=89, 256.07971pt x 88.04292pt>
+<eszterhazy-logo-hu.pdf, id=105, 256.07971pt x 88.04292pt>
 File: eszterhazy-logo-hu.pdf Graphic file (type pdf)
 <use eszterhazy-logo-hu.pdf>
 Package pdftex.def Info: eszterhazy-logo-hu.pdf  used on input line 21.
@@ -682,21 +682,21 @@ thesis-ekf/eszterhazy-logo-hu.pdf>] (./RCFR84_2024.toc)
 1. fejezet.
 [4
 
-]
+] [5]
 2. fejezet.
-[5
-
-]
-3. fejezet.
 [6
 
 ]
-4. fejezet.
+3. fejezet.
 [7
 
-] [8
+]
+4. fejezet.
+[8
 
 ] [9
+
+] [10
 
 ] (./RCFR84_2024.aux)
  ***********
@@ -704,13 +704,13 @@ LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-29>
  ***********
 Package rerunfilecheck Info: File `RCFR84_2024.out' has not changed.
-(rerunfilecheck)             Checksum: 579CECBF7FA7F5721895C919F98643CE;3397.
+(rerunfilecheck)             Checksum: 2B5E1C460BABD94DA414D3C9EFBF8D94;3969.
  ) 
 Here is how much of TeX's memory you used:
- 16452 strings out of 474933
- 260804 string characters out of 5763793
- 1925801 words of memory out of 5000000
- 37673 multiletter control sequences out of 15000+600000
+ 16466 strings out of 474933
+ 261022 string characters out of 5763793
+ 1926801 words of memory out of 5000000
+ 37679 multiletter control sequences out of 15000+600000
  617673 words of font info for 84 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  78i,7n,81p,548b,513s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -718,10 +718,10 @@ Here is how much of TeX's memory you used:
 /texmf-dist/fonts/type1/public/lm/lmcsc10.pfb><c:/texlive/2023/texmf-dist/fonts
 /type1/public/lm/lmr12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lm
 ri12.pfb>
-Output written on RCFR84_2024.pdf (9 pages, 131001 bytes).
+Output written on RCFR84_2024.pdf (10 pages, 136621 bytes).
 PDF statistics:
- 185 PDF objects out of 1000 (max. 8388607)
- 161 compressed objects within 2 object streams
- 32 named destinations out of 1000 (max. 500000)
- 186 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 216 PDF objects out of 1000 (max. 8388607)
+ 191 compressed objects within 2 object streams
+ 40 named destinations out of 1000 (max. 500000)
+ 218 words of extra memory for PDF output out of 10000 (max. 10000000)
 

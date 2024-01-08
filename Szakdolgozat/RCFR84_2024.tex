@@ -26,10 +26,17 @@
 
 	
 	\chapter{Fejlesztés}
-	\section{Fejlesztésről röviden}
+	\section{Fejlesztésről}
 	\section{A fejlesztéshez alkalmazott eszközök és technológiák}
 	\subsection{Laravel}
-		
+		A Laravel egy nyílt forráskódú, PHP webkeretrendszer, ami MVC tervezési mintán alapszik. Az MVC a Model-View-Controller rövidítése.
+		\begin{enumerate}
+			\item Model (Modell): ez az adatokat kezelő réteg, az adatok tárolásáért és visszaolvasásáért felelős.
+			\item View (Nézet): ez a réteg felhasználói felületek megjelenítéséért illetékes. 
+			\item Controller (Vezérlő): a felhasználói műveletek megfelelő kezeléséért ez a réteg a felelős.
+		\end{enumerate}
+		Mivel három részre van bontva, ezért van ennek a tervezési mintának néhány előnye is. Ilyen például ha lecseréljük az egyik réteget, akkor a többihez nem kell már hozzányúlni, amivel pénzt és időt is lehet spórolni. Előnye még az is, hogy egy modellnek lehet több nézetes is.
+		\cite[102-103.~oldal]{Kusper}
 		
 	\subsection{PHP}
 	\subsection{MySQL}
@@ -41,13 +48,13 @@
 	
 	
 	\chapter{Tervezés}
-	\section{Tervezésről röviden}
+	\section{Tervezésről}
 	\section{A tervezéshez alkalmazott eszközök és technológiák}
 	\subsection{PlantUML}
 	\subsection{Dbdiagramm}
 	
 	\chapter{Tesztelés}
-	\section{Tesztelésről röviden}
+	\section{Tesztelésről}
 	\section{A teszteléshez alkalmazott eszközök és technológiák}
 	\subsection{Cypress}
 	
@@ -60,8 +67,8 @@
 	
 	\begin{thebibliography}{2}
 		\addcontentsline{toc}{chapter}{\bibname}
-		\bibitem{Fazekas}
-		\textsc{Fazekas István}: \emph{Valószínűségszámítás}, Debreceni Egyetem, Debrecen, 2004.
+		\bibitem{Kusper}
+		\textsc{Kusper Gábor}: \emph{Programozási technológiák}, Eger, 2015.
 	\end{thebibliography}
 	
 	% Aláírt, szkennelt nyilatkozat beillesztése a szakdolgozat végére

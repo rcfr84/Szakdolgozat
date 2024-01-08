@@ -1,20 +1,24 @@
 \select@language {magyar} \contentsline {chapter}{Bevezetés}{3}{chapter*.2}%
 \select@language {magyar} \contentsline {chapter}{\numberline {1}Fejlesztés}{4}{chapter.1}%
-\select@language {magyar} \contentsline {section}{\numberline {1.1}A fejlesztéshez alkalmazott eszközök és technológiák}{4}{section.1.1}%
-\select@language {magyar} \contentsline {subsection}{\numberline {1.1.1}Laravel}{4}{subsection.1.1.1}%
-\select@language {magyar} \contentsline {subsection}{\numberline {1.1.2}PHP}{4}{subsection.1.1.2}%
-\select@language {magyar} \contentsline {subsection}{\numberline {1.1.3}MySQL}{4}{subsection.1.1.3}%
-\select@language {magyar} \contentsline {subsection}{\numberline {1.1.4}phpMyAdmin}{4}{subsection.1.1.4}%
-\select@language {magyar} \contentsline {subsection}{\numberline {1.1.5}Visual Studio Code}{4}{subsection.1.1.5}%
-\select@language {magyar} \contentsline {subsection}{\numberline {1.1.6}Github}{4}{subsection.1.1.6}%
-\select@language {magyar} \contentsline {subsection}{\numberline {1.1.7}Github desktop}{4}{subsection.1.1.7}%
-\select@language {magyar} \contentsline {chapter}{\numberline {2}Tervezés}{5}{chapter.2}%
-\select@language {magyar} \contentsline {section}{\numberline {2.1}A tervezéshez alkalmazott eszközök és technológiák}{5}{section.2.1}%
-\select@language {magyar} \contentsline {subsection}{\numberline {2.1.1}PlantUML}{5}{subsection.2.1.1}%
-\select@language {magyar} \contentsline {subsection}{\numberline {2.1.2}Dbdiagramm}{5}{subsection.2.1.2}%
-\select@language {magyar} \contentsline {chapter}{\numberline {3}Tesztelés}{6}{chapter.3}%
-\select@language {magyar} \contentsline {section}{\numberline {3.1}A teszteléshez alkalmazott eszközök és technológiák}{6}{section.3.1}%
-\select@language {magyar} \contentsline {subsection}{\numberline {3.1.1}Cypress}{6}{subsection.3.1.1}%
-\select@language {magyar} \contentsline {chapter}{\numberline {4}Felhasználói dokumentáció}{7}{chapter.4}%
-\select@language {magyar} \contentsline {chapter}{Összegzés}{8}{chapter*.3}%
-\select@language {magyar} \contentsline {chapter}{Irodalomjegyz\'ek}{9}{chapter*.4}%
+\select@language {magyar} \contentsline {section}{\numberline {1.1}Fejlesztésről}{4}{section.1.1}%
+\select@language {magyar} \contentsline {section}{\numberline {1.2}A fejlesztéshez alkalmazott eszközök és technológiák}{4}{section.1.2}%
+\select@language {magyar} \contentsline {subsection}{\numberline {1.2.1}Laravel}{4}{subsection.1.2.1}%
+\select@language {magyar} \contentsline {subsection}{\numberline {1.2.2}PHP}{5}{subsection.1.2.2}%
+\select@language {magyar} \contentsline {subsection}{\numberline {1.2.3}MySQL}{5}{subsection.1.2.3}%
+\select@language {magyar} \contentsline {subsection}{\numberline {1.2.4}PhpMyAdmin}{5}{subsection.1.2.4}%
+\select@language {magyar} \contentsline {subsection}{\numberline {1.2.5}XAMMP}{5}{subsection.1.2.5}%
+\select@language {magyar} \contentsline {subsection}{\numberline {1.2.6}Visual Studio Code}{5}{subsection.1.2.6}%
+\select@language {magyar} \contentsline {subsection}{\numberline {1.2.7}GitHub}{5}{subsection.1.2.7}%
+\select@language {magyar} \contentsline {subsection}{\numberline {1.2.8}GitHub Desktop}{5}{subsection.1.2.8}%
+\select@language {magyar} \contentsline {chapter}{\numberline {2}Tervezés}{6}{chapter.2}%
+\select@language {magyar} \contentsline {section}{\numberline {2.1}Tervezésről}{6}{section.2.1}%
+\select@language {magyar} \contentsline {section}{\numberline {2.2}A tervezéshez alkalmazott eszközök és technológiák}{6}{section.2.2}%
+\select@language {magyar} \contentsline {subsection}{\numberline {2.2.1}PlantUML}{6}{subsection.2.2.1}%
+\select@language {magyar} \contentsline {subsection}{\numberline {2.2.2}Dbdiagramm}{6}{subsection.2.2.2}%
+\select@language {magyar} \contentsline {chapter}{\numberline {3}Tesztelés}{7}{chapter.3}%
+\select@language {magyar} \contentsline {section}{\numberline {3.1}Tesztelésről}{7}{section.3.1}%
+\select@language {magyar} \contentsline {section}{\numberline {3.2}A teszteléshez alkalmazott eszközök és technológiák}{7}{section.3.2}%
+\select@language {magyar} \contentsline {subsection}{\numberline {3.2.1}Cypress}{7}{subsection.3.2.1}%
+\select@language {magyar} \contentsline {chapter}{\numberline {4}Felhasználói dokumentáció}{8}{chapter.4}%
+\select@language {magyar} \contentsline {chapter}{Összegzés}{9}{chapter*.3}%
+\select@language {magyar} \contentsline {chapter}{Irodalomjegyz\'ek}{10}{chapter*.4}%
