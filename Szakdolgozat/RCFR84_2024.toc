@@ -14,7 +14,7 @@
 \select@language {magyar} \contentsline {section}{\numberline {2.1}Tervezésről}{7}{section.2.1}%
 \select@language {magyar} \contentsline {section}{\numberline {2.2}A tervezéshez alkalmazott eszközök és technológiák}{7}{section.2.2}%
 \select@language {magyar} \contentsline {subsection}{\numberline {2.2.1}PlantUML}{7}{subsection.2.2.1}%
-\select@language {magyar} \contentsline {subsection}{\numberline {2.2.2}Dbdiagramm}{7}{subsection.2.2.2}%
+\select@language {magyar} \contentsline {subsection}{\numberline {2.2.2}Dbdiagram}{7}{subsection.2.2.2}%
 \select@language {magyar} \contentsline {chapter}{\numberline {3}Tesztelés}{8}{chapter.3}%
 \select@language {magyar} \contentsline {section}{\numberline {3.1}Tesztelésről}{8}{section.3.1}%
 \select@language {magyar} \contentsline {section}{\numberline {3.2}A teszteléshez alkalmazott eszközök és technológiák}{8}{section.3.2}%

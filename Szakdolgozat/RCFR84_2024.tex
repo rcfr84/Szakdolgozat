@@ -49,7 +49,7 @@
 	\subsection{XAMMP}
 		Az XAMMP nem más, mint egy PHP fejlesztői környezet. Erről még azt érdemes tudni, hogy ingyenesen használható és rendkívül egyszerű telepítése, illetve a használata.
 	\subsection{Visual Studio Code}
-		Ez egy IDE (integrált fejlesztői környezet), ami ingyenes használható és az egyik legelterjedtebb és legnépszerűbb a fejlesztők körében. Fontosnak tartom még megemlíteni, hogy a Visual Studio Code-ban van lehetőség különféle kiegészítők (extension) letöltésére is, például van lehetőség a python programozási nyelv vagy egy programozási nyelvhez tartozó szintaxis kiemelő letöltésére, illetve ezek használatára.
+		Ez egy IDE (integrált fejlesztői környezet), ami ingyenes használható és az egyik legelterjedtebb és legnépszerűbb a fejlesztők körében. Fontosnak tartom megemlíteni, hogy a Visual Studio Code-ban van lehetőség különféle kiegészítők (extension) letöltésére is, például van lehetőség a python programozási nyelv vagy egy programozási nyelvhez tartozó szintaxis kiemelő letöltésére, illetve ezek használatára.
 	\subsection{GitHub}
 		A GitHub-ról azt érdemes tudni, hogy ez egy verziókövető rendszer. Ezek a rendszerek képesek állományok tartalmi változásait követni,azt is képesek megmondani, hogy ki és mikor módosította azokat, valamint van lehetőség arra is, hogy korábbi állapotokat is képes előállítani. A main branch-be feleltethető meg a fő ágnak, amiből van lehetőség elágazások (branch) is létrehozni. Az elágazásokat arra valóak, hogy a fejlesztési funkciókat elkülönítsük. Még arra is használhatjuk, hogy kísérletezzünk vagy akár hibajavítások elvégzésére is lehet használni.
 	\subsection{GitHub Desktop}
@@ -60,14 +60,21 @@
 	\section{Tervezésről}
 	\section{A tervezéshez alkalmazott eszközök és technológiák}
 	\subsection{PlantUML}
+		Az UML a Unified Modeling Language rövidítése, azaz Egységes Modellezési Nyelv. Az UML arra jó, hogy szoftvert tervezzünk vele, a gondolataimat letudom vele rajzolni, skiccelni. Ezenkívül a kiforrott megoldások dokumentálására is használható. A PlantUML egy komponens, aminek a segítségével gyorsan tudunk létrehozni szekvencia-, használati eset- és osztálydiagramokat. Ezenkívül még rengeteg féle diagramot tudunk készíteni. \cite{PlantUML}
 		
-	\subsection{Dbdiagramm}
+		A következő képen látható a plantUML-ben készített ábra az alkalmazásomhoz:
+		
+	\subsection{Dbdiagram}
+		A dbdiagram segítségével van lehetőség arra, hogy egy alkalmazás adatbázisának a sémáját és struktúráját megtervezzük. A dbdiagram alap változata ingyenesen használható mindenki számára.
+		
+		A következő képen látható a dbdiagram-ban készített ábra az alkalmazásomhoz:
 	
 	\chapter{Tesztelés}
 	\section{Tesztelésről}
 	\section{A teszteléshez alkalmazott eszközök és technológiák}
 	\subsection{Cypress}
-	
+		A Cypress egy NodeJS-ben írt front end tesztelési keretrendszer. Ahhoz, hogy tudjuk futtatni a Cypress-t, ahhoz előtte telepíteni kell a NodeJS-t. A Cypress segítségével tudunk készíteni end-to-end-, komponens-, integrációs- valamint unitteszteket is. Ennek a tesztelési keretrendszer segítségével bármit lehet tesztelni ami a böngészőben fut.
+		\cite{Cypress}
 	\chapter{Felhasználói dokumentáció}
 
 	
@@ -84,7 +91,11 @@
 		\bibitem{PhpMyAdmin}
 		\textsc{PhpMyAdmin}: \url{https://www.phpmyadmin.net/}, 2024-es verzió.
 		\bibitem{GitHubDesktop}
-		\textsc{GitHub Desktop} : \url{https://docs.github.com/en/desktop/overview/about-github-desktop}. 2024-es verzió.
+		\textsc{GitHub Desktop}: \url{https://docs.github.com/en/desktop/overview/about-github-desktop}. 2024-es verzió.
+		\bibitem{PlantUML}
+		\textsc{PlantUML}: \emph{PlantUML Language Reference Guide}, \url{https://plantuml.com/guide}, 2023. novemberi verzió.
+		\bibitem{Cypress}
+		\textsc{Cypress}: \url{https://docs.cypress.io/guides/overview/why-cypress}, 2024-es verzió.
 	\end{thebibliography}
 	
 	% Aláírt, szkennelt nyilatkozat beillesztése a szakdolgozat végére
