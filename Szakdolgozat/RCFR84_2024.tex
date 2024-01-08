@@ -1,0 +1,69 @@
+\documentclass[]{thesis-ekf}
+\usepackage[T1]{fontenc}
+\PassOptionsToPackage{defaults=hu-min}{magyar.ldf}
+\usepackage[magyar]{babel}
+\usepackage{mathtools,amssymb,amsthm,pdfpages,listingsutf8,hyperref}
+\footnotestyle{rule=fourth}
+
+\newtheorem{tetel}{Tétel}[chapter]
+\theoremstyle{definition}
+\newtheorem{definicio}[tetel]{Definíció}
+\theoremstyle{remark}
+\newtheorem{megjegyzes}[tetel]{Megjegyzés}
+
+\begin{document}
+	\institute{Matematikai és Informatikai Intézet}
+	\title{Adatbázis alapú web alkalmazás fejlesztése}
+	\author{Verebélyi Valentin\\Programtervező Informatikus BSc}
+	\supervisor{Dr.~Tajti Tibor Gábor\\Egyetemi Docens}
+	\city{Eger}
+	\date{2024}
+	\maketitle
+	\tableofcontents
+	
+	\chapter*{Bevezetés}
+	\addcontentsline{toc}{chapter}{Bevezetés}
+
+	
+	\chapter{Fejlesztés}
+	\section{Fejlesztésről röviden}
+	\section{A fejlesztéshez alkalmazott eszközök és technológiák}
+	\subsection{Laravel}
+		
+		
+	\subsection{PHP}
+	\subsection{MySQL}
+	\subsection{PhpMyAdmin}
+	\subsection{XAMMP}
+	\subsection{Visual Studio Code}
+	\subsection{GitHub}
+	\subsection{GitHub Desktop}
+	
+	
+	\chapter{Tervezés}
+	\section{Tervezésről röviden}
+	\section{A tervezéshez alkalmazott eszközök és technológiák}
+	\subsection{PlantUML}
+	\subsection{Dbdiagramm}
+	
+	\chapter{Tesztelés}
+	\section{Tesztelésről röviden}
+	\section{A teszteléshez alkalmazott eszközök és technológiák}
+	\subsection{Cypress}
+	
+	\chapter{Felhasználói dokumentáció}
+
+	
+	
+	\chapter*{Összegzés}
+	\addcontentsline{toc}{chapter}{Összegzés}
+	
+	\begin{thebibliography}{2}
+		\addcontentsline{toc}{chapter}{\bibname}
+		\bibitem{Fazekas}
+		\textsc{Fazekas István}: \emph{Valószínűségszámítás}, Debreceni Egyetem, Debrecen, 2004.
+	\end{thebibliography}
+	
+	% Aláírt, szkennelt nyilatkozat beillesztése a szakdolgozat végére
+	%\includepdf{nyilatkozat.pdf}
+\end{document}
