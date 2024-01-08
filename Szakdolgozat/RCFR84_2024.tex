@@ -2,7 +2,7 @@
 \usepackage[T1]{fontenc}
 \PassOptionsToPackage{defaults=hu-min}{magyar.ldf}
 \usepackage[magyar]{babel}
-\usepackage{mathtools,amssymb,amsthm,pdfpages,listingsutf8,hyperref}
+\usepackage{mathtools,amssymb,amsthm,pdfpages,listingsutf8,hyperref,url}
 \footnotestyle{rule=fourth}
 
 \newtheorem{tetel}{Tétel}[chapter]
@@ -24,10 +24,11 @@
 	\chapter*{Bevezetés}
 	\addcontentsline{toc}{chapter}{Bevezetés}
 
-	
 	\chapter{Fejlesztés}
 	\section{Fejlesztésről}
+		
 	\section{A fejlesztéshez alkalmazott eszközök és technológiák}
+		A következő alszakaszokban a fejlesztéshez használt eszközökről és technológiákról lesz majd szó.
 	\subsection{Laravel}
 		A Laravel egy nyílt forráskódú, PHP webkeretrendszer, ami MVC tervezési mintán alapszik. Az MVC a Model-View-Controller rövidítése.
 		\begin{enumerate}
@@ -37,20 +38,29 @@
 		\end{enumerate}
 		Mivel három részre van bontva, ezért van ennek a tervezési mintának néhány előnye is. Ilyen például ha lecseréljük az egyik réteget, akkor a többihez nem kell már hozzányúlni, amivel pénzt és időt is lehet spórolni. Előnye még az is, hogy egy modellnek lehet több nézetes is.
 		\cite[102-103.~oldal]{Kusper}
-		
 	\subsection{PHP}
+		A PHP egy szerveroldali szkriptnyelv, amelynek a segítségével dinamikus weboldalakat lehet vele létrehozni.
 	\subsection{MySQL}
+		A MySQL nem más, mint egy nyílt forráskódú adatbázis kezelő rendszer. A MySQL egy relációs adatbázis, ahol az adatokat különböző táblákban vannak eltárolva. A különböző táblákban szereplő mezők között lehetnek különféle kapcsolatok is. Ilyen lehet például az egy-az-egyhez kapcsolat vagy egy-a-többhöz kapcsolat. A MySQL adatbázisok szerverére jellemző, hogy gyorsak, megbízhatóak és skálázhatóak.
+		\cite{MySQL}
 	\subsection{PhpMyAdmin}
+		A phpMyAdmin egy ingyenes szoftver, ami arra szolgál, hogy kezelje a MySQL-nek az adminisztrációját weben keresztül. A phpMyAdmin segítségével elvégezhetők a legtöbb adminisztratív feladatok, ideértve az adatbázis létrehozását, lekérdezések futtatását és felhasználói fiókok hozzáadását.
+		\cite{PhpMyAdmin}
 	\subsection{XAMMP}
+		Az XAMMP nem más, mint egy PHP fejlesztői környezet. Erről még azt érdemes tudni, hogy ingyenesen használható és rendkívül egyszerű telepítése, illetve a használata.
 	\subsection{Visual Studio Code}
+		Ez egy IDE (integrált fejlesztői környezet), ami ingyenes használható és az egyik legelterjedtebb és legnépszerűbb a fejlesztők körében. Fontosnak tartom még megemlíteni, hogy a Visual Studio Code-ban van lehetőség különféle kiegészítők (extension) letöltésére is, például van lehetőség a python programozási nyelv vagy egy programozási nyelvhez tartozó szintaxis kiemelő letöltésére, illetve ezek használatára.
 	\subsection{GitHub}
+		A GitHub-ról azt érdemes tudni, hogy ez egy verziókövető rendszer. Ezek a rendszerek képesek állományok tartalmi változásait követni,azt is képesek megmondani, hogy ki és mikor módosította azokat, valamint van lehetőség arra is, hogy korábbi állapotokat is képes előállítani. A main branch-be feleltethető meg a fő ágnak, amiből van lehetőség elágazások (branch) is létrehozni. Az elágazásokat arra valóak, hogy a fejlesztési funkciókat elkülönítsük. Még arra is használhatjuk, hogy kísérletezzünk vagy akár hibajavítások elvégzésére is lehet használni.
 	\subsection{GitHub Desktop}
-	
+		A GitHub Desktop egy ingyenesen használható alkalmazás, aminek a segítségével tudunk dolgozni a GitHub-on vagy Git-tárhely-szolgáltatásokon tárolt fájlokkal. Én ezt az eszközt azért szeretem használni, mivel megkönnyíti és felgyorsítja számomra a munkavégzés, illetve azért is, mert ennek a használatához nem kell a terminálban beírni a Git-hez tartozó parancsokat, hanem egy-két kattintás segítségével elvégezhetek egy konkrét parancsot.
+		\cite{GitHubDesktop}
 	
 	\chapter{Tervezés}
 	\section{Tervezésről}
 	\section{A tervezéshez alkalmazott eszközök és technológiák}
 	\subsection{PlantUML}
+		
 	\subsection{Dbdiagramm}
 	
 	\chapter{Tesztelés}
@@ -69,6 +79,12 @@
 		\addcontentsline{toc}{chapter}{\bibname}
 		\bibitem{Kusper}
 		\textsc{Kusper Gábor}: \emph{Programozási technológiák}, Eger, 2015.
+		\bibitem{MySQL}
+		\textsc{Oracle}: \url{https://dev.mysql.com/doc/refman/8.0/en/what-is-mysql.html}, 2024-es verzió.
+		\bibitem{PhpMyAdmin}
+		\textsc{PhpMyAdmin}: \url{https://www.phpmyadmin.net/}, 2024-es verzió.
+		\bibitem{GitHubDesktop}
+		\textsc{GitHub Desktop} : \url{https://docs.github.com/en/desktop/overview/about-github-desktop}. 2024-es verzió.
 	\end{thebibliography}
 	
 	% Aláírt, szkennelt nyilatkozat beillesztése a szakdolgozat végére

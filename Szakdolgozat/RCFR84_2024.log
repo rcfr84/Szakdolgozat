@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.12)  8 JAN 2024 11:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.12)  8 JAN 2024 13:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -682,21 +682,39 @@ thesis-ekf/eszterhazy-logo-hu.pdf>] (./RCFR84_2024.toc)
 1. fejezet.
 [4
 
-] [5]
+] [5] [6]
 2. fejezet.
-[6
-
-]
-3. fejezet.
 [7
 
 ]
-4. fejezet.
+3. fejezet.
 [8
 
-] [9
+]
+4. fejezet.
+[9
 
 ] [10
+
+]
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 8
+3.
+ (c:/texlive/2023/texmf-dist/tex/latex/lm/t1lmtt.fd
+File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+Underfull \hbox (badness 5711) in paragraph at lines 83--84
+[]\T1/lmr/m/sc/12 Oracle\T1/lmr/m/n/12 : []$\T1/lmtt/m/n/12 https : / / dev . m
+ysql . com / doc / refman / 8 . 0 / en / what-[]is-[]mysql . html$[]\T1/lmr/m/n
+/12 ,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 87--88
+[]\T1/lmr/m/sc/12 GitHub Desk-top\T1/lmr/m/n/12 : []$\T1/lmtt/m/n/12 https : / 
+/ docs . github . com / en / desktop / overview /
+ []
+
+[11
 
 ] (./RCFR84_2024.aux)
  ***********
@@ -707,21 +725,21 @@ Package rerunfilecheck Info: File `RCFR84_2024.out' has not changed.
 (rerunfilecheck)             Checksum: 2B5E1C460BABD94DA414D3C9EFBF8D94;3969.
  ) 
 Here is how much of TeX's memory you used:
- 16466 strings out of 474933
- 261022 string characters out of 5763793
+ 16520 strings out of 474933
+ 261842 string characters out of 5763793
  1926801 words of memory out of 5000000
- 37679 multiletter control sequences out of 15000+600000
- 617673 words of font info for 84 fonts, out of 8000000 for 9000
+ 37724 multiletter control sequences out of 15000+600000
+ 617991 words of font info for 85 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 78i,7n,81p,548b,513s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 78i,7n,81p,645b,513s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/texlive/2023
 /texmf-dist/fonts/type1/public/lm/lmcsc10.pfb><c:/texlive/2023/texmf-dist/fonts
 /type1/public/lm/lmr12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lm
-ri12.pfb>
-Output written on RCFR84_2024.pdf (10 pages, 136621 bytes).
+ri12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmtt12.pfb>
+Output written on RCFR84_2024.pdf (11 pages, 164512 bytes).
 PDF statistics:
- 216 PDF objects out of 1000 (max. 8388607)
- 191 compressed objects within 2 object streams
- 40 named destinations out of 1000 (max. 500000)
+ 236 PDF objects out of 1000 (max. 8388607)
+ 208 compressed objects within 3 object streams
+ 44 named destinations out of 1000 (max. 500000)
  218 words of extra memory for PDF output out of 10000 (max. 10000000)
 
