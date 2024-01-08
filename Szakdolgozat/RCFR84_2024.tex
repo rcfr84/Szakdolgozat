@@ -23,10 +23,33 @@
 	
 	\chapter*{Bevezetés}
 	\addcontentsline{toc}{chapter}{Bevezetés}
+	
+	\chapter{Tervezés}
+	\section{A tervezéshez alkalmazott eszközök és technológiák}
+	\subsection{PlantUML}
+	Az UML a Unified Modeling Language rövidítése, azaz Egységes Modellezési Nyelv. Az UML arra jó, hogy szoftvert tervezzünk vele, a gondolataimat letudom vele rajzolni, skiccelni. Ezenkívül a kiforrott megoldások dokumentálására is használható. A PlantUML egy komponens, aminek a segítségével gyorsan tudunk létrehozni szekvencia-, használati eset- és osztálydiagramokat. Ezenkívül még rengetegféle diagramot tudunk készíteni. \cite{PlantUML}
+	
+	A következő képen látható a plantUML-ben készített ábra az alkalmazásomhoz:
+	\begin{figure}[ht!]
+		\centering
+		\includegraphics[width=5cm]{./tervezes/useCase}
+		\caption{Használati eset (Saját készítés)} 
+		\label{useCase}
+	\end{figure}
+	
+	\subsection{Dbdiagram}
+	A dbdiagram segítségével van lehetőség arra, hogy egy alkalmazás adatbázisának a sémáját és struktúráját megtervezzük. A dbdiagram alap változata ingyenesen használható mindenki számára.
+	
+	A következő képen látható a dbdiagram-ban készített ábra az alkalmazásomhoz:
+	
+	\begin{figure}[ht!]
+		\centering
+		\includegraphics[width=20cm]{./tervezes/dbdiagram}
+		\caption{Adatbázisterv (Saját készítés)} 
+		\label{dbdiagram}
+	\end{figure}
 
-	\chapter{Fejlesztés}
-	\section{Fejlesztésről}
-		
+	\chapter{Fejlesztés}		
 	\section{A fejlesztéshez alkalmazott eszközök és technológiák}
 		A következő alszakaszokban a fejlesztéshez használt eszközökről és technológiákról lesz majd szó.
 	\subsection{Laravel}
@@ -56,28 +79,21 @@
 		A GitHub Desktop egy ingyenesen használható alkalmazás, aminek a segítségével tudunk dolgozni a GitHub-on vagy Git-tárhely-szolgáltatásokon tárolt fájlokkal. Én ezt az eszközt azért szeretem használni, mivel megkönnyíti és felgyorsítja számomra a munkavégzés, illetve azért is, mert ennek a használatához nem kell a terminálban beírni a Git-hez tartozó parancsokat, hanem egy-két kattintás segítségével elvégezhetek egy konkrét parancsot.
 		\cite{GitHubDesktop}
 	
-	\chapter{Tervezés}
-	\section{Tervezésről}
-	\section{A tervezéshez alkalmazott eszközök és technológiák}
-	\subsection{PlantUML}
-		Az UML a Unified Modeling Language rövidítése, azaz Egységes Modellezési Nyelv. Az UML arra jó, hogy szoftvert tervezzünk vele, a gondolataimat letudom vele rajzolni, skiccelni. Ezenkívül a kiforrott megoldások dokumentálására is használható. A PlantUML egy komponens, aminek a segítségével gyorsan tudunk létrehozni szekvencia-, használati eset- és osztálydiagramokat. Ezenkívül még rengeteg féle diagramot tudunk készíteni. \cite{PlantUML}
-		
-		A következő képen látható a plantUML-ben készített ábra az alkalmazásomhoz:
-		
-	\subsection{Dbdiagram}
-		A dbdiagram segítségével van lehetőség arra, hogy egy alkalmazás adatbázisának a sémáját és struktúráját megtervezzük. A dbdiagram alap változata ingyenesen használható mindenki számára.
-		
-		A következő képen látható a dbdiagram-ban készített ábra az alkalmazásomhoz:
-	
 	\chapter{Tesztelés}
-	\section{Tesztelésről}
+		A tesztelésre azért van szükség, hogy az alkalmazásomban megtaláljam az esetleges hibákat, amiket kijavítva növelhetem a szoftverem minőségét és megbízhatóságát. Abban sajnos nem lehetek biztos, hogy a tesztelés elvégzése után nem lesznek már hibák. A tesztelés során kettőféle tesztelési technikát alkalmaztam. Ezek pedig a következők:
+		\begin{enumerate}
+			\item Fehérdobozos (white-box): a forráskód alapján íródnak a tesztesetek.
+			\item Szürkedobozos (grey-box): amikor a forráskódnak csak egy rész ismert és csak ez alapján íródnak a tesztesetek.
+		\end{enumerate}
+		Azonban van egy harmadik féle is, amit nem alkalmaztam. Az nem más, mint a feketedobozos (black-box), amikor a tesztesetek a specifikáció alapján íródnak.
+		\cite[26-29.~oldal]{Kusper}
 	\section{A teszteléshez alkalmazott eszközök és technológiák}
 	\subsection{Cypress}
-		A Cypress egy NodeJS-ben írt front end tesztelési keretrendszer. Ahhoz, hogy tudjuk futtatni a Cypress-t, ahhoz előtte telepíteni kell a NodeJS-t. A Cypress segítségével tudunk készíteni end-to-end-, komponens-, integrációs- valamint unitteszteket is. Ennek a tesztelési keretrendszer segítségével bármit lehet tesztelni ami a böngészőben fut.
+		A Cypress egy NodeJS-ben írt front end tesztelési keretrendszer. Ahhoz, hogy tudjuk futtatni a Cypress-t, ahhoz előtte telepíteni kell a NodeJS-t. A Cypress segítségével tudunk készíteni végponttól végpontig tartó-, komponens-, integrációs- valamint a unitteszteket is. Ennek a tesztelési keretrendszer segítségével bármit lehet tesztelni ami a böngészőben fut.
 		\cite{Cypress}
+		
 	\chapter{Felhasználói dokumentáció}
 
-	
 	
 	\chapter*{Összegzés}
 	\addcontentsline{toc}{chapter}{Összegzés}

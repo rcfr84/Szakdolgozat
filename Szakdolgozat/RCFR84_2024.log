@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.12)  8 JAN 2024 13:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.12)  8 JAN 2024 17:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -660,7 +660,7 @@ Package: inputenc 2021/02/14 v1.3d Input encoding file
 LaTeX Info: Redefining \cal on input line 577.
 LaTeX Info: Redefining \mit on input line 578.
 )
-<eszterhazy-logo-hu.pdf, id=105, 256.07971pt x 88.04292pt>
+<eszterhazy-logo-hu.pdf, id=93, 256.07971pt x 88.04292pt>
 File: eszterhazy-logo-hu.pdf Graphic file (type pdf)
 <use eszterhazy-logo-hu.pdf>
 Package pdftex.def Info: eszterhazy-logo-hu.pdf  used on input line 21.
@@ -680,41 +680,56 @@ thesis-ekf/eszterhazy-logo-hu.pdf>] (./RCFR84_2024.toc)
 
 ]
 1. fejezet.
+<./tervezes/useCase.png, id=138, 608.2725pt x 2118.91624pt>
+File: ./tervezes/useCase.png Graphic file (type png)
+<use ./tervezes/useCase.png>
+Package pdftex.def Info: ./tervezes/useCase.png  used on input line 35.
+(pdftex.def)             Requested size: 142.26378pt x 495.55283pt.
+<./tervezes/dbdiagram.png, id=140, 1504.62125pt x 588.1975pt>
+File: ./tervezes/dbdiagram.png Graphic file (type png)
+<use ./tervezes/dbdiagram.png>
+Package pdftex.def Info: ./tervezes/dbdiagram.png  used on input line 47.
+(pdftex.def)             Requested size: 569.05511pt x 222.46727pt.
+
+Overfull \hbox (128.03738pt too wide) in paragraph at lines 47--48
+ [][] 
+ []
+
 [4
 
-] [5] [6]
+] [5 <./tervezes/useCase.png>] [6 <./tervezes/dbdiagram.png>]
 2. fejezet.
 [7
 
-]
+] [8] [9]
 3. fejezet.
-[8
+[10
 
 ]
 4. fejezet.
-[9
+[11
 
-] [10
+] [12
 
 ]
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 9
-0.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
+06.
  (c:/texlive/2023/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-Underfull \hbox (badness 5711) in paragraph at lines 90--91
+Underfull \hbox (badness 5711) in paragraph at lines 106--107
 []\T1/lmr/m/sc/12 Oracle\T1/lmr/m/n/12 : []$\T1/lmtt/m/n/12 https : / / dev . m
 ysql . com / doc / refman / 8 . 0 / en / what-[]is-[]mysql . html$[]\T1/lmr/m/n
 /12 ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 94--95
+Underfull \hbox (badness 10000) in paragraph at lines 110--111
 []\T1/lmr/m/sc/12 GitHub Desk-top\T1/lmr/m/n/12 : []$\T1/lmtt/m/n/12 https : / 
 / docs . github . com / en / desktop / overview /
  []
 
-[11
+[13
 
 ] (./RCFR84_2024.aux)
  ***********
@@ -722,13 +737,13 @@ LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-29>
  ***********
 Package rerunfilecheck Info: File `RCFR84_2024.out' has not changed.
-(rerunfilecheck)             Checksum: 47550140D167E567801E80E9FFADF25D;3964.
+(rerunfilecheck)             Checksum: C52597B990F61606E0B08F0EC7775E1B;3517.
  ) 
 Here is how much of TeX's memory you used:
- 16524 strings out of 474933
- 261886 string characters out of 5763793
- 1926801 words of memory out of 5000000
- 37726 multiletter control sequences out of 15000+600000
+ 16551 strings out of 474933
+ 262554 string characters out of 5763793
+ 1925801 words of memory out of 5000000
+ 37750 multiletter control sequences out of 15000+600000
  617991 words of font info for 85 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  78i,7n,81p,645b,513s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -736,10 +751,10 @@ Here is how much of TeX's memory you used:
 /texmf-dist/fonts/type1/public/lm/lmcsc10.pfb><c:/texlive/2023/texmf-dist/fonts
 /type1/public/lm/lmr12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lm
 ri12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmtt12.pfb>
-Output written on RCFR84_2024.pdf (11 pages, 168545 bytes).
+Output written on RCFR84_2024.pdf (13 pages, 408656 bytes).
 PDF statistics:
- 243 PDF objects out of 1000 (max. 8388607)
- 215 compressed objects within 3 object streams
- 46 named destinations out of 1000 (max. 500000)
- 218 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 248 PDF objects out of 1000 (max. 8388607)
+ 214 compressed objects within 3 object streams
+ 49 named destinations out of 1000 (max. 500000)
+ 204 words of extra memory for PDF output out of 10000 (max. 10000000)
 
