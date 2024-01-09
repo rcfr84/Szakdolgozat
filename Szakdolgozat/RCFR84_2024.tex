@@ -25,11 +25,20 @@
 	\addcontentsline{toc}{chapter}{Bevezetés}
 	
 	\chapter{Tervezés}
+		A tervezés egy nagyon fontos szerepet tölt be egy szoftvereknél. Mások és az én meglátásom szerint is a következő okok miatt szükséges tervezni:
+		\begin{enumerate}
+			\item Tervezési célok meghatározása: fontos az, hogy mind a fejlesztő, mind a megrendelő egyértelműen megértse, hogy pontosan mit kell elérni a szoftverrel.
+			\item Költség- és időmegtakarítás: implementálás előtt, ha kellő alapossággal tervezzük meg a szoftvert, akkor segíthet kiszűrni a későbbi fázisokban esetleges előforduló hibákat. 
+			\item Bővíthetőség: ez alatt azt értem, hogy a szoftver úgy kell megtervezni, hogy fel legyen készítve arra, hogy lehessen hozzáadni könnyedén új funkciókat.
+			\item Funkciók és feladatok felosztása: ez azért lehet hasznos, mivel a fejlesztés során a fejlesztők pontosan csak az ő általuk elvállalt feladatokat valósítják meg.
+			\item Kommunikáció segítése: ha van egy jól kidolgozott terv, akkor ha a fejlesztők elakadnak valamiben vagy nem értik meg pontosan, hogy mit és hogyan kell implementálni, akkor elég, ha megnézik a tervben az adott dologhoz kapcsolódó részeket és ezáltal megtudják oldani a rájuk bízott feladatot.
+		\end{enumerate}
 	\section{A tervezéshez alkalmazott eszközök és technológiák}
+		A következő alszakaszokban a tervezéshez használt eszközökről és technológiákról lesz majd szó.
 	\subsection{PlantUML}
 	Az UML a Unified Modeling Language rövidítése, azaz Egységes Modellezési Nyelv. Az UML arra jó, hogy szoftvert tervezzünk vele, a gondolataimat letudom vele rajzolni, skiccelni. Ezenkívül a kiforrott megoldások dokumentálására is használható. A PlantUML egy komponens, aminek a segítségével gyorsan tudunk létrehozni szekvencia-, használati eset- és osztálydiagramokat. Ezenkívül még rengetegféle diagramot tudunk készíteni. \cite{PlantUML}
 	
-	A következő képen látható a plantUML-ben készített ábra az alkalmazásomhoz:
+	A következő pár mondatban a használati eset alapú tervezésről lesz szó. Az ilyenféle alapú tervezés előnye az, hogy egyszerűen, érthetően írja le a rendszer funkcióit. Ebből kifolyólag, mind a megrendelő, mind a tervező számára könnyen érthető az ábra. Tulajdonképpen a használati eset alapú tervezés nem más, mint egy közös nyelv a megrendelő és a tervező között, amit mind a két fél ért.\cite{Kusper Informatikai} \Aref{useCase} képen látható a plantUML-ben készített használati eset ábra az alkalmazásomhoz.
 	\begin{figure}[ht!]
 		\centering
 		\includegraphics[width=5cm]{./tervezes/useCase}
@@ -40,7 +49,7 @@
 	\subsection{Dbdiagram}
 	A dbdiagram segítségével van lehetőség arra, hogy egy alkalmazás adatbázisának a sémáját és struktúráját megtervezzük. A dbdiagram alap változata ingyenesen használható mindenki számára.
 	
-	A következő képen látható a dbdiagram-ban készített ábra az alkalmazásomhoz:
+	\Aref{dbdiagram} képen látható a dbdiagram-ban készített ábra az alkalmazásomhoz.
 	
 	\begin{figure}[ht!]
 		\centering
@@ -102,6 +111,8 @@
 		\addcontentsline{toc}{chapter}{\bibname}
 		\bibitem{Kusper}
 		\textsc{Kusper Gábor}: \emph{Programozási technológiák}, Eger, 2015.
+		\bibitem{Kusper Informatikai}
+		\textsc{Kusper Gábor}: \emph{Informatikai rendszerek tervezése}, Eger, 2023, 0.8.7.2-es verzió
 		\bibitem{MySQL}
 		\textsc{Oracle}: \url{https://dev.mysql.com/doc/refman/8.0/en/what-is-mysql.html}, 2024-es verzió.
 		\bibitem{PhpMyAdmin}
