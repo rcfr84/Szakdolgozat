@@ -18,14 +18,15 @@ class AdvertisementController extends Controller
      */
     public function index()
     {
-        $advertisements = Advertisement::all()->sortByDesc('created_at');
+        $advertisements = Advertisement::with('pictures')->orderByDesc('created_at')->get();
         return view('advertisements.list', compact('advertisements'));
     }
 
     public function ownAdvertisements()
     {
         
-        $advertisements = Advertisement::where('user_id', Auth::user()->user_id)->get()->sortByDesc('created_at');
+        $advertisements = Advertisement::where('user_id', Auth::user()->user_id)->with('pictures')
+        ->orderByDesc('created_at')->get();
         return view('advertisements.ownList', compact('advertisements'));
     }
 
@@ -58,9 +59,9 @@ class AdvertisementController extends Controller
             'title' => 'required',
             'price' => 'required',
             'description' => 'required',
-            'picture' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
+            'pictures.*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
-
+    
         $newAdvertisement = new Advertisement();
         $newAdvertisement->user_id = Auth::user()->user_id;
         $newAdvertisement->city_id = $request->city_id;
@@ -68,26 +69,20 @@ class AdvertisementController extends Controller
         $newAdvertisement->title = $request->title;
         $newAdvertisement->price = $request->price;
         $newAdvertisement->description = $request->description;
-
-        if ($request->hasFile('picture')) {
-            $picturePath = $request->file('picture')->store('public/images');
     
-            $picture = new Picture();
-            $picture->src = $picturePath;
-            $picture->save();
-    
-            $newAdvertisement->picture_id = $picture->picture_id;
-        }
-    
-        
-
-        if ($request->has('mobile_number')) 
-        {
+        if ($request->has('mobile_number')) {
             $newAdvertisement->mobile_number = $request->mobile_number;
         }
-
+    
         $newAdvertisement->save();
-
+    
+        if ($request->hasFile('pictures')) {
+            foreach ($request->file('pictures') as $picture) {
+                $path = $picture->store('advertisement_images', 'public');
+                $newAdvertisement->pictures()->create(['src' => $path]);
+            }
+        }
+    
         return redirect()->route('advertisements.index')->with('status', 'Advertisement created successfully!');
     }
 
@@ -96,7 +91,7 @@ class AdvertisementController extends Controller
      */
     public function show($id)
     {
-        $advertisement = Advertisement::find($id);
+        $advertisement = Advertisement::find($id)->with('pictures');
 
         if (!$advertisement) 
         {
@@ -111,20 +106,23 @@ class AdvertisementController extends Controller
      */
     public function edit($id)
     {
-        if (auth()->user()->user_id != Advertisement::find($id)->user_id) 
-        {
+        $advertisement = Advertisement::find($id);
+
+        if (!$advertisement) {
+            return redirect()->route('advertisements.own')->with('error', 'Advertisement not found!');
+        }
+
+        // Ellenőrzés, hogy a bejelentkezett felhasználó a hirdetés tulajdonosa
+        if (auth()->user()->user_id != $advertisement->user_id) {
             return redirect()->route('advertisements.own')->with('error', 'You can only edit your own advertisements!');
         }
 
-        $advertisement = Advertisement::find($id);
+        // Most már rendelkezésre áll a hirdetés, így további adatokat lehet lekérni
+        $advertisement->load('pictures'); // Eager loading a képekhez
+
         $categories = Category::all();
         $counties = County::all();
         $cities = City::where('county_id', $advertisement->county_id)->get();
-
-        if (!$advertisement) 
-        {
-            return redirect()->route('advertisements.own')->with('error', 'Advertisement not found!');
-        }
 
         return view('advertisements.edit', compact('advertisement', 'counties', 'cities', 'categories'));
     }
@@ -153,6 +151,7 @@ class AdvertisementController extends Controller
             'title' => 'required',
             'price' => 'required',
             'description' => 'required',
+            'pictures.*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
 
         $advertisement->user_id = Auth::user()->user_id;
@@ -162,9 +161,13 @@ class AdvertisementController extends Controller
         $advertisement->price = $request->price;
         $advertisement->description = $request->description;
 
-        if($request->has('picture_id'))
+        if ($request->hasFile('pictures')) 
         {
-            $advertisement->picture_id = $request->picture_id;
+            foreach ($request->file('pictures') as $picture) 
+            {
+                $path = $picture->store('advertisement_images', 'public');
+                $advertisement->pictures()->create(['src' => $path]);
+            }
         }
 
         if ($request->has('mobile_number')) 

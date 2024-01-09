@@ -25,11 +25,9 @@
                             @foreach ($advertisements as $advertisement)
                                 <tr>
                                     <td class="px-4 py-2">
-                                        @if ($advertisement->picture_id != null)
-                                            <img src="{{ asset('storage/images/' . $advertisement->pictures->first()->src) }}" alt="Kép">
-                                        @else
-                                            Nincs kép
-                                        @endif
+                                        @foreach ($advertisement->pictures as $picture)
+                                            <img src="{{ asset('storage/' . $picture->src) }}" alt="Kép">
+                                        @endforeach
                                     </td>
                                     <td class="px-4 py-2">{{ $advertisement->title }}</td>
                                     <td class="px-4 py-2">{{ $advertisement->city->name }}</td>

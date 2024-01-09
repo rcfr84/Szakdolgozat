@@ -37,8 +37,9 @@ class Advertisement extends Model
 
     public function pictures()
     {
-        return $this->hasMany(Picture::class, 'picture_id', 'advertisement_id');
+        return $this->hasMany(Picture::class, 'advertisement_id', 'advertisement_id');
     }
+    
     
     
 

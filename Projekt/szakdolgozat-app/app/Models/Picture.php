@@ -13,6 +13,7 @@ class Picture extends Model
     protected $primaryKey = 'picture_id';
 
     protected $fillable = [
+        'advertisement_id',
         'src',
     ];
 
@@ -20,9 +21,5 @@ class Picture extends Model
     {
         return $this->belongsTo(Advertisement::class, 'advertisement_id', 'advertisement_id');
     }
-
-   
-
-  
 
 }

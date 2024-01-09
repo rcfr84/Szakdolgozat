@@ -9,11 +9,11 @@ class AdvertisementPolicy
 {
     public function update(User $user, Advertisement $advertisement)
     {
-        return $user->role === 'admin' || $user->user_id === $advertisement->user_id;
+        return $user->user_id === $advertisement->user_id;
     }
 
     public function delete(User $user, Advertisement $advertisement)
     {
-        return $user->role === 'admin' || $user->user_id === $advertisement->user_id;
+        return $user->user_id === $advertisement->user_id;
     }
 }

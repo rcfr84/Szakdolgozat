@@ -8,10 +8,12 @@ use Illuminate\Http\Request;
 
 class PictureController extends Controller
 {
+    /*
     public function __construct()
     {
         $this->middleware('CheckRole:admin')->only(['destroy']);
     }
+    */
     /**
      * Display a listing of the resource.
      */

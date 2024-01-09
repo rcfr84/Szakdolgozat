@@ -33,8 +33,8 @@
                             </select>
                         </div>
                         <div class="mb-4">
-                            <label for="picture" class="form-label">Kép</label>
-                            <input type="file" class="form-input" name="picture" id="picture">
+                            <label for="pictures" class="form-label">Képek</label>
+                            <input type="file" class="form-input" name="pictures[]" id="pictures" multiple>
                         </div>                            
                         <div class="mb-4">
                             <label for="title" class="form-label">Cím</label>

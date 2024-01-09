@@ -68,7 +68,7 @@ Route::middleware('auth')->group(function () {
 });
 
 
-Route::middleware(['CheckRole:admin'])->group(function (){
+/* Route::middleware(['CheckRole:admin'])->group(function (){
 
     //CATEGORY
     Route::get('/categories/create', [CategoryController::class, 'create'])->name('categories.create');
@@ -90,6 +90,6 @@ Route::middleware(['CheckRole:admin'])->group(function (){
     //PICTURE
     Route::delete('/pictures/{pictureId}', [PictureController::class, 'destroy'])->name('pictures.destroy');
 
-});
+}); */
 
 require __DIR__.'/auth.php';

@@ -21,10 +21,10 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
+        'role_id',
         'name',
         'email',
         'password',
-        'role',
     ];
 
     /**
@@ -61,4 +61,10 @@ class User extends Authenticatable
     {
         return $this->hasMany(Message::class, 'receiver_id', 'user_id');
     }
+
+    public function role()
+    {
+        return $this->belongsTo(Role::class, 'role_id', 'role_id');
+    }
+    
 }
