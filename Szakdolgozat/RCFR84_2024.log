@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.12)  9 JAN 2024 16:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.12)  10 JAN 2024 10:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -683,22 +683,17 @@ thesis-ekf/eszterhazy-logo-hu.pdf>] (./RCFR84_2024.toc)
 [4
 
 ]
-<./tervezes/useCase.png, id=149, 608.2725pt x 2118.91624pt>
+<./tervezes/useCase.png, id=149, 569.12625pt x 2015.53pt>
 File: ./tervezes/useCase.png Graphic file (type png)
 <use ./tervezes/useCase.png>
 Package pdftex.def Info: ./tervezes/useCase.png  used on input line 44.
-(pdftex.def)             Requested size: 142.26378pt x 495.55283pt.
-<./tervezes/dbdiagram.png, id=152, 1504.62125pt x 588.1975pt>
+(pdftex.def)             Requested size: 170.71652pt x 604.57141pt.
+<./tervezes/dbdiagram.png, id=153, 1504.62125pt x 588.1975pt>
 File: ./tervezes/dbdiagram.png Graphic file (type png)
 <use ./tervezes/dbdiagram.png>
-Package pdftex.def Info: ./tervezes/dbdiagram.png  used on input line 56.
-(pdftex.def)             Requested size: 569.05511pt x 222.46727pt.
-
-Overfull \hbox (128.03738pt too wide) in paragraph at lines 56--57
- [][] 
- []
-
-[5] [6 <./tervezes/useCase.png>] [7 <./tervezes/dbdiagram.png>]
+Package pdftex.def Info: ./tervezes/dbdiagram.png  used on input line 63.
+(pdftex.def)             Requested size: 426.79134pt x 166.83923pt.
+ [5] [6 <./tervezes/useCase.png>] [7 <./tervezes/dbdiagram.png>]
 2. fejezet.
 [8
 
@@ -714,18 +709,18 @@ Overfull \hbox (128.03738pt too wide) in paragraph at lines 56--57
 
 ]
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
-17.
+24.
  (c:/texlive/2023/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-Underfull \hbox (badness 5711) in paragraph at lines 117--118
+Underfull \hbox (badness 5711) in paragraph at lines 124--125
 []\T1/lmr/m/sc/12 Oracle\T1/lmr/m/n/12 : []$\T1/lmtt/m/n/12 https : / / dev . m
 ysql . com / doc / refman / 8 . 0 / en / what-[]is-[]mysql . html$[]\T1/lmr/m/n
 /12 ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 121--122
+Underfull \hbox (badness 10000) in paragraph at lines 128--129
 []\T1/lmr/m/sc/12 GitHub Desk-top\T1/lmr/m/n/12 : []$\T1/lmtt/m/n/12 https : / 
 / docs . github . com / en / desktop / overview /
  []
@@ -741,21 +736,21 @@ Package rerunfilecheck Info: File `RCFR84_2024.out' has not changed.
 (rerunfilecheck)             Checksum: C52597B990F61606E0B08F0EC7775E1B;3517.
  ) 
 Here is how much of TeX's memory you used:
- 16559 strings out of 474933
- 262640 string characters out of 5763793
- 1925801 words of memory out of 5000000
+ 16562 strings out of 474933
+ 262661 string characters out of 5763793
+ 1927801 words of memory out of 5000000
  37751 multiletter control sequences out of 15000+600000
  617991 words of font info for 85 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 78i,7n,81p,645b,513s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 78i,7n,81p,1100b,513s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/texlive/2023
 /texmf-dist/fonts/type1/public/lm/lmcsc10.pfb><c:/texlive/2023/texmf-dist/fonts
 /type1/public/lm/lmr12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lm
 ri12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmtt12.pfb>
-Output written on RCFR84_2024.pdf (14 pages, 411243 bytes).
+Output written on RCFR84_2024.pdf (14 pages, 391692 bytes).
 PDF statistics:
- 262 PDF objects out of 1000 (max. 8388607)
- 227 compressed objects within 3 object streams
- 56 named destinations out of 1000 (max. 500000)
+ 266 PDF objects out of 1000 (max. 8388607)
+ 231 compressed objects within 3 object streams
+ 59 named destinations out of 1000 (max. 500000)
  204 words of extra memory for PDF output out of 10000 (max. 10000000)
 
