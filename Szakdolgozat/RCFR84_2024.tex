@@ -35,6 +35,27 @@
 		\end{enumerate}
 	\section{A tervezéshez alkalmazott eszközök és technológiák}
 		A következő alszakaszokban a tervezéshez használt eszközökről és technológiákról lesz majd szó.
+	\subsection{Dbdiagram}
+	A dbdiagram segítségével van lehetőség arra, hogy egy alkalmazás adatbázisának a sémáját és struktúráját megtervezzük és ehhez ad egy vizuális képet számunkra. A DBML-t, azaz Database Markup Language használja, amit magyarul talán adatbázis jelölőnyelvként tudnék lefordítani. Amiért a véleményem szerint nagyon hasznos még az nem más, mint, hogy rengetegféle olyan opciót ad számunkra, amire szükségünk lehet. Ilyen opciók például azok, hogy van lehetőség importálni be kódot MySQL, PostgreSQL, Rails valamint SQL szerverről. Ugyanezeket a típusú kódokat kilehet exportálni az imént megemlített típusokba, kivéve a Rails, mivel oda nem lehetséges. Ezenkívül van még olyan opció is, hogy ki lehet exportálni PNG, SVG vagy akár PDF formátumba is az elkészült tervet. A dbdiagram alap változata ingyenesen használható mindenki számára.
+	
+	A következőkben \aref{dbdiagram} képen látható adatbázisterv kódjáról szeretnék egy keveset még írni, pontosabban arról, hogy hogyan épül fel az előbb bemutatott terv. Csak a tervről mutatott be pár részletet az érdekesség kedvéért.
+	
+	\begin{figure}[ht!]
+		\centering
+		\includegraphics[width=10cm]{./tervezes/dbKod}
+		\caption{DMBL kód részlet (Saját készítés)} 
+		\label{dbKod}
+	\end{figure}
+	
+	\Aref{dbdiagram} képen látható a dbdiagram-ban készített ábra az alkalmazásomhoz.
+	
+	\begin{figure}[ht!]
+		\centering
+		\includegraphics[width=15cm]{./tervezes/dbdiagram}
+		\caption{Adatbázisterv (Saját készítés)} 
+		\label{dbdiagram}
+	\end{figure}
+	
 	\subsection{PlantUML}
 	Az UML a Unified Modeling Language rövidítése, azaz Egységes Modellezési Nyelv. Az UML arra jó, hogy szoftvert tervezzünk vele, a gondolataimat letudom vele rajzolni, skiccelni. Ezenkívül a kiforrott megoldások dokumentálására is használható. A PlantUML egy komponens, aminek a segítségével gyorsan tudunk létrehozni szekvencia-, használati eset- és osztálydiagramokat. Ezenkívül még rengetegféle diagramot tudunk készíteni. \cite{PlantUML}
 	
@@ -52,18 +73,6 @@
 		\item Felhasználó: ő képes a saját adatainak módosítására, a profil törlése is. Neki van már lehetősége saját hirdetéseket létrehozni és ezeket kezelni, valamint már van lehetősége üzenetet küldeni egy másik felhasználónak.
 		\item Admin: neki már van lehetősége a kategóriákkal kapcsolatos műveletek elvégésére is. Szintén képes üzenetet küldeni bárkinek, ő képes már felhasználókat és hirdetések törölni az adott esetben.
 	\end{enumerate}	
-
-	\subsection{Dbdiagram}
-	A dbdiagram segítségével van lehetőség arra, hogy egy alkalmazás adatbázisának a sémáját és struktúráját megtervezzük. A dbdiagram alap változata ingyenesen használható mindenki számára.
-	
-	\Aref{dbdiagram} képen látható a dbdiagram-ban készített ábra az alkalmazásomhoz.
-	
-	\begin{figure}[ht!]
-		\centering
-		\includegraphics[width=15cm]{./tervezes/dbdiagram}
-		\caption{Adatbázisterv (Saját készítés)} 
-		\label{dbdiagram}
-	\end{figure}
 
 	\chapter{Fejlesztés}		
 	\section{A fejlesztéshez alkalmazott eszközök és technológiák}

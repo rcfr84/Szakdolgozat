@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.12)  10 JAN 2024 10:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.12)  10 JAN 2024 11:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -683,17 +683,23 @@ thesis-ekf/eszterhazy-logo-hu.pdf>] (./RCFR84_2024.toc)
 [4
 
 ]
-<./tervezes/useCase.png, id=149, 569.12625pt x 2015.53pt>
-File: ./tervezes/useCase.png Graphic file (type png)
-<use ./tervezes/useCase.png>
-Package pdftex.def Info: ./tervezes/useCase.png  used on input line 44.
-(pdftex.def)             Requested size: 170.71652pt x 604.57141pt.
-<./tervezes/dbdiagram.png, id=153, 1504.62125pt x 588.1975pt>
+<./tervezes/dbKod.png, id=147, 344.28625pt x 378.41376pt>
+File: ./tervezes/dbKod.png Graphic file (type png)
+<use ./tervezes/dbKod.png>
+Package pdftex.def Info: ./tervezes/dbKod.png  used on input line 45.
+(pdftex.def)             Requested size: 284.52756pt x 312.7322pt.
+<./tervezes/dbdiagram.png, id=150, 1504.62125pt x 588.1975pt>
 File: ./tervezes/dbdiagram.png Graphic file (type png)
 <use ./tervezes/dbdiagram.png>
-Package pdftex.def Info: ./tervezes/dbdiagram.png  used on input line 63.
+Package pdftex.def Info: ./tervezes/dbdiagram.png  used on input line 54.
 (pdftex.def)             Requested size: 426.79134pt x 166.83923pt.
- [5] [6 <./tervezes/useCase.png>] [7 <./tervezes/dbdiagram.png>]
+ [5 <./tervezes/dbKod.PNG>]
+<./tervezes/useCase.png, id=161, 569.12625pt x 2015.53pt>
+File: ./tervezes/useCase.png Graphic file (type png)
+<use ./tervezes/useCase.png>
+Package pdftex.def Info: ./tervezes/useCase.png  used on input line 65.
+(pdftex.def)             Requested size: 170.71652pt x 604.57141pt.
+ [6 <./tervezes/dbdiagram.png>] [7 <./tervezes/useCase.png>]
 2. fejezet.
 [8
 
@@ -709,18 +715,18 @@ Package pdftex.def Info: ./tervezes/dbdiagram.png  used on input line 63.
 
 ]
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
-24.
+33.
  (c:/texlive/2023/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-Underfull \hbox (badness 5711) in paragraph at lines 124--125
+Underfull \hbox (badness 5711) in paragraph at lines 133--134
 []\T1/lmr/m/sc/12 Oracle\T1/lmr/m/n/12 : []$\T1/lmtt/m/n/12 https : / / dev . m
 ysql . com / doc / refman / 8 . 0 / en / what-[]is-[]mysql . html$[]\T1/lmr/m/n
 /12 ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 128--129
+Underfull \hbox (badness 10000) in paragraph at lines 137--138
 []\T1/lmr/m/sc/12 GitHub Desk-top\T1/lmr/m/n/12 : []$\T1/lmtt/m/n/12 https : / 
 / docs . github . com / en / desktop / overview /
  []
@@ -733,24 +739,24 @@ LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-29>
  ***********
 Package rerunfilecheck Info: File `RCFR84_2024.out' has not changed.
-(rerunfilecheck)             Checksum: C52597B990F61606E0B08F0EC7775E1B;3517.
+(rerunfilecheck)             Checksum: DBC24E46A4F6F11CAC220D9ACCE4255A;3517.
  ) 
 Here is how much of TeX's memory you used:
- 16562 strings out of 474933
- 262661 string characters out of 5763793
- 1927801 words of memory out of 5000000
- 37751 multiletter control sequences out of 15000+600000
+ 16575 strings out of 474933
+ 262962 string characters out of 5763793
+ 1926801 words of memory out of 5000000
+ 37763 multiletter control sequences out of 15000+600000
  617991 words of font info for 85 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 78i,7n,81p,1100b,513s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 78i,7n,81p,1100b,551s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/texlive/2023
 /texmf-dist/fonts/type1/public/lm/lmcsc10.pfb><c:/texlive/2023/texmf-dist/fonts
 /type1/public/lm/lmr12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lm
 ri12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmtt12.pfb>
-Output written on RCFR84_2024.pdf (14 pages, 391692 bytes).
+Output written on RCFR84_2024.pdf (14 pages, 436061 bytes).
 PDF statistics:
- 266 PDF objects out of 1000 (max. 8388607)
- 231 compressed objects within 3 object streams
- 59 named destinations out of 1000 (max. 500000)
- 204 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 270 PDF objects out of 1000 (max. 8388607)
+ 233 compressed objects within 3 object streams
+ 60 named destinations out of 1000 (max. 500000)
+ 209 words of extra memory for PDF output out of 10000 (max. 10000000)
 
