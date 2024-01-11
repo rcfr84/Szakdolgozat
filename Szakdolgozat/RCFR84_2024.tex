@@ -59,7 +59,7 @@
 	\subsection{PlantUML}
 	Az UML a Unified Modeling Language rövidítése, azaz Egységes Modellezési Nyelv. Az UML arra jó, hogy szoftvert tervezzünk vele, a gondolataimat letudom vele rajzolni, skiccelni. Ezenkívül a kiforrott megoldások dokumentálására is használható. A PlantUML egy komponens, aminek a segítségével gyorsan tudunk létrehozni szekvencia-, használati eset- és osztálydiagramokat. Ezenkívül még rengetegféle diagramot tudunk készíteni. \cite{PlantUML}
 	
-	Manapság a tervezés az használati eset központú. A következő pár mondatban az ilyenféle alapú tervezésről lesz szó. Tulajdonképpen itt azt a kérdést tehetjük fel, hogy ki (actor) mire (funkció) tudja használni az adott informatika rendszert. Az actor-ról azt érdemes tudni, hogy ő nem része az informatikai rendszernek, hame ő csak használja azt. Az actor gyakran lehet ember, AI vagy akár egy másik informatikai rendszer. Fontos az is, hogy minden ábra, amit készítünk az visszavezethető legyen a már meghatározott követelmények szintjéig. Az használati alapú tervezés előnye az, hogy egyszerűen, érthetően írja le a rendszer funkcióit. Ebből kifolyólag, mind a megrendelő, mind a tervező számára könnyen érthető az ábra. Tulajdonképpen a használati eset alapú tervezés nem más, mint egy közös nyelv a megrendelő és a tervező között, amit mind a két fél ért.\cite{Kusper Informatikai} \Aref{useCase} képen látható a plantUML-ben készített használati eset ábra az alkalmazásomhoz.
+	Manapság a tervezés az használati eset központú. A következő pár mondatban az ilyenféle alapú tervezésről lesz szó. Tulajdonképpen itt azt a kérdést tehetjük fel, hogy ki (angolul: actor) mire (funkció) tudja használni az adott informatika rendszert. Az actor-ról azt érdemes tudni, hogy ő nem része az informatikai rendszernek, hame ő csak használja azt. Az actor gyakran lehet ember, AI vagy akár egy másik informatikai rendszer. Fontos az is, hogy minden ábra, amit készítünk az visszavezethető legyen a már meghatározott követelmények szintjéig. Az használati alapú tervezés előnye az, hogy egyszerűen, érthetően írja le a rendszer funkcióit. Ebből kifolyólag, mind a megrendelő, mind a tervező számára könnyen érthető az ábra. Tulajdonképpen a használati eset alapú tervezés nem más, mint egy közös nyelv a megrendelő és a tervező között, amit mind a két fél ért.\cite{Kusper Informatikai} \Aref{useCase} képen látható a plantUML-ben készített használati eset ábra az alkalmazásomhoz.
 	\begin{figure}[ht!]
 		\centering
 		\includegraphics[width=6cm]{./tervezes/useCase}
@@ -67,7 +67,7 @@
 		\label{useCase}
 	\end{figure}
 	\Aref{useCase} képen látható használati eset ábra magyarázata következik:
-	Az ábrán három darab actor (ki) látható.
+	Az ábrán három darab actor látható.
 	\begin{enumerate}
 		\item Nézelődő: ennek a szerepnek van a legkevesebb funkciója, ő az aki csak a már meglévő hirdetéseket és kategóriákat tudja megtekinteni, illetve képes még regisztráció, ami további meglévő funkciók használata miatt szükséges.
 		\item Felhasználó: ő képes a saját adatainak módosítására, a profil törlése is. Neki van már lehetősége saját hirdetéseket létrehozni és ezeket kezelni, valamint már van lehetősége üzenetet küldeni egy másik felhasználónak.
@@ -80,9 +80,9 @@
 	\subsection{Laravel}
 		A Laravel egy nyílt forráskódú, PHP webkeretrendszer, ami MVC tervezési mintán alapszik. Az MVC a Model-View-Controller rövidítése.
 		\begin{enumerate}
-			\item Model (Modell): ez az adatokat kezelő réteg, az adatok tárolásáért és visszaolvasásáért felelős.
-			\item View (Nézet): ez a réteg felhasználói felületek megjelenítéséért illetékes. 
-			\item Controller (Vezérlő): a felhasználói műveletek megfelelő kezeléséért ez a réteg a felelős.
+			\item Model (magyarul: modell): ez az adatokat kezelő réteg, az adatok tárolásáért és visszaolvasásáért felelős.
+			\item View (magyarul: nézet): ez a réteg felhasználói felületek megjelenítéséért illetékes. 
+			\item Controller (magyarul: vezérlő): a felhasználói műveletek megfelelő kezeléséért ez a réteg a felelős.
 		\end{enumerate}
 		Mivel három részre van bontva, ezért van ennek a tervezési mintának néhány előnye is. Ilyen például ha lecseréljük az egyik réteget, akkor a többihez nem kell már hozzányúlni, amivel pénzt és időt is lehet spórolni. Előnye még az is, hogy egy modellnek lehet több nézetes is.
 		\cite[102-103.~oldal]{Kusper}
@@ -97,9 +97,9 @@
 	\subsection{XAMMP}
 		Az XAMMP nem más, mint egy PHP fejlesztői környezet. Erről még azt érdemes tudni, hogy ingyenesen használható és rendkívül egyszerű telepítése, illetve a használata.
 	\subsection{Visual Studio Code}
-		Ez egy IDE (integrált fejlesztői környezet), ami ingyenes használható és az egyik legelterjedtebb és legnépszerűbb a fejlesztők körében. Fontosnak tartom megemlíteni, hogy a Visual Studio Code-ban van lehetőség különféle kiegészítők (extension) letöltésére is, például van lehetőség a python programozási nyelv vagy egy programozási nyelvhez tartozó szintaxis kiemelő letöltésére, illetve ezek használatára.
+		Ez egy IDE (integrált fejlesztői környezet), ami ingyenes használható és az egyik legelterjedtebb és legnépszerűbb a fejlesztők körében. Fontosnak tartom megemlíteni, hogy a Visual Studio Code-ban van lehetőség különféle kiegészítők (angolul: extension) letöltésére is, például van lehetőség a python programozási nyelv vagy egy programozási nyelvhez tartozó szintaxis kiemelő letöltésére, illetve ezek használatára.
 	\subsection{GitHub}
-		A GitHub-ról azt érdemes tudni, hogy ez egy verziókövető rendszer. Ezek a rendszerek képesek állományok tartalmi változásait követni,azt is képesek megmondani, hogy ki és mikor módosította azokat, valamint van lehetőség arra is, hogy korábbi állapotokat is képes előállítani. A main branch-be feleltethető meg a fő ágnak, amiből van lehetőség elágazások (branch) is létrehozni. Az elágazásokat arra valóak, hogy a fejlesztési funkciókat elkülönítsük. Még arra is használhatjuk, hogy kísérletezzünk vagy akár hibajavítások elvégzésére is lehet használni.
+		A GitHub-ról azt érdemes tudni, hogy ez egy verziókövető rendszer. Ezek a rendszerek képesek állományok tartalmi változásait követni,azt is képesek megmondani, hogy ki és mikor módosította azokat, valamint van lehetőség arra is, hogy korábbi állapotokat is képes előállítani. A main branch-be feleltethető meg a fő ágnak, amiből van lehetőség elágazások (angolul: branch) is létrehozni. Az elágazásokat arra valóak, hogy a fejlesztési funkciókat elkülönítsük. Még arra is használhatjuk, hogy kísérletezzünk vagy akár hibajavítások elvégzésére is lehet használni.
 	\subsection{GitHub Desktop}
 		A GitHub Desktop egy ingyenesen használható alkalmazás, aminek a segítségével tudunk dolgozni a GitHub-on vagy Git-tárhely-szolgáltatásokon tárolt fájlokkal. Én ezt az eszközt azért szeretem használni, mivel megkönnyíti és felgyorsítja számomra a munkavégzés, illetve azért is, mert ennek a használatához nem kell a terminálban beírni a Git-hez tartozó parancsokat, hanem egy-két kattintás segítségével elvégezhetek egy konkrét parancsot.
 		\cite{GitHubDesktop}
@@ -107,15 +107,24 @@
 	\chapter{Tesztelés}
 		A tesztelésre azért van szükség, hogy az alkalmazásomban megtaláljam az esetleges hibákat, amiket kijavítva növelhetem a szoftverem minőségét és megbízhatóságát. Abban sajnos nem lehetek biztos, hogy a tesztelés elvégzése után nem lesznek már hibák. A tesztelés során kettőféle tesztelési technikát alkalmaztam. Ezek pedig a következők:
 		\begin{enumerate}
-			\item Fehérdobozos (white-box): a forráskód alapján íródnak a tesztesetek.
-			\item Szürkedobozos (grey-box): amikor a forráskódnak csak egy rész ismert és csak ez alapján íródnak a tesztesetek.
+			\item Fehérdobozos (angolul: white-box): a forráskód alapján íródnak a tesztesetek.
+			\item Szürkedobozos (angolul: grey-box): amikor a forráskódnak csak egy rész ismert és csak ez alapján íródnak a tesztesetek.
 		\end{enumerate}
-		Azonban van egy harmadik féle is, amit nem alkalmaztam. Az nem más, mint a feketedobozos (black-box), amikor a tesztesetek a specifikáció alapján íródnak.
+		Azonban van egy harmadik féle is, amit nem alkalmaztam. Az nem más, mint a feketedobozos (angolul: black-box), amikor a tesztesetek a specifikáció alapján íródnak.
 		\cite[26-29.~oldal]{Kusper}
 	\section{A teszteléshez alkalmazott eszközök és technológiák}
+			A következő alszakaszokban a teszteléshez használt eszközökről és technológiákról lesz majd szó.
 	\subsection{Cypress}
-		A Cypress egy NodeJS-ben írt front end tesztelési keretrendszer. Ahhoz, hogy tudjuk futtatni a Cypress-t, ahhoz előtte telepíteni kell a NodeJS-t. A Cypress segítségével tudunk készíteni végponttól végpontig tartó-, komponens-, integrációs- valamint a unitteszteket is. Ennek a tesztelési keretrendszer segítségével bármit lehet tesztelni ami a böngészőben fut.
-		\cite{Cypress}
+		A Cypress egy NodeJS-ben írt front end tesztelési keretrendszer. Ahhoz, hogy tudjuk futtatni a Cypress-t, ahhoz előtte telepíteni kell a NodeJS-t. A Cypress segítségével tudunk készíteni végponttól végpontig tartó-, komponens-, integrációs- valamint a unitteszteket is.
+		Az imént felsorolt teszt típusok jelentése a következő:
+		\begin{enumerate}
+			\item Végponttól végpontig tartó teszt: ennél a típusnál a szoftver funkcionalitását és teljesítményét teszteljük a kezdetektől a végéig, ami a vég felhasználok által megvalósított interakciókat szimulálja valós adatokkal.
+			\item Komponensteszt: ez nem más, mint, amikor a rendszernek csak egy önálló komponensét teszteljük.
+			\item Integrációs teszt: ez egy olyanféle teszt, aminél legalább kettő különböző komponens együttműködését teszteljük.
+			\item Unitteszt (magyarul: egységteszt): ez egy olyan teszt, ami a metódusokat teszteli le. Itt nézzük meg, hogy a tényleges visszatérési érték azonos-e az elvárttal. Ez a komponensteszt egyik fajtája.
+		\end{enumerate}
+		Ezzel a tesztelési keretrendszer segítségével bármit lehet tesztelni ami a böngészőben fut.
+		\cite{Cypress, Kusper Szoftvertesztles, Katalon}
 		
 	\chapter{Felhasználói dokumentáció}
 
@@ -129,6 +138,8 @@
 		\textsc{Kusper Gábor}: \emph{Programozási technológiák}, Eger, 2015.
 		\bibitem{Kusper Informatikai}
 		\textsc{Kusper Gábor}: \emph{Informatikai rendszerek tervezése}, Eger, 2023, 0.8.7.2-es verzió
+		\bibitem{Kusper Szoftvertesztles}
+		\textsc{Kusper Gábor}: \emph{Szoftvertesztelés}, Eger, 2023, 2023.10.14-es verzió
 		\bibitem{MySQL}
 		\textsc{Oracle}: \url{https://dev.mysql.com/doc/refman/8.0/en/what-is-mysql.html}, 2024-es verzió.
 		\bibitem{PhpMyAdmin}
@@ -141,6 +152,8 @@
 		\textsc{Cypress}: \url{https://docs.cypress.io/guides/overview/why-cypress}, 2024-es verzió.
 		\bibitem{Dbdiagram}
 		\textsc{Dbdiagram}: \url{https://dbml.dbdiagram.io/docs/}, 2024-es verzió.
+		\bibitem{Katalon}
+		\textsc{Katalon}: \url{https://katalon.com/resources-center/blog/end-to-end-e2e-testing}, 2024-es verzió.
 	\end{thebibliography}
 	
 	% Aláírt, szkennelt nyilatkozat beillesztése a szakdolgozat végére

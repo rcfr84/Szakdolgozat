@@ -16,6 +16,6 @@
 \select@language {magyar} \contentsline {chapter}{\numberline {3}Tesztelés}{11}{chapter.3}%
 \select@language {magyar} \contentsline {section}{\numberline {3.1}A teszteléshez alkalmazott eszközök és technológiák}{11}{section.3.1}%
 \select@language {magyar} \contentsline {subsection}{\numberline {3.1.1}Cypress}{11}{subsection.3.1.1}%
-\select@language {magyar} \contentsline {chapter}{\numberline {4}Felhasználói dokumentáció}{12}{chapter.4}%
-\select@language {magyar} \contentsline {chapter}{Összegzés}{13}{chapter*.3}%
-\select@language {magyar} \contentsline {chapter}{Irodalomjegyz\'ek}{14}{chapter*.4}%
+\select@language {magyar} \contentsline {chapter}{\numberline {4}Felhasználói dokumentáció}{13}{chapter.4}%
+\select@language {magyar} \contentsline {chapter}{Összegzés}{14}{chapter*.3}%
+\select@language {magyar} \contentsline {chapter}{Irodalomjegyz\'ek}{15}{chapter*.4}%
