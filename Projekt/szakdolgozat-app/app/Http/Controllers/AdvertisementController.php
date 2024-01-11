@@ -59,7 +59,7 @@ class AdvertisementController extends Controller
             'title' => 'required',
             'price' => 'required',
             'description' => 'required',
-            'pictures.*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'pictures.*' => 'image|mimes:jpeg,png,jpg,gif,svg',
         ]);
     
         $newAdvertisement = new Advertisement();
@@ -91,7 +91,7 @@ class AdvertisementController extends Controller
      */
     public function show($id)
     {
-        $advertisement = Advertisement::find($id)->with('pictures');
+        $advertisement = Advertisement::find($id);
 
         if (!$advertisement) 
         {
@@ -112,13 +112,11 @@ class AdvertisementController extends Controller
             return redirect()->route('advertisements.own')->with('error', 'Advertisement not found!');
         }
 
-        // Ellenőrzés, hogy a bejelentkezett felhasználó a hirdetés tulajdonosa
         if (auth()->user()->user_id != $advertisement->user_id) {
             return redirect()->route('advertisements.own')->with('error', 'You can only edit your own advertisements!');
         }
 
-        // Most már rendelkezésre áll a hirdetés, így további adatokat lehet lekérni
-        $advertisement->load('pictures'); // Eager loading a képekhez
+        $advertisement->load('pictures');
 
         $categories = Category::all();
         $counties = County::all();

@@ -8,6 +8,7 @@ use App\Http\Controllers\CountyController;
 use App\Http\Controllers\CityController;
 use App\Http\Controllers\AdvertisementController;
 use App\Http\Controllers\MessageController;
+use App\Http\Controllers\PictureController;
 
 /*
 |--------------------------------------------------------------------------
@@ -51,6 +52,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/advertisements/{advertisementId}/edit', [AdvertisementController::class, 'edit'])->name('advertisements.edit');
     Route::put('/advertisements/{advertisementId}', [AdvertisementController::class, 'update'])->name('advertisements.update');
     Route::delete('/advertisements/{advertisementId}', [AdvertisementController::class, 'destroy'])->name('advertisements.destroy');
+    Route::get('/advertisements/{advertisementId}/show', [AdvertisementController::class, 'show'])->name('advertisements.show');
 
     //MESSAGE
     Route::get('/messages/get', [MessageController::class, 'index'])->name('messages.index');

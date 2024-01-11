@@ -4,12 +4,12 @@
     <div class="container mx-auto mt-8">
         <div class="flex justify-center">
             <div class="w-1/2">
-                <div class="bg-white p-6 rounded-lg shadow-md">
+                <div class="bg-white p-6 rounded-lg shadow-md flex flex-col">
                     <form action="{{ route('advertisements.store') }}" method="POST" enctype="multipart/form-data">
                         @csrf
                         <div class="mb-4">
                             <label for="countySelect" class="form-label">Vármegye</label>
-                            <select class="form-select" name="county_id" id="countySelect">
+                            <select class="form-select w-full" name="county_id" id="countySelect">
                                 <option value="">Válassz vármegyét</option>
                                 @foreach ($counties as $county)
                                     <option value="{{ $county->county_id }}">{{ $county->name }}</option>
@@ -19,13 +19,13 @@
                         
                         <div class="mb-4">
                             <label for="citySelect" class="form-label">Város</label>
-                            <select class="form-select" name="city_id" id="citySelect">
+                            <select class="form-select w-full" name="city_id" id="citySelect">
                                 <option value="">Válassz várost</option>
                             </select>
                         </div>
                         <div class="mb-4">
                             <label for="categorySelect" class="form-label">Kategória</label>
-                            <select class="form-select" name="category_id" id="category">
+                            <select class="form-select w-full" name="category_id" id="category">
                                 <option value="">Válassz kategóriát</option>
                                 @foreach ($categories as $category)
                                     <option value="{{ $category->category_id }}">{{ $category->name }}</option>
@@ -34,23 +34,23 @@
                         </div>
                         <div class="mb-4">
                             <label for="pictures" class="form-label">Képek</label>
-                            <input type="file" class="form-input" name="pictures[]" id="pictures" multiple>
+                            <input type="file" class="form-input w-full" name="pictures[]" id="pictures" multiple>
                         </div>                            
                         <div class="mb-4">
                             <label for="title" class="form-label">Cím</label>
-                            <input type="text" class="form-input" name="title" id="title" value="{{ old('title', '') }}">
+                            <input type="text" class="form-input w-full" name="title" id="title" value="{{ old('title', '') }}">
                         </div>
                         <div class="mb-4">
                             <label for="price" class="form-label">Ár</label>
-                            <input type="text" class="form-input" name="price" id="price" value="{{ old('price', '') }}">
+                            <input type="text" class="form-input w-full" name="price" id="price" value="{{ old('price', '') }}">
                         </div>
                         <div class="mb-4">
                             <label for="description" class="form-label" id="description">Leírás</label>
-                            <textarea class="form-input" rows="10" id="description" name="description">{{ old('description', '') }}</textarea>
+                            <textarea class="form-input w-full" rows="10" id="description" name="description">{{ old('description', '') }}</textarea>
                         </div>
                         <div class="mb-4">
                             <label for="mobile_number" class="form-label">Telefonszám</label>
-                            <input type="text" class="form-input" name="mobile_number" id="mobile_number" value="{{ old('mobile_number', '') }}">
+                            <input type="text" class="form-input w-full" name="mobile_number" id="mobile_number" value="{{ old('mobile_number', '') }}">
                         </div>
                         <div class="mb-4">
                             <button type="submit" class="bg-red-500 text-white p-2 rounded">Hozzáadás</button>

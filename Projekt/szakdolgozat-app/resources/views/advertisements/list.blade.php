@@ -16,9 +16,8 @@
                                 <th class="px-4 py-2">Vármegye</th>
                                 <th class="px-4 py-2">Kategória</th>
                                 <th class="px-4 py-2">Ár</th>
-                                <th class="px-4 py-2">Leírás</th>
                                 <th class="px-4 py-2">Eladó</th>
-                                <th class="px-4 py-2">Telefonszám</th>
+                                <th class="px-4 py-2">Megtekintés</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -34,9 +33,10 @@
                                     <td class="px-4 py-2">{{ $advertisement->city->county->name }}</td>
                                     <td class="px-4 py-2">{{ $advertisement->category->name }}</td>
                                     <td class="px-4 py-2">{{ $advertisement->price }}</td>
-                                    <td class="px-4 py-2">{{ $advertisement->description }}</td>
                                     <td class="px-4 py-2">{{ $advertisement->user->name }}</td>
-                                    <td class="px-4 py-2">{{ $advertisement->mobile_number }}</td>
+                                    <td class="px-4 py-2">
+                                        <a href="{{ route('advertisements.show', $advertisement->advertisement_id) }}" class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">Megtekintés</a>
+                                    </td>
                                 </tr>
                             @endforeach
                         </tbody>
