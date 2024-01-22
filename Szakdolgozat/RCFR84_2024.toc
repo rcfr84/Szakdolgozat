@@ -12,7 +12,7 @@
 \select@language {magyar} \contentsline {subsection}{\numberline {2.1.5}XAMMP}{9}{subsection.2.1.5}%
 \select@language {magyar} \contentsline {subsection}{\numberline {2.1.6}Visual Studio Code}{9}{subsection.2.1.6}%
 \select@language {magyar} \contentsline {subsection}{\numberline {2.1.7}GitHub}{9}{subsection.2.1.7}%
-\select@language {magyar} \contentsline {subsection}{\numberline {2.1.8}GitHub Desktop}{9}{subsection.2.1.8}%
+\select@language {magyar} \contentsline {subsection}{\numberline {2.1.8}GitHub Desktop}{10}{subsection.2.1.8}%
 \select@language {magyar} \contentsline {chapter}{\numberline {3}Tesztelés}{11}{chapter.3}%
 \select@language {magyar} \contentsline {section}{\numberline {3.1}A teszteléshez alkalmazott eszközök és technológiák}{11}{section.3.1}%
 \select@language {magyar} \contentsline {subsection}{\numberline {3.1.1}Cypress}{11}{subsection.3.1.1}%

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.12)  11 JAN 2024 16:12
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.12)  22 JAN 2024 11:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -715,24 +715,24 @@ Package pdftex.def Info: ./tervezes/useCase.png  used on input line 65.
 
 ]
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
-44.
+49.
  (c:/texlive/2023/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-Underfull \hbox (badness 5711) in paragraph at lines 144--145
+Underfull \hbox (badness 5711) in paragraph at lines 149--150
 []\T1/lmr/m/sc/12 Oracle\T1/lmr/m/n/12 : []$\T1/lmtt/m/n/12 https : / / dev . m
 ysql . com / doc / refman / 8 . 0 / en / what-[]is-[]mysql . html$[]\T1/lmr/m/n
 /12 ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 148--149
+Underfull \hbox (badness 10000) in paragraph at lines 153--154
 []\T1/lmr/m/sc/12 GitHub Desk-top\T1/lmr/m/n/12 : []$\T1/lmtt/m/n/12 https : / 
 / docs . github . com / en / desktop / overview /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 156--157
+Underfull \hbox (badness 10000) in paragraph at lines 161--162
 []\T1/lmr/m/sc/12 Katalon\T1/lmr/m/n/12 : []$\T1/lmtt/m/n/12 https : / / katalo
 n . com / resources-[]center / blog /
  []
@@ -748,10 +748,10 @@ Package rerunfilecheck Info: File `RCFR84_2024.out' has not changed.
 (rerunfilecheck)             Checksum: DBC24E46A4F6F11CAC220D9ACCE4255A;3517.
  ) 
 Here is how much of TeX's memory you used:
- 16586 strings out of 474933
- 263099 string characters out of 5763793
+ 16590 strings out of 474933
+ 263126 string characters out of 5763793
  1926801 words of memory out of 5000000
- 37766 multiletter control sequences out of 15000+600000
+ 37767 multiletter control sequences out of 15000+600000
  617991 words of font info for 85 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  78i,7n,81p,1109b,551s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -759,10 +759,10 @@ Here is how much of TeX's memory you used:
 /texmf-dist/fonts/type1/public/lm/lmcsc10.pfb><c:/texlive/2023/texmf-dist/fonts
 /type1/public/lm/lmr12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lm
 ri12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmtt12.pfb>
-Output written on RCFR84_2024.pdf (15 pages, 438413 bytes).
+Output written on RCFR84_2024.pdf (15 pages, 438842 bytes).
 PDF statistics:
- 289 PDF objects out of 1000 (max. 8388607)
- 251 compressed objects within 3 object streams
- 68 named destinations out of 1000 (max. 500000)
+ 294 PDF objects out of 1000 (max. 8388607)
+ 256 compressed objects within 3 object streams
+ 71 named destinations out of 1000 (max. 500000)
  209 words of extra memory for PDF output out of 10000 (max. 10000000)
 
