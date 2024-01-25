@@ -67,4 +67,11 @@ class User extends Authenticatable
         return $this->belongsTo(Role::class, 'role_id', 'role_id');
     }
     
+    public function getLastMessage()
+    {
+        return Message::where('sender_id', $this->sender_id)
+            ->orWhere('receiver_id', $this->receiver_id)
+            ->orderBy('created_at', 'desc')
+            ->first();
+    }
 }

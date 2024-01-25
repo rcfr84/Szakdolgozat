@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Message;
 use Illuminate\Http\Request;
+use App\Models\User;
 
 class MessageController extends Controller
 {
@@ -16,31 +17,35 @@ class MessageController extends Controller
      */
     public function index()
     {
-        $user = auth()->user();
+        $user_id = auth()->user()->user_id;
+        $userMessages = Message::userMessages($user_id)->get();
+    
+        return view('messages.ownList', ['messages' => $userMessages]);
+    }
+    public function showConversation($user1_id, $user2_id)
+    {
+        $conversation = Message::getConversation($user1_id, $user2_id);
 
-        $sentMessages = Message::where('sender_id', $user->user_id)->get();
-        $receivedMessages = Message::where('receiver_id', $user->user_id)->get();
-
-        return view('messages.index', compact('sentMessages', 'receivedMessages'));
+        return view('messages.show', ['conversation' => $conversation]);
     }
 
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function create($receiverId)
     {
-        $user = auth()->user();
-
-        $sentMessages = Message::where('sender_id', $user->user_id)->get();
-        $receivedMessages = Message::where('receiver_id', $user->user_id)->get();
-
-        return view('messages.create', compact('sentMessages', 'receivedMessages'));
+        $user_id = auth()->user()->user_id;
+        if ($user_id == $receiverId) {
+            return redirect()->route('advertisements.index')->with('status', 'You cannot send a message to yourself!');
+        }
+        return view('messages.create')->with('receiverId', $receiverId);
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    
+    public function store(Request $request, $receiverId)
     {
         $user = auth()->user();
 
@@ -50,11 +55,13 @@ class MessageController extends Controller
 
         $newMessage = new Message();
         $newMessage->sender_id = $user->user_id;
-        $newMessage->receiver_id = $request->receiver_id;
+        $newMessage->receiver_id = $receiverId;
         $newMessage->message = $request->message;
         $newMessage->save();
 
-        return redirect()->route('messages.index')->with('status', 'Message sent successfully!');
+        $conversation = Message::getConversation($user->user_id, $receiverId);
+
+        return view('messages.show', compact('receiverId', 'conversation'))->with('status', 'Message sent successfully!');
     }
 
     /**

@@ -60,7 +60,9 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <a href="{{ route('messages.create', $advertisement->user_id) }}" class="bg-red-500 text-white p-2 rounded">Üzenetet küldése</a>
+                                    <a href="{{ route('messages.create', ['receiverId' => $advertisement->user->user_id]) }}" class="btn btn-primary">
+                                        Üzenet küldése
+                                    </a>
                                 </td>
                             </tr>    
                         </thead>
