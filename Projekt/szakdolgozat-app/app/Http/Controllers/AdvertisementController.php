@@ -204,4 +204,12 @@ class AdvertisementController extends Controller
 
         return redirect()->route('advertisements.own')->with('status', 'Advertisement deleted successfully!');
     }
+
+    public function showByCategory($categoryId)
+    {
+        $category = Category::findOrFail($categoryId);
+        $advertisements = $category->advertisements;
+
+        return view('categories.show', compact('advertisements', 'category'));
+    }
 }

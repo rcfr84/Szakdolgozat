@@ -35,7 +35,15 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
     //CATEGORY
-    Route::get('/categories', [CategoryController::class, 'index'])->name('categories.index');
+    Route::get('/allCategories', [CategoryController::class, 'index'])->name('categories.index');
+    Route::get('/categories/action', [CategoryController::class, 'action'])->name('categories.action');
+    Route::get('/categories/{categoryId}', [AdvertisementController::class, 'showByCategory'])->name('categories.show');
+    Route::get('/categories', [CategoryController::class, 'create'])->name('categories.create');
+    Route::post('/categories', [CategoryController::class, 'store'])->name('categories.store');
+    Route::get('/categories/{categoryId}/edit', [CategoryController::class, 'edit'])->name('categories.edit');
+    Route::put('/categories/{categoryId}', [CategoryController::class, 'update'])->name('categories.update');
+    Route::delete('/categories/{categoryId}', [CategoryController::class, 'destroy'])->name('categories.destroy');
+
 
     //COUNTY
     Route::get('/counties', [CountyController::class, 'index'])->name('counties.index');
