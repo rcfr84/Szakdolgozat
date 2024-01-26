@@ -17,7 +17,7 @@ return new class extends Migration
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('city_id');
             $table->unsignedBigInteger('category_id');
-            $table->unsignedBigInteger('picture_id')->nullable();
+            //$table->unsignedBigInteger('picture_id')->nullable();
             //$table->unsignedBigInteger('mobile_number_id')->nullable();
             $table->string('title');
             $table->string('price');
@@ -28,7 +28,7 @@ return new class extends Migration
             $table->foreign('user_id')->references('user_id')->on('users')->onDelete('cascade');
             $table->foreign('city_id')->references('city_id')->on('cities')->onDelete('cascade');
             $table->foreign('category_id')->references('category_id')->on('categories')->onDelete('cascade');
-            $table->foreign('picture_id')->references('picture_id')->on('pictures')->onDelete('cascade');
+            //$table->foreign('picture_id')->references('picture_id')->on('pictures')->onDelete('cascade');
             //$table->foreign('mobile_number_id')->references('mobile_number_id')->on('mobile_numbers')->onDelete('cascade');
         });
     }

@@ -7,23 +7,19 @@ use Illuminate\Http\Request;
 
 class CategoryController extends Controller
 {
+    /*
     public function __construct()
     {
         $this->middleware('CheckRole:admin')->only(['create', 'store', 'edit', 'update', 'destroy']);
     }
+    */
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
         $categories = Category::all();
-        
-        if (!$categories) 
-        {
-            return redirect()->route('/dashboard')->with('status', 'Category not found!');
-        }
-
-        return view('categories.index', compact('categories'));
+        return view('categories.list', compact('categories'));
     }
 
     /**
@@ -47,7 +43,7 @@ class CategoryController extends Controller
         $newCategory->name = $request->name;
         $newCategory->save();
 
-        return redirect()->route('categories.index')->with('status', 'Category created successfully!');
+        return redirect()->route('categories.action')->with('status', 'Category created successfully!');
     }
 
     /**
@@ -61,9 +57,9 @@ class CategoryController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit($id)
+    public function edit($categoryId)
     {
-        $category = Category::find($id);
+        $category = Category::find($categoryId);
 
         if (!$category) 
         {
@@ -76,9 +72,9 @@ class CategoryController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $categoryId)
     {
-        $category = Category::find($id);
+        $category = Category::find($categoryId);
 
         if (!$category) 
         {
@@ -94,21 +90,28 @@ class CategoryController extends Controller
 
         return redirect()->route('categories.index')->with('status', 'Category updated successfully!');
     }
+    
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy($id)
+    public function destroy($categoryId)
     {
-        $category = Category::find($id);
+        $category = Category::find($categoryId);
 
         if (!$category) 
         {
-            return redirect()->route('/dashboard')->with('status', 'Category not found!');
+            return redirect()->route('dashboard')->with('status', 'Category not found!');
         }
 
         $category->delete();
 
-        return redirect()->route('categories.index')->with('status', 'Category deleted successfully!');
+        return redirect()->route('categories.action')->with('status', 'Category deleted successfully!');
+    }
+
+    public function action()
+    {
+        $categories = Category::all();
+        return view('categories.index', compact('categories'));
     }
 }

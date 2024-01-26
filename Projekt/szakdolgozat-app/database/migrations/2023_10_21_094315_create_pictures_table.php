@@ -11,14 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('advertisement_mobile_number', function (Blueprint $table) {
-            $table->id();
+        Schema::create('pictures', function (Blueprint $table) {
+            $table->id('picture_id');
             $table->unsignedBigInteger('advertisement_id');
-            $table->unsignedBigInteger('mobile_number_id');
+            $table->text('src');
             $table->timestamps();
 
             $table->foreign('advertisement_id')->references('advertisement_id')->on('advertisements')->onDelete('cascade');
-            $table->foreign('mobile_number_id')->references('mobile_number_id')->on('mobile_numbers')->onDelete('cascade');
         });
     }
 
@@ -27,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('advertisement_mobile_number');
+        Schema::dropIfExists('pictures');
     }
 };

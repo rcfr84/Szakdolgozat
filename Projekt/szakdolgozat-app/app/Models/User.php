@@ -21,10 +21,10 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
+        'role_id',
         'name',
         'email',
         'password',
-        'role',
     ];
 
     /**
@@ -60,5 +60,18 @@ class User extends Authenticatable
     public function received_messages()
     {
         return $this->hasMany(Message::class, 'receiver_id', 'user_id');
+    }
+
+    public function role()
+    {
+        return $this->belongsTo(Role::class, 'role_id', 'role_id');
+    }
+    
+    public function getLastMessage()
+    {
+        return Message::where('sender_id', $this->sender_id)
+            ->orWhere('receiver_id', $this->receiver_id)
+            ->orderBy('created_at', 'desc')
+            ->first();
     }
 }
