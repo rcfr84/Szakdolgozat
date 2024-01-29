@@ -7,13 +7,13 @@
                     <form method="POST" action="{{ route('messages.store', ['receiverId' => $receiverId]) }}">
                         @csrf
 
-                        <div class="form-group">
-                            <label for="message">Üzenet:</label>
-                            <textarea name="message" rows="5" id="message" class="form-control" required></textarea>
+                        <div class="mb-4">
+                            <label for="message" class="form-label" id="message">Üzenet</label>
+                            <textarea class="form-input w-full" rows="5" id="message" name="message">{{ old('message', '') }}</textarea>
                         </div>
 
-                        <div class="form-group">
-                            <button type="submit" class="btn btn-primary">Küldés</button>
+                        <div class="form-group text-center">
+                            <button type="submit" style="background-color: #4CAF50; color: white; padding: 10px; border-radius: 5px;">Küldés</button>
                         </div>
                     </form>
                     @if ($errors->any())

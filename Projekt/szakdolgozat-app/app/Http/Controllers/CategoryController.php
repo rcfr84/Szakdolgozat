@@ -43,7 +43,7 @@ class CategoryController extends Controller
         $newCategory->name = $request->name;
         $newCategory->save();
 
-        return redirect()->route('categories.action')->with('status', 'Category created successfully!');
+        return redirect()->route('categories.action')->with('status', 'Sikeres hozzáadás!');
     }
 
     /**
@@ -63,7 +63,7 @@ class CategoryController extends Controller
 
         if (!$category) 
         {
-            return redirect()->route('/dashboard')->with('status', 'Category not found!');
+            return redirect()->route('/allCategories')->with('status', 'Nincsen ilyen kategória!');
         }
 
         return view('categories.edit', compact('category'));
@@ -78,7 +78,7 @@ class CategoryController extends Controller
 
         if (!$category) 
         {
-            return redirect()->route('/dashboard')->with('status', 'Category not found!');
+            return redirect()->route('/allCategories')->with('status', 'Nincsen ilyen kategória!');
         }
 
         $request->validate([
@@ -88,7 +88,7 @@ class CategoryController extends Controller
         $category->name = $request->name;
         $category->update();
 
-        return redirect()->route('categories.index')->with('status', 'Category updated successfully!');
+        return redirect()->route('categories.action')->with('status', 'Sikeres módosítás!');
     }
     
 
@@ -101,12 +101,12 @@ class CategoryController extends Controller
 
         if (!$category) 
         {
-            return redirect()->route('dashboard')->with('status', 'Category not found!');
+            return redirect()->route('/allCategories')->with('status', 'Nincsen ilyen kategória!');
         }
 
         $category->delete();
 
-        return redirect()->route('categories.action')->with('status', 'Category deleted successfully!');
+        return redirect()->route('categories.action')->with('status', 'Sikeres törlés!');
     }
 
     public function action()

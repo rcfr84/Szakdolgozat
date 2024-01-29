@@ -23,19 +23,20 @@
                                     <td class="px-4 py-2">{{ $message->sender->name }}</td>
                                     <td class="px-4 py-2">{{ $message->receiver->name }}</td>
                                     <td class="px-4 py-2">{{ $message->message }}</td>
-                                    <td class="px-4 py-2">
-                                        @if(auth()->user()->user_id == $message->receiver_id)
-                                            <a href="{{ route('messages.create', ['receiverId' => $message->sender_id]) }}">
-                                                Üzenet küldése
-                                            </a>
-                                        @elseif(auth()->user()->user_id == $message->sender_id)
-                                            <a href="{{ route('messages.create', ['receiverId' => $message->receiver_id]) }}">
-                                                Üzenet küldése
-                                            </a>
-                                        @endif
-                                    </td>
+                                   
                                 </tr>
                             @endforeach
+                            <td class="px-4 py-2">
+                                @if(auth()->user()->user_id == $message->receiver_id)
+                                    <a href="{{ route('messages.create', ['receiverId' => $message->sender_id]) }}" style="background-color: #4CAF50; color: white; padding: 10px; border-radius: 5px;">
+                                        Üzenet küldése
+                                    </a>
+                                @elseif(auth()->user()->user_id == $message->sender_id)
+                                    <a href="{{ route('messages.create', ['receiverId' => $message->receiver_id]) }}" style="background-color: #4CAF50; color: white; padding: 10px; border-radius: 5px;">
+                                        Üzenet küldése
+                                    </a>
+                                @endif
+                            </td>
                         </tbody>
                     </table>
                 </div>

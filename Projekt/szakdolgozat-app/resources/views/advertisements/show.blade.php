@@ -59,11 +59,11 @@
                                 <td class="px-4 py-2">{{ $advertisement->mobile_number }}</td>
                             </tr>
                             <tr>
-                                <td>
-                                    <a href="{{ route('messages.create', ['receiverId' => $advertisement->user->user_id]) }}" class="btn btn-primary">
+                                <th class="px-4 py-2 flex justify-center">
+                                    <a href="{{ route('messages.create', ['receiverId' => $advertisement->user->user_id]) }}" style="background-color: #4CAF50; color: white; padding: 10px; border-radius: 5px;">
                                         Üzenet küldése
                                     </a>
-                                </td>
+                                </th>
                             </tr>    
                         </thead>
                         

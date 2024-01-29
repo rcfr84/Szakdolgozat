@@ -52,8 +52,8 @@
                             <label for="mobile_number" class="form-label">Telefonszám</label>
                             <input type="text" class="form-input w-full" name="mobile_number" id="mobile_number" value="{{ old('mobile_number', '') }}">
                         </div>
-                        <div class="mb-4">
-                            <button type="submit" class="bg-red-500 text-white p-2 rounded">Hozzáadás</button>
+                        <div class="mb-4 text-center">
+                            <button type="submit" style="background-color: #4CAF50; color: white; padding: 10px; border-radius: 5px;">Hozzáadás</button>
                         </div>
                     </form>
                     @if ($errors->any())

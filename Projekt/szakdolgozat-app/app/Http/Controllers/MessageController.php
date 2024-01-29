@@ -36,7 +36,7 @@ class MessageController extends Controller
     {
         $user_id = auth()->user()->user_id;
         if ($user_id == $receiverId) {
-            return redirect()->route('advertisements.index')->with('status', 'You cannot send a message to yourself!');
+            return redirect()->route('advertisements.index')->with('status', 'Nem küldhetsz üzenetet saját magadnak!');
         }
         return view('messages.create')->with('receiverId', $receiverId);
     }
@@ -61,7 +61,7 @@ class MessageController extends Controller
 
         $conversation = Message::getConversation($user->user_id, $receiverId);
 
-        return view('messages.show', compact('receiverId', 'conversation'))->with('status', 'Message sent successfully!');
+        return view('messages.show', compact('receiverId', 'conversation'))->with('status', 'Sikeres üzenet küldés!');
     }
 
     /**
@@ -81,7 +81,7 @@ class MessageController extends Controller
 
         if (!$message) 
         {
-            return redirect()->route('/dashboard')->with('status', 'Message not found!');
+            return redirect()->route('/messages/get')->with('status', 'Nincsen ilyen üzenet!');
         }
 
         return view('messages.edit', compact('message'));
@@ -96,7 +96,7 @@ class MessageController extends Controller
 
         if (!$message) 
         {
-            return redirect()->route('/dashboard')->with('status', 'Message not found!');
+            return redirect()->route('/messages/get')->with('status', 'Nincsen ilyen üzenet!');
         }
 
         $request->validate([
@@ -106,7 +106,7 @@ class MessageController extends Controller
         $message->message = $request->message;
         $message->save();
 
-        return redirect()->route('messages.index')->with('status', 'Message updated successfully!');
+        return redirect()->route('messages.index')->with('status', 'Sikeres módosítás!');
     }
 
     /**
@@ -118,11 +118,11 @@ class MessageController extends Controller
 
         if (!$message) 
         {
-            return redirect()->route('/dashboard')->with('status', 'Message not found!');
+            return redirect()->route('/messages/get')->with('status', 'Nincsen ilyen üzenet!');
         }
 
         $message->delete();
 
-        return redirect()->route('messages.index')->with('status', 'Message deleted successfully!');
+        return redirect()->route('messages.index')->with('status', 'Sikeres törlésw!');
     }
 }

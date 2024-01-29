@@ -4,7 +4,7 @@
     <div class="flex justify-center">
         <div class="w-4/4">
             @if(session('status'))
-                <div class="bg-green-500 text-white p-4 mb-4">{{ session('status') }}</div>
+            <div style="background-color: #4CAF50; color: white; padding: 10px; border-radius: 5px;" class="p-4 mb-4">{{ session('status') }}</div>
             @endif
             <div class="bg-white p-6 rounded-lg shadow-md">
                 <div class="text-center mb-4 text-lg font-bold">Kategóriák</div>
@@ -18,22 +18,20 @@
                             {{ $category->name}}  
                             </td> 
                             <td class="px-4 py-2">
-                                <a href="{{route('categories.edit', ['categoryId' => $category->category_id])}}">Módosítás</a>
+                                <a href="{{route('categories.edit', ['categoryId' => $category->category_id])}}"style="background-color: #0388fc; color: white; padding: 10px; border-radius: 5px; text-decoration: none; display: inline-block;">Módosítás</a>
                             </td>
                             <td class="px-4 py-2">
                                 <form method="POST" action="{{ route('categories.destroy', ['categoryId' => $category->category_id])}}">
                                     @csrf
                                     @method('DELETE')
-                                    <button type="submit" class="bg-red-500 text-white p-2 rounded">Törlés</button>
+                                    <button type="submit" style="background-color: #fc0303; color: white; padding: 10px; border-radius: 5px;">Törlés</button>
                                 </form>
                             </td>
                             </tr>
-                           
                        @empty
-                           
                        @endforelse
-                        <td class="px-4 py-2">
-                            <a href="{{ route('categories.create') }}" class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">Új kategória hozzáadása</a>
+                        <td class="px-4 py-2 text-center">
+                            <a href="{{ route('categories.create') }}" style="background-color: #4CAF50; color: white; padding: 10px; border-radius: 5px; text-decoration: none; display: inline-block;">Új kategória hozzáadása</a>
                         </td>                        
                     </tbody>
                 </table>

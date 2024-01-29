@@ -8,12 +8,12 @@
                     <form action="{{ route('categories.update', ['categoryId' => $category->category_id]) }}" method="POST" enctype="multipart/form-data">
                         @csrf
                         @method('PUT')
-                        <div class="mb-3">
+                        <div class="mb-4">
                             <label class="form-label">Név</label>
                             <input type="text" class="form-control w-full" name="name" id="name" value="{{ old('name', $category->name) }}">
                         </div>
-                        <div class="mb-3">
-                            <button type="submit" class="bg-red-500 text-white p-2 rounded">Módosítás</button>
+                        <div class="mb-4 text-center">
+                            <button type="submit" style="background-color: #0388fc; color: white; padding: 10px; border-radius: 5px;">Módosítás</button>
                         </div>
                     </form>
                     @if ($errors->any())
