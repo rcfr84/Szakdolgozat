@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.12)  22 JAN 2024 11:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.12)  29 JAN 2024 09:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -744,8 +744,15 @@ n . com / resources-[]center / blog /
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-29>
  ***********
-Package rerunfilecheck Info: File `RCFR84_2024.out' has not changed.
-(rerunfilecheck)             Checksum: DBC24E46A4F6F11CAC220D9ACCE4255A;3517.
+
+
+Package rerunfilecheck Warning: File `RCFR84_2024.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `RCFR84_2024.out':
+(rerunfilecheck)             Before: 9DCDD5DEB578AE477F89BA89CB3EB900;3538
+(rerunfilecheck)             After:  DBC24E46A4F6F11CAC220D9ACCE4255A;3517.
  ) 
 Here is how much of TeX's memory you used:
  16590 strings out of 474933
