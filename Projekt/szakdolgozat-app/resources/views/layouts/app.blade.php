@@ -32,6 +32,12 @@
                 <main class="py-4">
                     @yield('content')
                 </main>
+                <section class="space-y-6">
+                    <!-- ... (content of the first code section) ... -->
+                    @yield('delete-user-form')
+                    @yield('update-password-form')
+                    @yield('update-profile-information-form')
+                </section>
             </main>
         </div>
     </body>
