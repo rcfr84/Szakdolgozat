@@ -83,7 +83,7 @@ class AdvertisementController extends Controller
             }
         }
     
-        return redirect()->route('advertisements.index')->with('status', 'Advertisement created successfully!');
+        return redirect()->route('advertisements.index')->with('status', 'Sikeres hozzáadás!');
     }
 
     /**
@@ -95,7 +95,7 @@ class AdvertisementController extends Controller
 
         if (!$advertisement) 
         {
-            return redirect()->route('advertisements.index')->with('error', 'Advertisement not found!');
+            return redirect()->route('advertisements.index')->with('error', 'Nincsen ilyen hirdetés!');
         }
 
         return view('advertisements.show', compact('advertisement'));
@@ -109,11 +109,11 @@ class AdvertisementController extends Controller
         $advertisement = Advertisement::find($id);
 
         if (!$advertisement) {
-            return redirect()->route('advertisements.own')->with('error', 'Advertisement not found!');
+            return redirect()->route('advertisements.own')->with('error', 'Nincsen ilyen hirdetés!');
         }
 
         if (auth()->user()->user_id != $advertisement->user_id) {
-            return redirect()->route('advertisements.own')->with('error', 'You can only edit your own advertisements!');
+            return redirect()->route('advertisements.own')->with('error', 'Csak a saját hirdetéseidet tudod módosítani!');
         }
 
         $advertisement->load('pictures');
@@ -132,7 +132,7 @@ class AdvertisementController extends Controller
     {
         if (auth()->user()->user_id != Advertisement::find($id)->user_id) 
         {
-            return redirect()->route('advertisements.own')->with('error', 'You can only edit your own advertisements!');
+            return redirect()->route('advertisements.own')->with('error', 'Csak a saját hirdetéseidet tudod módosítani!');
         }
 
         $advertisement = Advertisement::find($id);
@@ -140,7 +140,7 @@ class AdvertisementController extends Controller
 
         if (!$advertisement) 
         {
-            return redirect()->route('advertisements.own')->with('error', 'Advertisement not found!');
+            return redirect()->route('advertisements.own')->with('error', 'Nincsen ilyen hirdetés!');
         }
 
         $request->validate([
@@ -175,7 +175,7 @@ class AdvertisementController extends Controller
 
         $advertisement->update();
 
-        return redirect()->route('advertisements.own')->with('status', 'Advertisement updated successfully!');
+        return redirect()->route('advertisements.own')->with('status', 'Sikeres módosítás!');
 
     }
 
@@ -188,7 +188,7 @@ class AdvertisementController extends Controller
 
         if (auth()->user()->user_id != Advertisement::find($id)->user_id) 
         {
-            return redirect()->route('advertisements.own')->with('error', 'You can only delete your own advertisements!');
+            return redirect()->route('advertisements.own')->with('error', 'Csak a saját hirdetéseidet tudod módosítani!');
         }
 
         $advertisement = Advertisement::find($id);
@@ -197,12 +197,12 @@ class AdvertisementController extends Controller
 
         if (!$advertisement) 
         {
-            return redirect()->route('advertisements.own')->with('error', 'Advertisement not found!');
+            return redirect()->route('advertisements.own')->with('error', 'Nincsen ilyen hirdetés!');
         }
 
         $advertisement->delete();
 
-        return redirect()->route('advertisements.own')->with('status', 'Advertisement deleted successfully!');
+        return redirect()->route('advertisements.own')->with('status', 'Sikeres törlés!');
     }
 
     public function showByCategory($categoryId)

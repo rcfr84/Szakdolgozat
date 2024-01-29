@@ -8,7 +8,7 @@
                     <form action="{{ route('advertisements.update', $advertisement->advertisement_id) }}" method="POST" enctype="multipart/form-data">
                         @csrf
                         @method('PUT')
-                        <div class="mb-3">
+                        <div class="mb-4">
                             <label class="form-label">Vármegye</label>
                             <select class="form-control w-full" name="county_id" id="countySelect">
                                 <option value="">Válassz vármegyét</option>
@@ -17,7 +17,7 @@
                                 @endforeach
                             </select>
                         </div>
-                        <div class="mb-3">
+                        <div class="mb-4">
                             <label class="form-label">Város</label>
                             <select class="form-control w-full" name="city_id" id="citySelect">
                                 <option value="">Válassz várost</option>
@@ -26,7 +26,7 @@
                                 @endforeach
                             </select>
                         </div>
-                        <div class="mb-3">
+                        <div class="mb-4">
                             <label class="form-label">Kategória</label>
                             <select class="form-control w-full" name="category_id" id="category">
                                 <option value="">Válassz kategóriát</option>
@@ -35,33 +35,33 @@
                                 @endforeach
                             </select>
                         </div>
-                        <div class="mb-3">
+                        <div class="mb-4">
                             <label class="form-label">Képek</label>
                             <input type="file" class="form-control w-full" name="pictures[]" id="pictures" multiple>
                         </div>
-                        <div class="mb-3">
+                        <div class="mb-4">
                             @foreach ($advertisement->pictures as $picture)
                                 <img src="{{ asset('storage/' . $picture->src) }}" alt="Kép" class="mb-2" style="max-width: 200px; max-height: 150px;">
                             @endforeach
                         </div>
-                        <div class="mb-3">
+                        <div class="mb-4">
                             <label class="form-label">Cím</label>
                             <input type="text" class="form-control w-full" name="title" id="title" value="{{ old('title', $advertisement->title) }}">
                         </div>
-                        <div class="mb-3">
+                        <div class="mb-4">
                             <label class="form-label">Ár</label>
                             <input type="text" class="form-control w-full" name="price" id="price" value="{{ old('price', $advertisement->price) }}">
                         </div>
-                        <div class="mb-3">
+                        <div class="mb-4">
                             <label class="form-label">Leírás</label>
                             <textarea class="form-control w-full" rows="10" id="description" name="description">{{ old('description', $advertisement->description) }}</textarea>
                         </div>
-                        <div class="mb-3">
+                        <div class="mb-4">
                             <label class="form-label">Telefonszám</label>
                             <input type="text" class="form-control w-full" name="mobile_number" id="mobile_number" value="{{ old('mobile_number', $advertisement->mobile_number) }}">
                         </div>
-                        <div class="mb-3">
-                            <button type="submit" class="bg-red-500 text-white p-2 rounded">Módosítás</button>
+                        <div class="mb-4 text-center">
+                            <button type="submit" style="background-color: #0388fc; color: white; padding: 10px; border-radius: 5px;">Módosítás</button>
                         </div>
                     </form>
                     @if ($errors->any())

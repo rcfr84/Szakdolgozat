@@ -16,7 +16,7 @@
                         <tr>
                             @foreach ($categoryChunk as $category)
                             <td class="px-4 py-2">
-                                <a href="{{ route('categories.show', ['categoryId' => $category->category_id]) }}">
+                                <a href="{{ route('categories.show', ['categoryId' => $category->category_id]) }}" style="border: 1px solid #4CAF50; color: black; padding: 10px; border-radius: 5px; text-decoration: none; display: inline-block;">
                                     {{ $category->name }}
                                 </a>
                             </td>
@@ -24,7 +24,7 @@
                         </tr>
                         @endforeach
                         <td>
-                            <a href="{{route('categories.action')}} " class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">Kategória műveletek</a>
+                            <a href="{{route('categories.action')}} " style="background-color: #4CAF50; color: white; padding: 10px; border-radius: 5px; text-decoration: none; display: inline-block;">Kategória műveletek</a>
                         </td>
                         
                     </tbody>

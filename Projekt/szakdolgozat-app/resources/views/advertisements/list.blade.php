@@ -4,7 +4,7 @@
         <div class="flex justify-center">
             <div class="w-4/4">
                 @if(session('status'))
-                    <div class="bg-green-500 text-white p-4 mb-4">{{ session('status') }}</div>
+                    <div style="background-color: #4CAF50; color: white; padding: 10px; border-radius: 5px;" class="p-4 mb-4">{{ session('status') }}</div>
                 @endif
                 <div class="bg-white p-6 rounded-lg shadow-md">
                     <table class="table-auto w-full">
@@ -35,7 +35,7 @@
                                     <td class="px-4 py-2">{{ $advertisement->price }}</td>
                                     <td class="px-4 py-2">{{ $advertisement->user->name }}</td>
                                     <td class="px-4 py-2">
-                                        <a href="{{ route('advertisements.show', $advertisement->advertisement_id) }}" class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">Megtekintés</a>
+                                        <a href="{{ route('advertisements.show', $advertisement->advertisement_id) }}" style="background-color: #4CAF50; color: white; padding: 10px; border-radius: 5px;">Megtekintés</a>
                                     </td>
                                 </tr>
                             @endforeach
