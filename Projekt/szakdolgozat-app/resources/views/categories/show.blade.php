@@ -36,7 +36,7 @@
                                     <td class="px-4 py-2">{{ $advertisement->price }}</td>
                                     <td class="px-4 py-2">{{ $advertisement->user->name }}</td>
                                     <td class="px-4 py-2">
-                                        <a href="{{ route('advertisements.show', $advertisement->advertisement_id) }}" class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">Megtekintés</a>
+                                        <a href="{{ route('advertisements.show', $advertisement->advertisement_id) }}" style="background-color: #4CAF50; color: white; padding: 10px; border-radius: 5px;">Megtekintés</a>
                                     </td>
                                 </tr>
                             @endforeach

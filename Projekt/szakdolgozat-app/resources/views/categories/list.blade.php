@@ -16,7 +16,7 @@
                         <tr>
                             @foreach ($categoryChunk as $category)
                             <td class="px-4 py-2">
-                                <a href="{{ route('categories.show', ['categoryId' => $category->category_id]) }}">
+                                <a href="{{ route('categories.show', ['categoryId' => $category->category_id]) }}" style="border: 1px solid #4CAF50; color: black; padding: 10px; border-radius: 5px; text-decoration: none; display: inline-block;">
                                     {{ $category->name }}
                                 </a>
                             </td>
