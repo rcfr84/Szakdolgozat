@@ -11,28 +11,28 @@
                         <thead>
                             <tr>
                                 <th class="px-4 py-2">Felhasználó</th>
+                                <th class="px-4 py-2">Címzett</th>
                                 <th class="px-4 py-2">Utolsó üzenet</th>
                                 <th class="px-4 py-2">Megtekint</th>
                             </tr>
                         </thead>
                         <tbody>
-                            @php
-                                $uniqueSenders = [];
-                            @endphp
+                            @php $displayedConversations = [] @endphp
                             @foreach($messages as $message)
-                                @if(!in_array($message->sender->user_id, $uniqueSenders))
+                                @php
+                                    $conversationKey = $message->sender_id < $message->receiver_id ? $message->sender_id . '-' . $message->receiver_id : $message->receiver_id . '-' . $message->sender_id;
+                                @endphp
+
+                                @if(!in_array($conversationKey, $displayedConversations))
                                     <tr>
                                         <td class="px-4 py-2">{{ $message->sender->name }}</td>
+                                        <td class="px-4 py-2">{{ $message->receiver->name }}</td>
                                         <td class="px-4 py-2">{{ $message->getLastMessage()->message }}</td>
                                         <td class="px-4 py-2">
-                                            <a href="{{ url('/messages/' . $message->sender_id . '/get/' . $message->receiver_id) }}" style="background-color: #4CAF50; color: white; padding: 10px; border-radius: 5px;">
-                                                Megtekint
-                                            </a>
+                                            <a href="{{ route('messages.showConversation', ['user1_id' => $message->sender_id, 'user2_id' => $message->receiver_id]) }}">Megtekint</a>
                                         </td>
                                     </tr>
-                                    @php
-                                        $uniqueSenders[] = $message->sender->user_id;
-                                    @endphp
+                                    @php $displayedConversations[] = $conversationKey @endphp
                                 @endif
                             @endforeach
                         </tbody>
