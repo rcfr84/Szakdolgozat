@@ -8,10 +8,12 @@ use App\Models\User;
 
 class MessageController extends Controller
 {
+    /*
     public function __construct()
     {
         $this->middleware('CheckRole:admin')->only(['edit', 'update', 'destroy']);
     }
+    */
     /**
      * Display a listing of the resource.
      */
@@ -118,11 +120,15 @@ class MessageController extends Controller
 
         if (!$message) 
         {
-            return redirect()->route('/messages/get')->with('status', 'Nincsen ilyen üzenet!');
+            return redirect()->route('messages.index')->with('status', 'Nincsen ilyen üzenet!');
+        }
+        if ($message->sender_id != auth()->user()->user_id) 
+        {
+            return redirect()->route('messages.index')->with('status', 'Nem törölheted más üzenetét!');
         }
 
         $message->delete();
 
-        return redirect()->route('messages.index')->with('status', 'Sikeres törlésw!');
+        return redirect()->route('messages.index')->with('status', 'Sikeres törlés!');
     }
 }

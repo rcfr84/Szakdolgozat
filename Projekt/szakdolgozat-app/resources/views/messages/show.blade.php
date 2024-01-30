@@ -14,6 +14,7 @@
                                 <th class="px-4 py-2">Feladó</th>
                                 <th class="px-4 py-2">Címzett</th>
                                 <th class="px-4 py-2">Üzenet</th>
+                                <th class="px-4 py-2">Műveletek</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -23,6 +24,24 @@
                                     <td class="px-4 py-2">{{ $message->sender->name }}</td>
                                     <td class="px-4 py-2">{{ $message->receiver->name }}</td>
                                     <td class="px-4 py-2">{{ $message->message }}</td>
+                                    <td class="px-4 py-2">
+                                        @if ($message->sender_id == auth()->user()->user_id)
+                                            <a href="{{ route('messages.edit', $message->message_id) }}" style="background-color: #0388fc; color: white; padding: 10px; border-radius: 5px;">
+                                                Szerkesztés
+                                            </a>
+                                        @endif
+                                    </td>
+                                    <td class="px-4 py-2">
+                                        @if ($message->sender_id == auth()->user()->user_id)
+                                        <form action="{{ route('messages.destroy', $message->message_id) }}" method="POST">
+                                            @csrf
+                                            @method('DELETE')
+                                            <button type="submit" style="background-color: #fc0303; color: white; padding: 10px; border-radius: 5px;">
+                                                Törlés
+                                            </button>
+                                        </form>
+                                        @endif
+                                    </td>
                                    
                                 </tr>
                             @endforeach
