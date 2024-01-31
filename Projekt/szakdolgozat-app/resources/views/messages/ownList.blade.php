@@ -29,7 +29,7 @@
                                         <td class="px-4 py-2">{{ $message->receiver->name }}</td>
                                         <td class="px-4 py-2">{{ $message->getLastMessage()->message }}</td>
                                         <td class="px-4 py-2">
-                                            <a href="{{ route('messages.showConversation', ['user1_id' => $message->sender_id, 'user2_id' => $message->receiver_id]) }}">Megtekint</a>
+                                            <a href="{{ route('messages.showConversation', ['user1_id' => $message->sender_id, 'user2_id' => $message->receiver_id]) }}" style="background-color: #4CAF50; color: white; padding: 10px; border-radius: 5px; text-decoration: none; display: inline-block;">Megtekint</a>
                                         </td>
                                     </tr>
                                     @php $displayedConversations[] = $conversationKey @endphp

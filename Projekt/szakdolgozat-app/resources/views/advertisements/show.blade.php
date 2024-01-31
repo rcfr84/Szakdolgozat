@@ -59,11 +59,13 @@
                                 <td class="px-4 py-2">{{ $advertisement->mobile_number }}</td>
                             </tr>
                             <tr>
-                                <th class="px-4 py-2 flex justify-center">
-                                    <a href="{{ route('messages.create', ['receiverId' => $advertisement->user->user_id]) }}" style="background-color: #4CAF50; color: white; padding: 10px; border-radius: 5px;">
-                                        Üzenet küldése
-                                    </a>
-                                </th>
+                                @if($advertisement->user->user_id != Auth::user()->user_id)
+                                    <th class="px-4 py-2 flex justify-center">
+                                        <a href="{{ route('messages.create', ['receiverId' => $advertisement->user->user_id]) }}" style="background-color: #4CAF50; color: white; padding: 10px; border-radius: 5px;">
+                                            Üzenet küldése
+                                        </a>
+                                    </th>
+                                @endif
                             </tr>    
                         </thead>
                         

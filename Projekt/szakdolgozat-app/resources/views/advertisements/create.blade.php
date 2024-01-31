@@ -33,8 +33,24 @@
                             </select>
                         </div>
                         <div class="mb-4">
-                            <label for="pictures" class="form-label">Képek</label>
-                            <input type="file" class="form-input w-full" name="pictures[]" id="pictures" multiple>
+                            <label for="pictures" class="form-label">Kép 1</label>
+                            <input type="file" class="form-input w-full" name="pictures[]" id="pictures1">
+                        </div>  
+                        <div class="mb-4">
+                            <label for="pictures" class="form-label">Kép 2</label>
+                            <input type="file" class="form-input w-full" name="pictures[]" id="pictures2">
+                        </div>  
+                        <div class="mb-4">
+                            <label for="pictures" class="form-label">Kép 3</label>
+                            <input type="file" class="form-input w-full" name="pictures[]" id="pictures3">
+                        </div>  
+                        <div class="mb-4">
+                            <label for="pictures" class="form-label">Kép 4</label>
+                            <input type="file" class="form-input w-full" name="pictures[]" id="pictures4">
+                        </div>  
+                        <div class="mb-4">
+                            <label for="pictures" class="form-label">Kép 5</label>
+                            <input type="file" class="form-input w-full" name="pictures[]" id="pictures5">
                         </div>                            
                         <div class="mb-4">
                             <label for="title" class="form-label">Cím</label>

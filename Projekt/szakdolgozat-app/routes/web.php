@@ -72,9 +72,9 @@ Route::middleware('auth')->group(function () {
     Route::delete('/messages/{messageId}', [MessageController::class, 'destroy'])->name('messages.destroy');
 
     //PICTURE
-    Route::get('/pictures', [PictureController::class, 'index'])->name('pictures.index');
-    Route::get('/pictures/create', [PictureController::class, 'create'])->name('pictures.create');
-    Route::post('/pictures', [PictureController::class, 'store'])->name('pictures.store');
+    Route::get('/pictures/{advertisementId}', [PictureController::class, 'index'])->name('pictures.index');
+    Route::get('/pictures/create/{advertisementId}', [PictureController::class, 'create'])->name('pictures.create');
+    Route::post('/pictures/create/{advertisementId}', [PictureController::class, 'store'])->name('pictures.store');
     Route::delete('/pictures/{pictureId}', [PictureController::class, 'destroy'])->name('pictures.destroy');
 });
 

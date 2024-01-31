@@ -1,5 +1,4 @@
 @extends('layouts.app')
-
 @section('content')
     <div class="container mx-auto mt-8">
         <div class="flex justify-center">
@@ -37,13 +36,12 @@
                         </div>
                         <div class="mb-4">
                             <label class="form-label">Képek</label>
-                            <input type="file" class="form-control w-full" name="pictures[]" id="pictures" multiple>
-                        </div>
-                        <div class="mb-4">
                             @foreach ($advertisement->pictures as $picture)
-                                <img src="{{ asset('storage/' . $picture->src) }}" alt="Kép" class="mb-2" style="max-width: 200px; max-height: 150px;">
+                                <div class="w-1/4 p-2 mx-auto">
+                                    <img src="{{ asset('storage/' . $picture->src) }}" alt="Kép" style="width: 8cm; height: auto; display: block; margin-left: auto; margin-right: auto;">
+                                </div>
                             @endforeach
-                        </div>
+                        </div>                        
                         <div class="mb-4">
                             <label class="form-label">Cím</label>
                             <input type="text" class="form-control w-full" name="title" id="title" value="{{ old('title', $advertisement->title) }}">
@@ -59,6 +57,12 @@
                         <div class="mb-4">
                             <label class="form-label">Telefonszám</label>
                             <input type="text" class="form-control w-full" name="mobile_number" id="mobile_number" value="{{ old('mobile_number', $advertisement->mobile_number) }}">
+                        </div>
+                        <div class="mb-4 text-center">
+                            <a href="{{route('pictures.create', $advertisement->advertisement_id)}}" style="background-color: #4CAF50; color: white; padding: 10px; border-radius: 5px;">Új kép hozzáadása</a>
+                        </div>
+                        <div class="mb-4 text-center">
+                            <a href="{{ route('pictures.index', $advertisement->advertisement_id) }}" style="background-color: #fc0303; color: white; padding: 10px; border-radius: 5px;">Képek törlése</a>
                         </div>
                         <div class="mb-4 text-center">
                             <button type="submit" style="background-color: #0388fc; color: white; padding: 10px; border-radius: 5px;">Módosítás</button>

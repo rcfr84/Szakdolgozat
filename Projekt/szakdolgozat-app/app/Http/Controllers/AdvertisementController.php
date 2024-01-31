@@ -78,7 +78,8 @@ class AdvertisementController extends Controller
     
         if ($request->hasFile('pictures')) {
             foreach ($request->file('pictures') as $picture) {
-                $path = $picture->store('advertisement_images', 'public');
+                $filename = 'advertisement_image_' . uniqid() . '.' . $picture->getClientOriginalExtension();
+                $path = $picture->storeAs('advertisement_images', $filename, 'public');
                 $newAdvertisement->pictures()->create(['src' => $path]);
             }
         }
