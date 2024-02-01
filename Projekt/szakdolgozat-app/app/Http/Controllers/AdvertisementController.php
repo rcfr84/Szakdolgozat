@@ -213,4 +213,16 @@ class AdvertisementController extends Controller
 
         return view('categories.show', compact('advertisements', 'category'));
     }
+
+    public function searchByTitle(Request $request)
+    {
+        $request->validate([
+            'search' => 'required|min:4',
+        ]);
+
+        $search = $request->search;
+        $advertisements = Advertisement::where('title', 'LIKE', "%{$search}%")->paginate(30);
+
+        return view('advertisements.search', compact('advertisements'));
+    }
 }

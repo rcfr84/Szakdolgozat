@@ -7,6 +7,16 @@
                     <div style="background-color: #4CAF50; color: white; padding: 10px; border-radius: 5px;" class="p-4 mb-4">{{ session('status') }}</div>
                 @endif
                 <div class="bg-white p-6 rounded-lg shadow-md">
+                    <form action="{{ route('advertisements.searchByTitle') }}" method="GET" class="mb-4">
+                        @csrf
+                        <div class="text-center">
+                            <input type="text" name="search" placeholder="Keresés név alapján" class="mb-4">
+                            <button type="submit" style="background-color: #4CAF50; color: white; padding: 10px; border-radius: 5px;">Keresés</button>
+                        </div>
+                    </form> 
+                    @error('search')
+                        <p class="text-center">Adj meg legalább 4 karakter a kereséshez!</p>
+                    @enderror                   
                     <table class="table-auto w-full">
                         <thead>
                             <tr>
@@ -24,7 +34,7 @@
                             @foreach ($advertisements as $advertisement)
                                 <tr>
                                     
-                                    <td class="px-4 py-2">
+                                    <td class="px-4 py-2 text-center">
                                         @if ($advertisement->pictures->isNotEmpty())
                                             <img src="{{ asset('storage/' . $advertisement->pictures->first()->src) }}" alt="Kép">
                                         @else
