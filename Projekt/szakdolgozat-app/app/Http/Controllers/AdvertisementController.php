@@ -18,7 +18,7 @@ class AdvertisementController extends Controller
      */
     public function index()
     {
-        $advertisements = Advertisement::with('pictures')->orderByDesc('created_at')->get();
+        $advertisements = Advertisement::with('pictures')->orderByDesc('created_at')->paginate(15);
         return view('advertisements.list', compact('advertisements'));
     }
 
@@ -26,7 +26,7 @@ class AdvertisementController extends Controller
     {
         
         $advertisements = Advertisement::where('user_id', Auth::user()->user_id)->with('pictures')
-        ->orderByDesc('created_at')->get();
+        ->orderByDesc('created_at')->paginate(15);
         return view('advertisements.ownList', compact('advertisements'));
     }
 
@@ -209,7 +209,7 @@ class AdvertisementController extends Controller
     public function showByCategory($categoryId)
     {
         $category = Category::findOrFail($categoryId);
-        $advertisements = $category->advertisements;
+        $advertisements = $category->advertisements()->paginate(15);
 
         return view('categories.show', compact('advertisements', 'category'));
     }

@@ -14,7 +14,7 @@
                                 <th></th>
                                 <td class="px-4 py-2">
                                     @foreach ($advertisement->pictures as $picture)
-                                        <img src="{{ asset('storage/' . $picture->src) }}" alt="Kép" style="width: 400px; height: 400px;">
+                                        <img src="{{ asset('storage/' . $picture->src) }}" alt="Kép" style="width: 8cm; height: auto; display: block; margin-left: auto; margin-right: auto;">
                                     @endforeach
                                 </td>
                             </tr>

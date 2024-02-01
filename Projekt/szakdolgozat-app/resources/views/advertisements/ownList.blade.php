@@ -26,9 +26,11 @@
                                 <tbody>
                                     <tr>
                                         <td class="px-4 py-2">
-                                            @foreach ($advertisement->pictures as $picture)
-                                                <img src="{{ asset('storage/' . $picture->src) }}" alt="Kép">
-                                            @endforeach
+                                            @if ($advertisement->pictures->isNotEmpty())
+                                                <img src="{{ asset('storage/' . $advertisement->pictures->first()->src) }}" alt="Kép">
+                                            @else
+                                                <span>Nincs kép</span>
+                                            @endif
                                         </td>
                                         <td class="px-4 py-2">{{ $advertisement->title }}</td>
                                         <td class="px-4 py-2">{{ $advertisement->city->name}}</td>
@@ -58,6 +60,7 @@
                             @endforelse
                         </table>
                 </div>
+                {{ $advertisements->links() }}
             </div>
         </div>
     </div>
