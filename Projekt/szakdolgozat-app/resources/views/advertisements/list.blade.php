@@ -21,29 +21,26 @@
                     <form action="{{ route('advertisements.filter') }}" method="GET" class="mb-4">
                         @csrf
                         <div class="text-center">
-                            <select class="form-select" name="county_id" id="countySelect"> 
+                            <select class="form-select" name="county_id" id="countySelect" style="margin-right: 20px;"> 
                                 <option value="">Válassz vármegyét</option>
                                 @foreach ($counties as $county)
                                     <option value="{{ $county->county_id }}">{{ $county->name }}</option>
                                 @endforeach
                             </select>
-                        </div>
-                        <div class="text-center">
-                            <select class="form-select" name="city_id" id="citySelect">
+                       
+                            <select class="form-select" name="city_id" id="citySelect" style="margin-top: 10px; margin-right: 20px;">
                                 <option value="">Válassz várost</option>
                             </select>
-                        </div>
-                        <div class="text-center">
-                            <select class="form-select" name="category_id" id="category">
+                       
+                            <select class="form-select" name="category_id" id="category" style="margin-top: 10px; margin-right: 20px;">
                                 <option value="">Válassz kategóriát</option>
                                 @foreach ($categories as $category)
                                     <option value="{{ $category->category_id }}">{{ $category->name }}</option>
                                 @endforeach
                             </select> 
-                        </div>
-                        <div class="mb-4 text-center">
-                            <input type="number" name="min_price" placeholder="Minimum ár" class="mb-4">
-                            <input type="number" name="max_price" placeholder="Maximum ár" class="mb-4">
+            
+                            <input type="number" name="min_price" placeholder="Minimum ár" class="mb-4" style="margin-top: 10px; margin-right: 20px;">
+                            <input type="number" name="max_price" placeholder="Maximum ár" class="mb-4" style="margin-top: 10px;">
                         </div>
                             
                             <script>
