@@ -16,7 +16,63 @@
                     </form> 
                     @error('search')
                         <p class="text-center">Adj meg legalább 4 karakter a kereséshez!</p>
-                    @enderror                   
+                    @enderror
+
+                    <form action="{{ route('advertisements.filter') }}" method="GET" class="mb-4">
+                        @csrf
+                        <div class="text-center">
+                            <select class="form-select" name="county_id" id="countySelect"> 
+                                <option value="">Válassz vármegyét</option>
+                                @foreach ($counties as $county)
+                                    <option value="{{ $county->county_id }}">{{ $county->name }}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                        <div class="text-center">
+                            <select class="form-select" name="city_id" id="citySelect">
+                                <option value="">Válassz várost</option>
+                            </select>
+                        </div>
+                        <div class="text-center">
+                            <select class="form-select" name="category_id" id="category">
+                                <option value="">Válassz kategóriát</option>
+                                @foreach ($categories as $category)
+                                    <option value="{{ $category->category_id }}">{{ $category->name }}</option>
+                                @endforeach
+                            </select> 
+                        </div>
+                        <div class="mb-4 text-center">
+                            <input type="number" name="min_price" placeholder="Minimum ár" class="mb-4">
+                            <input type="number" name="max_price" placeholder="Maximum ár" class="mb-4">
+                        </div>
+                            
+                            <script>
+                                var countySelect = document.getElementById("countySelect");
+                                var citySelect = document.getElementById("citySelect");
+                            
+                                countySelect.addEventListener("change", function () {
+                                    var selectedCounty = countySelect.value;
+                                    citySelect.innerHTML = "<option value=''>Válassz várost</option>";
+                            
+                                    if (selectedCounty) {
+                                        fetch(`/get-cities-by-county/${selectedCounty}`)
+                                            .then(response => response.json())
+                                            .then(data => {
+                                                data.forEach(function (city) {
+                                                    var option = document.createElement("option");
+                                                    option.value = city.city_id;
+                                                    option.text = city.name;
+                                                    citySelect.appendChild(option);
+                                                });
+                                            })
+                                            .catch(error => console.error(error));
+                                    }
+                                });
+                            </script>
+                            <div class="mb-4 text-center">
+                                <button type="submit" style="background-color: #4CAF50; color: white; padding: 10px; border-radius: 5px;">Szűrés</button>
+                            </div>
+                    </form>
                     <table class="table-auto w-full">
                         <thead>
                             <tr>

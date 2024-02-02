@@ -48,7 +48,7 @@
                         </div>
                         <div class="mb-4">
                             <label class="form-label">Ár</label>
-                            <input type="text" class="form-control w-full" name="price" id="price" value="{{ old('price', $advertisement->price) }}">
+                            <input type="number" class="form-control w-full" name="price" id="price" value="{{ old('price', $advertisement->price) }}">
                         </div>
                         <div class="mb-4">
                             <label class="form-label">Leírás</label>

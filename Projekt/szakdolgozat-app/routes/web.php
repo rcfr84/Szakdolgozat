@@ -62,6 +62,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/advertisements/{advertisementId}', [AdvertisementController::class, 'destroy'])->name('advertisements.destroy');
     Route::get('/advertisements/{advertisementId}/show', [AdvertisementController::class, 'show'])->name('advertisements.show');
     Route::get('/search', [AdvertisementController::class, 'searchByTitle'])->name('advertisements.searchByTitle');
+    Route::get('/filter', [AdvertisementController::class, 'filter'])->name('advertisements.filter');
 
     //MESSAGE
     Route::get('/messages/get', [MessageController::class, 'index'])->name('messages.index');

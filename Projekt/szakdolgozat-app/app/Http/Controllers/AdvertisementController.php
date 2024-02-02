@@ -19,7 +19,10 @@ class AdvertisementController extends Controller
     public function index()
     {
         $advertisements = Advertisement::with('pictures')->orderByDesc('created_at')->paginate(15);
-        return view('advertisements.list', compact('advertisements'));
+        $counties = County::all();
+        $cities = City::all();
+        $categories = Category::all();
+        return view('advertisements.list', compact('advertisements', 'counties', 'cities', 'categories'));
     }
 
     public function ownAdvertisements()
@@ -224,5 +227,59 @@ class AdvertisementController extends Controller
         $advertisements = Advertisement::where('title', 'LIKE', "%{$search}%")->paginate(30);
 
         return view('advertisements.search', compact('advertisements'));
+    }
+
+    public function filter(Request $request)
+    {
+        $request->validate([
+            'min_price' => 'nullable|numeric|min:0',
+            'max_price' => 'nullable|numeric|min:0',
+            'county' => 'nullable|exists:counties,name',
+            'city' => 'nullable|exists:cities,name',
+            'category' => 'nullable|exists:categories,name',
+        ]);
+
+        $query = Advertisement::query();
+
+        if ($request->filled('min_price') && $request->filled('max_price')) 
+        {
+            $query->whereBetween('price', [$request->input('min_price'), $request->input('max_price')]);
+        } 
+        else 
+        {
+            if ($request->filled('min_price'))
+            {
+                $query->where('price', '>=', $request->input('min_price'));
+            }
+        
+            if ($request->filled('max_price')) 
+            {
+                $query->orWhere('price', '<=', $request->input('max_price'));
+            }
+        }
+        
+        
+        if ($request->filled('county_id')) {
+            $query->whereHas('city.county', function ($q) use ($request) {
+                $q->where('county_id', '=', $request->input('county_id'));
+            });
+        }
+    
+        if ($request->filled('city_id')) {
+            $query->whereHas('city', function ($q) use ($request) {
+                $q->where('city_id', '=', $request->input('city_id'));
+            });
+        }
+    
+        if ($request->filled('category_id')) {
+            $query->whereHas('category', function ($q) use ($request) {
+                $q->where('category_id', '=', $request->input('category_id'));
+            });
+        }
+    
+        $advertisements = $query->paginate(2)->appends(request()->query());
+    
+        return view('advertisements.filter', compact('advertisements'));
+        
     }
 }
