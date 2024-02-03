@@ -11,7 +11,7 @@
         <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">-->
 
         <!-- Bootstrap JS bundle with Popper -->
-       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+       <!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>-->
 
 
         <!-- Fonts -->
@@ -20,6 +20,8 @@
 
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
+        <script src="{{ asset('js/citySelect.js') }}" defer></script>
+
     </head>
     <body class="font-sans antialiased">
         <div class="min-h-screen bg-gray-100">
@@ -36,8 +38,10 @@
 
             <!-- Page Content -->
             <main>
+                
                 <main class="py-4">
                     @yield('content')
+
                 </main>
                 <section class="space-y-6">
                     <!-- ... (content of the first code section) ... -->

@@ -10,7 +10,7 @@
                     <form action="{{ route('advertisements.searchByTitle') }}" method="GET" class="mb-4">
                         @csrf
                         <div class="text-center">
-                            <input type="text" name="search" placeholder="Keresés név alapján" class="mb-4">
+                            <input type="text" name="search" placeholder="Keresés cím alapján" class="mb-4">
                             <button type="submit" style="background-color: #4CAF50; color: white; padding: 10px; border-radius: 5px;">Keresés</button>
                         </div>
                     </form> 
@@ -42,33 +42,9 @@
                             <input type="number" name="min_price" placeholder="Minimum ár" class="mb-4" style="margin-top: 10px; margin-right: 20px;">
                             <input type="number" name="max_price" placeholder="Maximum ár" class="mb-4" style="margin-top: 10px;">
                         </div>
-                            
-                            <script>
-                                var countySelect = document.getElementById("countySelect");
-                                var citySelect = document.getElementById("citySelect");
-                            
-                                countySelect.addEventListener("change", function () {
-                                    var selectedCounty = countySelect.value;
-                                    citySelect.innerHTML = "<option value=''>Válassz várost</option>";
-                            
-                                    if (selectedCounty) {
-                                        fetch(`/get-cities-by-county/${selectedCounty}`)
-                                            .then(response => response.json())
-                                            .then(data => {
-                                                data.forEach(function (city) {
-                                                    var option = document.createElement("option");
-                                                    option.value = city.city_id;
-                                                    option.text = city.name;
-                                                    citySelect.appendChild(option);
-                                                });
-                                            })
-                                            .catch(error => console.error(error));
-                                    }
-                                });
-                            </script>
-                            <div class="mb-4 text-center">
-                                <button type="submit" style="background-color: #4CAF50; color: white; padding: 10px; border-radius: 5px;">Szűrés</button>
-                            </div>
+                        <div class="mb-4 text-center">
+                            <button type="submit" style="background-color: #4CAF50; color: white; padding: 10px; border-radius: 5px;">Szűrés</button>
+                        </div>
                     </form>
                     <table class="table-auto w-full">
                         <thead>
