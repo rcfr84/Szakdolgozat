@@ -276,8 +276,20 @@ class AdvertisementController extends Controller
                 $q->where('category_id', '=', $request->input('category_id'));
             });
         }
+
+        $sortBy = $request->input('sort_by', 'default');
+
+        if ($sortBy == 'asc') 
+        {
+            $query->orderBy('price', 'asc');
+        } 
+        elseif ($sortBy == 'desc') 
+        {
+            $query->orderBy('price', 'desc');
+        }
     
-        $advertisements = $query->paginate(2)->appends(request()->query());
+    
+        $advertisements = $query->paginate(15)->appends(request()->query());
     
         return view('advertisements.filter', compact('advertisements'));
         

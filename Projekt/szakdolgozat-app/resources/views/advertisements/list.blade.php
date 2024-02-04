@@ -41,7 +41,15 @@
             
                             <input type="number" name="min_price" placeholder="Minimum ár" class="mb-4" style="margin-top: 10px; margin-right: 20px;">
                             <input type="number" name="max_price" placeholder="Maximum ár" class="mb-4" style="margin-top: 10px;">
+                            
+                            <label for="sort_by" style="margin-right: 10px;">Rendezés:</label>
+                            <select class="form-select" name="sort_by" style="margin-top: 10px; margin-right: 20px;">
+                                <option value="default">Alapértelmezett</option>
+                                <option value="asc">Növekvő ár</option>
+                                <option value="desc">Csökkenő ár</option>
+                            </select>
                         </div>
+                        
                         <div class="mb-4 text-center">
                             <button type="submit" style="background-color: #4CAF50; color: white; padding: 10px; border-radius: 5px;">Szűrés</button>
                         </div>
