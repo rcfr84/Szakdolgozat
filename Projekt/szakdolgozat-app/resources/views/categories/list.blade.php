@@ -23,9 +23,11 @@
                             @endforeach
                         </tr>
                         @endforeach
-                        <td>
-                            <a href="{{route('categories.action')}} " style="background-color: #4CAF50; color: white; padding: 10px; border-radius: 5px; text-decoration: none; display: inline-block;">Kategória műveletek</a>
-                        </td>
+                        @if (Auth::user()->role->name === 'admin')
+                            <td>
+                                <a href="{{route('categories.action')}} " style="background-color: #4CAF50; color: white; padding: 10px; border-radius: 5px; text-decoration: none; display: inline-block;">Kategória műveletek</a>
+                            </td>
+                        @endif
                         
                     </tbody>
                 </table>

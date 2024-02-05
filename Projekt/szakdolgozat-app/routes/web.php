@@ -9,6 +9,7 @@ use App\Http\Controllers\CityController;
 use App\Http\Controllers\AdvertisementController;
 use App\Http\Controllers\MessageController;
 use App\Http\Controllers\PictureController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -78,6 +79,11 @@ Route::middleware('auth')->group(function () {
     Route::get('/pictures/create/{advertisementId}', [PictureController::class, 'create'])->name('pictures.create');
     Route::post('/pictures/create/{advertisementId}', [PictureController::class, 'store'])->name('pictures.store');
     Route::delete('/pictures/{pictureId}', [PictureController::class, 'destroy'])->name('pictures.destroy');
+
+    //USER
+    Route::get('/users', [UserController::class, 'index'])->name('users.index');
+    Route::delete('/users/{userId}', [UserController::class, 'destroy'])->name('users.destroy');
+
 });
 
 
