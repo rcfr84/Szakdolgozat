@@ -1,5 +1,8 @@
 @extends('layouts.app')
 @section('content')
+    @php
+        $user = Auth::user();
+    @endphp
     <div class="container mx-auto mt-8">
         <div class="flex justify-center">
             <div class="w-4/4">
@@ -87,6 +90,20 @@
                                     <td class="px-4 py-2">
                                         <a href="{{ route('advertisements.show', $advertisement->advertisement_id) }}" style="background-color: #4CAF50; color: white; padding: 10px; border-radius: 5px;">Megtekintés</a>
                                     </td>
+                                    @if ($user && $user->role->name === 'admin')
+                                        <td class="px-4 py-2">
+                                            <a href="{{ route('advertisements.edit', $advertisement->advertisement_id) }}" style="background-color: #0388fc; color: white; padding: 10px; border-radius: 5px;">Módosítás</a>
+                                        </td>
+                                    @endif
+                                    @if ($user && $user->role->name === 'admin')
+                                        <td class="px-4 py-2">
+                                                <form method="POST" action="{{ route('advertisements.destroy', $advertisement->advertisement_id) }}">
+                                                    @csrf
+                                                    @method('DELETE')
+                                                    <button type="submit" style="background-color: #fc0303; color: white; padding: 10px; border-radius: 5px;">Törlés</button>
+                                                </form>
+                                        </td>
+                                    @endif
                                 </tr>
                             @endforeach
                         </tbody>

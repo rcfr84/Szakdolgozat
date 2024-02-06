@@ -112,13 +112,12 @@ class AdvertisementController extends Controller
     {
         $advertisement = Advertisement::find($id);
 
-        if (!$advertisement) {
+        if (!$advertisement) 
+        {
             return redirect()->route('advertisements.own')->with('error', 'Nincsen ilyen hirdetés!');
         }
 
-        if (auth()->user()->user_id != $advertisement->user_id) {
-            return redirect()->route('advertisements.own')->with('error', 'Csak a saját hirdetéseidet tudod módosítani!');
-        }
+        $this->authorize('edit', $advertisement);
 
         $advertisement->load('pictures');
 
@@ -134,12 +133,8 @@ class AdvertisementController extends Controller
      */
     public function update(Request $request, $id)
     {
-        if (auth()->user()->user_id != Advertisement::find($id)->user_id) 
-        {
-            return redirect()->route('advertisements.own')->with('error', 'Csak a saját hirdetéseidet tudod módosítani!');
-        }
-
         $advertisement = Advertisement::find($id);
+        
         $this->authorize('update', $advertisement);
 
         if (!$advertisement) 
@@ -156,7 +151,10 @@ class AdvertisementController extends Controller
             'pictures.*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
 
-        $advertisement->user_id = Auth::user()->user_id;
+        if (auth()->user()->role->name !== 'admin') 
+        {
+            $advertisement->user_id = Auth::user()->user_id;
+        }
         $advertisement->city_id = $request->city_id;
         $advertisement->category_id = $request->category_id;
         $advertisement->title = $request->title;
@@ -188,25 +186,14 @@ class AdvertisementController extends Controller
      */
     public function destroy($id)
     {
-        
-
-        if (auth()->user()->user_id != Advertisement::find($id)->user_id) 
-        {
-            return redirect()->route('advertisements.own')->with('error', 'Csak a saját hirdetéseidet tudod módosítani!');
-        }
-
         $advertisement = Advertisement::find($id);
 
-        $this->authorize('delete', $advertisement);
-
-        if (!$advertisement) 
+        if (auth()->user()->role->name === 'admin' || auth()->user()->user_id === $advertisement->user_id)
         {
-            return redirect()->route('advertisements.own')->with('error', 'Nincsen ilyen hirdetés!');
-        }
-
-        $advertisement->delete();
-
-        return redirect()->route('advertisements.own')->with('status', 'Sikeres törlés!');
+            $advertisement->delete();
+            return redirect()->route('advertisements.own')->with('status', 'Sikeres törlés!');
+        } 
+        
     }
 
     public function showByCategory($categoryId)
