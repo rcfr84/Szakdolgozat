@@ -6,6 +6,7 @@
                 @if(session('status'))
                     <div style="background-color: #4CAF50; color: white; padding: 10px; border-radius: 5px;" class="p-4 mb-4">{{ session('status') }}</div>
                 @endif
+                <div class="bg-white p-6 rounded-lg shadow-md">
                     <table class="table-auto w-full">
                         <thead>
                             <tr>
@@ -32,6 +33,7 @@
                         </tbody>
                     </table>
                 </div>
+            </div>
                 
             </div>
         </div>
