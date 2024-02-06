@@ -39,7 +39,7 @@
             <!-- Page Content -->
             <main>
                 
-                <main class="py-4">
+                <main class="py-4" style="background-image: url('{{ asset('images/background.jpg') }}');">
                     @yield('content')
 
                 </main>
