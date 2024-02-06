@@ -16,8 +16,9 @@ class UserController extends Controller
         {
             return redirect()->route('categories.index')->with('status', 'Nincsen megfelelő jogosultságod!');
         }
-        $users = User::all()->sortBy('name');
-        //$users = User::where('role_id', '!=', 1)->orderBy('name')->get();
+        //$users = User::all()->sortBy('name');
+
+        $users = User::where('role_id', '!=', 1)->orderBy('name')->get();
 
         return view('users.index', compact('users'));
     }

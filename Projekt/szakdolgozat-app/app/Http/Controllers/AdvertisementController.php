@@ -38,6 +38,11 @@ class AdvertisementController extends Controller
      */
     public function create()
     {
+        if (auth()->user()->role->name === 'admin') 
+        {
+            return redirect()->route('advertisements.index')->with('status', 'Nem tudsz hirdetéseket létrehozni. mivel admin vagy!');
+        }
+
         $categories = Category::all();
         $counties = County::all();
         $cities = [];
@@ -56,6 +61,11 @@ class AdvertisementController extends Controller
      */
     public function store(Request $request)
     {
+        if (auth()->user()->role->name === 'admin') 
+        {
+            return redirect()->route('advertisements.index')->with('status', 'Nem tudsz hirdetéseket létrehozni. mivel admin vagy!');
+        }
+
         $request->validate([
             'city_id' => 'required',
             'category_id' => 'required',

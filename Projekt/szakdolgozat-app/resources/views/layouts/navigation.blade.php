@@ -21,21 +21,30 @@
                         {{ __('Hirdetések') }}
                     </x-nav-link>
                 </div>
-                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-nav-link :href="route('advertisements.create')" :active="request()->routeIs('advertisements.create')">
-                        {{ __('Új hirdetés hozzáadása') }}
-                    </x-nav-link>
-                </div>
-                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-nav-link :href="route('advertisements.own')" :active="request()->routeIs('advertisements.own')">
-                        {{ __('Saját hirdetések') }}
-                    </x-nav-link>
-                </div>
+                @if (Auth::user()->role->name === "user")
+                    <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                        <x-nav-link :href="route('advertisements.create')" :active="request()->routeIs('advertisements.create')">
+                            {{ __('Új hirdetés hozzáadása') }}
+                        </x-nav-link>
+                    </div>
+                    <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                        <x-nav-link :href="route('advertisements.own')" :active="request()->routeIs('advertisements.own')">
+                            {{ __('Saját hirdetések') }}
+                        </x-nav-link>
+                    </div>
+                @endif
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-nav-link :href="route('messages.index')" :active="request()->routeIs('messages.index')">
                         {{ __('Üzenetek') }}
                     </x-nav-link>
                 </div>
+                @if (Auth::user()->role->name === "admin")
+                    <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                        <x-nav-link :href="route('users.index')" :active="request()->routeIs('users.index')">
+                            {{ __('Felhasználók') }}
+                        </x-nav-link>
+                    </div>
+                @endif
             </div>
 
             <!-- Settings Dropdown -->
