@@ -27,7 +27,10 @@ class AdvertisementController extends Controller
 
     public function ownAdvertisements()
     {
-        
+        if (auth()->user()->role->name === 'admin') 
+        {
+            return redirect()->route('advertisements.index')->with('status', 'Nem lehetnek saját hirdetéseidet, mivel admin vagy!');
+        }
         $advertisements = Advertisement::where('user_id', Auth::user()->user_id)->with('pictures')
         ->orderByDesc('created_at')->paginate(15);
         return view('advertisements.ownList', compact('advertisements'));
@@ -40,7 +43,7 @@ class AdvertisementController extends Controller
     {
         if (auth()->user()->role->name === 'admin') 
         {
-            return redirect()->route('advertisements.index')->with('status', 'Nem tudsz hirdetéseket létrehozni. mivel admin vagy!');
+            return redirect()->route('advertisements.index')->with('status', 'Nem tudsz hirdetéseket létrehozni, mivel admin vagy!');
         }
 
         $categories = Category::all();
@@ -186,6 +189,11 @@ class AdvertisementController extends Controller
         }
 
         $advertisement->update();
+
+        if (auth()->user()->role->name === 'admin')
+        {
+            return redirect()->route('advertisements.index')->with('status', 'Sikeres módosítás!');
+        }
 
         return redirect()->route('advertisements.own')->with('status', 'Sikeres módosítás!');
 
