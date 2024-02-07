@@ -1,8 +1,5 @@
 @extends('layouts.app')
 @section('content')
-    @php
-        $user = Auth::user();
-    @endphp
     <div class="container mx-auto mt-8">
         <div class="flex justify-center">
             <div class="w-4/4">
@@ -58,12 +55,12 @@
                             <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-center mb-4">
                                 <div class="mb-4">
                                     <label for="min_price" class="block text-sm font-medium text-gray-700">Minimum ár:</label>
-                                    <input type="number" name="min_price" class="mb-4">
+                                    <input type="number" name="min_price" placeholder="Ft" class="mb-4">
                                     
                                 </div>
                                 <div class="mb-4">
                                     <label for="max_price" class="block text-sm font-medium text-gray-700">Maximum ár:</label>
-                                    <input type="number" name="max_price" class="mb-4">
+                                    <input type="number" name="max_price" placeholder="Ft" class="mb-4">
                                 </div>
                                 <div class="mb-4">
                                     <label for="category" class="block text-sm font-medium text-gray-700">Kategória:</label>
@@ -117,7 +114,7 @@
                                             </svg>
                                         </a>
                                     </td>
-                                    @if ($user && $user->role->name === 'admin')
+                                    @if (Auth::user() && Auth::user()->role->name === 'admin')
                                         <td class="px-4 py-2">
                                             <a href="{{ route('advertisements.edit', $advertisement->advertisement_id) }}">
                                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="20" height="20" style="cursor: pointer;" fill="blue">
@@ -126,7 +123,7 @@
                                             </a>
                                         </td>
                                     @endif
-                                    @if ($user && $user->role->name === 'admin')
+                                    @if (Auth::user() && Auth::user()->role->name === 'admin')
                                         <td class="px-4 py-2">
                                                 <form method="POST" action="{{ route('advertisements.destroy', $advertisement->advertisement_id) }}">
                                                     @csrf
