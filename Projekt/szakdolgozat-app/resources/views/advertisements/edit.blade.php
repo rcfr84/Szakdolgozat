@@ -36,12 +36,15 @@
                         </div>
                         <div class="mb-4">
                             <label class="form-label">Képek</label>
-                            @foreach ($advertisement->pictures as $picture)
-                                <div class="w-1/4 p-2 mx-auto">
-                                    <img src="{{ asset('storage/' . $picture->src) }}" alt="Kép" style="width: 8cm; height: auto; display: block; margin-left: auto; margin-right: auto;">
+                            @foreach ($advertisement->pictures as $key => $picture)
+                                <div class="grid">
+                                    <a href="{{ asset('storage/' . $picture->src) }}" data-lightbox="advertisement" data-title="Kép {{ $key + 1 }}">
+                                        <img src="{{ asset('storage/' . $picture->src) }}" alt="Kép" style="width: 10cm; height: auto; display: block; margin-left: auto; margin-right: auto; margin-bottom: 5px">
+                                    </a>
                                 </div>
                             @endforeach
-                        </div>                        
+                        </div>
+                                              
                         <div class="mb-4">
                             <label class="form-label">Cím</label>
                             <input type="text" class="form-control w-full" name="title" id="title" value="{{ old('title', $advertisement->title) }}">

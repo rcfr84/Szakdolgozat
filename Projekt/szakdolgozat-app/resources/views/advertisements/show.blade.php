@@ -2,7 +2,7 @@
 @section('content')
     <div class="container mx-auto mt-8">
         <div class="flex justify-center">
-            <div class="w-4/4">
+            <div class="w-2/3">
                 @if(session('status'))
                     <div class="bg-green-500 text-white p-4 mb-4">{{ session('status') }}</div>
                 @endif
@@ -13,9 +13,13 @@
                                 <th class="px-4 py-2">Kép</th>
                                 <th></th>
                                 <td class="px-4 py-2">
-                                    @foreach ($advertisement->pictures as $picture)
-                                        <img src="{{ asset('storage/' . $picture->src) }}" alt="Kép" style="width: 8cm; height: auto; display: block; margin-left: auto; margin-right: auto;">
-                                    @endforeach
+                                    <div class="grid grid-cols-5 gap-2">
+                                        @foreach ($advertisement->pictures as $i => $picture)    
+                                            <a href="{{ asset('storage/' . $picture->src) }}" data-title="Image {{ $i + 1 }}">
+                                                <img src="{{ asset('storage/' . $picture->src) }}" alt="Kép" style="width: 100%; height: auto; object-fit: cover; display: block; margin: 0 auto;" class="max-w-full rounded-lg">
+                                            </a>
+                                        @endforeach
+                                    </div>
                                 </td>
                             </tr>
                             <tr>
