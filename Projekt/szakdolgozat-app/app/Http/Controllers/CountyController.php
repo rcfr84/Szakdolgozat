@@ -12,8 +12,9 @@ class CountyController extends Controller
      */
     public function index()
     {
-        $county = County::all();
-        return view('county.index', compact('county'));
+        $this->authorize('index', County::class);
+        $counties = County::all();
+        return view('counties.list', compact('counties'));
     }
 
     /**
@@ -21,7 +22,8 @@ class CountyController extends Controller
      */
     public function create()
     {
-        //
+        $this->authorize('create', County::class);
+        return view('counties.create');
     }
 
     /**
@@ -29,7 +31,14 @@ class CountyController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->authorize('store', County::class);
+        $request->validate([
+            'name' => 'required'
+        ]);
+        $county = new County();
+        $county->name = $request->name;
+        $county->save();
+        return redirect()->route('counties.index')->with('status', 'Sikeres hozzáadás!');
     }
 
     /**
@@ -43,24 +52,47 @@ class CountyController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(County $county)
+    public function edit($countyId)
     {
-        //
+        $county = County::find($countyId);
+        if (!$county) {
+            return redirect()->route('counties.index')->with('status', 'Nem található a keresett megye!');
+        }
+        $this->authorize('edit', County::class);
+        return view('counties.edit', compact('county'));   
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, County $county)
+    public function update(Request $request, $countyId)
     {
-        //
+        $county = County::find($countyId);
+        if (!$county) 
+        {
+            return redirect()->route('counties.index')->with('status', 'Nem található a keresett megye!');
+        }
+        $this->authorize('update', County::class);
+        $request->validate([
+            'name' => 'required'
+        ]);
+        $county->name = $request->name;
+        $county->save();
+        return redirect()->route('counties.index')->with('status', 'Sikeres módosítás!');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(County $county)
+    public function destroy($countyId)
     {
-        //
+        $county = County::find($countyId);
+        if (!$county) {
+            return redirect()->route('counties.index')->with('status', 'Nem található a keresett megye!');
+        }
+        $this->authorize('destroy', County::class);
+
+        $county->delete();
+        return redirect()->route('counties.index')->with('status', 'Sikeres törlés!');
     }
 }

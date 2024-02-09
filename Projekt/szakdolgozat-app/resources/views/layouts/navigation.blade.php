@@ -44,6 +44,11 @@
                             {{ __('Felhasználók') }}
                         </x-nav-link>
                     </div>
+                    <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                        <x-nav-link :href="route('counties.index')" :active="request()->routeIs('counties.index')">
+                            {{ __('Vármegyék') }}
+                        </x-nav-link>
+                    </div>
                 @endif
             </div>
 

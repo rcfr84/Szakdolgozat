@@ -86,6 +86,21 @@ Route::middleware('auth')->group(function () {
     Route::get('/users', [UserController::class, 'index'])->name('users.index');
     Route::delete('/users/{userId}', [UserController::class, 'destroy'])->name('users.destroy');
 
+    //COUNTY
+    Route::get('/counties', [CountyController::class, 'index'])->name('counties.index');
+    Route::get('/counties/create', [CountyController::class, 'create'])->name('counties.create');
+    Route::post('/counties', [CountyController::class, 'store'])->name('counties.store');
+    Route::get('/counties/{countyId}', [CountyController::class, 'edit'])->name('counties.edit');
+    Route::put('/counties/{countyId}', [CountyController::class, 'update'])->name('counties.update');
+    Route::delete('/counties/{countyId}', [CountyController::class, 'destroy'])->name('counties.destroy');
+
+    //CITY
+    Route::get('/cities/county/{countyId}', [CityController::class, 'index'])->name('cities.index');
+    Route::get('/cities/create/county/{countyId}', [CityController::class, 'create'])->name('cities.create');
+    Route::post('/cities/create/county/{countyId}', [CityController::class, 'store'])->name('cities.store');
+    Route::get('/cities/{cityId}', [CityController::class, 'edit'])->name('cities.edit');
+    Route::put('/cities/{cityId}', [CityController::class, 'update'])->name('cities.update');
+    Route::delete('/cities/{cityId}', [CityController::class, 'destroy'])->name('cities.destroy');
 });
 
 
