@@ -140,6 +140,22 @@ class AdvertisementController extends Controller
 
         return view('advertisements.edit', compact('advertisement', 'counties', 'cities', 'categories'));
     }
+    public function editCountyAndCity(Request $request, $id)
+    {
+        auth()->user();
+        
+        $advertisement = Advertisement::find($id);
+        $counties = County::all();
+        $cities = [];
+        return view('advertisements.countyCityEdit', compact('cities', 'advertisement', 'counties'));
+    }
+    public function updateCountyAndCity(Request $request, $id)
+    {
+        $advertisement = Advertisement::find($id);
+        $advertisement->city_id = $request->city_id;
+        $advertisement->update();
+        return redirect()->route('advertisements.edit', $advertisement->advertisement_id)->with('status', 'Sikeres módosítás!');
+    }
 
     /**
      * Update the specified resource in storage.
@@ -156,7 +172,6 @@ class AdvertisementController extends Controller
         }
 
         $request->validate([
-            'city_id' => 'required',
             'category_id' => 'required',
             'title' => 'required',
             'price' => 'required',
@@ -168,7 +183,6 @@ class AdvertisementController extends Controller
         {
             $advertisement->user_id = Auth::user()->user_id;
         }
-        $advertisement->city_id = $request->city_id;
         $advertisement->category_id = $request->category_id;
         $advertisement->title = $request->title;
         $advertisement->price = $request->price;

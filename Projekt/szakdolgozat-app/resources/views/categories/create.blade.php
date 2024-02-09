@@ -7,7 +7,7 @@
                 <form action="{{ route('categories.store') }}" method="POST" enctype="multipart/form-data">
                     @csrf            
                     <div class="mb-4">
-                        <label for="name" class="form-label">Név</label>
+                        <label for="name" class="form-label font-bold">Név</label>
                         <input type="text" class="form-input w-full" name="name" id="name" value="{{ old('name', '') }}">
                     </div>
                     <div class="mb-4 text-center">

@@ -9,7 +9,7 @@
                         @csrf
                         @method('PUT')
                         <div class="mb-4">
-                            <label class="form-label">Üzenet</label>
+                            <label class="form-label font-bold">Üzenet</label>
                             <input type="text" class="form-control w-full" name="message" id="message" value="{{ old('message', $message->message) }}">
                         </div>
                         <div class="mb-4 text-center">

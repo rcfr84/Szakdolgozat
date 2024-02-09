@@ -9,7 +9,7 @@
                         @csrf
                         @method('PUT')
                         <div class="mb-4">
-                            <label class="form-label">Név</label>
+                            <label class="form-label font-bold">Név</label>
                             <input type="text" class="form-control w-full" name="name" id="name" value="{{ old('name', $category->name) }}">
                         </div>
                         <div class="mb-4 text-center">

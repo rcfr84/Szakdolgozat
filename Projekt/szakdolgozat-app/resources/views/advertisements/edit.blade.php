@@ -3,30 +3,23 @@
     <div class="container mx-auto mt-8">
         <div class="flex justify-center">
             <div class="w-3/2">
+                @if(session('status'))
+                    <div class="bg-green-500 text-white p-4 mb-4">{{ session('status') }}</div>
+                @endif
                 <div class="bg-white p-6 rounded-lg shadow-md flex flex-col">
                     <form action="{{ route('advertisements.update', $advertisement->advertisement_id) }}" method="POST" enctype="multipart/form-data">
                         @csrf
                         @method('PUT')
                         <div class="mb-4">
-                            <label class="form-label">Vármegye</label>
-                            <select class="form-control w-full" name="county_id" id="countySelect">
-                                <option value="">Válassz vármegyét</option>
-                                @foreach ($counties as $county)
-                                    <option value="{{ $county->county_id }}" {{ $county->county_id == $advertisement->city->county->county_id ? 'selected' : '' }}>{{ $county->name }}</option>
-                                @endforeach
-                            </select>
+                            <label class="form-label font-bold">Vármegye</label>
+                            <p>{{ old('county_name', $advertisement->city->county->name) }}</p>
                         </div>
                         <div class="mb-4">
-                            <label class="form-label">Város</label>
-                            <select class="form-control w-full" name="city_id" id="citySelect">
-                                <option value="">Válassz várost</option>
-                                @foreach ($cities as $city)
-                                    <option value="{{ $city->city_id }}" {{ $city->city_id == $advertisement->city_id ? 'selected' : '' }}>{{ $city->name }}</option>
-                                @endforeach
-                            </select>
-                        </div>
+                            <label class="form-label font-bold">Város</label>
+                            <p>{{ old('city_name', $advertisement->city->name) }}</p>
+                        </div>                        
                         <div class="mb-4">
-                            <label class="form-label">Kategória</label>
+                            <label class="form-label font-bold">Kategória</label>
                             <select class="form-control w-full" name="category_id" id="category">
                                 <option value="">Válassz kategóriát</option>
                                 @foreach ($categories as $category)
@@ -35,7 +28,7 @@
                             </select>
                         </div>
                         <div class="mb-4">
-                            <label class="form-label">Képek</label>
+                            <label class="form-label font-bold">Képek</label>
                             @foreach ($advertisement->pictures as $key => $picture)
                                 <div class="grid">
                                     <a href="{{ asset('storage/' . $picture->src) }}" data-lightbox="advertisement" data-title="Kép {{ $key + 1 }}">
@@ -46,19 +39,19 @@
                         </div>
                                               
                         <div class="mb-4">
-                            <label class="form-label">Cím</label>
+                            <label class="form-label font-bold">Cím</label>
                             <input type="text" class="form-control w-full" name="title" id="title" value="{{ old('title', $advertisement->title) }}">
                         </div>
                         <div class="mb-4">
-                            <label class="form-label">Ár</label>
+                            <label class="form-label font-bold">Ár</label>
                             <input type="number" class="form-control w-full" name="price" id="price" value="{{ old('price', $advertisement->price) }}">
                         </div>
                         <div class="mb-4">
-                            <label class="form-label">Leírás</label>
+                            <label class="form-label font-bold">Leírás</label>
                             <textarea class="form-control w-full" rows="10" id="description" name="description">{{ old('description', $advertisement->description) }}</textarea>
                         </div>
                         <div class="mb-4">
-                            <label class="form-label">Telefonszám</label>
+                            <label class="form-label font-bold">Telefonszám</label>
                             <input type="text" class="form-control w-full" name="mobile_number" id="mobile_number" value="{{ old('mobile_number', $advertisement->mobile_number) }}">
                         </div>
                         <table>
@@ -72,10 +65,14 @@
 
                                 </td>
                                 <td>
-                                    <button type="submit" class="text-white bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Módosítás</button>
+                                    <a href="{{route('advertisements.editCountyAndCity', $advertisement->advertisement_id)}}" class="text-white bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Vármegye és város módosítása</a>
                                 </td>
                             </tbody>
                         </table>
+                        <div class="flex flex-col items-center justify-center">
+                            <button type="submit" class="mt-6 text-white bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Módosítás</button>
+
+                        </div>
                     </form>
                     @if ($errors->any())
                         <div class="alert alert-danger">

@@ -4,7 +4,7 @@
         <div class="flex justify-center">
             <div class="w-4/4">
                 @if(session('status'))
-                    <div style="background-color: #0388fc; color: white; padding: 10px; border-radius: 5px;">{{ session('status') }}</div>
+                    <div class="bg-green-500 text-white p-4 mb-4">{{ session('status') }}</div>
                 @endif
                 <div class="bg-white p-6 rounded-lg shadow-md">
                         <table class="table-auto w-full">

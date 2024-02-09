@@ -8,7 +8,7 @@
                         @csrf
 
                         <div class="mb-4">
-                            <label for="message" class="form-label" id="message">Üzenet</label>
+                            <label for="message" class="form-label font-bold" id="message">Üzenet</label>
                             <textarea class="form-input w-full" rows="5" id="message" name="message">{{ old('message', '') }}</textarea>
                         </div>
 

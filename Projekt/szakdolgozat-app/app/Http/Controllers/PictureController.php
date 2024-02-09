@@ -53,8 +53,8 @@ class PictureController extends Controller
                 'src' => $path,
             ]);}
 
-        return redirect()->route('advertisements.own')->with('status', 'Sikeres hozzáadás!');
-    }
+            return redirect()->route('advertisements.edit', $advertisementId)->with('status', 'Sikeres módosítás!');
+        }
 
     /**
      * Display the specified resource.

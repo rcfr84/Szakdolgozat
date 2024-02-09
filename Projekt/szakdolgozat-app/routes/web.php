@@ -64,7 +64,9 @@ Route::middleware('auth')->group(function () {
     Route::get('/advertisements/{advertisementId}/show', [AdvertisementController::class, 'show'])->name('advertisements.show');
     Route::get('/search', [AdvertisementController::class, 'searchByTitle'])->name('advertisements.searchByTitle');
     Route::get('/filter', [AdvertisementController::class, 'filter'])->name('advertisements.filter');
-
+    Route::get('/editCountyAndCity/{advertisementId}', [AdvertisementController::class, 'editCountyAndCity'])->name('advertisements.editCountyAndCity');
+    Route::put('/editCountyAndCity/{advertisementId}', [AdvertisementController::class, 'updateCountyAndCity'])->name('advertisements.updateCountyAndCity');
+    
     //MESSAGE
     Route::get('/messages/get', [MessageController::class, 'index'])->name('messages.index');
     Route::get('/messages/create/{receiverId}', [MessageController::class, 'create'])->name('messages.create');
