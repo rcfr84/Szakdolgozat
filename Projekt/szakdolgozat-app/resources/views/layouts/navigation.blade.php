@@ -21,7 +21,7 @@
                         {{ __('Hirdetések') }}
                     </x-nav-link>
                 </div>
-                @if (Auth::user()->role->name === "user")
+                @if (Auth::check() && Auth::user()->role->name === "user")
                     <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                         <x-nav-link :href="route('advertisements.create')" :active="request()->routeIs('advertisements.create')">
                             {{ __('Új hirdetés hozzáadása') }}
@@ -32,13 +32,14 @@
                             {{ __('Saját hirdetések') }}
                         </x-nav-link>
                     </div>
+                    <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                        <x-nav-link :href="route('messages.index')" :active="request()->routeIs('messages.index')">
+                            {{ __('Üzenetek') }}
+                        </x-nav-link>
+                    </div>
                 @endif
-                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-nav-link :href="route('messages.index')" :active="request()->routeIs('messages.index')">
-                        {{ __('Üzenetek') }}
-                    </x-nav-link>
-                </div>
-                @if (Auth::user()->role->name === "admin")
+                
+                @if (Auth::check() && Auth::user()->role->name === "admin")
                     <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                         <x-nav-link :href="route('users.index')" :active="request()->routeIs('users.index')">
                             {{ __('Felhasználók') }}
@@ -49,9 +50,27 @@
                             {{ __('Vármegyék') }}
                         </x-nav-link>
                     </div>
+                    <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                        <x-nav-link :href="route('messages.index')" :active="request()->routeIs('messages.index')">
+                            {{ __('Üzenetek') }}
+                        </x-nav-link>
+                    </div>
                 @endif
+                <div class="fixed top-0 right-0 p-6 text-right z-10">
+                    @auth
+                    @else
+                        <a href="{{ route('login') }}" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:ring focus:ring-red-500">Bejelentkezés</a>
+
+                        @if (Route::has('register'))
+                            <a href="{{ route('register') }}" class="ml-4 font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:ring focus:ring-red-500">Regisztráció</a>
+                        @endif
+                    @endauth
+                </div>
             </div>
 
+            @auth
+                
+            
             <!-- Settings Dropdown -->
             <div class="hidden sm:flex sm:items-center sm:ml-6">
                 <x-dropdown align="right" width="48">
@@ -109,8 +128,8 @@
         <!-- Responsive Settings Options -->
         <div class="pt-4 pb-1 border-t border-gray-200">
             <div class="px-4">
-                <div class="font-medium text-base text-gray-800">{{ Auth::user()->name }}</div>
-                <div class="font-medium text-sm text-gray-500">{{ Auth::user()->email }}</div>
+                <div class="font-medium text-base text-gray-800">{{Auth::check() && Auth::user()->name }}</div>
+                <div class="font-medium text-sm text-gray-500">{{Auth::check() && Auth::user()->email }}</div>
             </div>
 
             <div class="mt-3 space-y-1">
@@ -130,5 +149,6 @@
                 </form>
             </div>
         </div>
+        @endauth
     </div>
 </nav>
