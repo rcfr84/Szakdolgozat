@@ -7,13 +7,17 @@ use App\Models\Advertisement;
 
 class AdvertisementPolicy
 {
+    public function edit(User $user, Advertisement $advertisement)
+    {
+        return $user->user_id === $advertisement->user_id || $user->role->name === 'admin';
+    }
     public function update(User $user, Advertisement $advertisement)
     {
-        return $user->user_id === $advertisement->user_id;
+        return $user->user_id === $advertisement->user_id || $user->role->name === 'admin';
     }
 
-    public function delete(User $user, Advertisement $advertisement)
+    public function destroy(User $user, Advertisement $advertisement)
     {
-        return $user->user_id === $advertisement->user_id;
+        return $user->role->name === 'admin' || $user->user_id === $advertisement->user_id;
     }
 }

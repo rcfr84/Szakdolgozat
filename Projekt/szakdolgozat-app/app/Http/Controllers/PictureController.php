@@ -17,43 +17,44 @@ class PictureController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index($advertisementId)
     {
         $user = auth()->user();
 
-        $AdvertisementPictures = Picture::where('advertisement_id', $user->user_id)->get();
+        $advertisement = Advertisement::find($advertisementId);
+        $advertisementPictures = $advertisement->pictures;
 
-        return view('pictures.index', compact('AdvertisementPictures'));
+        return view('pictures.list', compact('advertisement', 'advertisementPictures'));
     }
-
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function create($advertisementId)
     {
         $user = auth()->user();
 
-        $AdvertisementPictures = Advertisement::where('picture_id', $user->user_id)->get();
-        return view('pictures.create', compact('AdvertisementPictures'));
+        $advertisement = Advertisement::find($advertisementId);
+
+        return view('pictures.create', compact('advertisement'));
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(Request $request, $advertisementId)
     {
         $user = auth()->user();
 
-        $request->validate([
-            'src' => 'required',
-        ]);
+        foreach ($request->file('pictures') as $picture) {
+            $filename = 'advertisement_image_' . uniqid() . '.' . $picture->getClientOriginalExtension();
+            $path = $picture->storeAs('advertisement_images', $filename, 'public');
+            Picture::create([
+                'advertisement_id' => $advertisementId,
+                'src' => $path,
+            ]);}
 
-        $newPicture = new Picture();
-        $newPicture->src = $request->src;
-        $newPicture->save();
-
-        return redirect()->route('pictures.index')->with('status', 'Picture added successfully!');
-    }
+            return redirect()->route('advertisements.edit', $advertisementId)->with('status', 'Sikeres módosítás!');
+        }
 
     /**
      * Display the specified resource.
@@ -71,7 +72,7 @@ class PictureController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Picture $picture)
+    public function edit()
     {
         //
     }
@@ -79,7 +80,7 @@ class PictureController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Picture $picture)
+    public function update()
     {
         //
     }
@@ -87,19 +88,18 @@ class PictureController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy($id)
+    public function destroy($pictureId)
     {
         $user = auth()->user();
 
-        $picture = Picture::find($id);
+        $picture = Picture::find($pictureId);
 
-        if (!$picture) 
-        {
-            return redirect()->route('/dashboard')->with('status', 'Picture not found!');
+        if ($picture) {
+            $picture->delete();
+            return redirect()->back()->with('success', 'Kép sikeresen törölve!');
+        } else {
+            return redirect()->back()->with('error', 'A kép nem található.');
         }
 
-        $picture->delete();
-
-        return redirect()->route('pictures.index')->with('status', 'Picture deleted successfully!');
     }
 }

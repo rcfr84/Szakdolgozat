@@ -7,7 +7,7 @@
                     <div class="bg-green-500 text-white p-4 mb-4">{{ session('status') }}</div>
                 @endif
                 <div class="bg-white p-6 rounded-lg shadow-md">
-                    <div class="text-center mb-4 text-lg font-bold">{{$category->name}}</div>
+                    <div class="text-center">{{ $advertisements->total() }} db találat.</div>
                     <table class="table-auto w-full">
                         <thead>
                             <tr>
@@ -24,9 +24,10 @@
                         <tbody>
                             @foreach ($advertisements as $advertisement)
                                 <tr>
-                                    <td class="px-4 py-2">
+                                    
+                                    <td class="px-4 py-2 text-center">
                                         @if ($advertisement->pictures->isNotEmpty())
-                                            <img src="{{ asset('storage/' . $advertisement->pictures->first()->src) }}" alt="Kép" style="width: 8cm; height: auto;">
+                                            <img src="{{ asset('storage/' . $advertisement->pictures->first()->src) }}" alt="Kép">
                                         @else
                                             <span>Nincs kép</span>
                                         @endif
@@ -49,7 +50,7 @@
                         </tbody>
                     </table>
                 </div>
-                {{ $advertisements->links() }}
+                {{ $advertisements->appends(request()->query())->links() }}
             </div>
         </div>
     </div>

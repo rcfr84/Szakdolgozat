@@ -28,12 +28,16 @@ class Message extends Model
         return $this->belongsTo(User::class, 'receiver_id', 'user_id');
     }
     public function getLastMessage()
-    {
-        return Message::where('sender_id', $this->sender_id)
-            ->orWhere('receiver_id', $this->receiver_id)
-            ->orderBy('created_at', 'desc')
-            ->first();
-    }
+{
+    return Message::where(function ($query) {
+        $query->where('sender_id', $this->sender_id)
+              ->where('receiver_id', $this->receiver_id);
+    })->orWhere(function ($query) {
+        $query->where('sender_id', $this->receiver_id)
+              ->where('receiver_id', $this->sender_id);
+    })->latest('created_at')->first();
+}
+
 
     public function scopeUserMessages($query, $user_id)
     {

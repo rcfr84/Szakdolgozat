@@ -3,12 +3,12 @@
 @section('content')
     <div class="container mx-auto mt-8">
         <div class="flex justify-center">
-            <div class="w-1/2">
+            <div class="w-3/2">
                 <div class="bg-white p-6 rounded-lg shadow-md flex flex-col">
                     <form action="{{ route('advertisements.store') }}" method="POST" enctype="multipart/form-data">
                         @csrf
                         <div class="mb-4">
-                            <label for="countySelect" class="form-label">Vármegye</label>
+                            <label for="countySelect" class="form-label font-bold">Vármegye</label>
                             <select class="form-select w-full" name="county_id" id="countySelect">
                                 <option value="">Válassz vármegyét</option>
                                 @foreach ($counties as $county)
@@ -16,15 +16,14 @@
                                 @endforeach
                             </select>
                         </div>
-                        
                         <div class="mb-4">
-                            <label for="citySelect" class="form-label">Város</label>
+                            <label for="citySelect" class="form-label font-bold">Város</label>
                             <select class="form-select w-full" name="city_id" id="citySelect">
                                 <option value="">Válassz várost</option>
                             </select>
                         </div>
                         <div class="mb-4">
-                            <label for="categorySelect" class="form-label">Kategória</label>
+                            <label for="categorySelect" class="form-label font-bold">Kategória</label>
                             <select class="form-select w-full" name="category_id" id="category">
                                 <option value="">Válassz kategóriát</option>
                                 @foreach ($categories as $category)
@@ -33,27 +32,43 @@
                             </select>
                         </div>
                         <div class="mb-4">
-                            <label for="pictures" class="form-label">Képek</label>
-                            <input type="file" class="form-input w-full" name="pictures[]" id="pictures" multiple>
+                            <label for="pictures" class="form-label font-bold">Kép 1</label>
+                            <input type="file" class="form-input w-full" name="pictures[]" id="pictures1">
+                        </div>  
+                        <div class="mb-4">
+                            <label for="pictures" class="form-label font-bold">Kép 2</label>
+                            <input type="file" class="form-input w-full" name="pictures[]" id="pictures2">
+                        </div>  
+                        <div class="mb-4">
+                            <label for="pictures" class="form-label font-bold">Kép 3</label>
+                            <input type="file" class="form-input w-full" name="pictures[]" id="pictures3">
+                        </div>  
+                        <div class="mb-4">
+                            <label for="pictures" class="form-label font-bold">Kép 4</label>
+                            <input type="file" class="form-input w-full" name="pictures[]" id="pictures4">
+                        </div>  
+                        <div class="mb-4">
+                            <label for="pictures" class="form-label font-bold">Kép 5</label>
+                            <input type="file" class="form-input w-full" name="pictures[]" id="pictures5">
                         </div>                            
                         <div class="mb-4">
-                            <label for="title" class="form-label">Cím</label>
+                            <label for="title" class="form-label font-bold">Cím</label>
                             <input type="text" class="form-input w-full" name="title" id="title" value="{{ old('title', '') }}">
                         </div>
                         <div class="mb-4">
-                            <label for="price" class="form-label">Ár</label>
-                            <input type="text" class="form-input w-full" name="price" id="price" value="{{ old('price', '') }}">
+                            <label for="price" class="form-label font-bold">Ár</label>
+                            <input type="number" class="form-input w-full" placeholder="Ft" name="price" id="price" value="{{ old('price', '') }}">
                         </div>
                         <div class="mb-4">
-                            <label for="description" class="form-label" id="description">Leírás</label>
+                            <label for="description" class="form-label font-bold" id="description">Leírás</label>
                             <textarea class="form-input w-full" rows="10" id="description" name="description">{{ old('description', '') }}</textarea>
                         </div>
                         <div class="mb-4">
-                            <label for="mobile_number" class="form-label">Telefonszám</label>
+                            <label for="mobile_number" class="form-label font-bold">Telefonszám</label>
                             <input type="text" class="form-input w-full" name="mobile_number" id="mobile_number" value="{{ old('mobile_number', '') }}">
                         </div>
                         <div class="mb-4 text-center">
-                            <button type="submit" style="background-color: #4CAF50; color: white; padding: 10px; border-radius: 5px;">Hozzáadás</button>
+                            <button type="submit" class="text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 shadow-lg shadow-green-500/50 dark:shadow-lg dark:shadow-green-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Hozzáadás</button>
                         </div>
                     </form>
                     @if ($errors->any())
@@ -69,28 +84,6 @@
                 </div>
             </div>
         </div>
-        <script>
-            var countySelect = document.getElementById("countySelect");
-            var citySelect = document.getElementById("citySelect");
         
-            countySelect.addEventListener("change", function () {
-                var selectedCounty = countySelect.value;
-                citySelect.innerHTML = "<option value=''>Válassz várost</option>";
-        
-                if (selectedCounty) {
-                    fetch(`/get-cities-by-county/${selectedCounty}`)
-                        .then(response => response.json())
-                        .then(data => {
-                            data.forEach(function (city) {
-                                var option = document.createElement("option");
-                                option.value = city.city_id;
-                                option.text = city.name;
-                                citySelect.appendChild(option);
-                            });
-                        })
-                        .catch(error => console.error(error));
-                }
-            });
-        </script>
     </div>
 @endsection

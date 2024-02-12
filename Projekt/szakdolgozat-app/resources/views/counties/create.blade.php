@@ -4,7 +4,7 @@
     <div class="flex justify-center">
         <div class="w-3/2">
             <div class="bg-white p-6 rounded-lg shadow-md flex flex-col">
-                <form action="{{ route('categories.store') }}" method="POST" enctype="multipart/form-data">
+                <form action="{{ route('counties.store') }}" method="POST" enctype="multipart/form-data">
                     @csrf            
                     <div class="mb-4">
                         <label for="name" class="form-label font-bold">Név</label>

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Gate;
 
 class CategoryController extends Controller
 {
@@ -27,6 +28,8 @@ class CategoryController extends Controller
      */
     public function create()
     {
+        $this->authorize('create', Category::class);
+        
         return view('categories.create');
     }
 
@@ -35,6 +38,8 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
+        $this->authorize('store', Category::class);
+
         $request->validate([
             'name' => 'required',
         ]);
@@ -61,6 +66,8 @@ class CategoryController extends Controller
     {
         $category = Category::find($categoryId);
 
+        $this->authorize('create', Category::class);
+
         if (!$category) 
         {
             return redirect()->route('/allCategories')->with('status', 'Nincsen ilyen kategória!');
@@ -75,6 +82,9 @@ class CategoryController extends Controller
     public function update(Request $request, $categoryId)
     {
         $category = Category::find($categoryId);
+
+        $this->authorize('update', Category::class);
+
 
         if (!$category) 
         {
@@ -99,6 +109,8 @@ class CategoryController extends Controller
     {
         $category = Category::find($categoryId);
 
+        $this->authorize('destroy', Category::class);
+
         if (!$category) 
         {
             return redirect()->route('/allCategories')->with('status', 'Nincsen ilyen kategória!');
@@ -111,6 +123,7 @@ class CategoryController extends Controller
 
     public function action()
     {
+        $this->authorize('action', Category::class);
         $categories = Category::all();
         return view('categories.index', compact('categories'));
     }
