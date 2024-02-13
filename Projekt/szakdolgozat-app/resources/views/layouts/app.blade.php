@@ -21,6 +21,7 @@
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
         <script src="{{ asset('js/citySelect.js') }}" defer></script>
+        <script src="{{ asset('js/filter.js') }}" defer></script>
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
 
@@ -47,11 +48,11 @@
                     @yield('content')
 
                 </main>
-                <section class="space-y-6">
+                <section class="space-y-6" style="background-image: url('{{ asset('images/background.jpg') }}');">
                     <!-- ... (content of the first code section) ... -->
-                    @yield('delete-user-form')
-                    @yield('update-password-form')
                     @yield('update-profile-information-form')
+                    @yield('update-password-form')
+                    @yield('delete-user-form')
                 </section>
             </main>
         </div>

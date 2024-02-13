@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-    <div class="container mx-auto mt-8">
+    <div class="min-h-screen container mx-auto mt-8">
         <div class="flex justify-center">
             <div class="w-4/4">
                 <div class="bg-white p-6 rounded-lg shadow-md">
@@ -11,8 +11,8 @@
                         <table class="table-auto w-full">
                             <thead>
                                 <tr>
-                                    <th class="px-4 py-2">Kép</th>
-                                    <th class="px-4 py-2">Cím</th>
+                                    <th class="px-4 py-2" style="width: 150px; height: 200px;">Kép</th>
+                                    <th class="px-4 py-2" style="width: 150px;">Cím</th>
                                     <th class="px-4 py-2">Város</th>
                                     <th class="px-4 py-2">Vármegye</th>
                                     <th class="px-4 py-2">Kategória</th>

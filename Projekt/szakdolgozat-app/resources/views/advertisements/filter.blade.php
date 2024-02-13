@@ -1,18 +1,18 @@
 @extends('layouts.app')
 @section('content')
-    <div class="container mx-auto mt-8">
+    <div class="min-h-screen container mx-auto mt-8">
         <div class="flex justify-center">
             <div class="w-4/4">
                 @if(session('status'))
                     <div class="bg-green-500 text-white p-4 mb-4">{{ session('status') }}</div>
                 @endif
                 <div class="bg-white p-6 rounded-lg shadow-md">
-                    <div class="text-center">{{ $advertisements->total() }} db találat.</div>
+                    <div class="text-center font-bold">{{ $advertisements->total() }} db találat.</div>
                     <table class="table-auto w-full">
                         <thead>
                             <tr>
-                                <th class="px-4 py-2">Kép</th>
-                                <th class="px-4 py-2">Cím</th>
+                                <th class="px-4 py-2" style="width: 150px; height: 200px;">Kép</th>
+                                <th class="px-4 py-2" style="width: 150px;">Cím</th>
                                 <th class="px-4 py-2">Város</th>
                                 <th class="px-4 py-2">Vármegye</th>
                                 <th class="px-4 py-2">Kategória</th>
