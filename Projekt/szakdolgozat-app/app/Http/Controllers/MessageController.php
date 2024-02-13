@@ -8,12 +8,6 @@ use App\Models\User;
 
 class MessageController extends Controller
 {
-    /*
-    public function __construct()
-    {
-        $this->middleware('CheckRole:admin')->only(['edit', 'update', 'destroy']);
-    }
-    */
     /**
      * Display a listing of the resource.
      */
@@ -37,7 +31,8 @@ class MessageController extends Controller
     public function create($receiverId)
     {
         $user_id = auth()->user()->user_id;
-        if ($user_id == $receiverId) {
+        if ($user_id == $receiverId) 
+        {
             return redirect()->route('advertisements.index')->with('status', 'Nem küldhetsz üzenetet saját magadnak!');
         }
         return view('messages.create')->with('receiverId', $receiverId);
@@ -84,10 +79,12 @@ class MessageController extends Controller
     public function edit($id)
     {
         $message = Message::find($id);
+        $receiverId = $message->receiver_id;
+        $senderId = $message->sender_id;
 
         if (!$message) 
         {
-            return redirect()->route('/messages/get')->with('status', 'Nincsen ilyen üzenet!');
+            return redirect()->route('messages.showConversation', [$receiverId, $senderId])->with('status', 'Nincsen ilyen üzenet!');
         }
 
         return view('messages.edit', compact('message'));

@@ -8,12 +8,6 @@ use Illuminate\Support\Facades\Gate;
 
 class CategoryController extends Controller
 {
-    /*
-    public function __construct()
-    {
-        $this->middleware('CheckRole:admin')->only(['create', 'store', 'edit', 'update', 'destroy']);
-    }
-    */
     /**
      * Display a listing of the resource.
      */

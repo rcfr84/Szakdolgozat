@@ -8,12 +8,6 @@ use Illuminate\Http\Request;
 
 class PictureController extends Controller
 {
-    /*
-    public function __construct()
-    {
-        $this->middleware('CheckRole:admin')->only(['destroy']);
-    }
-    */
     /**
      * Display a listing of the resource.
      */
@@ -94,10 +88,13 @@ class PictureController extends Controller
 
         $picture = Picture::find($pictureId);
 
-        if ($picture) {
+        if ($picture) 
+        {
             $picture->delete();
             return redirect()->back()->with('success', 'Kép sikeresen törölve!');
-        } else {
+        } 
+        else 
+        {
             return redirect()->back()->with('error', 'A kép nem található.');
         }
 

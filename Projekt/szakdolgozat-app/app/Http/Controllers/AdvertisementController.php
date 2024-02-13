@@ -12,7 +12,6 @@ use App\Models\Picture;
 
 class AdvertisementController extends Controller
 {
-    
     /**
      * Display a listing of the resource.
      */
@@ -243,7 +242,7 @@ class AdvertisementController extends Controller
         ]);
 
         $search = $request->search;
-        $advertisements = Advertisement::where('title', 'LIKE', "%{$search}%")->paginate(30);
+        $advertisements = Advertisement::where('title', 'LIKE', "%{$search}%")->paginate(15);
 
         return view('advertisements.search', compact('advertisements'));
     }
