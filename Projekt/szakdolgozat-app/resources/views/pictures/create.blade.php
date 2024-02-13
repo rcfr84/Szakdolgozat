@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-    <div class="container mx-auto mt-8">
+    <div class="min-h-screen container mx-auto mt-8">
         <div class="flex justify-center">
             <div class="w-3/2">
                 <div class="bg-white p-6 rounded-lg shadow-md flex flex-col">
@@ -13,7 +13,7 @@
 
                         @for ($i = 1; $i <= $remainingPicture; $i++)
                             <div class="mb-4">
-                                <label for="pictures" class="form-label">Kép {{ $i }}</label>
+                                <label for="pictures" class="form-label font-bold">Kép {{ $i }}</label>
                                 <input type="file" class="form-input w-full" name="pictures[]" id="pictures{{ $i }}">
                             </div>
                         @endfor

@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-<div class="container mx-auto mt-8">
+<div class="min-h-screen container mx-auto mt-8">
     <div class="flex justify-center">
         <div class="w-3/2">
             @if(session('status'))
