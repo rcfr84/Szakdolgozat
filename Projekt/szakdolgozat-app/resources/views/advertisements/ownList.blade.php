@@ -10,8 +10,8 @@
                         <table class="table-auto w-full">
                             <thead>
                                 <tr>
-                                    <th class="px-4 py-2">Kép</th>
-                                    <th class="px-4 py-2">Cím</th>
+                                    <th class="px-4 py-2" style="width: 150px; height: 200px;">Kép</th>
+                                    <th class="px-4 py-2" style="width: 150px;">Cím</th>
                                     <th class="px-4 py-2">Város</th>
                                     <th class="px-4 py-2">Vármegye</th>
                                     <th class="px-4 py-2">Kategória</th>
@@ -27,18 +27,18 @@
                                     <tr>
                                         <td class="px-4 py-2">
                                             @if ($advertisement->pictures->isNotEmpty())
-                                                <img src="{{ asset('storage/' . $advertisement->pictures->first()->src) }}" alt="Kép">
+                                                <img src="{{ asset('storage/' . $advertisement->pictures->first()->src) }}" alt="Kép" style="width: auto; height: auto; display: block; margin: 0 auto;">
                                             @else
                                                 <span>Nincs kép</span>
                                             @endif
                                         </td>
-                                        <td class="px-4 py-2">{{ $advertisement->title }}</td>
+                                        <td class="px-4 py-2 break-all">{{ $advertisement->title }}</td>
                                         <td class="px-4 py-2">{{ $advertisement->city->name}}</td>
                                         <td class="px-4 py-2">{{ $advertisement->city->county->name }}</td>
                                         <td class="px-4 py-2">{{ $advertisement->category->name }}</td>
                                         <td class="px-4 py-2">{{ $advertisement->price }}</td>
-                                        <td class="px-4 py-2">{{ $advertisement->description }}</td>
-                                        <td class="px-4 py-2">{{ $advertisement->mobile_number }} </td>
+                                        <td class="px-4 py-2 break-all">{{ $advertisement->description }}</td>
+                                        <td class="px-4 py-2 break-all">{{ $advertisement->mobile_number }} </td>
                                         <td class="px-4 py-2">
                                             <a href="{{ route('advertisements.edit', $advertisement->advertisement_id) }}">
                                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="20" height="20" style="cursor: pointer;" fill="blue">
