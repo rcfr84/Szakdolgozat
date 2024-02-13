@@ -27,7 +27,7 @@
                                     <tr>
                                         <td class="px-4 py-2">{{ $message->sender->name }}</td>
                                         <td class="px-4 py-2">{{ $message->receiver->name }}</td>
-                                        <td class="px-4 py-2">{{ $message->getLastMessage()->message }}</td>
+                                        <td class="px-4 py-2" style="max-width: 300px; word-wrap: break-word;">{{ $message->getLastMessage()->message }}</td>
                                         <td class="px-4 py-2">
                                             <a href="{{ route('messages.showConversation', ['user1_id' => $message->sender_id, 'user2_id' => $message->receiver_id]) }}">
                                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" fill="green" width="30" height="30">

@@ -20,10 +20,10 @@
                         <tbody>
                             @foreach($conversation as $message)
                                 <tr>
-                                    <td class="px-4 py-2">{{ $message->created_at }}</td>
+                                    <td class="px-4 py-2">{{ $message->created_at->format('Y.m.d H.i') }}</td>
                                     <td class="px-4 py-2">{{ $message->sender->name }}</td>
                                     <td class="px-4 py-2">{{ $message->receiver->name }}</td>
-                                    <td class="px-4 py-2">{{ $message->message }}</td>
+                                    <td class="px-4 py-2" style="max-width: 300px; word-wrap: break-word;">{{ $message->message }}</td>
                                     <td class="px-4 py-2">
                                         @if ($message->sender_id == auth()->user()->user_id)
                                             <a href="{{ route('messages.edit', $message->message_id) }}">

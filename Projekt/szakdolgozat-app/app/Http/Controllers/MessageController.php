@@ -63,7 +63,11 @@ class MessageController extends Controller
 
         $conversation = Message::getConversation($user->user_id, $receiverId);
 
-        return view('messages.show', compact('receiverId', 'conversation'))->with('status', 'Sikeres üzenet küldés!');
+        $receiverId = $newMessage->receiver_id;
+        $senderId = $newMessage->sender_id;
+
+        return redirect()->route('messages.showConversation', [$receiverId, $senderId])->with('status', 'Sikeres küldés!');
+
     }
 
     /**
@@ -108,7 +112,10 @@ class MessageController extends Controller
         $message->message = $request->message;
         $message->save();
 
-        return redirect()->route('messages.index')->with('status', 'Sikeres módosítás!');
+        $receiverId = $message->receiver_id;
+        $senderId = $message->sender_id;
+
+        return redirect()->route('messages.showConversation', [$receiverId, $senderId])->with('status', 'Sikeres módosítás!');
     }
 
     /**
@@ -126,9 +133,10 @@ class MessageController extends Controller
         {
             return redirect()->route('messages.index')->with('status', 'Nem törölheted más üzenetét!');
         }
-
+        $receiverId = $message->receiver_id;
+        $senderId = $message->sender_id;
         $message->delete();
 
-        return redirect()->route('messages.index')->with('status', 'Sikeres törlés!');
+        return redirect()->route('messages.showConversation', [$receiverId, $senderId])->with('status', 'Sikeres törlés!');
     }
 }
