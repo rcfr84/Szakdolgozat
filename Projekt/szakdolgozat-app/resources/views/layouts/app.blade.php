@@ -42,13 +42,13 @@
             @endif
 
             <!-- Page Content -->
-            <main>
+            <main style="background-image: url('{{ asset('images/background.jpg') }}');">
                 
                 <main class="py-4" style="background-image: url('{{ asset('images/background.jpg') }}');">
                     @yield('content')
 
                 </main>
-                <section class="space-y-6" style="background-image: url('{{ asset('images/background.jpg') }}');">
+                <section class="space-y-6">
                     <!-- ... (content of the first code section) ... -->
                     @yield('update-profile-information-form')
                     @yield('update-password-form')

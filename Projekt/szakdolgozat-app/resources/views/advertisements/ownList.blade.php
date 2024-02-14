@@ -25,7 +25,7 @@
                             @forelse ($advertisements as $advertisement)
                                 <tbody>
                                     <tr>
-                                        <td class="px-4 py-2">
+                                        <td class="px-4 py-2 text-center">
                                             @if ($advertisement->pictures->isNotEmpty())
                                                 <img src="{{ asset('storage/' . $advertisement->pictures->first()->src) }}" alt="Kép" style="width: auto; height: auto; display: block; margin: 0 auto;">
                                             @else
@@ -62,7 +62,7 @@
                             @empty
                                 <tbody>
                                     <tr>
-                                        <td class="px-4 py-2" colspan="10">Nincs saját hirdetésed még.</td>
+                                        <td class="px-4 py-2 font-bold" colspan="10">Nincs saját hirdetésed még.</td>
                                     </tr>
                                 </tbody>
                             @endforelse
