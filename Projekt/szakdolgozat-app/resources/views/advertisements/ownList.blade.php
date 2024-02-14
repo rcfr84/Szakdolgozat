@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-    <div class="container mx-auto mt-8">
+    <div class="min-h-screen container mx-auto mt-8">
         <div class="flex justify-center">
             <div class="w-4/4">
                 @if(session('status'))
@@ -62,7 +62,7 @@
                             @empty
                                 <tbody>
                                     <tr>
-                                        <td class="px-4 py-2" colspan="10">Nincs hirdetés</td>
+                                        <td class="px-4 py-2" colspan="10">Nincs saját hirdetésed még.</td>
                                     </tr>
                                 </tbody>
                             @endforelse
