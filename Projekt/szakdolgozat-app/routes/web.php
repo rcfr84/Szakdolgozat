@@ -43,13 +43,6 @@ Route::middleware('auth')->group(function () {
     Route::put('/categories/{categoryId}', [CategoryController::class, 'update'])->name('categories.update');
     Route::delete('/categories/{categoryId}', [CategoryController::class, 'destroy'])->name('categories.destroy');
 
-
-    //COUNTY
-    Route::get('/counties', [CountyController::class, 'index'])->name('counties.index');
-
-    //CITY
-    Route::get('/cities', [CityController::class, 'index'])->name('cities.index');
-
     //ADVERTISEMENT
     Route::get('/advertisements/own', [AdvertisementController::class, 'ownAdvertisements'])->name('advertisements.own');
     Route::get('/advertisements/create', [AdvertisementController::class, 'create'])->name('advertisements.create');

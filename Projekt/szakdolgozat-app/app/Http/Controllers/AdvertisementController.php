@@ -28,7 +28,7 @@ class AdvertisementController extends Controller
     {
         if (auth()->user()->role->name === 'admin') 
         {
-            return redirect()->route('advertisements.index')->with('status', 'Nem lehetnek saját hirdetéseidet, mivel admin vagy!');
+            return redirect()->route('advertisements.index')->with('error', 'Nem lehetnek saját hirdetéseidet, mivel admin vagy!');
         }
         $advertisements = Advertisement::where('user_id', Auth::user()->user_id)->with('pictures')
         ->orderByDesc('created_at')->paginate(15);
@@ -42,7 +42,7 @@ class AdvertisementController extends Controller
     {
         if (auth()->user()->role->name === 'admin') 
         {
-            return redirect()->route('advertisements.index')->with('status', 'Nem tudsz hirdetéseket létrehozni, mivel admin vagy!');
+            return redirect()->route('advertisements.index')->with('error', 'Nem tudsz hirdetéseket létrehozni, mivel admin vagy!');
         }
 
         $categories = Category::all();
@@ -65,7 +65,7 @@ class AdvertisementController extends Controller
     {
         if (auth()->user()->role->name === 'admin') 
         {
-            return redirect()->route('advertisements.index')->with('status', 'Nem tudsz hirdetéseket létrehozni. mivel admin vagy!');
+            return redirect()->route('advertisements.index')->with('error', 'Nem tudsz hirdetéseket létrehozni. mivel admin vagy!');
         }
 
         $request->validate([
@@ -129,6 +129,11 @@ class AdvertisementController extends Controller
             return redirect()->route('advertisements.own')->with('error', 'Nincsen ilyen hirdetés!');
         }
 
+        if ($advertisement->user_id !== Auth::user()->user_id) 
+        {
+            return redirect()->route('advertisements.own')->with('error', 'Nincsen ilyen hirdetés!');
+        }
+
         $this->authorize('edit', $advertisement);
 
         $advertisement->load('pictures');
@@ -166,6 +171,11 @@ class AdvertisementController extends Controller
         $this->authorize('update', $advertisement);
 
         if (!$advertisement) 
+        {
+            return redirect()->route('advertisements.own')->with('error', 'Nincsen ilyen hirdetés!');
+        }
+
+        if ($advertisement->user_id !== Auth::user()->user_id) 
         {
             return redirect()->route('advertisements.own')->with('error', 'Nincsen ilyen hirdetés!');
         }
@@ -229,7 +239,13 @@ class AdvertisementController extends Controller
 
     public function showByCategory($categoryId)
     {
-        $category = Category::findOrFail($categoryId);
+        $category = Category::find($categoryId);
+
+        if (!$category) 
+        {
+            return redirect()->route('categories.index')->with('error', 'Nincsen ilyen kategória!');
+        }
+
         $advertisements = $category->advertisements()->paginate(15);
 
         return view('categories.show', compact('advertisements', 'category'));

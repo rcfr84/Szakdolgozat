@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\City;
 use App\Models\County;
 use Illuminate\Http\Request;
+use Exception;
 
 class CityController extends Controller
 {
@@ -33,7 +34,7 @@ class CityController extends Controller
         $county = County::find($countyId);
         if (!$county) 
         {
-            return redirect()->route('counties.index', $countyId)->with('status', 'Nem található a keresett megye!');
+            return redirect()->route('counties.index', $countyId)->with('error', 'Nem található a keresett megye!');
         }
         $this->authorize('create', City::class);
         $county_id = $county->county_id;
@@ -71,10 +72,17 @@ class CityController extends Controller
     public function edit($cityId)
     {
         $city = City::find($cityId);
-        $countyId = $city->county_id;
-        if (!$city) 
+        try 
         {
-            return redirect()->route('cities.index', $countyId)->with('status', 'Nem található a keresett város!');
+            $countyId = $city->county_id;
+            if (!$city) 
+            {
+                return redirect()->route('cities.index', $countyId)->with('error', 'Nem található a keresett város!');
+            }
+        }
+        catch (Exception $e) 
+        {
+            return redirect()->route('counties.index')->with('error', 'Nem található a keresett város!');
         }
         $this->authorize('edit', $city);
         return view('cities.edit', compact('city'));
@@ -89,7 +97,7 @@ class CityController extends Controller
         $countyId = $city->county_id;
         if (!$city) 
         {
-            return redirect()->route('cities.index', $countyId)->with('status', 'Nem található a keresett város!');
+            return redirect()->route('cities.index', $countyId)->with('error', 'Nem található a keresett város!');
         }
         $request->validate([
             'name' => 'required'
@@ -109,7 +117,7 @@ class CityController extends Controller
         $countyId = $city->county_id;
         if (!$city) 
         {
-            return redirect()->route('cities.index', $countyId)->with('status', 'Nem található a keresett város!');
+            return redirect()->route('cities.index', $countyId)->with('error', 'Nem található a keresett város!');
         }
         $this->authorize('destroy', $city);
         $city->delete();

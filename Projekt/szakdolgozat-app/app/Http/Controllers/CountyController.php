@@ -56,7 +56,7 @@ class CountyController extends Controller
     {
         $county = County::find($countyId);
         if (!$county) {
-            return redirect()->route('counties.index')->with('status', 'Nem található a keresett megye!');
+            return redirect()->route('counties.index')->with('error', 'Nem található a keresett megye!');
         }
         $this->authorize('edit', County::class);
         return view('counties.edit', compact('county'));   
@@ -70,7 +70,7 @@ class CountyController extends Controller
         $county = County::find($countyId);
         if (!$county) 
         {
-            return redirect()->route('counties.index')->with('status', 'Nem található a keresett megye!');
+            return redirect()->route('counties.index')->with('error', 'Nem található a keresett megye!');
         }
         $this->authorize('update', County::class);
         $request->validate([
@@ -88,7 +88,7 @@ class CountyController extends Controller
     {
         $county = County::find($countyId);
         if (!$county) {
-            return redirect()->route('counties.index')->with('status', 'Nem található a keresett megye!');
+            return redirect()->route('counties.index')->with('errorc', 'Nem található a keresett megye!');
         }
         $this->authorize('destroy', County::class);
 
