@@ -129,7 +129,7 @@ class AdvertisementController extends Controller
             return redirect()->route('advertisements.own')->with('error', 'Nincsen ilyen hirdetés!');
         }
 
-        if ($advertisement->user_id !== Auth::user()->user_id) 
+        if ($advertisement->user_id !== Auth::user()->user_id && auth()->user()->role->name !== 'admin')
         {
             return redirect()->route('advertisements.own')->with('error', 'Nincsen ilyen hirdetés!');
         }
@@ -175,7 +175,7 @@ class AdvertisementController extends Controller
             return redirect()->route('advertisements.own')->with('error', 'Nincsen ilyen hirdetés!');
         }
 
-        if ($advertisement->user_id !== Auth::user()->user_id) 
+        if ($advertisement->user_id !== Auth::user()->user_id && auth()->user()->role->name !== 'admin')
         {
             return redirect()->route('advertisements.own')->with('error', 'Nincsen ilyen hirdetés!');
         }

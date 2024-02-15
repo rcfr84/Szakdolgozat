@@ -56,7 +56,7 @@
 		\label{dbdiagram}
 	\end{figure}
 	
-	\subsection{PlantUML}
+	\subsection{PlantUML}\label{sc-plantuml}
 	Az UML a Unified Modeling Language rövidítése, azaz Egységes Modellezési Nyelv. Az UML arra jó, hogy szoftvert tervezzünk vele, a gondolataimat letudom vele rajzolni, skiccelni. Ezenkívül a kiforrott megoldások dokumentálására is használható. A PlantUML egy komponens, aminek a segítségével gyorsan tudunk létrehozni szekvencia-, használati eset- és osztálydiagramokat. Ezenkívül még rengetegféle diagramot tudunk készíteni. \cite{PlantUML}
 	
 	Manapság a tervezés az használati eset központú. A következő pár mondatban az ilyenféle alapú tervezésről lesz szó. Tulajdonképpen itt azt a kérdést tehetjük fel, hogy ki (angolul: actor) mire (funkció) tudja használni az adott informatika rendszert. Az actor-ról azt érdemes tudni, hogy ő nem része az informatikai rendszernek, hame ő csak használja azt. Az actor gyakran lehet ember, AI vagy akár egy másik informatikai rendszer. Fontos az is, hogy minden ábra, amit készítünk az visszavezethető legyen a már meghatározott követelmények szintjéig. Az használati alapú tervezés előnye az, hogy egyszerűen, érthetően írja le a rendszer funkcióit. Ebből kifolyólag, mind a megrendelő, mind a tervező számára könnyen érthető az ábra. Tulajdonképpen a használati eset alapú tervezés nem más, mint egy közös nyelv a megrendelő és a tervező között, amit mind a két fél ért.\cite{Kusper Informatikai} \Aref{useCase} képen látható a plantUML-ben készített használati eset ábra az alkalmazásomhoz.
@@ -115,7 +115,7 @@
 			\item Fehérdobozos (angolul: white-box): a forráskód alapján íródnak a tesztesetek.
 			\item Szürkedobozos (angolul: grey-box): amikor a forráskódnak csak egy rész ismert és csak ez alapján íródnak a tesztesetek.
 		\end{enumerate}
-		Azonban van egy harmadik féle is, amit nem alkalmaztam. Az nem más, mint a feketedobozos (angolul: black-box), amikor a tesztesetek a specifikáció alapján íródnak.
+		Azonban van egy harmadik féle is, amit nem alkalmaztam. Az nemmás, mint a feketedobozos (angolul: black-box), amikor a tesztesetek a specifikáció alapján íródnak.
 		\cite[26-29.~oldal]{Kusper}
 	\section{A teszteléshez alkalmazott eszközök és technológiák}
 			A következő alszakaszokban a teszteléshez használt eszközökről és technológiákról lesz majd szó.
@@ -132,8 +132,64 @@
 		\cite{Cypress, Kusper Szoftvertesztles, Katalon}
 		
 	\chapter{Felhasználói dokumentáció}
-
+		Ebben a fejezetben szó lesz majd, arról, hogy különböző jogosultságú felhasználóknak milyen lehetőségei vannak a webes alkalmazásom használata során. Minden ebben a fejezetben lévő alfejezetben szereplő jogosultsághoz szinte csak azokat a funkciókat említem majd meg, amiket csak ők tudnák használni. A különböző szerepű felhasználókról \az{\ref{sc-plantuml}} alfejezetben már megemlítettem róluk pár szót.
+	\section{Admin}
+	Az admin (magyarul: adminisztrátor) van néhány szükséges egyedi funkció az alkalmazásomnak. Az adminisztrátoroknak nagyon fontos szerepük bármilyen alkalmazás életében. Az webes projektemben a következő admin funkciókat készítettem el.
+	\subsection{Felhasználókkal kapcsolatos művelet}
+	Az én meglévő tudásom birtokában úgy gondoltam, hogy a csak és kizárólag törölni tudjon már regisztrált felhasználókat. Admin jogosultságú felhasználókat nem lehetséges kitörölni, azaz amennyiben van több ilyen, akkor nem tudják kitörölni egymást. Ennek a jogosultságnak a birtokában képes új kategóriát hozzáadni, módosítani már meglévőt és még képes törölni is, amennyiben szükséges. \Aref{felhasznalo-muvelet} ábrán a piros színű ikon segítségével törölni lehet a felhasználót.
+	\begin{figure}[ht!]
+		\centering
+		\includegraphics[height=3cm]{./felhasznaloi/felhasznalo}
+		\caption{Felhasználók (Saját készítés)} 
+		\label{felhasznalo-muvelet}
+	\end{figure}
+	\subsection{Kategóriákkal kapcsolatos műveletek}\label{sc-kategoria}
+	Ennek a jogosultságnak a birtokában képes új kategóriát hozzáadni, módosítani már meglévőt és még képes törölni is, amennyiben szükséges. \Aref{kategoria-muveletek} ábrán a kék színű ikon segítségével módosítani lehet a kategóriát, a piros színűvel pedig törölni. A képen nem látszik viszont van ott egy gomb, aminek a segítségével tudunk új kategóriát hozzáadni.
+	\begin{figure}[ht!]
+		\centering
+		\includegraphics[height=8cm]{./felhasznaloi/kategoria}
+		\caption{Kategóriák (Saját készítés)} 
+		\label{kategoria-muveletek}
+	\end{figure} 
+	\subsection{Vármegyével és városokkal kapcsolatos műveletek}
+	Itt az admin jogosultságú felhasználó képes új vármegyét hozzáadni, meglévőt módosítani, illetve törölni. Szintén képes még különböző vármegyékhez hozzáadni új városokat, meglévőt módosítani és törölni. \Aref{varmegye-varos-muvelet} ábrán a zöld színű ikon segítségével lehet megtekinteni az adott vármegyéhez tartozó városokat megjeleníteni, ez ugyan úgy épül fel, mint az imént említett kategóriák \aref{sc-kategoria} alfejezetben. A kék színű ikon segítségével módosítani lehet a kategóriát, a piros színűvel pedig törölni. A képen nem látszik viszont van ott egy gomb, aminek a segítségével tudunk új vármegyét hozzáadni.
+	\begin{figure}[ht!]
+		\centering
+		\includegraphics[height=9cm]{./felhasznaloi/varmegye}
+		\caption{Vármegyék (Saját készítés)} 
+		\label{varmegye-varos-muvelet}
+	\end{figure}
+	\subsection{Hirdetéssel kapcsolatos műveletek}
+	Ez lenne az egyetlen kivétel, itt a sima felhasználó is képes módosítani vagy törölni a saját hirdetéseit. Képes a már az összes meglévő hirdetéseket módosítani, illetve törölni azokat, ha valamilyen oknál fogva nem megfelelő nyelvezetet vagy képet használ.
 	
+	\section{Felhasználó}
+	A következő alfejezetekben csak a sima felhasználó egyedi funkcióijáról lesz szó.
+	\subsection{Hirdetéssel kapcsolatos műveletek}
+	Regisztrált felhasználóként van arra lehetőség, hogy a hirdetéseivel kapcsolatos műveleteket végezzen el, legyen szó akár csak azok megtekintéséről, módosításairól vagy törléseiről. Ő már képes új hirdetések létrehozni, ami \aref{hirdetes-hozzadas-muvelet} ábrán lesz látható.
+	\begin{figure}[ht!]
+		\centering
+		\includegraphics[height=7cm]{./felhasznaloi/hozzadas1}
+		\includegraphics[height=7cm]{./felhasznaloi/hozzadas2}
+		\caption{Új hirdetés hozzáadása (Saját készítés)} 
+		\label{hirdetes-hozzadas-muvelet}
+	\end{figure}
+	\Aref{hirdetes-hozzadas-muvelet} ábrán magyarázata következik. A vármegyét egy legördülő listából lehet kiválasztani, ha ezt megtettük csak utána tudjuk majd a várost kiválasztani szintén legördülő listából. A hirdetés kategóriáját is ilyenféle módon választhatjuk ki. A hirdetés címét, árát és leírását pedig a felhasználó adja majd meg. Ezek voltak a kötelezően megadandó információk. Telefonszámot, illetve képeket nem szükséges megadni. A megadható képek számát limitáltam 5 darabra.
+	\subsection{Nézelődő}
+	Ő nem rendelkezik semmilyen jogosultsággal sem, ezért is nincsen egyedi funkciója ennek a szerepkörnek. Ő csak a kategóriákat képes megtekinteni, illetve a meglévő hirdetéseket tudja megnézni. Keresésre és szűrésre is van itt lehetőség. Ezekről \aref{egyeb-funkciok} alfejezetben olvashat többet.
+	\subsection{Egyéb funkciók}\label{egyeb-funkciok}
+	\begin{enumerate}
+		\item Keresés: a hirdetéseknél van arra lehetőség, hogy keresni lehessen, ez a hirdetés címe alapján lehetséges.
+		\item Szűrés: van arra lehetőség, hogy szűrjünk ára, vármegyére, városra vagy kategóriára is.
+		\item Rendezés: a hirdetéseket rendezhetjük ár szerint növekvő, csökkenőbe vagy lehet alapértelmezett is.
+			\begin{figure}[ht!]
+			\centering
+			\includegraphics[width=13cm]{./felhasznaloi/kereses-szures}
+			\caption{Keresés, szűrés és rendezés (Saját készítés)} 
+			\label{kereses-szures-muvelet}
+		\end{figure}
+		\item Üzenetek: a regisztrált felhasználók vagy adminisztrátorok képes üzenetek küldeni egymásnak, ezeket megtekinteni, módosítani vagy törölni a saját küldött üzeneteket is.
+		\item Profil módosítása: a webes alkalmazásomban adva van a lehetőség arra, hogy a regisztrált felhasználó tudják módosítani a saját adataikat, illetve képes törölni a profiljukat is. Az adminisztrátor nem képes arra, hogy módosítsa a felhasználók adatait, csak törölni tudja őket.
+	\end{enumerate}
 	\chapter*{Összegzés}
 	\addcontentsline{toc}{chapter}{Összegzés}
 	

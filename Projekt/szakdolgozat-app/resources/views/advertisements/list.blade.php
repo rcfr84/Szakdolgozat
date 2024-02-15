@@ -70,7 +70,7 @@
                                         <input type="number" name="max_price" placeholder="Ft" class="mb-4">
                                     </div>
                                     <div class="mb-4">
-                                        <label for="category" class="block text-sm font-medium text-gray-700">Kategória:</label>
+                                        <label for="category" class="block text-sm font-medium text-gray-700">Rendezés:</label>
                                         <select class="form-select" name="sort_by">
                                             <option value="default">Alapértelmezett</option>
                                             <option value="asc">Növekvő ár</option>

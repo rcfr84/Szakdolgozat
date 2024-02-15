@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.12)  29 JAN 2024 17:46
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.12)  15 FEB 2024 11:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -660,7 +660,7 @@ Package: inputenc 2021/02/14 v1.3d Input encoding file
 LaTeX Info: Redefining \cal on input line 577.
 LaTeX Info: Redefining \mit on input line 578.
 )
-<eszterhazy-logo-hu.pdf, id=93, 256.07971pt x 88.04292pt>
+<eszterhazy-logo-hu.pdf, id=129, 256.07971pt x 88.04292pt>
 File: eszterhazy-logo-hu.pdf Graphic file (type pdf)
 <use eszterhazy-logo-hu.pdf>
 Package pdftex.def Info: eszterhazy-logo-hu.pdf  used on input line 21.
@@ -670,106 +670,137 @@ Package pdftex.def Info: eszterhazy-logo-hu.pdf  used on input line 21.
 
 {c:/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{c:/texlive/2023/
 texmf-dist/fonts/enc/dvips/lm/lm-ec.enc} <c:/texlive/2023/texmf-dist/tex/latex/
-thesis-ekf/eszterhazy-logo-hu.pdf>] (./RCFR84_2024.toc)
+thesis-ekf/eszterhazy-logo-hu.pdf>] (./RCFR84_2024.toc [2
+
+])
 \tf@toc=\write4
 \openout4 = `RCFR84_2024.toc'.
 
- [2
-
-] [3
+ [3] [4
 
 ]
 1. fejezet.
-[4
+[5
 
 ]
-<./tervezes/dbKod.png, id=148, 344.28625pt x 378.41376pt>
+<./tervezes/dbKod.png, id=198, 344.28625pt x 378.41376pt>
 File: ./tervezes/dbKod.png Graphic file (type png)
 <use ./tervezes/dbKod.png>
 Package pdftex.def Info: ./tervezes/dbKod.png  used on input line 45.
 (pdftex.def)             Requested size: 284.52756pt x 312.7322pt.
-<./tervezes/dbdiagram.png, id=151, 1504.62125pt x 588.1975pt>
+<./tervezes/dbdiagram.png, id=201, 1504.62125pt x 588.1975pt>
 File: ./tervezes/dbdiagram.png Graphic file (type png)
 <use ./tervezes/dbdiagram.png>
 Package pdftex.def Info: ./tervezes/dbdiagram.png  used on input line 54.
 (pdftex.def)             Requested size: 426.79134pt x 166.83923pt.
- [5 <./tervezes/dbKod.PNG>]
-<./tervezes/useCase.png, id=163, 569.12625pt x 2015.53pt>
+ [6 <./tervezes/dbKod.PNG>]
+<./tervezes/useCase.png, id=213, 569.12625pt x 2015.53pt>
 File: ./tervezes/useCase.png Graphic file (type png)
 <use ./tervezes/useCase.png>
 Package pdftex.def Info: ./tervezes/useCase.png  used on input line 65.
 (pdftex.def)             Requested size: 170.71652pt x 604.57141pt.
- [6 <./tervezes/dbdiagram.png>] [7 <./tervezes/useCase.png>]
+ [7 <./tervezes/dbdiagram.png>] [8 <./tervezes/useCase.png>]
 2. fejezet.
-[8
+[9
 
-] [9] [10]
+] [10] [11]
 3. fejezet.
-[11
+[12
 
-] [12]
+] [13]
 4. fejezet.
-[13
+<./felhasznaloi/felhasznalo.png, id=283, 179.16937pt x 149.05687pt>
+File: ./felhasznaloi/felhasznalo.png Graphic file (type png)
+<use ./felhasznaloi/felhasznalo.png>
+Package pdftex.def Info: ./felhasznaloi/felhasznalo.png  used on input line 142
+.
+(pdftex.def)             Requested size: 102.60329pt x 85.35826pt.
+<./felhasznaloi/kategoria.png, id=285, 328.72812pt x 437.635pt>
+File: ./felhasznaloi/kategoria.png Graphic file (type png)
+<use ./felhasznaloi/kategoria.png>
+Package pdftex.def Info: ./felhasznaloi/kategoria.png  used on input line 150.
+(pdftex.def)             Requested size: 170.97972pt x 227.62204pt.
+[14
 
-] [14
+ <./felhasznaloi/felhasznalo.PNG>]
+<./felhasznaloi/varmegye.png, id=295, 415.5525pt x 417.05812pt>
+File: ./felhasznaloi/varmegye.png Graphic file (type png)
+<use ./felhasznaloi/varmegye.png>
+Package pdftex.def Info: ./felhasznaloi/varmegye.png  used on input line 158.
+(pdftex.def)             Requested size: 255.16063pt x 256.0748pt.
+ [15 <./felhasznaloi/kategoria.PNG>]
+<./felhasznaloi/hozzadas1.png, id=304, 381.425pt x 410.53375pt>
+File: ./felhasznaloi/hozzadas1.png Graphic file (type png)
+<use ./felhasznaloi/hozzadas1.png>
+Package pdftex.def Info: ./felhasznaloi/hozzadas1.png  used on input line 171.
+(pdftex.def)             Requested size: 185.04327pt x 199.16928pt.
+<./felhasznaloi/hozzadas2.png, id=305, 378.41376pt x 443.6575pt>
+File: ./felhasznaloi/hozzadas2.png Graphic file (type png)
+<use ./felhasznaloi/hozzadas2.png>
+Package pdftex.def Info: ./felhasznaloi/hozzadas2.png  used on input line 172.
+(pdftex.def)             Requested size: 169.87465pt x 199.16928pt.
+
+[16 <./felhasznaloi/varmegye.PNG> <./felhasznaloi/hozzadas1.PNG> <./felhasznalo
+i/hozzadas2.PNG>]
+<./felhasznaloi/kereses-szures.png, id=316, 777.90625pt x 306.14375pt>
+File: ./felhasznaloi/kereses-szures.png Graphic file (type png)
+<use ./felhasznaloi/kereses-szures.png>
+Package pdftex.def Info: ./felhasznaloi/kereses-szures.png  used on input line 
+186.
+(pdftex.def)             Requested size: 369.88582pt x 145.56926pt.
+ [17 <./felhasznaloi/kereses-szures.PNG>] [18] [19
 
 ]
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
-49.
- (c:/texlive/2023/texmf-dist/tex/latex/lm/t1lmtt.fd
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 2
+05.
+
+(c:/texlive/2023/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-Underfull \hbox (badness 5711) in paragraph at lines 149--150
+Underfull \hbox (badness 5711) in paragraph at lines 205--206
 []\T1/lmr/m/sc/12 Oracle\T1/lmr/m/n/12 : []$\T1/lmtt/m/n/12 https : / / dev . m
 ysql . com / doc / refman / 8 . 0 / en / what-[]is-[]mysql . html$[]\T1/lmr/m/n
 /12 ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 153--154
+Underfull \hbox (badness 10000) in paragraph at lines 209--210
 []\T1/lmr/m/sc/12 GitHub Desk-top\T1/lmr/m/n/12 : []$\T1/lmtt/m/n/12 https : / 
 / docs . github . com / en / desktop / overview /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 161--162
+Underfull \hbox (badness 10000) in paragraph at lines 217--218
 []\T1/lmr/m/sc/12 Katalon\T1/lmr/m/n/12 : []$\T1/lmtt/m/n/12 https : / / katalo
 n . com / resources-[]center / blog /
  []
 
-[15
+[20
 
 ] (./RCFR84_2024.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-29>
  ***********
-
-
-Package rerunfilecheck Warning: File `RCFR84_2024.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `RCFR84_2024.out':
-(rerunfilecheck)             Before: 9DCDD5DEB578AE477F89BA89CB3EB900;3538
-(rerunfilecheck)             After:  DBC24E46A4F6F11CAC220D9ACCE4255A;3517.
+Package rerunfilecheck Info: File `RCFR84_2024.out' has not changed.
+(rerunfilecheck)             Checksum: 6CAE9E45409B959A0376759787E89973;5593.
  ) 
 Here is how much of TeX's memory you used:
- 16590 strings out of 474933
- 263126 string characters out of 5763793
- 1926801 words of memory out of 5000000
- 37767 multiletter control sequences out of 15000+600000
+ 16697 strings out of 474933
+ 266017 string characters out of 5763793
+ 1928801 words of memory out of 5000000
+ 37850 multiletter control sequences out of 15000+600000
  617991 words of font info for 85 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 78i,7n,81p,1109b,551s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 78i,7n,81p,1109b,615s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/texlive/2023
 /texmf-dist/fonts/type1/public/lm/lmcsc10.pfb><c:/texlive/2023/texmf-dist/fonts
 /type1/public/lm/lmr12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lm
 ri12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmtt12.pfb>
-Output written on RCFR84_2024.pdf (15 pages, 438842 bytes).
+Output written on RCFR84_2024.pdf (20 pages, 624981 bytes).
 PDF statistics:
- 294 PDF objects out of 1000 (max. 8388607)
- 256 compressed objects within 3 object streams
- 71 named destinations out of 1000 (max. 500000)
- 209 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 396 PDF objects out of 1000 (max. 8388607)
+ 340 compressed objects within 4 object streams
+ 95 named destinations out of 1000 (max. 500000)
+ 311 words of extra memory for PDF output out of 10000 (max. 10000000)
 
