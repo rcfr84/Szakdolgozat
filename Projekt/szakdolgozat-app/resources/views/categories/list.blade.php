@@ -1,10 +1,13 @@
 @extends('layouts.app')
 @section('content')
-<div class="container mx-auto mt-8">
+<div class="min-h-screen container mx-auto mt-8">
     <div class="flex justify-center">
         <div class="w-4/4">
             @if(session('status'))
                 <div class="bg-green-500 text-white p-4 mb-4">{{ session('status') }}</div>
+            @endif
+            @if(session('error'))
+                <div class="bg-red-500 text-white p-4 mb-4">{{ session('error') }}</div>
             @endif
             <div class="bg-white p-6 rounded-lg shadow-md">
                 <div class="text-center mb-4 text-lg font-bold">Kategóriák</div>
@@ -27,7 +30,7 @@
                     </tbody>
                 </table>
                 <div class="flex flex-col items-center justify-center">
-                    @if (Auth::user()->role->name === 'admin')
+                    @if (Auth::check() && Auth::user()->role->name === 'admin')
                         <td>
                             <a href="{{route('categories.action')}} " class="text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 shadow-lg shadow-green-500/50 dark:shadow-lg dark:shadow-green-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Kategória műveletek</a>
                         </td>

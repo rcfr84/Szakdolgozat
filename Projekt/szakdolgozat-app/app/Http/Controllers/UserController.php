@@ -18,7 +18,7 @@ class UserController extends Controller
         }
         //$users = User::all()->sortBy('name');
 
-        $users = User::where('role_id', '!=', 1)->orderBy('name')->get();
+        $users = User::where('role_id', '!=', 1)->orderBy('name', 'asc')->paginate(15);
 
         return view('users.index', compact('users'));
     }

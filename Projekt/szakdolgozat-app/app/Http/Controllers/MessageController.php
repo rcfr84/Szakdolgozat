@@ -5,15 +5,10 @@ namespace App\Http\Controllers;
 use App\Models\Message;
 use Illuminate\Http\Request;
 use App\Models\User;
+use Exception;
 
 class MessageController extends Controller
 {
-    /*
-    public function __construct()
-    {
-        $this->middleware('CheckRole:admin')->only(['edit', 'update', 'destroy']);
-    }
-    */
     /**
      * Display a listing of the resource.
      */
@@ -28,6 +23,11 @@ class MessageController extends Controller
     {
         $conversation = Message::getConversation($user1_id, $user2_id);
 
+        if ($conversation->isEmpty()) 
+        {
+            return redirect()->route('messages.index')->with('error', 'Nem a te beszélgetésed!');
+        }
+
         return view('messages.show', ['conversation' => $conversation]);
     }
 
@@ -37,8 +37,13 @@ class MessageController extends Controller
     public function create($receiverId)
     {
         $user_id = auth()->user()->user_id;
-        if ($user_id == $receiverId) {
-            return redirect()->route('advertisements.index')->with('status', 'Nem küldhetsz üzenetet saját magadnak!');
+        if (!User::find($receiverId)) 
+        {
+            return redirect()->route('messages.index')->with('error', 'Nincsen ilyen felhasználó!');
+        }
+        if ($user_id == $receiverId) 
+        {
+            return redirect()->route('messages.index')->with('error', 'Nem küldhetsz üzenetet saját magadnak!');
         }
         return view('messages.create')->with('receiverId', $receiverId);
     }
@@ -63,7 +68,11 @@ class MessageController extends Controller
 
         $conversation = Message::getConversation($user->user_id, $receiverId);
 
-        return view('messages.show', compact('receiverId', 'conversation'))->with('status', 'Sikeres üzenet küldés!');
+        $receiverId = $newMessage->receiver_id;
+        $senderId = $newMessage->sender_id;
+
+        return redirect()->route('messages.showConversation', [$receiverId, $senderId])->with('status', 'Sikeres küldés!');
+
     }
 
     /**
@@ -80,10 +89,19 @@ class MessageController extends Controller
     public function edit($id)
     {
         $message = Message::find($id);
-
-        if (!$message) 
+        try
         {
-            return redirect()->route('/messages/get')->with('status', 'Nincsen ilyen üzenet!');
+            $receiverId = $message->receiver_id;
+            $senderId = $message->sender_id;
+        }
+        
+        catch (Exception $e) 
+        {
+            return redirect()->route('messages.index')->with('error', 'Nincsen ilyen üzenet!');
+        }
+        if (!$message || $message->sender_id != auth()->user()->user_id) 
+        {
+            return redirect()->route('messages.showConversation', [$receiverId, $senderId])->with('error', 'Nincsen ilyen saját üzeneted!');
         }
 
         return view('messages.edit', compact('message'));
@@ -98,7 +116,7 @@ class MessageController extends Controller
 
         if (!$message) 
         {
-            return redirect()->route('/messages/get')->with('status', 'Nincsen ilyen üzenet!');
+            return redirect()->route('messages.index')->with('error', 'Nincsen ilyen üzenet!');
         }
 
         $request->validate([
@@ -108,7 +126,10 @@ class MessageController extends Controller
         $message->message = $request->message;
         $message->save();
 
-        return redirect()->route('messages.index')->with('status', 'Sikeres módosítás!');
+        $receiverId = $message->receiver_id;
+        $senderId = $message->sender_id;
+
+        return redirect()->route('messages.showConversation', [$receiverId, $senderId])->with('status', 'Sikeres módosítás!');
     }
 
     /**
@@ -120,15 +141,16 @@ class MessageController extends Controller
 
         if (!$message) 
         {
-            return redirect()->route('messages.index')->with('status', 'Nincsen ilyen üzenet!');
+            return redirect()->route('messages.index')->with('error', 'Nincsen ilyen üzenet!');
         }
         if ($message->sender_id != auth()->user()->user_id) 
         {
-            return redirect()->route('messages.index')->with('status', 'Nem törölheted más üzenetét!');
+            return redirect()->route('messages.index')->with('error', 'Nem törölheted más üzenetét!');
         }
-
+        $receiverId = $message->receiver_id;
+        $senderId = $message->sender_id;
         $message->delete();
 
-        return redirect()->route('messages.index')->with('status', 'Sikeres törlés!');
+        return redirect()->route('messages.showConversation', [$receiverId, $senderId])->with('status', 'Sikeres törlés!');
     }
 }

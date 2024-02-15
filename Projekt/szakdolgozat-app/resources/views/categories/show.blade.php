@@ -1,12 +1,15 @@
 @extends('layouts.app')
 @section('content')
-    <div class="container mx-auto mt-8">
+    <div class="min-h-screen container mx-auto mt-8">
         <div class="flex justify-center">
             <div class="w-4/4">
                 @if(session('status'))
                     <div class="bg-green-500 text-white p-4 mb-4">{{ session('status') }}</div>
                 @endif
                 <div class="bg-white p-6 rounded-lg shadow-md">
+                    @if($advertisements->isEmpty())
+                        <div class="text-center mb-4 text-lg font-bold">Nincs ilyen kategóriájú hirdetés!</div>
+                    @endif
                     <div class="text-center mb-4 text-lg font-bold">{{$category->name}}</div>
                     <table class="table-auto w-full">
                         <thead>

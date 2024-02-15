@@ -8,12 +8,6 @@ use Illuminate\Support\Facades\Gate;
 
 class CategoryController extends Controller
 {
-    /*
-    public function __construct()
-    {
-        $this->middleware('CheckRole:admin')->only(['create', 'store', 'edit', 'update', 'destroy']);
-    }
-    */
     /**
      * Display a listing of the resource.
      */
@@ -70,7 +64,7 @@ class CategoryController extends Controller
 
         if (!$category) 
         {
-            return redirect()->route('/allCategories')->with('status', 'Nincsen ilyen kategória!');
+            return redirect()->route('categories.action')->with('error', 'Nincsen ilyen kategória!');
         }
 
         return view('categories.edit', compact('category'));
@@ -88,7 +82,7 @@ class CategoryController extends Controller
 
         if (!$category) 
         {
-            return redirect()->route('/allCategories')->with('status', 'Nincsen ilyen kategória!');
+            return redirect()->route('categories.action')->with('error', 'Nincsen ilyen kategória!');
         }
 
         $request->validate([
@@ -113,7 +107,7 @@ class CategoryController extends Controller
 
         if (!$category) 
         {
-            return redirect()->route('/allCategories')->with('status', 'Nincsen ilyen kategória!');
+            return redirect()->route('categories.action')->with('error', 'Nincsen ilyen kategória!');
         }
 
         $category->delete();

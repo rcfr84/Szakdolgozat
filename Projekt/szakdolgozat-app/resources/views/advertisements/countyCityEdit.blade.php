@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-    <div class="container mx-auto mt-8">
+    <div class="min-h-screen container mx-auto mt-8">
         <div class="flex justify-center">
             <div class="w-3/2">
                 <div class="bg-white p-6 rounded-lg shadow-md flex flex-col">
@@ -8,7 +8,7 @@
                         @csrf
                         @method('PUT')
                         <div class="mb-4">
-                            <label for="countySelect" class="form-label">Vármegye</label>
+                            <label for="countySelect" class="form-label font-bold">Vármegye</label>
                             <select class="form-select w-full" name="county_id" id="countySelect">
                                 <option value="">Válassz vármegyét</option>
                                 @foreach ($counties as $county)
@@ -17,7 +17,7 @@
                             </select>
                         </div>
                         <div class="mb-4">
-                            <label for="citySelect" class="form-label">Város</label>
+                            <label for="citySelect" class="form-label font-bold">Város</label>
                             <select class="form-select w-full" name="city_id" id="citySelect">
                                 <option value="">Válassz várost</option>
                             </select>

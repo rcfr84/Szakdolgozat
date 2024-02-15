@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('name');
             $table->timestamps();
 
-            $table->foreign('county_id')->references('county_id')->on('counties');
+            $table->foreign('county_id')->references('county_id')->on('counties')->onDelete('cascade');
         });
     }
 
