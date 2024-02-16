@@ -14,7 +14,7 @@
 \renewcommand{\lstlistingname}{kód}
 \lstdefinestyle{user1}{
 	inputencoding=utf8/latin2,
-	language=Php,
+	language=PHP,
 	basicstyle=\footnotesize\ttfamily,
 	columns=fullflexible,
 	numbers=left,
@@ -129,6 +129,8 @@
 	\subsection{GitHub Desktop}
 		A GitHub Desktop egy ingyenesen használható alkalmazás, aminek a segítségével tudunk dolgozni a GitHub-on vagy Git-tárhely-szolgáltatásokon tárolt fájlokkal. Én ezt az eszközt azért szeretem használni, mivel megkönnyíti és felgyorsítja számomra a munkavégzés, illetve azért is, mert ennek a használatához nem kell a terminálban beírni a Git-hez tartozó parancsokat, hanem egy-két kattintás segítségével elvégezhetek egy konkrét parancsot.
 		\cite{GitHubDesktop}
+	\subsection{Tailwind CSS}\label{sc-tailwind}
+		Tailwind css használatával a felhasználói felületeket lehet kialakítani, ez csak külsőleges formázást jelent, tehát csak és kizárólag esztétikai szépítésre szolgál. Érdemes még róla tudni, hogy gyors, megbízható, rugalmas és nincsen futási ideje, azaz azonnal megtörténik a változás, nem kell rá várni semmit sem. \cite{tailwind}
 	
 	\chapter{Tesztelés}
 		A tesztelésre azért van szükség, hogy az alkalmazásomban megtaláljam az esetleges hibákat, amiket kijavítva növelhetem a szoftverem minőségét és megbízhatóságát. Abban sajnos nem lehetek biztos, hogy a tesztelés elvégzése után nem lesznek már hibák. A tesztelés során kettőféle tesztelési technikát alkalmaztam. Ezek pedig a következők:
@@ -247,10 +249,27 @@
 	
 	\Aref{kod-modell} kódrészleten a 6.~és 7.~ sorban az adatbázis tábla neve és elsődleges kulcs megadása látható. Rögtön alatta pedig az látszik, hogy egy tömbbe megadom a kötelezően megadandó mezők nevét, amik nem lehetnek üresek. Itt található még egy belongsTo és egy hasMany kapcsolatra egy példa. Az első azt röviden az azt jelenti, egy modell egy másik modellhez tartozik, azaz, hogy egy hirdetés egy felhasználóhoz tartozik. Míg az utóbbi azt azt jelenti, hogy egy modell több modellhez tartozik, azaz egy hirdetéshez több kép is tartozhat.
 	
-	\subsection{Kontroller}
-	\subsection{Blade}
-	\subsection{Webp.pph}
+	\subsection{Kontroller}\label{sc-kontroller}
+	A kontrollerek tulajdonképpen arra használatosak, hogy a különböző kérésékhez szükséges metódusokat itt definiálhatjuk. A kontrollerekben általában sokféle metódusokat írhatunk, azonban alap esetekben a következő lehetnek. Lehet index nevű, ami az összes adat (erőforrások) megjelenítésére szolgál, lehet még create (magyarul: létrehozás), ami az adatok bekéréséért felelős form, ehhez szorosan kapcsolódik a store (magyarul: tárol, mentés), ami pedig elmenti a kívánt erőforrást. Beszélhetünk még a show (magyarul: megnéz) és a destroy (magyarul: törlés) metódusokról, az előbbi egy konkrét erőforrást jelenít meg, míg utóbbi segítségével az erőforrást lehetséges kitörölni. Végezetül még két metódus van, az első az edit (magyarul: módosítás), ami a create metódushoz hasonlóan egy formot jelenít meg, aminek a segítségével lehetséges az adott erőforrás módosítása. A másik pedig az update (magyarul: módosítás), ez pedig konkrétan módosítja az imént említett edit formon az eszközölt változtatásokat. Példa képen a show metódust mutatom be Önnek. \cite{Laravel}
+	
+	\lstinputlisting[caption={Egy kontrollerben lévő metódus}, label=kod-kontoller, style=user1]{./fejlesztoi/hirdetesShow.php}
+	
+	A következőben röviden megmagyarázom \aref{kod-kontoller} kódot. Látható, hogy a hirdetéshez tartozó kontrollerben található a metódus, ami paraméterként kér egy id-t, az id segítségével tudom, hogy pontosan melyik hirdetést szeretném megjeleníteni. Ezután megkeressem az adott bekért id alapján a hirdetést, majd leellenőrzöm, hogy egyáltalán létezik-e, ha nem akkor hibát adok vissza, amit majd a blade tudunk majd felhasználni, ahhoz, hogy értesítsem a felhasználót a hibáról. Végül pedig, ha nincsen hiba, akkor megjelenítem egy másik bladen a felhasználó számára. A compact nevű metódusra, azért van szükségem, hogy a bladen majd megjeleníteni tudjam a kívánt hirdetést. A bladekről többet \aref{sc-blade} alfejezetben tudhat meg.
+	  
+	\subsection{Web.php}
+	A web.php nevű fájl, arra szolgál, hogy a kontrollerekben elkészített különböző metódusokhoz route-t (magyarul: útvonal) rendeljük hozzá. Ez azért szükséges, hogy a böngészőkben eltudjuk érni magát a konkrét blade-t, ami a kontrollerben definiált metódust fogja megvalósítani. Itt még annyit érdemes megemlítenem, hogy a middleware (magyarul: köztes szoftver) segítségével van lehetőség szabályozni, azt hogy ki férhessen hozzá az adott útvonalhoz. A következőben pedig egy útvonalat fogok mutatni, hogy eltudják képzelni, hogy hogyan is nézz ki.
+	
+	\lstinputlisting[caption={Egy web.php lévő útvonal}, label=kod-utvonal, style=user1]{./fejlesztoi/hirdetesUtvonal.php}
+	
+	Röviden az látható \aref{kod-utvonal} kód részleten, hogy a route és két darab kettőspont után van lehetőségünk a kérést típusát megadni, attól függően, hogy melyik metódust hívjuk meg. Jelen esetben most get (magyarul: kap) található ott, ami tulajdonképpen a listázásért felelős. Gyakran használatosan még a post (magyarul: hozzáadás, beszúrás), a put (magyarul: módosítás) és a delete (magyarul: törlés) elnevezések. Ezt követően következik az első paraméter, ami az elérési útvonal, a másik pedig azon az útvonalon található metódust lesz. Még megtalálható a végen ott egy elnevezés metódus, aminek a segítségével könnyeben tudunk majd hivatkozni a kívánt bladen. Ennek a használata azért előnyös, mivel így nem kell a teljes útvonalat megadni, ha hivatkozni szeretnénk a metódusra és ha esetlegesen változtatni kellene az útvonalon, akkor azt csak egy helyen elég megtenni, itt a web.php-ben. Ha nem neveznénk el és több blade is használná ezt az útvonalat, akkor mindenhol meg kellene változtatni, ami nem lenne túl szerencsés. A bladekről többet \aref{sc-blade} alfejezetben tudhat meg.
+	
+	\subsection{Blade}\label{sc-blade}
+	A bladek segítségével azokat nézeteket tudjuk definiálni, amiket látni lehet a böngészőben. Tulajdonképpen ez lenne a UI (user interface), azaz a felhasználói felület. Egy hirdetés megjelenítéséért felelős felület szeretném bemutatni, amiről már szó esett az előző két alfejezetben. Ezen \aref{kod-blade} kód részleten láthatja.
 		
+	\lstinputlisting[caption={Egy hirdetés megjelenítésére szolgáló felület}, label=kod-blade, style=user1]{./fejlesztoi/hirdetesBlade.blade.php}
+	
+	Erről csak röviden szeretnénk beszélni, rögtön az elején van ként részlet, ami említésre méltó. Az extends (magyarul: kibővít) kulcsszó segítségével kitudjuk bővíteni egy másik felületet, a másik kulcsszó pedig a section (magyarul: szekció), ami pedig a kibővített felületen belüli content (magyarul: tartalom) helyére kerül be a taglalt felület. Táblázatos formában jelenítettem meg a hirdetést, és ennek a tailwind css (\ref{sc-tailwind}) segítségével való formázás található még ott. \Aref{sc-kontroller} alfejezetben esik szó a compact nevű metódusról, aminek a használata azért volt szükséges, hogy elérjük a \$advertisement (magyarul: hirdetés) változót. Még egy dolgot szeretnénk kiemelni, ami pedig a 36.~sorban olvasható. Erről már volt szó ebben \aref{kod-modell} alfejezetben. Itt a modellek miatt tudom ezt megtenni, hogy így megtudjam jeleníteni a hozzá tartozó kategória nevét, ennek a hiányában a hirdetéshez tartozó kategória id-t tudnám csak megjeleníteni.
+	
 	\chapter*{Összegzés}
 	\addcontentsline{toc}{chapter}{Összegzés}
 	
@@ -280,6 +299,8 @@
 		\textsc{PHP}: \url{https://www.php.net/docs.php}, 2024-es verzió.
 		\bibitem{Laravel}
 		\textsc{Laravel:} \url{https://laravel.com/docs/10.x}, 2024-es verzió.
+		\bibitem{tailwind}
+		\textsc{Tailwind CSS:} \url{https://tailwindcss.com/}, 2024-es verzió.
 	\end{thebibliography}
 	
 	% Aláírt, szkennelt nyilatkozat beillesztése a szakdolgozat végére
