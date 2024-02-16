@@ -2,7 +2,7 @@
 \usepackage[T1]{fontenc}
 \PassOptionsToPackage{defaults=hu-min}{magyar.ldf}
 \usepackage[magyar]{babel}
-\usepackage{mathtools,amssymb,amsthm,pdfpages,listingsutf8,hyperref,url}
+\usepackage{mathtools,amssymb,amsthm,pdfpages,listingsutf8,hyperref,url,xcolor,lmodern,caption}
 \footnotestyle{rule=fourth}
 
 \newtheorem{tetel}{Tétel}[chapter]
@@ -10,6 +10,27 @@
 \newtheorem{definicio}[tetel]{Definíció}
 \theoremstyle{remark}
 \newtheorem{megjegyzes}[tetel]{Megjegyzés}
+
+\renewcommand{\lstlistingname}{kód}
+\lstdefinestyle{user1}{
+	inputencoding=utf8/latin2,
+	language=Php,
+	basicstyle=\footnotesize\ttfamily,
+	columns=fullflexible,
+	numbers=left,
+	breaklines,
+	xleftmargin=1cm,
+	xrightmargin=1cm,
+	postbreak=\hbox{$\color{red}\hookrightarrow$\ },
+	backgroundcolor=\color{gray!30},
+	frame=tblr,
+	framesep=3pt,
+	keywordstyle=\bfseries\color{blue},
+	commentstyle=\itshape\color{teal},
+	morekeywords=[3]{Windows, Graphics},
+	keywordstyle=[3]\bfseries\color{green},
+}
+
 
 \begin{document}
 	\institute{Matematikai és Informatikai Intézet}
@@ -77,7 +98,7 @@
 	\chapter{Fejlesztés}		
 	\section{A fejlesztéshez alkalmazott eszközök és technológiák}
 		A következő alszakaszokban a fejlesztéshez használt eszközökről és technológiákról lesz majd szó.
-	\subsection{Laravel}
+	\subsection{Laravel}\label{sc-laravel}
 		A Laravel egy nyílt forráskódú, PHP webkeretrendszer, ami MVC tervezési mintán alapszik. Az MVC a Model-View-Controller rövidítése.
 		\begin{enumerate}
 			\item Model (magyarul: modell): ez az adatokat kezelő réteg, az adatok tárolásáért és visszaolvasásáért felelős.
@@ -174,9 +195,9 @@
 		\label{hirdetes-hozzadas-muvelet}
 	\end{figure}
 	\Aref{hirdetes-hozzadas-muvelet} ábrán magyarázata következik. A vármegyét egy legördülő listából lehet kiválasztani, ha ezt megtettük csak utána tudjuk majd a várost kiválasztani szintén legördülő listából. A hirdetés kategóriáját is ilyenféle módon választhatjuk ki. A hirdetés címét, árát és leírását pedig a felhasználó adja majd meg. Ezek voltak a kötelezően megadandó információk. Telefonszámot, illetve képeket nem szükséges megadni. A megadható képek számát limitáltam 5 darabra.
-	\subsection{Nézelődő}
+	\section{Nézelődő}
 	Ő nem rendelkezik semmilyen jogosultsággal sem, ezért is nincsen egyedi funkciója ennek a szerepkörnek. Ő csak a kategóriákat képes megtekinteni, illetve a meglévő hirdetéseket tudja megnézni. Keresésre és szűrésre is van itt lehetőség. Ezekről \aref{egyeb-funkciok} alfejezetben olvashat többet.
-	\subsection{Egyéb funkciók}\label{egyeb-funkciok}
+	\section{Egyéb funkciók}\label{egyeb-funkciok}
 	\begin{enumerate}
 		\item Keresés: a hirdetéseknél van arra lehetőség, hogy keresni lehessen, ez a hirdetés címe alapján lehetséges.
 		\item Szűrés: van arra lehetőség, hogy szűrjünk ára, vármegyére, városra vagy kategóriára is.
@@ -187,9 +208,49 @@
 			\caption{Keresés, szűrés és rendezés (Saját készítés)} 
 			\label{kereses-szures-muvelet}
 		\end{figure}
-		\item Üzenetek: a regisztrált felhasználók vagy adminisztrátorok képes üzenetek küldeni egymásnak, ezeket megtekinteni, módosítani vagy törölni a saját küldött üzeneteket is.
-		\item Profil módosítása: a webes alkalmazásomban adva van a lehetőség arra, hogy a regisztrált felhasználó tudják módosítani a saját adataikat, illetve képes törölni a profiljukat is. Az adminisztrátor nem képes arra, hogy módosítsa a felhasználók adatait, csak törölni tudja őket.
+		\item Üzenetek: a regisztrált felhasználók vagy adminisztrátorok képesek üzenetek küldeni egymásnak, ezeket megtekinteni, módosítani vagy törölni a saját általuk korábban elküldött üzeneteket is.
+		\item Profil módosítása: a webes alkalmazásomban adva van a lehetőség arra, hogy a regisztrált felhasználó tudják módosítani a saját adataikat, illetve képesek törölni a profiljukat is. Az adminisztrátor nem képes arra, hogy módosítsa a felhasználók adatait, csak törölni tudja őket.
 	\end{enumerate}
+	
+	\chapter{Fejlesztői dokumentáció}
+	\section{Az alkalmazás felépítése}
+	Ebben az alfejezetben beszeretném mutatni Önöknek az alkalmazásom fő komponenseit kódrészletek segítségével a könnyebb megértés reményében. Egy nagyon keveset már említettem megemlítettem korábban \aref{sc-laravel} alfejezetben, de nem mindent, most lépésről lépesre elmesélem, hogy hogyan lehetséges megjeleníteni egy konkrét adatokat az adatbázisomból.
+	\subsection{Adatbázis kapcsolat létrehozása}
+	Magát az adatbázist többféle módon van lehetőségünk létrehozni, de ezekbe most nem mennék bele. Most itt még azt kell megemlítenem, hogy a projektemben ezt hogyan szükséges beállítani. Ehhez meg kell keresni a projektben a .env nevű fájlt és meg kell adni néhány információt. A következőket szükséges megadni.
+	\begin{enumerate}
+		\item DB\_CONNECTION (magyarul: adatbázis kapcsolat): itt magát az adatbázis fajtáját kell megadnunk. Alapértelmezetten mysql van megadva. 
+		\item DB\_HOST (magyarul: adatbázis kiszolgáló): ez az adatbázis IP-címe lenne.
+		\item DB\_PORT (magyarul: adatbázis port): ennek a segítségével tudunk kapcsolódni az adatbázis szerverhez. 
+		\item DB\_DATABASE (magyarul: adatbázis neve): itt az magát az elnevezését kell megadnunk.
+		\item DB\_USERNAME (magyarul: felhasználónév az adatbázishoz): meg kell adnunk egy felhasználónevet, amelyet az alkalmazás használ a belépéshez.
+		\item DB\_PASSWORD (magyarul: jelszó az adatbázishoz): a belépéshez meg kell adnunk még egy jelszót is.
+		
+	\end{enumerate}
+	\subsection{Migráció}
+	A migrációk segítségével tulajdonképpen az adatbázis struktúráját tudjuk definiálni. Van arra lehetőség, hogy egy migrációs fájlt egy parancs segítségével lelehessen generálni struktúra szintjén, de már a benne szükséges mezőket és az esetleges különböző megszorításokat már nekünk kell definiálni. A következő parancs segítségével lehetséges egy migrációs fájlt generálni:
+	\begin{center} 
+		php artisan make:migration create\_név\_table .
+	\end{center}
+	Következőnek nézzük azt meg, hogy hogyan is épül fel egy migrációs fájlt, konkrétan az a hirdetéshez tartozó.
+	
+	\lstinputlisting[caption={Egy migrációra példa kód}, label=kod-migracio, style=user1]{./fejlesztoi/hirdetes.php}
+	
+	Látható tehát, hogy egy mezőt úgy szükséges megadni, hogy \$table-->mező típusa, majd zárójelbe a mező nevét.
+	A 15.~sorban az elsődleges kulcs megadása látható. Az alatta lévő sorban pedig egy olyan mezőt hoztam létre, ami majd egy másik migrációs fájlból kapja majd meg az értékét, tehát ez egy idegen kulcs. A 25.~sorban pedig az imént említett mezőre így lehetséges hivatkozni. Itt ennek a sornak végén lévő kód az azt jelenti, hogy ha kitörlődik az adott felhasználó, akkor a hirdetés is törlődni fog vele együtt. Alapértelmezetten egyik mező értéke sem lehet nulla, ha azonban szükségünk van rá, akkor meglehet tenni úgy, ahogyan én a 22.~sorban csináltam. Ha elkészültünk a migrációs fájlokkal, akkor a következő parancs segítségével lehet majd végrehajtani azt:
+	\begin{center}
+		php artisan migrate .
+	\end{center}
+	\subsection{Modell}
+	A laravel már tartalmazza az eloquentet, ami egy ORM (angoul: Object-Relational Mapping, magyarul: objektum-relációs leképzés). Amikor ezt használjuk, akkor minden egyes adatbázis táblához tartozik egy modell is, aminek a segítségével interaktálni tudunk a táblával. Az ilyenféle modellek használatával lehetséges beszúrni, módosítani vagy törölni az adott adatbázis táblából. Itt a modellekben még megadhatunk különféle metódusokat is és még itt van lehetőség az eloquent kapcsolatok megadására is. Ezekre még majd kitérek a példa bemutatása során.\cite{Laravel}
+	
+	\lstinputlisting[caption={Egy modellre példa kód részlet}, label=kod-modell, style=user1]{./fejlesztoi/hirdetesModell.php}
+	
+	\Aref{kod-modell} kódrészleten a 6.~és 7.~ sorban az adatbázis tábla neve és elsődleges kulcs megadása látható. Rögtön alatta pedig az látszik, hogy egy tömbbe megadom a kötelezően megadandó mezők nevét, amik nem lehetnek üresek. Itt található még egy belongsTo és egy hasMany kapcsolatra egy példa. Az első azt röviden az azt jelenti, egy modell egy másik modellhez tartozik, azaz, hogy egy hirdetés egy felhasználóhoz tartozik. Míg az utóbbi azt azt jelenti, hogy egy modell több modellhez tartozik, azaz egy hirdetéshez több kép is tartozhat.
+	
+	\subsection{Kontroller}
+	\subsection{Blade}
+	\subsection{Webp.pph}
+		
 	\chapter*{Összegzés}
 	\addcontentsline{toc}{chapter}{Összegzés}
 	
@@ -217,6 +278,8 @@
 		\textsc{Katalon}: \url{https://katalon.com/resources-center/blog/end-to-end-e2e-testing}, 2024-es verzió.
 		\bibitem{PHP}
 		\textsc{PHP}: \url{https://www.php.net/docs.php}, 2024-es verzió.
+		\bibitem{Laravel}
+		\textsc{Laravel:} \url{https://laravel.com/docs/10.x}, 2024-es verzió.
 	\end{thebibliography}
 	
 	% Aláírt, szkennelt nyilatkozat beillesztése a szakdolgozat végére
