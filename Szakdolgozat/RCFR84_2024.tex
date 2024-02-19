@@ -2,7 +2,8 @@
 \usepackage[T1]{fontenc}
 \PassOptionsToPackage{defaults=hu-min}{magyar.ldf}
 \usepackage[magyar]{babel}
-\usepackage{mathtools,amssymb,amsthm,pdfpages,listingsutf8,hyperref,url,xcolor,lmodern,caption}
+\usepackage{mathtools,amssymb,amsthm,pdfpages,listingsutf8,hyperref,url,xcolor,lmodern,caption,hyperref,longtable,array}
+
 \footnotestyle{rule=fourth}
 
 \newtheorem{tetel}{Tétel}[chapter]
@@ -22,15 +23,12 @@
 	xleftmargin=1cm,
 	xrightmargin=1cm,
 	postbreak=\hbox{$\color{red}\hookrightarrow$\ },
-	backgroundcolor=\color{gray!30},
+	backgroundcolor=\color{gray!10},
 	frame=tblr,
-	framesep=3pt,
+	framesep=2pt,
 	keywordstyle=\bfseries\color{blue},
-	commentstyle=\itshape\color{teal},
-	morekeywords=[3]{Windows, Graphics},
-	keywordstyle=[3]\bfseries\color{green},
+	commentstyle=\itshape\color{red},
 }
-
 
 \begin{document}
 	\institute{Matematikai és Informatikai Intézet}
@@ -54,6 +52,56 @@
 			\item Funkciók és feladatok felosztása: ez azért lehet hasznos, mivel a fejlesztés során a fejlesztők pontosan csak az ő általuk elvállalt feladatokat valósítják meg.
 			\item Kommunikáció segítése: ha van egy jól kidolgozott terv, akkor ha a fejlesztők elakadnak valamiben vagy nem értik meg pontosan, hogy mit és hogyan kell implementálni, akkor elég, ha megnézik a tervben az adott dologhoz kapcsolódó részeket és ezáltal megtudják oldani a rájuk bízott feladatot.
 		\end{enumerate}
+		Azonban az imént felsoroltakon kívül még számtalan okok miatt szükséges a tervezni. A következőben az én általam készített adatbázis alapú webalkalmazásomnak a követelménylistája látható. A követelménylistában azokat a funkciókat szükséges dokumentálni, amikkel a programoknak rendelkeznie kell. Ez általában a különböző projektek esetében a követelmény specifikációban található meg. A követelmény specifikáció egy olyan dokumentáció, amelyben az igények, követelmények kerülnek meghatározásra, ennek az alapja a riportok. A riportok segítségével lehetséges felmérni a megrendelő követelményeit. \Aref{kovetelmenylista} táblázatban megtekinthető a projektem követelmény listája.
+		
+		\begin{longtable}{|l|l|p{3cm}|p{8cm}|}
+			\caption{Követelménylista} \label{kovetelmenylista} \\
+			\hline
+			\emph{Id} & \emph{Modul} & \emph{Név} & \emph{Leírás} \\ \hline
+			\endfirsthead
+			
+			\multicolumn{4}{c}{{\tablename\ \thetable{} -- folytatás}} \\
+			\hline
+			\textbf{Id} & \textbf{Modul} & \textbf{Név} & \textbf{Leírás} \\ \hline
+			\endhead
+			
+			\hline \multicolumn{4}{r}{{Folytatódik a következő oldalon}} \\
+			\endfoot
+			
+			\hline
+			\endlastfoot
+			
+			K1 & Jogosultság & Regisztráció & A webalkalmazásom teljes körű használatához regisztrációra van szükség. \\ \hline
+			K2 & Jogosultság & Bejelentkezés & Email és jelszóval van lehetőség belépni. Hibák esetén visszajelzést kapnak a felhasználók. \\ \hline
+			K3 & Jogosultság & Kijelentkezés & \\ \hline
+			K4 & Jogosultság & Profillal kapcsolatos műveletek & A felhasználónak van lehetősége a nevét, email címét és jelszavát is módosítani, illetve törölni a saját profilját. Hibák esetén visszajelzést kapnak a felhasználók. \\ \hline
+			K5 & Jogosultság & Jogosultsági szintek & \emph{Admin}: vármegyékkel, városokkal, kategóriákkal kapcsolatos műveletek, azaz azok megtekintése, törlése, módosítása és hozzáadása. A hirdetések törlése, módosítása, megtekintése. A felhasználók törlése. Üzenetek küldése, megtekintése, sajátok módosítása és törlése. \\ 
+			& & & \emph{Felhasználó}: hirdetések megtekintése, sajátjai módosítása, törlése. Üzenetek küldése, megtekintése, sajátok módosítása és törlése. Kategóriák megtekintése. \\ 
+			& & & \emph{Nézelődő}: kategóriák és hirdetések megtekintése. \\ \hline
+			K6 & Felület & Regisztráció & Egy név, email cím és a jelszó kétszeri megadása szükséges. Hibák esetén visszajelzést kapnak a felhasználók. \\ \hline
+			K7 & Felület & Bejelentkezés & Email és jelszóval van lehetőség belépni. Hibák esetén visszajelzést kapnak a felhasználók. \\ \hline
+			K8 & Felület & Hirdetések & Az összes hirdetés kilistázva való megtekintése. \\ \hline
+			K9 & Felület & Hirdetések szűrése, rendezése, keresése & Az összes hirdetés kilistázva való megtekintése a szűrésre, keresésre vagy rendezésre. A keresés az a hirdetés neve alapján történik. \\ \hline
+			K10 & Felület & Saját hirdetések & A saját hirdetések kilistázva való megtekintése, törlése. \\ \hline
+			K11 & Felület & Saját hirdetések módosítása & A hirdetés összes adatát lehetséges megváltoztatni, kivéve a hirdető nevét. \\ \hline
+			K12 & Felület & Új hirdetés hozzáadása & ~ \\ \hline
+			K13 & Felület & Saját beszélgetések megtekintése & Az összes beszélgetés megtekintése, csak az utolsó üzenet látjuk. \\ \hline
+			K14 & Felület & Saját üzenetek megtekintése, törlése & ~ \\ \hline
+			K15 & Felület & Saját üzenetek módosítása & ~ \\ \hline
+			K16 & Felület & Saját beszélgetések megtekintése & ~ \\ \hline
+			K17 & Felület & Kategóriák megtekintése, törlése & A törlés csak admin jogosultsággal lehetséges. \\ \hline
+			K18 & Felület & Új kategória hozzáadása & ~ \\ \hline
+			K19 & Felület & Kategória módosítása & ~ \\ \hline
+			K20 & Felület & Vármegyék megtekintése, törlése & Csak admin jogosultsággal lehetséges. \\ \hline
+			K21 & Felület & Vármegye hozzáadása & Csak admin jogosultsággal lehetséges. \\ \hline
+			K22 & Felület & Vármegye nevének módosítása & Csak admin jogosultsággal lehetséges. \\ \hline
+			K23 & Felület & Városok megtekintése, törlése & Csak admin jogosultsággal lehetséges. \\ \hline
+			K24 & Felület & Városok hozzáadása & Csak admin jogosultsággal lehetséges. \\ \hline
+			K25 & Felület & Városok nevének módosítása & Csak admin jogosultsággal lehetséges. \\ \hline
+			K26 & Felület & Felhasználók megtekintése, törlése & Csak admin jogosultsággal lehetséges. Az adminok itt nem kerülnek kilistázásra. \\ \hline
+			
+		\end{longtable}
+		
 	\section{A tervezéshez alkalmazott eszközök és technológiák}
 		A következő alszakaszokban a tervezéshez használt eszközökről és technológiákról lesz majd szó.
 	\subsection{Dbdiagram}
