@@ -3,15 +3,18 @@ document.addEventListener('DOMContentLoaded', function ()
     const filterCheckbox = document.getElementById('filterCheckbox');
     const filterSection = document.getElementById('filterSection');
 
-    filterCheckbox.addEventListener('change', function () 
+    if (filterCheckbox && filterSection) 
     {
-        if (this.checked) 
+        filterCheckbox.addEventListener('change', function () 
         {
-            filterSection.style.display = 'block';
-        } 
-        else 
-        {
-            filterSection.style.display = 'none';
-        }
-    });
+            if (this.checked) 
+            {
+                filterSection.style.display = 'block';
+            } 
+            else 
+            {
+                filterSection.style.display = 'none';
+            }
+        });
+    }
 });
