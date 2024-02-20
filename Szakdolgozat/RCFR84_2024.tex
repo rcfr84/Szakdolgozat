@@ -202,6 +202,12 @@
 		Ezzel a tesztelési keretrendszer segítségével bármit lehet tesztelni ami a böngészőben fut.
 		\cite{Cypress, Kusper Szoftvertesztles, Katalon}
 		
+		A szemléltetés kedvéért szeretné, Önnek bemutatni, hogy hogyan is kell elképzelni egy ilyenféle tesztet. \Aref{cypress-teszt} kódon látható.
+		
+		\lstinputlisting[caption={Egy cypress teszt egy hirdetés hozzáadására}, label=cypress-teszt, style=user1]{./teszteles/add.js}
+		
+		Itt a visit (magyarul: meglátogat) metódus segítségével lehetséges egy konkrét útvonalra eljutni. Ezután bejelentkezni szükség, mivel csak akkor van lehetőség hirdetés hozzáadására. Id, azaz valamilyen azonosító alapján szükséges megkeresni a formon az adatok megadásának a helyét. Ahol mi adunk meg valamilyen információt, ott a type (magyarul: begépel) metódus segítségével tehetjük meg. Ahol legördülő menüből kell kiválasztani a szükséges adatokat, ott pedig a select (magyarul: kiválaszt) metódussal lehetséges. Ezen kívül még két darab kép hozzáadása is látható még, ezt az attachFile (magyarul: fájl csatolása) metódussal történik, azonban ehhez szükséges még egy csomagot letölteni, de ezt csak megemlítettem, mivel többet erről nem lesz szó. Gombokat lehetséges szöveg alapján megkeresni és utána rákattintani, ez pedig a contains (magyarul: tartalmaz) és click (magyarul: rákattint) metódusokkal történhet meg. Végezetül pedig egy átirányítása megvalósítása látszik, ha minden sikerrel zárult. Tehát véleményem szerint kijelenthető, hogy cypress tesztek írása egyszerű és nagyon érthető még akár egy hétköznapi ember számára is.
+		
 	\chapter{Felhasználói dokumentáció}
 		Ebben a fejezetben szó lesz majd, arról, hogy különböző jogosultságú felhasználóknak milyen lehetőségei vannak a webes alkalmazásom használata során. Minden ebben a fejezetben lévő alfejezetben szereplő jogosultsághoz szinte csak azokat a funkciókat említem majd meg, amiket csak ők tudnák használni. A különböző szerepű felhasználókról \az{\ref{sc-plantuml}} alfejezetben már megemlítettem róluk pár szót.
 	\section{Admin}
@@ -295,14 +301,20 @@
 	
 	\lstinputlisting[caption={Egy modellre példa kód részlet}, label=kod-modell, style=user1]{./fejlesztoi/hirdetesModell.php}
 	
-	\Aref{kod-modell} kódrészleten a 6.~és 7.~ sorban az adatbázis tábla neve és elsődleges kulcs megadása látható. Rögtön alatta pedig az látszik, hogy egy tömbbe megadom a kötelezően megadandó mezők nevét, amik nem lehetnek üresek. Itt található még egy belongsTo és egy hasMany kapcsolatra egy példa. Az első azt röviden az azt jelenti, egy modell egy másik modellhez tartozik, azaz, hogy egy hirdetés egy felhasználóhoz tartozik. Míg az utóbbi azt azt jelenti, hogy egy modell több modellhez tartozik, azaz egy hirdetéshez több kép is tartozhat.
+	\Aref{kod-modell} kódrészleten a 6.~és 7.~ sorban az adatbázis tábla neve és elsődleges kulcs megadása látható. Rögtön alatta pedig az látszik, hogy egy tömbbe megadom a kötelezően megadandó mezők nevét, amik nem lehetnek üresek. Itt található még egy belongsTo és egy hasMany kapcsolatra egy példa. Az első azt röviden az azt jelenti, egy modell egy másik modellhez tartozik, azaz, hogy egy hirdetés egy felhasználóhoz tartozik. Míg az utóbbi azt azt jelenti, hogy egy modell több modellhez tartozik, azaz egy hirdetéshez több kép is tartozhat. Egy modell létrehozása a következő parancs segítségével történhet meg:
+	\begin{center} 
+		php artisan make:model név .
+	\end{center}
 	
 	\subsection{Kontroller}\label{sc-kontroller}
 	A kontrollerek tulajdonképpen arra használatosak, hogy a különböző kérésékhez szükséges metódusokat itt definiálhatjuk. A kontrollerekben általában sokféle metódusokat írhatunk, azonban alap esetekben a következő lehetnek. Lehet index nevű, ami az összes adat (erőforrások) megjelenítésére szolgál, lehet még create (magyarul: létrehozás), ami az adatok bekéréséért felelős form, ehhez szorosan kapcsolódik a store (magyarul: tárol, mentés), ami pedig elmenti a kívánt erőforrást. Beszélhetünk még a show (magyarul: megnéz) és a destroy (magyarul: törlés) metódusokról, az előbbi egy konkrét erőforrást jelenít meg, míg utóbbi segítségével az erőforrást lehetséges kitörölni. Végezetül még két metódus van, az első az edit (magyarul: módosítás), ami a create metódushoz hasonlóan egy formot jelenít meg, aminek a segítségével lehetséges az adott erőforrás módosítása. A másik pedig az update (magyarul: módosítás), ez pedig konkrétan módosítja az imént említett edit formon az eszközölt változtatásokat. Példa képen a show metódust mutatom be Önnek. \cite{Laravel}
 	
 	\lstinputlisting[caption={Egy kontrollerben lévő metódus}, label=kod-kontoller, style=user1]{./fejlesztoi/hirdetesShow.php}
 	
-	A következőben röviden megmagyarázom \aref{kod-kontoller} kódot. Látható, hogy a hirdetéshez tartozó kontrollerben található a metódus, ami paraméterként kér egy id-t, az id segítségével tudom, hogy pontosan melyik hirdetést szeretném megjeleníteni. Ezután megkeressem az adott bekért id alapján a hirdetést, majd leellenőrzöm, hogy egyáltalán létezik-e, ha nem akkor hibát adok vissza, amit majd a blade tudunk majd felhasználni, ahhoz, hogy értesítsem a felhasználót a hibáról. Végül pedig, ha nincsen hiba, akkor megjelenítem egy másik bladen a felhasználó számára. A compact nevű metódusra, azért van szükségem, hogy a bladen majd megjeleníteni tudjam a kívánt hirdetést. A bladekről többet \aref{sc-blade} alfejezetben tudhat meg.
+	A következőben röviden megmagyarázom \aref{kod-kontoller} kódot. Látható, hogy a hirdetéshez tartozó kontrollerben található a metódus, ami paraméterként kér egy id-t, az id segítségével tudom, hogy pontosan melyik hirdetést szeretném megjeleníteni. Ezután megkeressem az adott bekért id alapján a hirdetést, majd leellenőrzöm, hogy egyáltalán létezik-e, ha nem akkor hibát adok vissza, amit majd a blade tudunk majd felhasználni, ahhoz, hogy értesítsem a felhasználót a hibáról. Végül pedig, ha nincsen hiba, akkor megjelenítem egy másik bladen a felhasználó számára. A compact nevű metódusra, azért van szükségem, hogy a bladen majd megjeleníteni tudjam a kívánt hirdetést. A bladekről többet \aref{sc-blade} alfejezetben tudhat meg.  Egy kontroller létrehozása a következő parancs segítségével történhet meg:
+	\begin{center} 
+		php artisan make:controller névController .
+	\end{center}
 	  
 	\subsection{Web.php}
 	A web.php nevű fájl, arra szolgál, hogy a kontrollerekben elkészített különböző metódusokhoz route-t (magyarul: útvonal) rendeljük hozzá. Ez azért szükséges, hogy a böngészőkben eltudjuk érni magát a konkrét blade-t, ami a kontrollerben definiált metódust fogja megvalósítani. Itt még annyit érdemes megemlítenem, hogy a middleware (magyarul: köztes szoftver) segítségével van lehetőség szabályozni, azt hogy ki férhessen hozzá az adott útvonalhoz. A következőben pedig egy útvonalat fogok mutatni, hogy eltudják képzelni, hogy hogyan is nézz ki.
