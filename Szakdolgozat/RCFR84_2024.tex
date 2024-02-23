@@ -179,7 +179,8 @@
 		\cite{GitHubDesktop}
 	\subsection{Tailwind CSS}\label{sc-tailwind}
 		Tailwind css használatával a felhasználói felületeket lehet kialakítani, ez csak külsőleges formázást jelent, tehát csak és kizárólag esztétikai szépítésre szolgál. Érdemes még róla tudni, hogy gyors, megbízható, rugalmas és nincsen futási ideje, azaz azonnal megtörténik a változás, nem kell rá várni semmit sem. \cite{tailwind}
-	
+	\subsection{JavaScript}\label{javascript}
+		A javascript az egyik szkript- vagy programozási nyelv, aminek a segítségével van lehetőség bonyolultabb funkciók megjelenítésére a weboldalakon. Lehetővé teszi például egy dinamikusan frissülő tartalom létrehozását vagy akár képek animálását is. Ezeken kívül még nagyon sok mindenre használható még.
 	\chapter{Tesztelés}
 		A tesztelésre azért van szükség, hogy az alkalmazásomban megtaláljam az esetleges hibákat, amiket kijavítva növelhetem a szoftverem minőségét és megbízhatóságát. Abban sajnos nem lehetek biztos, hogy a tesztelés elvégzése után nem lesznek már hibák. A tesztelés során kettőféle tesztelési technikát alkalmaztam. Ezek pedig a következők:
 		\begin{enumerate}
@@ -189,9 +190,9 @@
 		Azonban van egy harmadik fajta is, amit nem alkalmaztam. Az nemmás, mint a feketedobozos (angolul: black-box), amikor a tesztesetek a specifikáció alapján íródnak.
 		\cite[26-29.~oldal]{Kusper}
 	\section{A teszteléshez alkalmazott eszközök és technológiák}
-			A következő alszakaszokban a teszteléshez használt eszközökről és technológiákról lesz majd szó.
+			A következő alszakaszokban a teszteléshez használt eszközökről és technológiákról lesz majd szó. Kitérek majd arra, hogy pontosan mit is jelentenek, miket lehet velük tesztelni és az előnyük és hátrányaikról is ejtek majd pár gondolatot.
 	\subsection{Manuális teszt}
-		
+		Manuális teszt az azt jelenti, hogy a tesztelő végig próbálgatja saját magától a funkciókat és leellenőrzi azok működését, illetve helyességét. Az ilyenféle tesztelés végzésekor nem alkalmazunk semmilyen automatizált tesztet. Én fejlesztés közben folyamatosan végeztem manuális tesztelést, abból kifolyólag, hogy megbizonyosodjak az elkészült funkció helyességéről, illetve, hogy feltárjam vele az esetleges hibákat, amiket nem vettem észre vagy még nem gondoltam rá. Az én meglátásom szerint a manuális tesztelésnek a legnagyobb hibája az, hogy minden lehetséges kombinációt ki kell próbálnunk ahhoz, hogy bebizonyosodjunk arról, hogy a készített funkció a megfelelő módon működik. Még szintén hátrány lehet az, hogy rendkívül költséges lehet a manuális tesztelés. Végül pedig az, hogy az emberek nagyobb százalékban hibáznak, ami érthető is, hiszen tévedni emberi dolog. Azonban vannak előnyei is, ezek pedig véleményem szerint a következők lennének. Az első ilyen az lenne, hogy, ha van valamilyen hiba, akkor azt nagy valószínűséggel hamarabb észre lehet venni, amivel pénzt és időt is lehet spórolni. A másik ilyen előny az pedig, hogy a tesztelőnek van megfelelő intelligenciája ahhoz, hogy kiszűrje az esetleges hibákat, ellenben az automatizált tesztekkel szemben. 
 		
 	\subsection{Cypress}
 		A Cypress egy NodeJS-ben írt front end tesztelési keretrendszer. Ahhoz, hogy tudjuk futtatni a Cypress-t, ahhoz előtte telepíteni kell a NodeJS-t. A Cypress segítségével tudunk készíteni végponttól végpontig tartó-, komponens-, integrációs- valamint a unitteszteket is.
@@ -202,8 +203,8 @@
 			\item Integrációs teszt: ez egy olyanféle teszt, aminél legalább kettő különböző komponens együttműködését teszteljük.
 			\item Unitteszt (magyarul: egységteszt): ez egy olyan teszt, ami a metódusokat teszteli le. Itt nézzük meg, hogy a tényleges visszatérési érték azonos-e az elvárttal. Ez a komponensteszt egyik fajtája.
 		\end{enumerate}
-		Ezzel a tesztelési keretrendszer segítségével bármit lehet tesztelni ami a böngészőben fut.
-		\cite{Cypress, Kusper Szoftvertesztles, Katalon}
+		Ezzel a tesztelési keretrendszer segítségével bármit lehet tesztelni ami a böngészőben fut. Nézzük meg néhány előnyét és hátrányát is ennek használatára. Kezdjük a negatívumokkal először. A teszteknek javascript nyelven kell íródniuk. Erről többet megtudhat itt \aref{javascript}. Hátrány még az is, hogy egyszerre csak egy ablakban vagy csak egy böngészőben lehetséges a tesztek végrehajtása. Most nézzük meg a pozitívumait is. Az egyik legnyilvánvalóbb ha ránézzünk egy ilyen kódra az, hogy nagyon olvasható bárki számára. Előny még az is, hogy igazi böngészőt használ a tesztek végrehajtására. Ez azért hasznos, mivel a valódi végfelhasználók is igazi böngészőkben fogják használni az alkalmazást, ezért jól lehet velük szimulálni a működését. Még előnynek tekinthető az is, hogy a hálózatól érkező kéréseket lehetséges ellenőrizni a cypress segítségével.
+		\cite{Cypress, Kusper Szoftvertesztles, Katalon,Medium}
 		
 		A szemléltetés kedvéért szeretné, Önnek bemutatni, hogy hogyan is kell elképzelni egy ilyenféle tesztet. \Aref{cypress-teszt} kódon látható.
 		
@@ -364,6 +365,8 @@
 		\textsc{Laravel:} \url{https://laravel.com/docs/10.x}, 2024-es verzió.
 		\bibitem{tailwind}
 		\textsc{Tailwind CSS:} \url{https://tailwindcss.com/}, 2024-es verzió.
+		\bibitem{Medium}
+		\textsc{Medium:} \url{https://skakarh.medium.com/advantages-and-disadvantages-of-cypress-end-to-end-testing-tool-before-choosing-it-as-your-347b6436dec8}, 2024-es verzió.
 	\end{thebibliography}
 	
 	% Aláírt, szkennelt nyilatkozat beillesztése a szakdolgozat végére
