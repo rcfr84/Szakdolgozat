@@ -39,6 +39,15 @@ class PictureController extends Controller
     {
         $user = auth()->user();
 
+        $request->validate([
+            'pictures.*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:10240',
+        ]);
+
+        if ($request->file('pictures') === null) 
+        {
+            return redirect()->back()->with('error', 'Nincs kiválasztva kép!');
+        }
+
         foreach ($request->file('pictures') as $picture) {
             $filename = 'advertisement_image_' . uniqid() . '.' . $picture->getClientOriginalExtension();
             $path = $picture->storeAs('advertisement_images', $filename, 'public');

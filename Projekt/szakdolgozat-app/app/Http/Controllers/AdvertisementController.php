@@ -71,10 +71,11 @@ class AdvertisementController extends Controller
         $request->validate([
             'city_id' => 'required',
             'category_id' => 'required',
-            'title' => 'required',
+            'title' => 'required|max:40',
             'price' => 'required',
-            'description' => 'required',
-            'pictures.*' => 'image|mimes:jpeg,png,jpg,gif,svg',
+            'description' => 'required|max:1000',
+            'pictures.*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:10240',
+            'mobile_number' => 'max:20',
         ]);
     
         $newAdvertisement = new Advertisement();
@@ -149,6 +150,10 @@ class AdvertisementController extends Controller
         auth()->user();
         
         $advertisement = Advertisement::find($id);
+        if ($advertisement === null) 
+        {
+            return redirect()->route('advertisements.own')->with('error', 'Nincsen ilyen hirdetés!');
+        }
         $counties = County::all();
         $cities = [];
         return view('advertisements.countyCityEdit', compact('cities', 'advertisement', 'counties'));
@@ -157,6 +162,14 @@ class AdvertisementController extends Controller
     {
         $advertisement = Advertisement::find($id);
         $advertisement->city_id = $request->city_id;
+        if ($advertisement === null) 
+        {
+            return redirect()->route('advertisements.own')->with('error', 'Nincsen ilyen hirdetés!');
+        }
+        if ($request->city_id === null) 
+        {
+            return redirect()->route('advertisements.editCountyAndCity', $advertisement->advertisement_id)->with('error', 'Nem választottad ki a vármegyét vagy a várost!');
+        }
         $advertisement->update();
         return redirect()->route('advertisements.edit', $advertisement->advertisement_id)->with('status', 'Sikeres módosítás!');
     }
@@ -182,10 +195,11 @@ class AdvertisementController extends Controller
 
         $request->validate([
             'category_id' => 'required',
-            'title' => 'required',
+            'title' => 'required|max:40',
             'price' => 'required',
-            'description' => 'required',
-            'pictures.*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'description' => 'required|max:1000',
+            'pictures.*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:10240',
+            'mobile_number' => 'max:20',
         ]);
 
         if (auth()->user()->role->name !== 'admin') 

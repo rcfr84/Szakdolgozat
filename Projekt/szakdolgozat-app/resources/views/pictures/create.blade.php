@@ -3,6 +3,7 @@
     <div class="min-h-screen container mx-auto mt-8">
         <div class="flex justify-center">
             <div class="w-3/2">
+                @include('statusAndError')
                 <div class="bg-white p-6 rounded-lg shadow-md flex flex-col">
                     <form action="{{ route('pictures.store', $advertisement->advertisement_id) }}" method="POST" enctype="multipart/form-data">
                         @csrf                        
@@ -26,16 +27,7 @@
                             <p>Maximum csak 5 kép engedélyezett.</p>
                         @endif
                     </form>
-                    @if ($errors->any())
-                        <div class="alert alert-danger">
-                            <strong>Hiba!</strong> Problámák vannak az adatokkal.<br><br>
-                            <ul>
-                                @foreach ($errors->all() as $error)
-                                    <li>{{ $error }}</li>
-                                @endforeach
-                            </ul>
-                        </div>
-                    @endif
+                    @include('pictures.errorMessage')
                 </div>
             </div>
         </div>
