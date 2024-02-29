@@ -4,10 +4,7 @@
     <div class="container mx-auto mt-8">
         <div class="flex justify-center">
             <div class="w-full max-w-2xl">
-                @if(session('status'))
-                    <div class="bg-green-500 text-white p-4 mb-4 rounded-md">{{ session('status') }}</div>
-                @endif
-
+                @include('statusAndError')
                 <div class="bg-white p-6 rounded-lg shadow-md">
                     <header>
                         <h2 class="text-2xl font-medium text-gray-900">
@@ -27,7 +24,7 @@
                     </x-danger-button>
 
                     <x-modal name="confirm-user-deletion" :show="$errors->userDeletion->isNotEmpty()" focusable>
-                        <form method="post" action="{{ route('profile.destroy') }}" class="mt-6">
+                        <form method="post" action="{{ route('profile.destroy') }}" class="mt-6 mr-4 ml-4">
                             @csrf
                             @method('delete')
 
@@ -47,11 +44,12 @@
                                 type="password"
                                 class="mt-1 block w-full"
                                 placeholder="{{ __('Jelszó') }}"
+                                required
                             />
 
-                            <x-input-error :messages="$errors->userDeletion->get('password')" class="mt-2" />
+                            <x-input-error :messages="$errors->userDeletion->get('password')" class="mt-2"/>
 
-                            <div class="mt-6 flex justify-end">
+                            <div class="mt-6 flex justify-end mr-4 mb-4">
                                 <x-secondary-button x-on:click="$dispatch('close')">
                                     {{ __('Mégse') }}
                                 </x-secondary-button>

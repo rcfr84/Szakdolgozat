@@ -48,7 +48,7 @@ class CityController extends Controller
     {
         $this->authorize('store', City::class);
         $request->validate([
-            'name' => 'required'
+            'name' => 'required|unique:cities,name',
         ]);
         $city = new City();
         $city->name = $request->name;
@@ -100,7 +100,7 @@ class CityController extends Controller
             return redirect()->route('cities.index', $countyId)->with('error', 'Nem található a keresett város!');
         }
         $request->validate([
-            'name' => 'required'
+            'name' => 'required|unique:cities,name',
         ]);
         $this->authorize('update', $city);
         $city->name = $request->name;

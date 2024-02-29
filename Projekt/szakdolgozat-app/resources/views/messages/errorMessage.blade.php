@@ -8,7 +8,6 @@
             <span class="font-medium">Hiba történt, lehetséges ok(ok):</span>
             <ul class="mt-1.5 list-disc list-inside">
                 <li>Nem lehet üres.</li>
-                <li>Már létezik ilyen.</li>
             </ul>
         </div>
     </div>

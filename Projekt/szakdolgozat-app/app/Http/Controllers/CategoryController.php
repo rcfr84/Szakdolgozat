@@ -35,7 +35,7 @@ class CategoryController extends Controller
         $this->authorize('store', Category::class);
 
         $request->validate([
-            'name' => 'required',
+            'name' => 'required|unique:categories,name',
         ]);
 
         $newCategory = new Category();
@@ -86,7 +86,7 @@ class CategoryController extends Controller
         }
 
         $request->validate([
-            'name' => 'required',
+            'name' => 'required|unique:categories,name',
         ]);
 
         $category->name = $request->name;

@@ -33,7 +33,7 @@ class CountyController extends Controller
     {
         $this->authorize('store', County::class);
         $request->validate([
-            'name' => 'required'
+            'name' => 'required|unique:counties,name',
         ]);
         $county = new County();
         $county->name = $request->name;
@@ -74,7 +74,7 @@ class CountyController extends Controller
         }
         $this->authorize('update', County::class);
         $request->validate([
-            'name' => 'required'
+            'name' => 'required|unique:counties,name',
         ]);
         $county->name = $request->name;
         $county->save();
