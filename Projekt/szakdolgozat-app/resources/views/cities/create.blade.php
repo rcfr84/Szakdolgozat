@@ -3,9 +3,7 @@
 <div class="min-h-screen container mx-auto mt-8">
     <div class="flex justify-center">
         <div class="w-3/2">
-            @if(session('status'))
-                    <div class="bg-green-500 text-white p-4 mb-4">{{ session('status') }}</div>
-                @endif
+            @include('statusAndError')
             <div class="bg-white p-6 rounded-lg shadow-md flex flex-col">
                 <form action="{{ route('cities.store', ['countyId' => $county_id]) }}" method="POST" enctype="multipart/form-data">
                     @csrf            
