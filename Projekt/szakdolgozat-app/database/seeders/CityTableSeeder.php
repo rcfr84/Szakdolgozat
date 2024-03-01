@@ -1988,13 +1988,11 @@ class CityTableSeeder extends Seeder
         ];
     
         $countyId = 1;
-
        
-             // Növeli a megye számát az új városokhoz
              foreach ($cities as $countyId => $cityGroup) {
                 foreach ($cityGroup as $cityName) {
                     DB::table('cities')->insert([
-                        'county_id' => $countyId + 1, // Mivel a tömb index 0-tól kezdődik, hozzá kell adni 1-et
+                        'county_id' => $countyId + 1, 
                         'name' => $cityName,
                         'created_at' => now(),
                         'updated_at' => now(),
