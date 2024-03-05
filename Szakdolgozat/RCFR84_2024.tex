@@ -145,7 +145,7 @@
 
 	\chapter{Fejlesztés}		
 	\section{A fejlesztéshez alkalmazott eszközök és technológiák}
-		A következő alszakaszokban a fejlesztéshez használt eszközökről és technológiákról lesz majd szó. Részletezem majd azokat az eszközöket és technológiákat, melyeket a fejlesztés során használtam és alkalmaztam. A következő alszakaszokban definiálni fogom a választott eszközöket és technológiákat. 
+		A következő alszakaszokban a fejlesztéshez használt eszközökről és technológiákról lesz majd szó. Részletezem majd azokat az eszközöket és technológiákat, melyeket a fejlesztés során használtam és alkalmaztam. A következő alszakaszokban definiálni fogom a választott eszközöket és technológiákat, ezenkívül pedig megemlítem, hogy hol használtam őket, azaz miket valósítottam meg a segítségükkel.
 	\subsection{Laravel}\label{sc-laravel}
 		A Laravel egy nyílt forráskódú, PHP webkeretrendszer, ami MVC tervezési mintán alapszik. Az MVC a Model-View-Controller rövidítése. Ez az egyik legősibb tervezési minta.
 		\begin{enumerate}
@@ -153,8 +153,8 @@
 			\item View (magyarul: nézet): ez a réteg felhasználói felületek megjelenítéséért illetékes. 
 			\item Controller (magyarul: vezérlő, kontroller): a felhasználói műveletek megfelelő kezeléséért ez a réteg a felelős.
 		\end{enumerate}
-		Az elképzelése röviden az, hogy van egy modell és ha ez módosul, akkor erről értesíteni kell az összes nézetett. Minden nézett pontosan ugyanazon a vezérlőn tudja módosítani a modellt. Mivel három részre van bontva, ezért van ennek a tervezési mintának néhány előnye is. Ilyen például ha lecseréljük az egyik réteget, akkor a többihez nem kell már hozzányúlni, amivel pénzt és időt is lehet spórolni. Előnye még az is, hogy egy modellnek lehet több nézetes is.
-		\cite[102-103.~oldal]{Kusper}
+		Az elképzelése röviden az, hogy van egy modell és ha ez módosul, akkor erről értesíteni kell az összes nézetett. Minden nézett pontosan ugyanazon a vezérlőn tudja módosítani a modellt. Mivel három részre van bontva, ezért van ennek a tervezési mintának néhány előnye is. Ilyen például ha lecseréljük az egyik réteget, akkor a többihez nem kell már hozzányúlni, amivel pénzt és időt is lehet spórolni. Előnye még az is, hogy egy modellnek lehet több nézetes is. Pozitívumok közzé sorolható az még, hogy számos alapvetőnek tekinthető funkcióhoz lehetséges használni néhány szükséges parancs megadásával. Például a webes alkalmazásomban használtam a laravel breezehez tartozó funkciókat. Ezzel különféle autentikációhoz kapcsolódó funkciókat lehet használni, ebbe beletartozik például a bejelentkezés, a regisztráció és a felhasználóval kapcsolatos adatok módosítása is. Még használtam egy olyan parancs által megadható funkciót is, ami a lapozás megvalósítását teszi lehetővé. Ezeknek a pozitívumoknak köszönhetően szerintem a laravel az nagyon megkönnyítheti a fejlesztők számára a munkavégzést. 
+		\cite{Kusper, Laravel}
 	\subsection{PHP}
 		A PHP egy szerveroldali szkriptnyelv, amelynek a segítségével dinamikus weboldalakat lehet vele létrehozni. Azt érdemes még róla tudni, hogy nyílt forráskódú. Ezen kívül még a következő feladatok megvalósítására lehet használni:
 		\begin{enumerate}
@@ -180,7 +180,7 @@
 	\subsection{Tailwind CSS}\label{sc-tailwind}
 		Tailwind css használatával a felhasználói felületeket lehet kialakítani, ez csak külsőleges formázást jelent, tehát csak és kizárólag esztétikai szépítésre szolgál. Érdemes még róla tudni, hogy gyors, megbízható, rugalmas és nincsen futási ideje, azaz azonnal megtörténik a változás, nem kell rá várni semmit sem. \cite{tailwind}
 	\subsection{JavaScript}\label{javascript}
-		A javascript az egyik szkript- vagy programozási nyelv, aminek a segítségével van lehetőség bonyolultabb funkciók megjelenítésére a weboldalakon. Lehetővé teszi például egy dinamikusan frissülő tartalom létrehozását vagy akár képek animálását is. Ezeken kívül még nagyon sok mindenre használható még.
+		A javascript az egyik szkript- vagy programozási nyelv, aminek a segítségével van lehetőség bonyolultabb funkciók megjelenítésére a weboldalakon. Lehetővé teszi például egy dinamikusan frissülő tartalom létrehozását vagy akár képek animálását is. Ezeken kívül még nagyon sok mindenre használható még. A projektemben használtam a javascriptet ahhoz, hogy amikor vármegyét választok ki egy legördülő listából, akkor egy másik listában csak az előzőleg kiválasztott vármegyébe tartozó város jelenjenek meg. A másik ahol szintén használtam az pedig a szűréshez tartozó részeket jelenítem meg vagy nem, annak a tükrében, hogy be van pipálva egy checkbox (magyarul: jelölőnégyzet) vagy nem.
 	\chapter{Tesztelés}
 		A tesztelésre azért van szükség, hogy az alkalmazásomban megtaláljam az esetleges hibákat, amiket kijavítva növelhetem a szoftverem minőségét és megbízhatóságát. Abban sajnos nem lehetek biztos, hogy a tesztelés elvégzése után nem lesznek már hibák. A tesztelés során kettőféle tesztelési technikát alkalmaztam. Ezek pedig a következők:
 		\begin{enumerate}

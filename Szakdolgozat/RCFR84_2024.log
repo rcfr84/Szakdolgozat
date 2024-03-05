@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.12)  29 FEB 2024 08:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.12)  5 MAR 2024 12:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -848,16 +848,16 @@ Package pdftex.def Info: ./tervezes/useCase.png  used on input line 134.
 2. fejezet.
 [12
 
-] [13] [14]
+] [13] [14] [15]
 3. fejezet.
-[15
+[16
 
 ] (c:/texlive/2023/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2023/02/27 1.9 listings language file
 )
 (c:/texlive/2023/texmf-dist/tex/latex/listings/lstlang2.sty
 File: lstlang2.sty 2023/02/27 1.9 listings language file
-) [16]
+) [17]
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
 nput line 211.
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 2
@@ -883,57 +883,54 @@ File: ts1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10> not available
 (Font)              Font shape `T1/lmtt/b/n' tried instead on input line 21.
- [17{c:/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}{c:/texlive/2023/
+ [18{c:/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}{c:/texlive/2023/
 texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{c:/texlive/2023/texmf-dist/fonts/e
-nc/dvips/lm/lm-mathsy.enc}] [18]
+nc/dvips/lm/lm-mathsy.enc}] [19]
 4. fejezet.
-<./felhasznaloi/felhasznalo.png, id=404, 179.16937pt x 149.05687pt>
+<./felhasznaloi/felhasznalo.png, id=411, 179.16937pt x 149.05687pt>
 File: ./felhasznaloi/felhasznalo.png Graphic file (type png)
 <use ./felhasznaloi/felhasznalo.png>
 Package pdftex.def Info: ./felhasznaloi/felhasznalo.png  used on input line 223
 .
 (pdftex.def)             Requested size: 102.60329pt x 85.35826pt.
-<./felhasznaloi/kategoria.png, id=406, 328.72812pt x 437.635pt>
+<./felhasznaloi/kategoria.png, id=413, 328.72812pt x 437.635pt>
 File: ./felhasznaloi/kategoria.png Graphic file (type png)
 <use ./felhasznaloi/kategoria.png>
 Package pdftex.def Info: ./felhasznaloi/kategoria.png  used on input line 231.
 (pdftex.def)             Requested size: 170.97972pt x 227.62204pt.
-[19
+[20
 
  <./felhasznaloi/felhasznalo.PNG>]
-<./felhasznaloi/varmegye.png, id=416, 415.5525pt x 417.05812pt>
+<./felhasznaloi/varmegye.png, id=422, 415.5525pt x 417.05812pt>
 File: ./felhasznaloi/varmegye.png Graphic file (type png)
 <use ./felhasznaloi/varmegye.png>
 Package pdftex.def Info: ./felhasznaloi/varmegye.png  used on input line 239.
 (pdftex.def)             Requested size: 255.16063pt x 256.0748pt.
- [20 <./felhasznaloi/kategoria.PNG>]
-<./felhasznaloi/hozzadas1.png, id=425, 381.425pt x 410.53375pt>
+ [21 <./felhasznaloi/kategoria.PNG>]
+<./felhasznaloi/hozzadas1.png, id=432, 381.425pt x 410.53375pt>
 File: ./felhasznaloi/hozzadas1.png Graphic file (type png)
 <use ./felhasznaloi/hozzadas1.png>
 Package pdftex.def Info: ./felhasznaloi/hozzadas1.png  used on input line 252.
 (pdftex.def)             Requested size: 185.04327pt x 199.16928pt.
-<./felhasznaloi/hozzadas2.png, id=426, 378.41376pt x 443.6575pt>
+<./felhasznaloi/hozzadas2.png, id=433, 378.41376pt x 443.6575pt>
 File: ./felhasznaloi/hozzadas2.png Graphic file (type png)
 <use ./felhasznaloi/hozzadas2.png>
 Package pdftex.def Info: ./felhasznaloi/hozzadas2.png  used on input line 253.
 (pdftex.def)             Requested size: 169.87465pt x 199.16928pt.
 
-[21 <./felhasznaloi/varmegye.PNG> <./felhasznaloi/hozzadas1.PNG> <./felhasznalo
+[22 <./felhasznaloi/varmegye.PNG> <./felhasznaloi/hozzadas1.PNG> <./felhasznalo
 i/hozzadas2.PNG>]
-<./felhasznaloi/kereses-szures.png, id=438, 777.90625pt x 306.14375pt>
+<./felhasznaloi/kereses-szures.png, id=444, 777.90625pt x 306.14375pt>
 File: ./felhasznaloi/kereses-szures.png Graphic file (type png)
 <use ./felhasznaloi/kereses-szures.png>
 Package pdftex.def Info: ./felhasznaloi/kereses-szures.png  used on input line 
 267.
 (pdftex.def)             Requested size: 369.88582pt x 145.56926pt.
- [22 <./felhasznaloi/kereses-szures.PNG>] [23]
+ [23 <./felhasznaloi/kereses-szures.PNG>] [24]
 5. fejezet.
-[24
+[25
 
 ] (c:/texlive/2023/texmf-dist/tex/latex/base/latin2.def
-File: latin2.def 2021/02/14 v1.3d Input encoding file
-) [25]
-(c:/texlive/2023/texmf-dist/tex/latex/base/latin2.def
 File: latin2.def 2021/02/14 v1.3d Input encoding file
 ) [26]
 (c:/texlive/2023/texmf-dist/tex/latex/base/latin2.def
@@ -944,7 +941,10 @@ File: latin2.def 2021/02/14 v1.3d Input encoding file
 ) [28]
 (c:/texlive/2023/texmf-dist/tex/latex/base/latin2.def
 File: latin2.def 2021/02/14 v1.3d Input encoding file
-) [29] [30] [31] [32
+) [29]
+(c:/texlive/2023/texmf-dist/tex/latex/base/latin2.def
+File: latin2.def 2021/02/14 v1.3d Input encoding file
+) [30] [31] [32] [33
 
 ]
 Underfull \hbox (badness 5711) in paragraph at lines 349--350
@@ -972,26 +972,19 @@ Overfull \hbox (450.41037pt too wide) in paragraph at lines 369--370
 ]tool-[]before-[]choosing-[]it-[]as-[]your-[]347b6436dec8$[]\T1/lmr/m/n/12 ,
  []
 
-[33
+[34
 
 ] (./RCFR84_2024.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-29>
  ***********
-
-
-Package rerunfilecheck Warning: File `RCFR84_2024.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `RCFR84_2024.out':
-(rerunfilecheck)             Before: B344DED573FDF247CC7992A4FCD99506;7463
-(rerunfilecheck)             After:  39D65E917A4CBC7092E5F1C25B10E8B6;7422.
+Package rerunfilecheck Info: File `RCFR84_2024.out' has not changed.
+(rerunfilecheck)             Checksum: 39D65E917A4CBC7092E5F1C25B10E8B6;7422.
  ) 
 Here is how much of TeX's memory you used:
- 21022 strings out of 474933
- 341091 string characters out of 5763793
+ 21023 strings out of 474933
+ 341098 string characters out of 5763793
  2234801 words of memory out of 5000000
  41896 multiletter control sequences out of 15000+600000
  626468 words of font info for 96 fonts, out of 8000000 for 9000
@@ -1006,10 +999,10 @@ fonts/type1/public/lm/lmsy10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public
 /lm/lmtk10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmtt10.pfb><c:
 /texlive/2023/texmf-dist/fonts/type1/public/lm/lmtt12.pfb><c:/texlive/2023/texm
 f-dist/fonts/type1/public/lm/lmtti10.pfb>
-Output written on RCFR84_2024.pdf (33 pages, 771882 bytes).
+Output written on RCFR84_2024.pdf (34 pages, 773424 bytes).
 PDF statistics:
- 795 PDF objects out of 1000 (max. 8388607)
- 715 compressed objects within 8 object streams
- 311 named destinations out of 1000 (max. 500000)
+ 800 PDF objects out of 1000 (max. 8388607)
+ 719 compressed objects within 8 object streams
+ 312 named destinations out of 1000 (max. 500000)
  399 words of extra memory for PDF output out of 10000 (max. 10000000)
 
