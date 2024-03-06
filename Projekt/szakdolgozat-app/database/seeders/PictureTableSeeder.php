@@ -16,67 +16,67 @@ class PictureTableSeeder extends Seeder
         $pictures = [
             [
                 'advertisement_id' => 1,
-                'src' => "storage/advertisement_images/advertisement_image_audi.jpg",
+                'src' => "advertisement_images/advertisement_image_audi.jpg",
             ],
             [
                 'advertisement_id' => 2,
-                'src' => 'images/suzuki.jpg',
+                'src' => 'advertisement_images/suzuki.jpg',
             ],
             [
                 'advertisement_id' => 3,
-                'src' => 'images/pelenka.png',
+                'src' => 'advertisement_images/pelenka.png',
             ],
             [
                 'advertisement_id' => 4,
-                'src' => 'images/asztal.jpg',
+                'src' => 'advertisement_images/asztal.jpg',
             ],
             [
                 'advertisement_id' => 7,
-                'src' => 'images/fogkrem.jpg',
+                'src' => 'advertisement_images/fogkrem.jpg',
             ],
             [
                 'advertisement_id' => 9,
-                'src' => 'images/cement.png',
+                'src' => 'advertisement_images/cement.png',
             ],
             [
                 'advertisement_id' => 9,
-                'src' => 'images/cement2.jpeg',
+                'src' => 'advertisement_images/cement2.jpeg',
             ],
             [
                 'advertisement_id' => 10,
-                'src' => 'images/bor.jpg',
+                'src' => 'advertisement_images/bor.jpg',
             ],
             [
                 'advertisement_id' => 11,
-                'src' => 'images/mammamia.jpg',
+                'src' => 'advertisement_images/mammamia.jpg',
             ],
             [
                 'advertisement_id' => 12,
-                'src' => 'images/gitar.jpg',
+                'src' => 'advertisement_images/gitar.jpg',
             ],
             [
                 'advertisement_id' => 12,
-                'src' => 'images/gitar2.jpg',
+                'src' => 'advertisement_images/gitar2.jpg',
             ],
             [
                 'advertisement_id' => 12,
-                'src' => 'images/suzuki.jpg',
+                'src' => 'advertisement_images/suzuki.jpg',
             ],
             [
                 'advertisement_id' => 13,
-                'src' => 'images/ps5d.jpg',
+                'src' => 'advertisement_images/ps5d.jpg',
             ],
             [
                 'advertisement_id' => 14,
-                'src' => 'images/ps5.jpg',
+                'src' => 'advertisement_images/ps5.jpg',
             ],
             [
                 'advertisement_id' => 15,
-                'src' => 'images/spiderman.jpg',
+                'src' => 'advertisement_images/spiderman.jpg',
             ],
             [
                 'advertisement_id' => 15,
-                'src' => 'images/spiderman2.jpg',
+                'src' => 'advertisement_images/spiderman2.jpg',
             ],
         ];
 
