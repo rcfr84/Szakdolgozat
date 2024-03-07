@@ -12,6 +12,7 @@
                 <li>A leírás mező nem lehet hosszabb 1000 karakternél.</li>
                 <li>A telefonszám mező nem lehet hosszabb 20 karakternél.</li>
                 <li>A képek nem jó formátumban vannak vagy nem lehet nagyobbak 10 megabájtnál.</li>
+                <li>Az ár mező értéke kisebb kell, hogy legyen, mint 2147483647 és nagyobb, mint 0.</li>
             </ul>
         </div>
     </div>

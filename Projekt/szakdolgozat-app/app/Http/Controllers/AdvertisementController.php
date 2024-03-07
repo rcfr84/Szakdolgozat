@@ -72,7 +72,7 @@ class AdvertisementController extends Controller
             'city_id' => 'required',
             'category_id' => 'required',
             'title' => 'required|max:40',
-            'price' => 'required',
+            'price' => 'required|integer|min:0',
             'description' => 'required|max:1000',
             'pictures.*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:10240',
             'mobile_number' => 'max:20',
@@ -196,7 +196,7 @@ class AdvertisementController extends Controller
         $request->validate([
             'category_id' => 'required',
             'title' => 'required|max:40',
-            'price' => 'required',
+            'price' => 'required|integer|min:0',
             'description' => 'required|max:1000',
             'pictures.*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:10240',
             'mobile_number' => 'max:20',
@@ -275,6 +275,18 @@ class AdvertisementController extends Controller
         $advertisements = Advertisement::where('title', 'LIKE', "%{$search}%")->paginate(15);
 
         return view('advertisements.search', compact('advertisements'));
+    }
+
+    public function searchByTitleOwn(Request $request)
+    {
+        $request->validate([
+            'search' => 'required|min:4',
+        ]);
+
+        $search = $request->search;
+        $advertisements = Advertisement::where('title', 'LIKE', "%{$search}%")->where('user_id', Auth::user()->user_id)->paginate(15);
+
+        return view('advertisements.searchOwnList', compact('advertisements'));
     }
 
     public function filter(Request $request)

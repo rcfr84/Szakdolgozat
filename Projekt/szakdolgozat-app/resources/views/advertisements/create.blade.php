@@ -58,7 +58,7 @@
                         </div>
                         <div class="mb-4">
                             <label for="price" class="form-label font-bold">Ár</label>
-                            <input type="number" class="form-input w-full" placeholder="Ft" name="price" id="price" value="{{ old('price', '') }}">
+                            <input type="number" class="form-input w-full" placeholder="Ft" name="price" id="price" value="{{ old('price', '') }}" max="2147483647">
                         </div>
                         <div class="mb-4">
                             <label for="description" class="form-label font-bold" id="description">Leírás</label>

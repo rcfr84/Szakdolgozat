@@ -52,7 +52,8 @@ Route::middleware('auth')->group(function () {
     Route::delete('/advertisements/{advertisementId}', [AdvertisementController::class, 'destroy'])->name('advertisements.destroy');
     Route::get('/editCountyAndCity/{advertisementId}', [AdvertisementController::class, 'editCountyAndCity'])->name('advertisements.editCountyAndCity');
     Route::put('/editCountyAndCity/{advertisementId}', [AdvertisementController::class, 'updateCountyAndCity'])->name('advertisements.updateCountyAndCity');
-    
+    Route::get('/advertisements/own/search', [AdvertisementController::class, 'searchByTitleOwn'])->name('advertisements.searchByTitleOwn');
+
     //MESSAGE
     Route::get('/messages/get', [MessageController::class, 'index'])->name('messages.index');
     Route::get('/messages/create/{receiverId}', [MessageController::class, 'create'])->name('messages.create');
