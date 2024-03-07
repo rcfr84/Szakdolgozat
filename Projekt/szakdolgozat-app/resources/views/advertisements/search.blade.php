@@ -5,9 +5,9 @@
             <div class="w-4/4">
                 <div class="bg-white p-6 rounded-lg shadow-md">
                     @if($advertisements->isEmpty())
-                        <p>Nincs találat a keresésre.</p>
+                    <div class="text-center mb-4 text-lg font-bold">Nincs találat.</div>
                     @else
-                        <div class="text-center mb-4 text-lg font-bold"> {{$advertisements->count()}} db találat.</div>
+                        <div class="text-center mb-4 text-lg font-bold"> {{$advertisements->total()}} db találat.</div>
                         <table class="table-auto w-full">
                             <thead>
                                 <tr>

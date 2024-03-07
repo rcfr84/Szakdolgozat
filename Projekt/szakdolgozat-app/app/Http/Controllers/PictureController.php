@@ -48,16 +48,18 @@ class PictureController extends Controller
             return redirect()->back()->with('error', 'Nincs kiválasztva kép!');
         }
 
-        foreach ($request->file('pictures') as $picture) {
+        foreach ($request->file('pictures') as $picture) 
+        {
             $filename = 'advertisement_image_' . uniqid() . '.' . $picture->getClientOriginalExtension();
             $path = $picture->storeAs('advertisement_images', $filename, 'public');
             Picture::create([
                 'advertisement_id' => $advertisementId,
                 'src' => $path,
-            ]);}
-
-            return redirect()->route('advertisements.edit', $advertisementId)->with('status', 'Sikeres módosítás!');
+            ]);
         }
+
+        return redirect()->route('advertisements.edit', $advertisementId)->with('status', 'Sikeres módosítás!');
+    }
 
     /**
      * Display the specified resource.

@@ -55,7 +55,8 @@ class CountyController extends Controller
     public function edit($countyId)
     {
         $county = County::find($countyId);
-        if (!$county) {
+        if (!$county) 
+        {
             return redirect()->route('counties.index')->with('error', 'Nem található a keresett megye!');
         }
         $this->authorize('edit', County::class);
@@ -87,7 +88,8 @@ class CountyController extends Controller
     public function destroy($countyId)
     {
         $county = County::find($countyId);
-        if (!$county) {
+        if (!$county) 
+        {
             return redirect()->route('counties.index')->with('errorc', 'Nem található a keresett megye!');
         }
         $this->authorize('destroy', County::class);
