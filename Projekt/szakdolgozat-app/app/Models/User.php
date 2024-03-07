@@ -70,8 +70,6 @@ class User extends Authenticatable
     public function getLastMessage()
     {
         return Message::where('sender_id', $this->sender_id)
-            ->orWhere('receiver_id', $this->receiver_id)
-            ->orderBy('created_at', 'desc')
-            ->first();
+            ->orWhere('receiver_id', $this->receiver_id)->orderBy('created_at', 'desc')->first();
     }
 }

@@ -39,10 +39,4 @@ class Advertisement extends Model
     {
         return $this->hasMany(Picture::class, 'advertisement_id', 'advertisement_id');
     }
-    
-    
-    
-
-    
-
 }
