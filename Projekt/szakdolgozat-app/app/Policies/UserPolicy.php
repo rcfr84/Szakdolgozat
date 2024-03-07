@@ -18,4 +18,9 @@ class UserPolicy
     {
         return $user->role->name === 'admin';
     }
+
+    public function searchByName(User $user)
+    {
+        return $user->role->name === 'admin';   
+    }
 }

@@ -71,6 +71,7 @@ Route::middleware('auth')->group(function () {
     //USER
     Route::get('/users', [UserController::class, 'index'])->name('users.index');
     Route::delete('/users/{userId}', [UserController::class, 'destroy'])->name('users.destroy');
+    Route::get('/users/search', [UserController::class, 'searchByName'])->name('users.searchByName');
 
     //COUNTY
     Route::get('/counties', [CountyController::class, 'index'])->name('counties.index');

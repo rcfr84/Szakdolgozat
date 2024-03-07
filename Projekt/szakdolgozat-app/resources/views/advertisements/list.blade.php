@@ -14,7 +14,7 @@
                             </div>
                         </form> 
                         @error('search')
-                            <p class="text-center">Adj meg legalább 4 karakter a kereséshez!</p>
+                            @include('advertisements.searchErrorMessage')
                         @enderror
                     </div>
                     
