@@ -3,6 +3,7 @@
 \select@language {magyar} \contentsline {section}{\numberline {1.1}A tervezéshez alkalmazott eszközök és technológiák}{8}{section.1.1}%
 \select@language {magyar} \contentsline {subsection}{\numberline {1.1.1}Dbdiagram}{8}{subsection.1.1.1}%
 \select@language {magyar} \contentsline {subsection}{\numberline {1.1.2}PlantUML}{8}{subsection.1.1.2}%
+\select@language {magyar} \contentsline {section}{\numberline {1.2}Egyéb}{10}{section.1.2}%
 \select@language {magyar} \contentsline {chapter}{\numberline {2}Fejlesztés}{12}{chapter.2}%
 \select@language {magyar} \contentsline {section}{\numberline {2.1}A fejlesztéshez alkalmazott eszközök és technológiák}{12}{section.2.1}%
 \select@language {magyar} \contentsline {subsection}{\numberline {2.1.1}Laravel}{12}{subsection.2.1.1}%
