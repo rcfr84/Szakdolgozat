@@ -37,5 +37,6 @@
 \select@language {magyar} \contentsline {subsection}{\numberline {5.1.4}Kontroller}{28}{subsection.5.1.4}%
 \select@language {magyar} \contentsline {subsection}{\numberline {5.1.5}Web.php}{29}{subsection.5.1.5}%
 \select@language {magyar} \contentsline {subsection}{\numberline {5.1.6}Blade}{30}{subsection.5.1.6}%
-\select@language {magyar} \contentsline {chapter}{Összegzés}{33}{chapter*.11}%
-\select@language {magyar} \contentsline {chapter}{Irodalomjegyz\'ek}{34}{chapter*.12}%
+\select@language {magyar} \contentsline {section}{\numberline {5.2}Jogosultságkezelés}{32}{section.5.2}%
+\select@language {magyar} \contentsline {chapter}{Összegzés}{34}{chapter*.11}%
+\select@language {magyar} \contentsline {chapter}{Irodalomjegyz\'ek}{35}{chapter*.12}%
