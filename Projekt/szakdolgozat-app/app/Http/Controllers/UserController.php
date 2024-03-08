@@ -12,10 +12,8 @@ class UserController extends Controller
      */
     public function index()
     {
-        if (auth()->user()->role->name !== 'admin') 
-        {
-            return redirect()->route('categories.index')->with('status', 'Nincsen megfelelő jogosultságod!');
-        }
+        $this->authorize('index', User::class);
+        
         $users = User::where('role_id', '!=', 1)->orderBy('name', 'asc')->paginate(15);
 
         return view('users.index', compact('users'));

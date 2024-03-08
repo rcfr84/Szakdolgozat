@@ -4,6 +4,7 @@ namespace App\Policies;
 
 use App\Models\User;
 use App\Models\Category;
+use App\Helpers\PolicyHelper;
 
 class CategoryPolicy
 {
@@ -17,31 +18,31 @@ class CategoryPolicy
 
     public function create(User $user)
     {
-        return $user->role->name === 'admin';
+        return PolicyHelper::isAdmin($user);
     }
 
     public function store(User $user)
     {
-        return $user->role->name === 'admin';
+        return PolicyHelper::isAdmin($user);
     }
 
     public function edit(User $user)
     {
-        return $user->role->name === 'admin';
+        return PolicyHelper::isAdmin($user);
     }
 
     public function update(User $user)
     {
-        return $user->role->name === 'admin';
+        return PolicyHelper::isAdmin($user);
     }
 
     public function destroy(User $user)
     {
-        return $user->role->name === 'admin';
+        return PolicyHelper::isAdmin($user);
     }
 
     public function action(User $user)
     {
-        return $user->role->name === 'admin';
+        return PolicyHelper::isAdmin($user);
     }
 }

@@ -3,6 +3,7 @@
 namespace App\Policies;
 
 use App\Models\User;
+use App\Helpers\PolicyHelper;
 
 class CityPolicy
 {
@@ -16,30 +17,30 @@ class CityPolicy
 
     public function index(User $user)
     {
-        return $user->role->name === 'admin';
+        return PolicyHelper::isAdmin($user);
     }
     public function create(User $user)
     {
-        return $user->role->name === 'admin';
+        return PolicyHelper::isAdmin($user);
     }
 
     public function store(User $user)
     {
-        return $user->role->name === 'admin';
+        return PolicyHelper::isAdmin($user);
     }
 
     public function edit(User $user)
     {
-        return $user->role->name === 'admin';
+        return PolicyHelper::isAdmin($user);
     }
 
     public function update(User $user)
     {
-        return $user->role->name === 'admin';
+        return PolicyHelper::isAdmin($user);
     }
 
     public function destroy(User $user)
     {
-        return $user->role->name === 'admin';
+        return PolicyHelper::isAdmin($user);
     }
 }

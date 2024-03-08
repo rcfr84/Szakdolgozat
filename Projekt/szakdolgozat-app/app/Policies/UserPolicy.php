@@ -3,6 +3,7 @@
 namespace App\Policies;
 
 use App\Models\User;
+use App\Helpers\PolicyHelper;
 
 class UserPolicy
 {
@@ -14,13 +15,18 @@ class UserPolicy
         //
     }
 
+    public function index(User $user)
+    {
+        return PolicyHelper::isAdmin($user);
+    }
+
     public function destroy(User $user)
     {
-        return $user->role->name === 'admin';
+        return PolicyHelper::isAdmin($user);
     }
 
     public function searchByName(User $user)
     {
-        return $user->role->name === 'admin';   
+        return PolicyHelper::isAdmin($user);
     }
 }

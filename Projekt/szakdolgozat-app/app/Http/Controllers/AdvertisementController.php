@@ -28,7 +28,7 @@ class AdvertisementController extends Controller
     {
         if (auth()->user()->role->name === 'admin') 
         {
-            return redirect()->route('advertisements.index')->with('error', 'Nem lehetnek saját hirdetéseidet, mivel admin vagy!');
+            return redirect()->route('advertisements.index');
         }
         $advertisements = Advertisement::where('user_id', Auth::user()->user_id)->with('pictures')
         ->orderByDesc('created_at')->paginate(15);
@@ -51,12 +51,12 @@ class AdvertisementController extends Controller
 
         return view('advertisements.create', compact('categories', 'counties', 'cities'));
     }
+
     public function getCitiesByCounty($countyId)
     {
         $cities = City::where('county_id', $countyId)->get();
         return response()->json($cities);
     }
-
 
     /**
      * Store a newly created resource in storage.
@@ -130,11 +130,6 @@ class AdvertisementController extends Controller
             return redirect()->route('advertisements.own')->with('error', 'Nincsen ilyen hirdetés!');
         }
 
-        if ($advertisement->user_id !== Auth::user()->user_id && auth()->user()->role->name !== 'admin')
-        {
-            return redirect()->route('advertisements.own')->with('error', 'Nincsen ilyen hirdetés!');
-        }
-
         $this->authorize('edit', $advertisement);
 
         $advertisement->load('pictures');
@@ -150,6 +145,7 @@ class AdvertisementController extends Controller
         auth()->user();
         
         $advertisement = Advertisement::find($id);
+        $this->authorize('editCountyAndCity', $advertisement);
         if ($advertisement === null) 
         {
             return redirect()->route('advertisements.own')->with('error', 'Nincsen ilyen hirdetés!');
@@ -161,6 +157,7 @@ class AdvertisementController extends Controller
     public function updateCountyAndCity(Request $request, $id)
     {
         $advertisement = Advertisement::find($id);
+        $this->authorize('updateCountyAndCity', $advertisement);
         $advertisement->city_id = $request->city_id;
         if ($advertisement === null) 
         {
@@ -184,11 +181,6 @@ class AdvertisementController extends Controller
         $this->authorize('update', $advertisement);
 
         if (!$advertisement) 
-        {
-            return redirect()->route('advertisements.own')->with('error', 'Nincsen ilyen hirdetés!');
-        }
-
-        if ($advertisement->user_id !== Auth::user()->user_id && auth()->user()->role->name !== 'admin')
         {
             return redirect()->route('advertisements.own')->with('error', 'Nincsen ilyen hirdetés!');
         }
@@ -243,7 +235,7 @@ class AdvertisementController extends Controller
     {
         $advertisement = Advertisement::find($id);
 
-        if (auth()->user()->role->name === 'admin' || auth()->user()->user_id === $advertisement->user_id)
+        if ($this->authorize('destroy', $advertisement))
         {
             $advertisement->delete();
             return redirect()->route('advertisements.own')->with('status', 'Sikeres törlés!');
