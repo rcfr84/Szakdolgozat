@@ -29,6 +29,8 @@ class PictureController extends Controller
 
         $advertisement = Advertisement::find($advertisementId);
 
+        $this->authorize('create', [Picture::class, $advertisement]);
+
         return view('pictures.create', compact('advertisement'));
     }
 
@@ -38,6 +40,14 @@ class PictureController extends Controller
     public function store(Request $request, $advertisementId)
     {
         $user = auth()->user();
+
+        $advertisement = Advertisement::find($advertisementId);
+
+        if (!$advertisement)
+        {
+            return redirect()->back()->with('error', 'Nincsne ilyen hirdetés!');
+        }
+        $this->authorize('store', [Picture::class, $advertisement]);
 
         $request->validate([
             'pictures.*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:10240',
@@ -101,6 +111,7 @@ class PictureController extends Controller
 
         if ($picture) 
         {
+            $this->authorize('destroy', [Picture::class, $picture]);
             $picture->delete();
             return redirect()->back()->with('success', 'Kép sikeresen törölve!');
         } 

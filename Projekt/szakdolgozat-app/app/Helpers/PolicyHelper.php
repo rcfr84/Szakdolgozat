@@ -17,4 +17,9 @@ class PolicyHelper
     {
         return $user->user_id === $advertisement->user_id;
     }
+
+    public static function canDeletePicture(User $user, Picture $picture)
+    {
+        return $user->user_id === $picture->advertisement->user_id || PolicyHelper::isAdmin($user);
+    }
 }
