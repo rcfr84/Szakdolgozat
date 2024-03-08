@@ -19,13 +19,16 @@ class MessageController extends Controller
     
         return view('messages.ownList', ['messages' => $userMessages]);
     }
+
     public function showConversation($user1_id, $user2_id)
     {
         $conversation = Message::getConversation($user1_id, $user2_id);
 
+        $this->authorize('showConversation', [Message::class, $user1_id, $user2_id]);
+
         if ($conversation->isEmpty()) 
         {
-            return redirect()->route('messages.index')->with('error', 'Nem a te beszélgetésed!');
+            return redirect()->route('messages.index');
         }
 
         return view('messages.show', ['conversation' => $conversation]);
@@ -89,6 +92,7 @@ class MessageController extends Controller
     public function edit($id)
     {
         $message = Message::find($id);
+        $this->authorize('edit', $message);
         try
         {
             $receiverId = $message->receiver_id;
@@ -138,7 +142,7 @@ class MessageController extends Controller
     public function destroy($id)
     {
         $message = Message::find($id);
-
+        $this->authorize('destroy', $message);
         if (!$message) 
         {
             return redirect()->route('messages.index')->with('error', 'Nincsen ilyen üzenet!');

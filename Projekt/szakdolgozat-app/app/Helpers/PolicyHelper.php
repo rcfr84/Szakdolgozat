@@ -22,4 +22,9 @@ class PolicyHelper
     {
         return $user->user_id === $picture->advertisement->user_id || PolicyHelper::isAdmin($user);
     }
+
+    public static function showConversation(User $user, $user1_id, $user2_id)
+    {
+        return $user->user_id == $user1_id || $user->user_id == $user2_id;
+    }
 }
