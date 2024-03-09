@@ -4,6 +4,6 @@
     </svg>
     <span class="sr-only">Info</span>
     <div>
-      <span class="font-medium">Figyelmeztetés</span> Nincsen megfelelő jogosultságod a kívánt művelethez!
+      <span class="font-medium">Figyelmeztetés!</span> Nincsen megfelelő jogosultságod a kívánt művelethez!
     </div>
   </div>

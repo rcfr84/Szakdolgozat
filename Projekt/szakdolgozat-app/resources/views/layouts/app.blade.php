@@ -55,6 +55,7 @@
                     @yield('delete-user-form')
                 </section>
             </main>
+            @include('components.footer')
         </div>
     </body>
 </html>
