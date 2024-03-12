@@ -21,7 +21,7 @@
                     <table class="table-auto w-full">
                         <thead>
                             <tr>
-                                <th class="px-4 py-2" style="width: 150px; height: 200px;">Kép</th>
+                                <th class="px-4 py-2">Kép</th>
                                 <th class="px-4 py-2" style="width: 150px;">Cím</th>
                                 <th class="px-4 py-2">Város</th>
                                 <th class="px-4 py-2">Vármegye</th>
@@ -37,7 +37,7 @@
                                     
                                     <td class="px-4 py-2 text-center">
                                         @if ($advertisement->pictures->isNotEmpty())
-                                            <img src="{{ asset('storage/' . $advertisement->pictures->first()->src) }}" alt="Kép" >
+                                            <img src="{{ asset('storage/' . $advertisement->pictures->first()->src) }}" alt="Kép" class="h-32 w-32 object-contain">
                                         @else
                                             <span>Nincs kép</span>
                                         @endif

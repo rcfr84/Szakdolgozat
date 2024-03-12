@@ -36,7 +36,7 @@
                                     <tr>
                                         <td class="px-4 py-2 text-center">
                                             @if ($advertisement->pictures->isNotEmpty())
-                                                <img src="{{ asset('storage/' . $advertisement->pictures->first()->src) }}" alt="Kép" style="width: auto; height: auto; display: block; margin: 0 auto;">
+                                                <img src="{{ asset('storage/' . $advertisement->pictures->first()->src) }}" alt="Kép" class="h-32 w-32 object-contain">
                                             @else
                                                 <span>Nincs kép</span>
                                             @endif
@@ -46,7 +46,7 @@
                                         <td class="px-4 py-2">{{ $advertisement->city->county->name }}</td>
                                         <td class="px-4 py-2">{{ $advertisement->category->name }}</td>
                                         <td class="px-4 py-2">{{ $advertisement->price }}</td>
-                                        <td class="px-4 py-2 break">{{ $advertisement->description }}</td>
+                                        <td class="px-4 py-2 break">{{ substr($advertisement->description, 0, 50) }}</td>
                                         <td class="px-4 py-2 break">{{ $advertisement->mobile_number }} </td>
                                         <td class="px-4 py-2">
                                             <a href="{{ route('advertisements.edit', $advertisement->advertisement_id) }}">
@@ -64,15 +64,12 @@
                                         </td>
                                     </tr>
                                 @empty
-                                    <tr>
-                                        <td colspan="10" class="text-center mb-4 text-lg font-bold">Nincs még hirdetésed.</td>
-                                    </tr>
                                 @endforelse
                             </tbody>
                         </table>
                         {{ $advertisements->links() }}
                     @else
-                        <div class="text-center mb-4 text-lg font-bold">Nincs még hirdetésed.</div>
+                        <div class="text-center mb-4 text-lg font-bold">Nincs még saját hirdetésed.</div>
                     @endif
                 </div>
             </div>

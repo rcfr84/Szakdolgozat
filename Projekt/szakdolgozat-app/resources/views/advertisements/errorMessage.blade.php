@@ -5,7 +5,7 @@
         </svg>
         <span class="sr-only">Danger</span>
         <div>
-            <span class="font-medium">Hiba történt, lehetséges okok:</span>
+            <span class="font-medium">Hiba történt, lehetséges ok(ok):</span>
             <ul class="mt-1.5 list-disc list-inside">
                 <li>Nem lehetnek üresek a vármegye, város, kategória, ár, cím és leírás mezők.</li>
                 <li>A cím mező nem lehet hosszabb 40 karakternél.</li>
