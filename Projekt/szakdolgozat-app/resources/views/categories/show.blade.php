@@ -13,13 +13,12 @@
                             <thead>
                                 <tr>
                                     <th class="px-4 py-2">Kép</th>
-                                    <th class="px-4 py-2">Cím</th>
+                                    <th class="px-4 py-2" style="width: 150px;">Cím</th>
                                     <th class="px-4 py-2">Város</th>
                                     <th class="px-4 py-2">Vármegye</th>
                                     <th class="px-4 py-2">Kategória</th>
                                     <th class="px-4 py-2">Ár</th>
                                     <th class="px-4 py-2">Eladó</th>
-                                    <th class="px-4 py-2"></th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -27,7 +26,7 @@
                                     <tr>
                                         <td class="px-4 py-2">
                                             @if ($advertisement->pictures->isNotEmpty())
-                                                <img src="{{ asset('storage/' . $advertisement->pictures->first()->src) }}" alt="Kép" style="width: 8cm; height: auto;">
+                                                <img src="{{ asset('storage/' . $advertisement->pictures->first()->src) }}" alt="Kép" class="h-32 w-32 object-contain">
                                             @else
                                                 <span>Nincs kép</span>
                                             @endif
