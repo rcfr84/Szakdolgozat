@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.12)  14 MAR 2024 14:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.12)  15 MAR 2024 09:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -948,26 +948,26 @@ File: latin2.def 2021/02/14 v1.3d Input encoding file
 [35
 
 ]
-Underfull \hbox (badness 5711) in paragraph at lines 359--360
+Underfull \hbox (badness 5711) in paragraph at lines 360--361
 []\T1/lmr/m/sc/12 Oracle\T1/lmr/m/n/12 : []$\T1/lmtt/m/n/12 https : / / dev . m
 ysql . com / doc / refman / 8 . 0 / en / what-[]is-[]mysql . html$[]\T1/lmr/m/n
 /12 ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 363--364
+Underfull \hbox (badness 10000) in paragraph at lines 364--365
 []\T1/lmr/m/sc/12 GitHub Desk-top\T1/lmr/m/n/12 : []$\T1/lmtt/m/n/12 https : / 
 / docs . github . com / en / desktop / overview /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 371--372
+Underfull \hbox (badness 10000) in paragraph at lines 372--373
 []\T1/lmr/m/sc/12 Katalon\T1/lmr/m/n/12 : []$\T1/lmtt/m/n/12 https : / / katalo
 n . com / resources-[]center / blog /
  []
 
 
-Overfull \hbox (450.41037pt too wide) in paragraph at lines 379--380
+Overfull \hbox (450.41037pt too wide) in paragraph at lines 380--381
 []\T1/lmr/m/sc/12 Medium: []$\T1/lmtt/m/n/12 https : / / skakarh . medium . com
  / advantages-[]and-[]disadvantages-[]of-[]cypress-[]end-[]to-[]end-[]testing-[
 ]tool-[]before-[]choosing-[]it-[]as-[]your-[]347b6436dec8$[]\T1/lmr/m/n/12 ,
@@ -1000,7 +1000,7 @@ fonts/type1/public/lm/lmsy10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public
 /lm/lmtk10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmtt10.pfb><c:
 /texlive/2023/texmf-dist/fonts/type1/public/lm/lmtt12.pfb><c:/texlive/2023/texm
 f-dist/fonts/type1/public/lm/lmtti10.pfb>
-Output written on RCFR84_2024.pdf (36 pages, 779073 bytes).
+Output written on RCFR84_2024.pdf (36 pages, 780323 bytes).
 PDF statistics:
  820 PDF objects out of 1000 (max. 8388607)
  737 compressed objects within 8 object streams
