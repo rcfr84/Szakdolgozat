@@ -3,7 +3,7 @@
     <div class="min-h-screen container mx-auto mt-8">
         <div class="flex justify-center">
             <div class="w-4/4">
-                @include('statusAndError')
+                @include('components.statusAndError')
                 <div class="bg-white p-6 rounded-lg shadow-md">
                     @if($messages->isNotEmpty())
                         <table class="table-auto w-full">

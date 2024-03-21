@@ -41,7 +41,7 @@
                                                 @include('icons.show')
                                             </a>
                                         </td>
-                                        @include('advertisements.editAndDeleteForAdmin')
+                                        @include('advertisements.components.editAndDeleteForAdmin')
                                     </tr>
                                 @endforeach
                             </tbody>

@@ -3,7 +3,7 @@
     <div class="min-h-screen container mx-auto mt-8">
         <div class="flex justify-center">
             <div class="w-4/4">
-                @include('statusAndError')
+                @include('components.statusAndError')
                 <div class="bg-white p-6 rounded-lg shadow-md">
                     <div class="flex flex-col items-center justify-center">
                         <form action="{{ route('advertisements.searchByTitle') }}" method="GET" class="mb-4">
@@ -14,10 +14,10 @@
                             </div>
                         </form> 
                         @error('search')
-                            @include('advertisements.searchErrorMessage')
+                            @include('advertisements.components.searchErrorMessage')
                         @enderror
                     </div>
-                    @include('advertisements.filterHelp')
+                    @include('advertisements.components.filterHelp')
                     <table class="table-auto w-full">
                         <thead>
                             <tr>
@@ -53,7 +53,7 @@
                                             @include('icons.show')
                                         </a>
                                     </td>
-                                    @include('advertisements.editAndDeleteForAdmin')
+                                    @include('advertisements.components.editAndDeleteForAdmin')
                                 </tr>
                             @endforeach
                         </tbody>

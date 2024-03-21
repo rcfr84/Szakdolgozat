@@ -3,7 +3,7 @@
     <div class="min-h-screen container mx-auto mt-8">
         <div class="flex justify-center">
             <div class="w-2/3">
-                @include('statusAndError')
+                @include('components.statusAndError')
                 <div class="bg-white p-6 rounded-lg shadow-md">
                     <table class="table-auto w-full">
                         <thead>

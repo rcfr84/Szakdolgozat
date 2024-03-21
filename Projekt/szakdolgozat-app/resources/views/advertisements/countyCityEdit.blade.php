@@ -3,7 +3,7 @@
     <div class="min-h-screen container mx-auto mt-8">
         <div class="flex justify-center">
             <div class="w-3/2">
-                @include('statusAndError')
+                @include('components.statusAndError')
                 <div class="bg-white p-6 rounded-lg shadow-md flex flex-col">
                     <form action="{{ route('advertisements.updateCountyAndCity', $advertisement->advertisement_id) }}" method="POST" enctype="multipart/form-data">
                         @csrf

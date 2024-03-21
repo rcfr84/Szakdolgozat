@@ -4,7 +4,7 @@
     <div class="container mx-auto mt-8">
         <div class="flex justify-center">
             <div class="w-full max-w-2xl">
-                @include('statusAndError')
+                @include('components.statusAndError')
                 <div class="bg-white p-6 rounded-lg shadow-md">
                     <header>
                         <h2 class="text-2xl font-medium text-gray-900">

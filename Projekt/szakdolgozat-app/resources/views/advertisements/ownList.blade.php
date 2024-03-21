@@ -3,7 +3,7 @@
     <div class="min-h-screen container mx-auto mt-8">
         <div class="flex justify-center">
             <div class="w-4/4">
-                @include('statusAndError')
+                @include('components.statusAndError')
                 <div class="bg-white p-6 rounded-lg shadow-md">
                     @if ($advertisements->isNotEmpty())
                     <div class="flex flex-col items-center justify-center">
@@ -15,7 +15,7 @@
                             </div>
                         </form> 
                         @error('search')
-                            @include('advertisements.searchErrorMessage')
+                            @include('advertisements.components.searchErrorMessage')
                         @enderror
                     </div>
                         <table class="table-auto w-full">

@@ -4,7 +4,7 @@
     <div class="min-h-screen container mx-auto mt-8">
         <div class="flex justify-center">
             <div class="w-3/2">
-                @include('advertisements.errorMessage')
+                @include('advertisements.components.errorMessage')
                 <div class="bg-white p-6 rounded-lg shadow-md flex flex-col">
                     <form action="{{ route('advertisements.store') }}" method="POST" enctype="multipart/form-data">
                         @csrf
