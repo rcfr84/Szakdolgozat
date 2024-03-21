@@ -60,8 +60,7 @@ class PictureController extends Controller
 
         foreach ($request->file('pictures') as $picture) 
         {
-            $filename = 'advertisement_image_' . uniqid() . '.' . $picture->getClientOriginalExtension();
-            $path = $picture->storeAs('advertisement_images', $filename, 'public');
+            $path = $picture->store('advertisement_images', 'public');
             Picture::create([
                 'advertisement_id' => $advertisementId,
                 'src' => $path,

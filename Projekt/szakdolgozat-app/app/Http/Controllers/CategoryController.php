@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Gate;
 
 class CategoryController extends Controller
 {
@@ -119,6 +118,7 @@ class CategoryController extends Controller
     {
         $this->authorize('action', Category::class);
         $categories = Category::all();
+        
         return view('categories.index', compact('categories'));
     }
 }

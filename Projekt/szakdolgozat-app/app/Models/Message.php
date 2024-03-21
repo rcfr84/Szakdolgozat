@@ -27,15 +27,18 @@ class Message extends Model
     {
         return $this->belongsTo(User::class, 'receiver_id', 'user_id');
     }
+
     public function getLastMessage()
     {
         return Message::where(function ($query) 
         {
             $query->where('sender_id', $this->sender_id)->where('receiver_id', $this->receiver_id);
-        })->orWhere(function ($query) 
+        })
+        ->orWhere(function ($query) 
         {
             $query->where('sender_id', $this->receiver_id)->where('receiver_id', $this->sender_id);
-        })->latest('created_at')->first();
+        })
+        ->latest('created_at')->first();
     }
     
     public function scopeUserMessages($query, $user_id)
@@ -51,10 +54,12 @@ class Message extends Model
         return Message::where(function ($query) use ($user1_id, $user2_id) 
         {
             $query->where('sender_id', $user1_id)->where('receiver_id', $user2_id);
-        })->orWhere(function ($query) use ($user1_id, $user2_id) 
+        })
+        ->orWhere(function ($query) use ($user1_id, $user2_id) 
         {
             $query->where('sender_id', $user2_id)->where('receiver_id', $user1_id);
-        })->orderBy('created_at', 'asc')->get();
+        })
+        ->orderBy('created_at', 'asc')->get();
     }
 
 }

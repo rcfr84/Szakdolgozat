@@ -31,4 +31,19 @@ class AdvertisementPolicy
     {
         return PolicyHelper::isUserOwner($user, $advertisement) || PolicyHelper::isAdmin($user);
     }
+
+    public function ownAdvertisement(User $user)
+    {
+        return !PolicyHelper::isAdmin($user);
+    }
+
+    public function create(User $user)
+    {
+        return !PolicyHelper::isAdmin($user);
+    }
+
+    public function store(User $user)
+    {
+        return !PolicyHelper::isAdmin($user);
+    }
 }

@@ -8,7 +8,6 @@ use Illuminate\Http\Request;
 use App\Models\County;
 use App\Models\City;
 use Illuminate\Support\Facades\Auth;
-use App\Models\Picture;
 
 class AdvertisementController extends Controller
 {
@@ -21,17 +20,17 @@ class AdvertisementController extends Controller
         $counties = County::all();
         $cities = City::all();
         $categories = Category::all();
+
         return view('advertisements.list', compact('advertisements', 'counties', 'cities', 'categories'));
     }
 
     public function ownAdvertisements()
     {
-        if (auth()->user()->role->name === 'admin') 
-        {
-            return redirect()->route('advertisements.index');
-        }
+        $this->authorize('ownAdvertisement', Advertisement::class);
+
         $advertisements = Advertisement::where('user_id', Auth::user()->user_id)->with('pictures')
         ->orderByDesc('created_at')->paginate(15);
+
         return view('advertisements.ownList', compact('advertisements'));
     }
 
@@ -40,10 +39,7 @@ class AdvertisementController extends Controller
      */
     public function create()
     {
-        if (auth()->user()->role->name === 'admin') 
-        {
-            return redirect()->route('advertisements.index')->with('error', 'Nem tudsz hirdetéseket létrehozni, mivel admin vagy!');
-        }
+        $this->authorize('create', Advertisement::class);
 
         $categories = Category::all();
         $counties = County::all();
@@ -63,10 +59,7 @@ class AdvertisementController extends Controller
      */
     public function store(Request $request)
     {
-        if (auth()->user()->role->name === 'admin') 
-        {
-            return redirect()->route('advertisements.index')->with('error', 'Nem tudsz hirdetéseket létrehozni. mivel admin vagy!');
-        }
+        $this->authorize('store', Advertisement::class);
 
         $request->validate([
             'city_id' => 'required',
@@ -86,16 +79,18 @@ class AdvertisementController extends Controller
         $newAdvertisement->price = $request->price;
         $newAdvertisement->description = $request->description;
     
-        if ($request->has('mobile_number')) {
+        if ($request->has('mobile_number')) 
+        {
             $newAdvertisement->mobile_number = $request->mobile_number;
         }
     
         $newAdvertisement->save();
     
-        if ($request->hasFile('pictures')) {
-            foreach ($request->file('pictures') as $picture) {
-                $filename = 'advertisement_image_' . uniqid() . '.' . $picture->getClientOriginalExtension();
-                $path = $picture->storeAs('advertisement_images', $filename, 'public');
+        if ($request->hasFile('pictures')) 
+        {
+            foreach ($request->file('pictures') as $picture) 
+            {
+                $path = $picture->store('advertisement_images', 'public');
                 $newAdvertisement->pictures()->create(['src' => $path]);
             }
         }
@@ -152,6 +147,7 @@ class AdvertisementController extends Controller
         }
         $counties = County::all();
         $cities = [];
+
         return view('advertisements.countyCityEdit', compact('cities', 'advertisement', 'counties'));
     }
     public function updateCountyAndCity(Request $request, $id)
@@ -168,6 +164,7 @@ class AdvertisementController extends Controller
             return redirect()->route('advertisements.editCountyAndCity', $advertisement->advertisement_id)->with('error', 'Nem választottad ki a vármegyét vagy a várost!');
         }
         $advertisement->update();
+
         return redirect()->route('advertisements.edit', $advertisement->advertisement_id)->with('status', 'Sikeres módosítás!');
     }
 
@@ -310,21 +307,26 @@ class AdvertisementController extends Controller
             }
         }
         
-        
-        if ($request->filled('county_id')) {
-            $query->whereHas('city.county', function ($q) use ($request) {
+        if ($request->filled('county_id')) 
+        {
+            $query->whereHas('city.county', function ($q) use ($request) 
+            {
                 $q->where('county_id', '=', $request->input('county_id'));
             });
         }
     
-        if ($request->filled('city_id')) {
-            $query->whereHas('city', function ($q) use ($request) {
+        if ($request->filled('city_id'))
+        {
+            $query->whereHas('city', function ($q) use ($request) 
+            {
                 $q->where('city_id', '=', $request->input('city_id'));
             });
         }
     
-        if ($request->filled('category_id')) {
-            $query->whereHas('category', function ($q) use ($request) {
+        if ($request->filled('category_id')) 
+        {
+            $query->whereHas('category', function ($q) use ($request) 
+            {
                 $q->where('category_id', '=', $request->input('category_id'));
             });
         }
@@ -344,6 +346,5 @@ class AdvertisementController extends Controller
         $advertisements = $query->paginate(15)->appends(request()->query());
     
         return view('advertisements.filter', compact('advertisements'));
-        
     }
 }

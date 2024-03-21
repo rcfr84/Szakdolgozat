@@ -4,7 +4,7 @@
         <div class="flex justify-center">
             <div class="w-4/4">
                 <div class="bg-white p-6 rounded-lg shadow-md">
-                    @include('errors.components.errorMessage403')
+                    @include('errors.components.errorMessage405')
                 </div>
             </div>
         </div>

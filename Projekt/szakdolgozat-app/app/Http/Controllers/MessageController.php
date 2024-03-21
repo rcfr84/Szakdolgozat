@@ -69,8 +69,6 @@ class MessageController extends Controller
         $newMessage->message = $request->message;
         $newMessage->save();
 
-        $conversation = Message::getConversation($user->user_id, $receiverId);
-
         $receiverId = $newMessage->receiver_id;
         $senderId = $newMessage->sender_id;
 
