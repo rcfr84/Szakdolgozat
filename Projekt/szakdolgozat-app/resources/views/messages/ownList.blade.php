@@ -15,7 +15,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @php $conversations = [] @endphp
+                                @php $conversations = []; @endphp
                                 @foreach($messages as $message)
                                     @php
                                         $conversationKey = $message->sender_id < $message->receiver_id ? $message->sender_id . '-' . $message->receiver_id : $message->receiver_id . '-' . $message->sender_id;
@@ -23,14 +23,22 @@
 
                                     @if(!in_array($conversationKey, $conversations))
                                         <tr>
-                                            <td class="px-4 py-2">{{ $message->sender->name }}</td>
-                                            <td class="px-4 py-2">{{ $message->receiver->name }}</td>
-                                            <td class="px-4 py-2" style="max-width: 300px; word-wrap: break-word;">{{ $message->getLastMessage()->message }}</td>
                                             <td class="px-4 py-2">
-                                                <a href="{{ route('messages.showConversation', ['user1_id' => $message->sender_id, 'user2_id' => $message->receiver_id]) }}">
-                                                    @include('icons.show')
-                                                </a>
+                                                @if($message->sender->role->name === 'admin')
+                                                    <span class="text-green-500">{{ $message->sender->name }}</span>
+                                                @else
+                                                    {{ $message->sender->name }}
+                                                @endif
                                             </td>
+                                            <td class="px-4 py-2">
+                                                @if($message->receiver->role->name === 'admin')
+                                                    <span class="text-green-500">{{ $message->receiver->name }}</span>
+                                                @else
+                                                    {{ $message->receiver->name }}
+                                                @endif
+                                            </td>
+                                            <td class="px-4 py-2" style="max-width: 300px; word-wrap: break-word;">{{ $message->getLastMessage()->message }}</td>
+                                            @include('messages.components.showConversation')
                                         </tr>
                                         @php $conversations[] = $conversationKey @endphp
                                     @endif
