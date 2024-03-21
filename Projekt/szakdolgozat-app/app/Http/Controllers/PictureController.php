@@ -113,7 +113,7 @@ class PictureController extends Controller
         {
             $this->authorize('destroy', [Picture::class, $picture]);
             $picture->delete();
-            return redirect()->back()->with('success', 'Kép sikeresen törölve!');
+            return redirect()->back()->with('status', 'Kép sikeresen törölve!');
         } 
         else 
         {
