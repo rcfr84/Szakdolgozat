@@ -8,8 +8,8 @@
                     <form action="{{ route('pictures.store', $advertisement->advertisement_id) }}" method="POST" enctype="multipart/form-data">
                         @csrf                        
                         @php
-                            $uploadedPicturesCount = count($advertisement->pictures);
-                            $remainingPicture = 5 - $uploadedPicturesCount;
+                            $uploadedPictures = count($advertisement->pictures);
+                            $remainingPicture = 5 - $uploadedPictures;
                         @endphp
 
                         @for ($i = 1; $i <= $remainingPicture; $i++)

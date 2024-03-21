@@ -37,22 +37,9 @@
                                     <td class="px-4 py-2">{{ $advertisement->city->county->name }}</td>
                                     <td class="px-4 py-2">{{ $advertisement->category->name }}</td>
                                     <td class="px-4 py-2">{{ $advertisement->price }}</td>
-                                    <td class="px-4 py-2 break">{{ $advertisement->description }}</td>
+                                    <td class="px-4 py-2 break">{{ substr($advertisement->description, 0, 50) }}</td>
                                     <td class="px-4 py-2 break">{{ $advertisement->mobile_number }} </td>
-                                    <td class="px-4 py-2">
-                                        <a href="{{ route('advertisements.edit', $advertisement->advertisement_id) }}">
-                                            @include('icons.edit')
-                                        </a>
-                                    </td>
-                                    <td class="px-4 py-2">
-                                        <form method="POST" action="{{ route('advertisements.destroy', $advertisement->advertisement_id) }}">
-                                            @csrf
-                                            @method('DELETE')
-                                            <button type="submit">
-                                                @include('icons.delete')
-                                            </button>
-                                        </form>
-                                    </td>
+                                    @include('advertisements.components.editAndDelete')
                                 </tr>
                             @empty
                                 <tr>

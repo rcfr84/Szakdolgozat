@@ -7,16 +7,7 @@
                 <div class="bg-white p-6 rounded-lg shadow-md">
                     @if ($advertisements->isNotEmpty())
                     <div class="flex flex-col items-center justify-center">
-                        <form action="{{ route('advertisements.searchByTitleOwn') }}" method="GET" class="mb-4">
-                            @csrf
-                            <div class="text-center">
-                                <input type="text" name="search" placeholder="Keresés cím alapján" class="mb-4">
-                                <button type="submit" class="text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 shadow-lg shadow-green-500/50 dark:shadow-lg dark:shadow-green-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Keresés</button>
-                            </div>
-                        </form> 
-                        @error('search')
-                            @include('advertisements.components.searchErrorMessage')
-                        @enderror
+                        @include('advertisements.components.searchByTitleOwn')
                     </div>
                         <table class="table-auto w-full">
                             <thead>
@@ -48,20 +39,7 @@
                                         <td class="px-4 py-2">{{ $advertisement->price }}</td>
                                         <td class="px-4 py-2 break">{{ substr($advertisement->description, 0, 50) }}</td>
                                         <td class="px-4 py-2 break">{{ $advertisement->mobile_number }} </td>
-                                        <td class="px-4 py-2">
-                                            <a href="{{ route('advertisements.edit', $advertisement->advertisement_id) }}">
-                                                @include('icons.edit')
-                                            </a>
-                                        </td>
-                                        <td class="px-4 py-2">
-                                            <form method="POST" action="{{ route('advertisements.destroy', $advertisement->advertisement_id) }}">
-                                                @csrf
-                                                @method('DELETE')
-                                                <button type="submit">
-                                                    @include('icons.delete')
-                                                </button>
-                                            </form>
-                                        </td>
+                                        @include('advertisements.components.editAndDelete')
                                     </tr>
                                 @empty
                                 @endforelse

@@ -12,17 +12,16 @@
                                     <th class="px-4 py-2">Felhasználó</th>
                                     <th class="px-4 py-2">Címzett</th>
                                     <th class="px-4 py-2">Utolsó üzenet</th>
-                                    <th class="px-4 py-2"></th>
                                 </tr>
                             </thead>
                             <tbody>
-                                @php $displayedConversations = [] @endphp
+                                @php $conversations = [] @endphp
                                 @foreach($messages as $message)
                                     @php
                                         $conversationKey = $message->sender_id < $message->receiver_id ? $message->sender_id . '-' . $message->receiver_id : $message->receiver_id . '-' . $message->sender_id;
                                     @endphp
 
-                                    @if(!in_array($conversationKey, $displayedConversations))
+                                    @if(!in_array($conversationKey, $conversations))
                                         <tr>
                                             <td class="px-4 py-2">{{ $message->sender->name }}</td>
                                             <td class="px-4 py-2">{{ $message->receiver->name }}</td>
@@ -33,7 +32,7 @@
                                                 </a>
                                             </td>
                                         </tr>
-                                        @php $displayedConversations[] = $conversationKey @endphp
+                                        @php $conversations[] = $conversationKey @endphp
                                     @endif
                                 @endforeach
                             </tbody>

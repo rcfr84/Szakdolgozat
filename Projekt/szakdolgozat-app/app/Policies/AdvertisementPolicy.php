@@ -24,12 +24,12 @@ class AdvertisementPolicy
 
     public function editCountyAndCity(User $user, Advertisement $advertisement)
     {
-        return PolicyHelper::isUserOwner($user, $advertisement) || PolicyHelper::isAdmin($user);
+        return PolicyHelper::isUserOwner($user, $advertisement);
     }
 
     public function updateCountyAndCity(User $user, Advertisement $advertisement)
     {
-        return PolicyHelper::isUserOwner($user, $advertisement) || PolicyHelper::isAdmin($user);
+        return PolicyHelper::isUserOwner($user, $advertisement);
     }
 
     public function ownAdvertisement(User $user)
