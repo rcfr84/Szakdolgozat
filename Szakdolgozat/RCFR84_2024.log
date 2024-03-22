@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.12)  22 MAR 2024 12:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.12)  22 MAR 2024 13:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -561,25 +561,25 @@ File: l3backend-pdftex.def 2023-04-19 L3 backend support: PDF output (pdfTeX)
 (./RCFR84_2024.aux)
 \openout1 = `RCFR84_2024.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-Package hyperref Info: Link coloring OFF on input line 33.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+Package hyperref Info: Link coloring OFF on input line 44.
  (./RCFR84_2024.out) (./RCFR84_2024.out)
 \@outlinefile=\write3
 \openout3 = `RCFR84_2024.out'.
@@ -619,52 +619,52 @@ Package hyperref Info: Link coloring OFF on input line 33.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 3
-3.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 4
+4.
 (c:/texlive/2023/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )<<ot1.cmap>>
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 3
-3.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 4
+4.
 
 (c:/texlive/2023/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )<<oml.cmap>>
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-33.
+44.
 
 (c:/texlive/2023/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )<<oms.cmap>>
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-33.
+44.
 
 (c:/texlive/2023/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 33.
+(Font)              <12> on input line 44.
 <<omx.cmap>>
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 33.
+(Font)              <8> on input line 44.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 33.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 33.
+(Font)              <6> on input line 44.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 44.
 
 
 (c:/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 33.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 44.
 
 
 (c:/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
-(Font)                  OMX/lmex/m/n --> OMX/cmex/m/n on input line 33.
+(Font)                  OMX/lmex/m/n --> OMX/cmex/m/n on input line 44.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
-(Font)                  OMX/lmex/m/n --> OMX/cmex/m/n on input line 33.
+(Font)                  OMX/lmex/m/n --> OMX/cmex/m/n on input line 44.
 
 (c:/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -722,7 +722,7 @@ LaTeX Info: Redefining \mit on input line 578.
 <eszterhazy-logo-hu.pdf, id=185, 256.07971pt x 88.04292pt>
 File: eszterhazy-logo-hu.pdf Graphic file (type pdf)
 <use eszterhazy-logo-hu.pdf>
-Package pdftex.def Info: eszterhazy-logo-hu.pdf  used on input line 40.
+Package pdftex.def Info: eszterhazy-logo-hu.pdf  used on input line 51.
 (pdftex.def)             Requested size: 256.07907pt x 88.0427pt.
  [1
 
@@ -740,87 +740,87 @@ thesis-ekf/eszterhazy-logo-hu.pdf>] (./RCFR84_2024.toc [2
 ] [5]
 1. fejezet.
 
-Overfull \hbox (1.8891pt too wide) in alignment at lines 58--62
+Overfull \hbox (1.8891pt too wide) in alignment at lines 69--73
  [] [] [] [] 
  []
 
 
-Overfull \hbox (1.8891pt too wide) in alignment at lines 62--67
+Overfull \hbox (1.8891pt too wide) in alignment at lines 73--78
  [] [] [] [] 
  []
 
 
-Overfull \hbox (1.8891pt too wide) in alignment at lines 67--70
+Overfull \hbox (1.8891pt too wide) in alignment at lines 78--81
  [] [] [] [] 
  []
 
 
-Overfull \hbox (1.8891pt too wide) in alignment at lines 70--73
+Overfull \hbox (1.8891pt too wide) in alignment at lines 81--84
  [] [] [] [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 79--79
+Underfull \hbox (badness 10000) in paragraph at lines 90--90
 []|\T1/lmr/m/n/12 Jogosultsági
  []
 
 
-Underfull \hbox (badness 4366) in paragraph at lines 85--85
+Underfull \hbox (badness 4366) in paragraph at lines 96--96
 []|\T1/lmr/m/n/12 Hirdetések sz¶-
  []
 
 
-Underfull \hbox (badness 4341) in paragraph at lines 85--85
+Underfull \hbox (badness 4341) in paragraph at lines 96--96
 \T1/lmr/m/n/12 ré-se, ren-de-zé-se,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 90--90
+Underfull \hbox (badness 10000) in paragraph at lines 101--101
 []|\T1/lmr/m/n/12 Saját üze-ne-tek
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 90--90
+Underfull \hbox (badness 10000) in paragraph at lines 101--101
 \T1/lmr/m/n/12 meg-te-kin-té-se,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 91--91
+Underfull \hbox (badness 10000) in paragraph at lines 102--102
 []|\T1/lmr/m/n/12 Saját üze-ne-tek
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 94--94
+Underfull \hbox (badness 10000) in paragraph at lines 105--105
 []|\T1/lmr/m/n/12 Új ka-te-gó-ria
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 97--97
+Underfull \hbox (badness 10000) in paragraph at lines 108--108
 []|\T1/lmr/m/n/12 Vármegye hoz-
  []
 
 
-Underfull \hbox (badness 2409) in paragraph at lines 99--99
+Underfull \hbox (badness 2409) in paragraph at lines 110--110
 []|\T1/lmr/m/n/12 Városok meg-te-
  []
 
 
-Underfull \hbox (badness 5878) in paragraph at lines 100--100
+Underfull \hbox (badness 5878) in paragraph at lines 111--111
 []|\T1/lmr/m/n/12 Városok hoz-zá-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 102--102
+Underfull \hbox (badness 10000) in paragraph at lines 113--113
 []|\T1/lmr/m/n/12 Felhasználók
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 102--102
+Underfull \hbox (badness 10000) in paragraph at lines 113--113
 \T1/lmr/m/n/12 meg-te-kin-té-se,
  []
 
 
-Overfull \hbox (1.8891pt too wide) in alignment at lines 73--104
+Overfull \hbox (1.8891pt too wide) in alignment at lines 84--115
  [] [] [] [] 
  []
 
@@ -830,13 +830,13 @@ Overfull \hbox (1.8891pt too wide) in alignment at lines 73--104
 <./tervezes/dbdiagram.png, id=283, 1295.84125pt x 621.32124pt>
 File: ./tervezes/dbdiagram.png Graphic file (type png)
 <use ./tervezes/dbdiagram.png>
-Package pdftex.def Info: ./tervezes/dbdiagram.png  used on input line 113.
+Package pdftex.def Info: ./tervezes/dbdiagram.png  used on input line 124.
 (pdftex.def)             Requested size: 426.79134pt x 204.63846pt.
  [9]
 <./tervezes/useCase.png, id=295, 569.12625pt x 2015.53pt>
 File: ./tervezes/useCase.png Graphic file (type png)
 <use ./tervezes/useCase.png>
-Package pdftex.def Info: ./tervezes/useCase.png  used on input line 126.
+Package pdftex.def Info: ./tervezes/useCase.png  used on input line 137.
 (pdftex.def)             Requested size: 170.71652pt x 604.57141pt.
  [10 <./tervezes/dbdiagram.png>] [11 <./tervezes/useCase.png>]
 [12]
@@ -847,18 +847,12 @@ Package pdftex.def Info: ./tervezes/useCase.png  used on input line 126.
 3. fejezet.
 [17
 
-] (c:/texlive/2023/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2023/02/27 1.9 listings language file
-)
-(c:/texlive/2023/texmf-dist/tex/latex/listings/lstlang2.sty
-File: lstlang2.sty 2023/02/27 1.9 listings language file
-) [18]
+] [18]
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 208.
+nput line 219.
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 2
-08.
-
-(c:/texlive/2023/texmf-dist/tex/latex/lm/t1lmtt.fd
+19.
+ (c:/texlive/2023/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 (c:/texlive/2023/texmf-dist/tex/latex/base/latin2.def
@@ -870,27 +864,26 @@ File: se-utf8.def 2019/11/29 v1.12 stringenc: UTF-8
 (c:/texlive/2023/texmf-dist/tex/generic/stringenc/se-iso-8859-2.def
 File: se-iso-8859-2.def 2019/11/29 v1.12 stringenc: ISO-8859-2
 )
+LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10> not available
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 1.
 LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line 
 1.
 
 (c:/texlive/2023/texmf-dist/tex/latex/lm/ts1lmtt.fd
 File: ts1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 21.
- [19{c:/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}{c:/texlive/2023/
-texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{c:/texlive/2023/texmf-dist/fonts/e
-nc/dvips/lm/lm-mathsy.enc}] [20]
+) [19{c:/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}{c:/texlive/2023
+/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{c:/texlive/2023/texmf-dist/fonts/
+enc/dvips/lm/lm-mathsy.enc}] [20]
 4. fejezet.
 <./felhasznaloi/kategoria.png, id=427, 328.72812pt x 437.635pt>
 File: ./felhasznaloi/kategoria.png Graphic file (type png)
 <use ./felhasznaloi/kategoria.png>
-Package pdftex.def Info: ./felhasznaloi/kategoria.png  used on input line 222.
+Package pdftex.def Info: ./felhasznaloi/kategoria.png  used on input line 233.
 (pdftex.def)             Requested size: 170.97972pt x 227.62204pt.
 <./felhasznaloi/varmegye.png, id=430, 415.5525pt x 417.05812pt>
 File: ./felhasznaloi/varmegye.png Graphic file (type png)
 <use ./felhasznaloi/varmegye.png>
-Package pdftex.def Info: ./felhasznaloi/varmegye.png  used on input line 230.
+Package pdftex.def Info: ./felhasznaloi/varmegye.png  used on input line 241.
 (pdftex.def)             Requested size: 255.16063pt x 256.0748pt.
 [21
 
@@ -898,12 +891,12 @@ Package pdftex.def Info: ./felhasznaloi/varmegye.png  used on input line 230.
 <./felhasznaloi/hozzadas1.png, id=438, 381.425pt x 410.53375pt>
 File: ./felhasznaloi/hozzadas1.png Graphic file (type png)
 <use ./felhasznaloi/hozzadas1.png>
-Package pdftex.def Info: ./felhasznaloi/hozzadas1.png  used on input line 242.
+Package pdftex.def Info: ./felhasznaloi/hozzadas1.png  used on input line 253.
 (pdftex.def)             Requested size: 185.04327pt x 199.16928pt.
 <./felhasznaloi/hozzadas2.png, id=439, 378.41376pt x 443.6575pt>
 File: ./felhasznaloi/hozzadas2.png Graphic file (type png)
 <use ./felhasznaloi/hozzadas2.png>
-Package pdftex.def Info: ./felhasznaloi/hozzadas2.png  used on input line 243.
+Package pdftex.def Info: ./felhasznaloi/hozzadas2.png  used on input line 254.
 (pdftex.def)             Requested size: 169.87465pt x 199.16928pt.
  [22 <./felhasznaloi/kategoria.PNG>] [23 <./felhasznaloi/varmegye.PNG> <./felha
 sznaloi/hozzadas1.PNG> <./felhasznaloi/hozzadas2.PNG>]
@@ -911,7 +904,7 @@ sznaloi/hozzadas1.PNG> <./felhasznaloi/hozzadas2.PNG>]
 File: ./felhasznaloi/kereses-szures.png Graphic file (type png)
 <use ./felhasznaloi/kereses-szures.png>
 Package pdftex.def Info: ./felhasznaloi/kereses-szures.png  used on input line 
-257.
+268.
 (pdftex.def)             Requested size: 369.88582pt x 135.15923pt.
  [24 <./felhasznaloi/kereses-szures.PNG>] [25]
 5. fejezet.
@@ -935,26 +928,26 @@ File: latin2.def 2021/02/14 v1.3d Input encoding file
 [35
 
 ]
-Underfull \hbox (badness 5711) in paragraph at lines 347--348
+Underfull \hbox (badness 5711) in paragraph at lines 359--360
 []\T1/lmr/m/sc/12 Oracle\T1/lmr/m/n/12 : []$\T1/lmtt/m/n/12 https : / / dev . m
 ysql . com / doc / refman / 8 . 0 / en / what-[]is-[]mysql . html$[]\T1/lmr/m/n
 /12 ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 351--352
+Underfull \hbox (badness 10000) in paragraph at lines 363--364
 []\T1/lmr/m/sc/12 GitHub Desk-top\T1/lmr/m/n/12 : []$\T1/lmtt/m/n/12 https : / 
 / docs . github . com / en / desktop / overview /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 359--360
+Underfull \hbox (badness 10000) in paragraph at lines 371--372
 []\T1/lmr/m/sc/12 Katalon\T1/lmr/m/n/12 : []$\T1/lmtt/m/n/12 https : / / katalo
 n . com / resources-[]center / blog /
  []
 
 
-Overfull \hbox (450.41037pt too wide) in paragraph at lines 367--368
+Overfull \hbox (450.41037pt too wide) in paragraph at lines 379--380
 []\T1/lmr/m/sc/12 Medium: []$\T1/lmtt/m/n/12 https : / / skakarh . medium . com
  / advantages-[]and-[]disadvantages-[]of-[]cypress-[]end-[]to-[]end-[]testing-[
 ]tool-[]before-[]choosing-[]it-[]as-[]your-[]347b6436dec8$[]\T1/lmr/m/n/12 ,
@@ -971,13 +964,13 @@ Package rerunfilecheck Info: File `RCFR84_2024.out' has not changed.
 (rerunfilecheck)             Checksum: A6DA48F62CEF12B37E2D45C6A3A2BEDC;7837.
  ) 
 Here is how much of TeX's memory you used:
- 21006 strings out of 474933
- 340462 string characters out of 5763793
+ 19207 strings out of 474933
+ 308169 string characters out of 5763793
  2237801 words of memory out of 5000000
- 41875 multiletter control sequences out of 15000+600000
+ 40081 multiletter control sequences out of 15000+600000
  626468 words of font info for 96 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 78i,9n,81p,3017b,3787s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 78i,9n,81p,3017b,2656s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/texlive/2023
 /texmf-dist/fonts/type1/public/lm/lmcsc10.pfb><c:/texlive/2023/texmf-dist/fonts
 /type1/public/lm/lmmi10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/l
@@ -987,10 +980,10 @@ fonts/type1/public/lm/lmsy10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public
 /lm/lmtk10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmtt10.pfb><c:
 /texlive/2023/texmf-dist/fonts/type1/public/lm/lmtt12.pfb><c:/texlive/2023/texm
 f-dist/fonts/type1/public/lm/lmtti10.pfb>
-Output written on RCFR84_2024.pdf (36 pages, 731226 bytes).
+Output written on RCFR84_2024.pdf (36 pages, 736958 bytes).
 PDF statistics:
- 819 PDF objects out of 1000 (max. 8388607)
- 740 compressed objects within 8 object streams
- 316 named destinations out of 1000 (max. 500000)
+ 820 PDF objects out of 1000 (max. 8388607)
+ 741 compressed objects within 8 object streams
+ 317 named destinations out of 1000 (max. 500000)
  413 words of extra memory for PDF output out of 10000 (max. 10000000)
 
