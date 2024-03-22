@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.12)  22 MAR 2024 11:42
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.12)  22 MAR 2024 12:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -907,60 +907,60 @@ Package pdftex.def Info: ./felhasznaloi/hozzadas2.png  used on input line 243.
 (pdftex.def)             Requested size: 169.87465pt x 199.16928pt.
  [22 <./felhasznaloi/kategoria.PNG>] [23 <./felhasznaloi/varmegye.PNG> <./felha
 sznaloi/hozzadas1.PNG> <./felhasznaloi/hozzadas2.PNG>]
-<./felhasznaloi/kereses-szures.png, id=456, 777.90625pt x 306.14375pt>
+<./felhasznaloi/kereses-szures.png, id=456, 803.50188pt x 293.59688pt>
 File: ./felhasznaloi/kereses-szures.png Graphic file (type png)
 <use ./felhasznaloi/kereses-szures.png>
 Package pdftex.def Info: ./felhasznaloi/kereses-szures.png  used on input line 
 257.
-(pdftex.def)             Requested size: 369.88582pt x 145.56926pt.
- [24 <./felhasznaloi/kereses-szures.PNG>]
+(pdftex.def)             Requested size: 369.88582pt x 135.15923pt.
+ [24 <./felhasznaloi/kereses-szures.PNG>] [25]
 5. fejezet.
-[25
+[26
 
 ] (c:/texlive/2023/texmf-dist/tex/latex/base/latin2.def
 File: latin2.def 2021/02/14 v1.3d Input encoding file
-) [26]
+) [27]
 (c:/texlive/2023/texmf-dist/tex/latex/base/latin2.def
 File: latin2.def 2021/02/14 v1.3d Input encoding file
-) [27] [28]
+) [28] [29]
 (c:/texlive/2023/texmf-dist/tex/latex/base/latin2.def
 File: latin2.def 2021/02/14 v1.3d Input encoding file
-) [29]
+) [30]
 (c:/texlive/2023/texmf-dist/tex/latex/base/latin2.def
 File: latin2.def 2021/02/14 v1.3d Input encoding file
 )
 (c:/texlive/2023/texmf-dist/tex/latex/base/latin2.def
 File: latin2.def 2021/02/14 v1.3d Input encoding file
-) [30] [31] [32] [33]
-[34
+) [31] [32] [33] [34]
+[35
 
 ]
-Underfull \hbox (badness 5711) in paragraph at lines 346--347
+Underfull \hbox (badness 5711) in paragraph at lines 347--348
 []\T1/lmr/m/sc/12 Oracle\T1/lmr/m/n/12 : []$\T1/lmtt/m/n/12 https : / / dev . m
 ysql . com / doc / refman / 8 . 0 / en / what-[]is-[]mysql . html$[]\T1/lmr/m/n
 /12 ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 350--351
+Underfull \hbox (badness 10000) in paragraph at lines 351--352
 []\T1/lmr/m/sc/12 GitHub Desk-top\T1/lmr/m/n/12 : []$\T1/lmtt/m/n/12 https : / 
 / docs . github . com / en / desktop / overview /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 358--359
+Underfull \hbox (badness 10000) in paragraph at lines 359--360
 []\T1/lmr/m/sc/12 Katalon\T1/lmr/m/n/12 : []$\T1/lmtt/m/n/12 https : / / katalo
 n . com / resources-[]center / blog /
  []
 
 
-Overfull \hbox (450.41037pt too wide) in paragraph at lines 366--367
+Overfull \hbox (450.41037pt too wide) in paragraph at lines 367--368
 []\T1/lmr/m/sc/12 Medium: []$\T1/lmtt/m/n/12 https : / / skakarh . medium . com
  / advantages-[]and-[]disadvantages-[]of-[]cypress-[]end-[]to-[]end-[]testing-[
 ]tool-[]before-[]choosing-[]it-[]as-[]your-[]347b6436dec8$[]\T1/lmr/m/n/12 ,
  []
 
-[35
+[36
 
 ] (./RCFR84_2024.aux)
  ***********
@@ -971,8 +971,8 @@ Package rerunfilecheck Info: File `RCFR84_2024.out' has not changed.
 (rerunfilecheck)             Checksum: A6DA48F62CEF12B37E2D45C6A3A2BEDC;7837.
  ) 
 Here is how much of TeX's memory you used:
- 21004 strings out of 474933
- 340448 string characters out of 5763793
+ 21006 strings out of 474933
+ 340462 string characters out of 5763793
  2237801 words of memory out of 5000000
  41875 multiletter control sequences out of 15000+600000
  626468 words of font info for 96 fonts, out of 8000000 for 9000
@@ -987,10 +987,10 @@ fonts/type1/public/lm/lmsy10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public
 /lm/lmtk10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmtt10.pfb><c:
 /texlive/2023/texmf-dist/fonts/type1/public/lm/lmtt12.pfb><c:/texlive/2023/texm
 f-dist/fonts/type1/public/lm/lmtti10.pfb>
-Output written on RCFR84_2024.pdf (35 pages, 731873 bytes).
+Output written on RCFR84_2024.pdf (36 pages, 731226 bytes).
 PDF statistics:
- 814 PDF objects out of 1000 (max. 8388607)
- 736 compressed objects within 8 object streams
- 314 named destinations out of 1000 (max. 500000)
+ 819 PDF objects out of 1000 (max. 8388607)
+ 740 compressed objects within 8 object streams
+ 316 named destinations out of 1000 (max. 500000)
  413 words of extra memory for PDF output out of 10000 (max. 10000000)
 
