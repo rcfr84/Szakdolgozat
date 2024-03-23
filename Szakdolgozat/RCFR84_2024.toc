@@ -10,7 +10,7 @@
 \select@language {magyar} \contentsline {subsection}{\numberline {2.1.2}PHP}{14}{subsection.2.1.2}%
 \select@language {magyar} \contentsline {subsection}{\numberline {2.1.3}MySQL}{14}{subsection.2.1.3}%
 \select@language {magyar} \contentsline {subsection}{\numberline {2.1.4}PhpMyAdmin}{14}{subsection.2.1.4}%
-\select@language {magyar} \contentsline {subsection}{\numberline {2.1.5}XAMMP}{15}{subsection.2.1.5}%
+\select@language {magyar} \contentsline {subsection}{\numberline {2.1.5}XAMPP}{15}{subsection.2.1.5}%
 \select@language {magyar} \contentsline {subsection}{\numberline {2.1.6}Visual Studio Code}{15}{subsection.2.1.6}%
 \select@language {magyar} \contentsline {subsection}{\numberline {2.1.7}GitHub}{15}{subsection.2.1.7}%
 \select@language {magyar} \contentsline {subsection}{\numberline {2.1.8}GitHub Desktop}{15}{subsection.2.1.8}%
