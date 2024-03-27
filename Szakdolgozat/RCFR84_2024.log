@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.12)  23 MAR 2024 09:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.12)  27 MAR 2024 16:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -965,9 +965,44 @@ Underfull \hbox (badness 10000) in paragraph at lines 381--382
 ow-[]server-[]site-[]gyaa$[]\T1/lmr/m/n/12 ,
  []
 
+<nyilatkozat.pdf, id=704, 612.8496pt x 844.11362pt>
+File: nyilatkozat.pdf Graphic file (type pdf)
+<use nyilatkozat.pdf>
+Package pdftex.def Info: nyilatkozat.pdf  used on input line 384.
+(pdftex.def)             Requested size: 612.84808pt x 844.11156pt.
+File: nyilatkozat.pdf Graphic file (type pdf)
+<use nyilatkozat.pdf>
+Package pdftex.def Info: nyilatkozat.pdf  used on input line 384.
+(pdftex.def)             Requested size: 612.84808pt x 844.11156pt.
+<nyilatkozat.pdf, id=707, page=1, 612.8496pt x 844.11362pt>
+File: nyilatkozat.pdf Graphic file (type pdf)
+<use nyilatkozat.pdf, page 1>
+Package pdftex.def Info: nyilatkozat.pdf , page1 used on input line 384.
+(pdftex.def)             Requested size: 612.84808pt x 844.11156pt.
+File: nyilatkozat.pdf Graphic file (type pdf)
+<use nyilatkozat.pdf, page 1>
+Package pdftex.def Info: nyilatkozat.pdf , page1 used on input line 384.
+(pdftex.def)             Requested size: 598.33482pt x 824.1216pt.
 [36
 
-] [37] (./RCFR84_2024.aux)
+] [37]
+File: nyilatkozat.pdf Graphic file (type pdf)
+<use nyilatkozat.pdf, page 1>
+Package pdftex.def Info: nyilatkozat.pdf , page1 used on input line 384.
+(pdftex.def)             Requested size: 598.33482pt x 824.1216pt.
+File: nyilatkozat.pdf Graphic file (type pdf)
+<use nyilatkozat.pdf, page 1>
+Package pdftex.def Info: nyilatkozat.pdf , page1 used on input line 384.
+(pdftex.def)             Requested size: 598.33482pt x 824.1216pt.
+File: nyilatkozat.pdf Graphic file (type pdf)
+<use nyilatkozat.pdf, page 1>
+Package pdftex.def Info: nyilatkozat.pdf , page1 used on input line 384.
+(pdftex.def)             Requested size: 598.33482pt x 824.1216pt.
+ [38 <./nyilatkozat.pdf
+
+pdfTeX warning: pdflatex.exe (file ./nyilatkozat.pdf): PDF inclusion: Subtype i
+n Resources dict is not a name (key 'Subtype', type <stream>); ignored.
+>] (./RCFR84_2024.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-29>
@@ -976,13 +1011,13 @@ Package rerunfilecheck Info: File `RCFR84_2024.out' has not changed.
 (rerunfilecheck)             Checksum: 7EE3AE46A9C3E3482A0D63973ACFC734;7837.
  ) 
 Here is how much of TeX's memory you used:
- 19210 strings out of 474933
- 308193 string characters out of 5763793
+ 19223 strings out of 474933
+ 308524 string characters out of 5763793
  2237801 words of memory out of 5000000
- 40082 multiletter control sequences out of 15000+600000
+ 40094 multiletter control sequences out of 15000+600000
  626468 words of font info for 96 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 78i,9n,81p,3017b,2656s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 78i,17n,81p,3017b,2656s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/texlive/2023
 /texmf-dist/fonts/type1/public/lm/lmcsc10.pfb><c:/texlive/2023/texmf-dist/fonts
 /type1/public/lm/lmmi10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/l
@@ -992,10 +1027,10 @@ fonts/type1/public/lm/lmsy10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public
 /lm/lmtk10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmtt10.pfb><c:
 /texlive/2023/texmf-dist/fonts/type1/public/lm/lmtt12.pfb><c:/texlive/2023/texm
 f-dist/fonts/type1/public/lm/lmtti10.pfb>
-Output written on RCFR84_2024.pdf (37 pages, 737639 bytes).
+Output written on RCFR84_2024.pdf (38 pages, 878534 bytes).
 PDF statistics:
- 832 PDF objects out of 1000 (max. 8388607)
- 752 compressed objects within 8 object streams
- 319 named destinations out of 1000 (max. 500000)
- 413 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 846 PDF objects out of 1000 (max. 8388607)
+ 759 compressed objects within 8 object streams
+ 320 named destinations out of 1000 (max. 500000)
+ 433 words of extra memory for PDF output out of 10000 (max. 10000000)
 
