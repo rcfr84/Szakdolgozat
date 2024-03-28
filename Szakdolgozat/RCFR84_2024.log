@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.12)  28 MAR 2024 11:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.12)  28 MAR 2024 11:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -927,26 +927,26 @@ File: latin2.def 2021/02/14 v1.3d Input encoding file
 [35
 
 ]
-Underfull \hbox (badness 5711) in paragraph at lines 360--361
+Underfull \hbox (badness 5711) in paragraph at lines 359--360
 []\T1/lmr/m/sc/12 Oracle\T1/lmr/m/n/12 : []$\T1/lmtt/m/n/12 https : / / dev . m
 ysql . com / doc / refman / 8 . 0 / en / what-[]is-[]mysql . html$[]\T1/lmr/m/n
 /12 ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 364--365
+Underfull \hbox (badness 10000) in paragraph at lines 363--364
 []\T1/lmr/m/sc/12 GitHub Desk-top\T1/lmr/m/n/12 : []$\T1/lmtt/m/n/12 https : / 
 / docs . github . com / en / desktop / overview /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 372--373
+Underfull \hbox (badness 10000) in paragraph at lines 371--372
 []\T1/lmr/m/sc/12 Katalon\T1/lmr/m/n/12 : []$\T1/lmtt/m/n/12 https : / / katalo
 n . com / resources-[]center / blog /
  []
 
 
-Overfull \hbox (449.6894pt too wide) in paragraph at lines 374--375
+Overfull \hbox (449.6894pt too wide) in paragraph at lines 373--374
 []\T1/lmr/m/sc/12 Medium\T1/lmr/m/n/12 : []$\T1/lmtt/m/n/12 https : / / skakarh
  . medium . com / advantages-[]and-[]disadvantages-[]of-[]cypress-[]end-[]to-[]
 end-[]testing-[]tool-[]before-[]choosing-[]it-[]as-[]your-[]347b6436dec8$[]\T1/
@@ -954,13 +954,13 @@ lmr/m/n/12 ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 380--381
+Underfull \hbox (badness 10000) in paragraph at lines 379--380
 []\T1/lmr/m/sc/12 Site Gya-an\T1/lmr/m/n/12 : []$\T1/lmtt/m/n/12 https : / / ww
 w . linkedin . com / pulse /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 380--381
+Underfull \hbox (badness 10000) in paragraph at lines 379--380
 \T1/lmtt/m/n/12 what-[]xampp-[]how-[]does-[]work-[]everything-[]you-[]need-[]kn
 ow-[]server-[]site-[]gyaa$[]\T1/lmr/m/n/12 ,
  []
@@ -971,33 +971,33 @@ ow-[]server-[]site-[]gyaa$[]\T1/lmr/m/n/12 ,
 <nyilatkozat.pdf, id=734, 612.8496pt x 844.11362pt>
 File: nyilatkozat.pdf Graphic file (type pdf)
 <use nyilatkozat.pdf>
-Package pdftex.def Info: nyilatkozat.pdf  used on input line 389.
+Package pdftex.def Info: nyilatkozat.pdf  used on input line 388.
 (pdftex.def)             Requested size: 612.84808pt x 844.11156pt.
 File: nyilatkozat.pdf Graphic file (type pdf)
 <use nyilatkozat.pdf>
-Package pdftex.def Info: nyilatkozat.pdf  used on input line 389.
+Package pdftex.def Info: nyilatkozat.pdf  used on input line 388.
 (pdftex.def)             Requested size: 612.84808pt x 844.11156pt.
 <nyilatkozat.pdf, id=737, page=1, 612.8496pt x 844.11362pt>
 File: nyilatkozat.pdf Graphic file (type pdf)
 <use nyilatkozat.pdf, page 1>
-Package pdftex.def Info: nyilatkozat.pdf , page1 used on input line 389.
+Package pdftex.def Info: nyilatkozat.pdf , page1 used on input line 388.
 (pdftex.def)             Requested size: 612.84808pt x 844.11156pt.
 File: nyilatkozat.pdf Graphic file (type pdf)
 <use nyilatkozat.pdf, page 1>
-Package pdftex.def Info: nyilatkozat.pdf , page1 used on input line 389.
+Package pdftex.def Info: nyilatkozat.pdf , page1 used on input line 388.
 (pdftex.def)             Requested size: 598.33482pt x 824.1216pt.
  [37]
 File: nyilatkozat.pdf Graphic file (type pdf)
 <use nyilatkozat.pdf, page 1>
-Package pdftex.def Info: nyilatkozat.pdf , page1 used on input line 389.
+Package pdftex.def Info: nyilatkozat.pdf , page1 used on input line 388.
 (pdftex.def)             Requested size: 598.33482pt x 824.1216pt.
 File: nyilatkozat.pdf Graphic file (type pdf)
 <use nyilatkozat.pdf, page 1>
-Package pdftex.def Info: nyilatkozat.pdf , page1 used on input line 389.
+Package pdftex.def Info: nyilatkozat.pdf , page1 used on input line 388.
 (pdftex.def)             Requested size: 598.33482pt x 824.1216pt.
 File: nyilatkozat.pdf Graphic file (type pdf)
 <use nyilatkozat.pdf, page 1>
-Package pdftex.def Info: nyilatkozat.pdf , page1 used on input line 389.
+Package pdftex.def Info: nyilatkozat.pdf , page1 used on input line 388.
 (pdftex.def)             Requested size: 598.33482pt x 824.1216pt.
  [38 <./nyilatkozat.pdf
 
@@ -1030,7 +1030,7 @@ live/2023/texmf-dist/fonts/type1/public/lm/lmtk10.pfb><c:/texlive/2023/texmf-di
 st/fonts/type1/public/lm/lmtt10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/pub
 lic/lm/lmtt12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmtti10.pfb
 >
-Output written on RCFR84_2024.pdf (38 pages, 929662 bytes).
+Output written on RCFR84_2024.pdf (38 pages, 929675 bytes).
 PDF statistics:
  876 PDF objects out of 1000 (max. 8388607)
  787 compressed objects within 8 object streams
