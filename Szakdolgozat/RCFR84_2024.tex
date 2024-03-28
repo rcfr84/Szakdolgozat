@@ -194,15 +194,15 @@
 			\item Fehérdobozos (angolul: white-box): a forráskód alapján íródnak a tesztesetek.
 			\item Szürkedobozos (angolul: grey-box): amikor a forráskódnak csak egy rész ismert és csak ez alapján íródnak a tesztesetek.
 		\end{enumerate}
-		Azonban van egy harmadik fajta is, amit nem alkalmaztam. Az nemmás, mint a feketedobozos (angolul: black-box), amikor a tesztesetek a specifikáció alapján íródnak.
+		Azonban van egy harmadik fajta is, amit nem alkalmaztam. Az nem más, mint a feketedobozos (angolul: black-box), amikor a tesztesetek a specifikáció alapján íródnak.
 		\cite[26-29.~oldal]{Kusper}
 	\section{A teszteléshez alkalmazott eszközök és technológiák}
-			A következő alszakaszokban a teszteléshez használt eszközökről és technológiákról lesz majd szó. Kitérek majd arra, hogy pontosan mit is jelentenek, miket lehet velük tesztelni és az előnyük és hátrányaikról is ejtek majd pár gondolatot.
+			A következő alszakaszokban a teszteléshez használt eszközökről és technológiákról lesz majd szó. Kitérek majd arra is, hogy pontosan mit is jelentenek, miket lehet velük tesztelni és az előnyük és hátrányaikról is ejtek majd pár gondolatot.
 	\subsection{Manuális teszt}
 		Manuális teszt az azt jelenti, hogy a tesztelő végig próbálgatja saját magától a funkciókat és leellenőrzi azok működését, illetve helyességét. Az ilyenféle tesztelés végzésekor nem alkalmazunk semmilyen automatizált tesztet. Én fejlesztés közben folyamatosan végeztem manuális tesztelést, abból kifolyólag, hogy megbizonyosodjak az elkészült funkció helyességéről, illetve, hogy feltárjam vele az esetleges hibákat, amiket nem vettem észre vagy még nem gondoltam rá. Az én meglátásom szerint a manuális tesztelésnek a legnagyobb hibája az, hogy minden lehetséges kombinációt ki kell próbálnunk ahhoz, hogy bebizonyosodjunk arról, hogy a készített funkció a megfelelő módon működik. Még szintén hátrány lehet az, hogy rendkívül költséges lehet a manuális tesztelés. Végül pedig az, hogy az emberek nagyobb százalékban hibáznak, ami érthető is, hiszen tévedni emberi dolog. Azonban vannak előnyei is, ezek pedig véleményem szerint a következők lennének. Az első ilyen az lenne, hogy, ha van valamilyen hiba, akkor azt nagy valószínűséggel hamarabb észre lehet venni, amivel pénzt és időt is lehet spórolni. A másik ilyen előny az pedig, hogy a tesztelőnek van megfelelő intelligenciája ahhoz, hogy kiszűrje az esetleges hibákat, ellenben az automatizált tesztekkel szemben. 
 		
 	\subsection{Cypress}
-		A Cypress egy NodeJS-ben írt front end tesztelési keretrendszer. Ahhoz, hogy tudjuk futtatni a Cypress-t, ahhoz előtte telepíteni kell a NodeJS-t. A Cypress segítségével tudunk készíteni végponttól végpontig tartó-, komponens-, integrációs- valamint a unitteszteket is.
+		A Cypress egy NodeJS-ben\footnote{Ez egy ingyenes, nyílt forráskódú futtatókörnyezet, amellyel webes alkalmazásokat, szervereket is lehetséges létrehozni.} írt frontend tesztelési keretrendszer. Ahhoz, hogy tudjuk futtatni a Cypress-t, ahhoz előtte telepíteni kell a NodeJS-t. A Cypress segítségével tudunk készíteni végponttól végpontig tartó-, komponens-, integrációs- valamint a unitteszteket is.
 		Az imént felsorolt teszt típusok jelentése a következő:
 		\begin{enumerate}
 			\item Végponttól végpontig tartó teszt: ennél a típusnál a szoftver funkcionalitását és teljesítményét teszteljük a kezdetektől a végéig, ami a vég felhasználok által megvalósított interakciókat szimulálja valós adatokkal.
@@ -210,14 +210,14 @@
 			\item Integrációs teszt: ez egy olyanféle teszt, aminél legalább kettő különböző komponens együttműködését teszteljük.
 			\item Unitteszt (magyarul: egységteszt): ez egy olyan teszt, ami a metódusokat teszteli le. Itt nézzük meg, hogy a tényleges visszatérési érték azonos-e az elvárttal. Ez a komponensteszt egyik fajtája.
 		\end{enumerate}
-		Ezzel a tesztelési keretrendszer segítségével bármit lehet tesztelni ami a böngészőben fut. Nézzük meg néhány előnyét és hátrányát is ennek használatára. Kezdjük a negatívumokkal először. A teszteknek javascript nyelven kell íródniuk. Erről többet megtudhat itt \aref{javascript}. Hátrány még az is, hogy egyszerre csak egy ablakban vagy csak egy böngészőben lehetséges a tesztek végrehajtása. Most nézzük meg a pozitívumait is. Az egyik legnyilvánvalóbb ha ránézzünk egy ilyen kódra az, hogy nagyon olvasható bárki számára. Előny még az is, hogy igazi böngészőt használ a tesztek végrehajtására. Ez azért hasznos, mivel a valódi végfelhasználók is igazi böngészőkben fogják használni az alkalmazást, ezért jól lehet velük szimulálni a működését. Még előnynek tekinthető az is, hogy a hálózatól érkező kéréseket lehetséges ellenőrizni a cypress segítségével.
-		\cite{Cypress, Kusper Szoftvertesztles, Katalon,Medium}
+		Ezzel a tesztelési keretrendszer segítségével bármit lehet tesztelni ami a böngészőben fut. Nézzük meg néhány előnyét és hátrányát is ennek használatára. Kezdjük a negatívumokkal először. A teszteknek JavaScript nyelven kell íródniuk. Erről többet megtudhat itt \aref{javascript}. Hátrány még az is, hogy egyszerre csak egy ablakban vagy csak egy böngészőben lehetséges a tesztek végrehajtása. Most nézzük meg a pozitívumait is. Az egyik legnyilvánvalóbb ha ránézzünk egy ilyen kódra az, hogy nagyon olvasható bárki számára. Előny még az is, hogy igazi böngészőt használ a tesztek végrehajtására. Ez azért hasznos, mivel a valódi végfelhasználók is igazi böngészőkben fogják használni az alkalmazást, ezért jól lehet velük szimulálni a működését. Még előnynek tekinthető az is, hogy a hálózatól érkező kéréseket lehetséges ellenőrizni a Cypress segítségével.
+		\cite{Cypress, Kusper Szoftvertesztles, Katalon, Medium, NodeJS}
 		
-		A szemléltetés kedvéért szeretné, Önnek bemutatni, hogy hogyan is kell elképzelni egy ilyenféle tesztet. \Aref{cypress-teszt} kódon látható.
+		A szemléltetés kedvéért szeretné, Önnek bemutatni, hogy hogyan is kell elképzelni egy ilyenféle tesztet. \Aref{cypress-teszt} kódon megtekinthető.
 		
 		\lstinputlisting[caption={Egy cypress teszt egy hirdetés hozzáadására}, label=cypress-teszt, style=user1, language=JavaScript]{./teszteles/add.js}
 		
-		Itt a visit (magyarul: meglátogat) metódus segítségével lehetséges egy konkrét útvonalra eljutni. Ezután bejelentkezni szükség, mivel csak akkor van lehetőség hirdetés hozzáadására. Id, azaz valamilyen azonosító alapján szükséges megkeresni a formon az adatok megadásának a helyét. Ahol mi adunk meg valamilyen információt, ott a type (magyarul: begépel) metódus segítségével tehetjük meg. Ahol legördülő menüből kell kiválasztani a szükséges adatokat, ott pedig a select (magyarul: kiválaszt) metódussal lehetséges. Ezen kívül még két darab kép hozzáadása is látható még, ezt az attachFile (magyarul: fájl csatolása) metódussal történik, azonban ehhez szükséges még egy csomagot letölteni, de ezt csak megemlítettem, mivel többet erről nem lesz szó. Gombokat lehetséges szöveg alapján megkeresni és utána rákattintani, ez pedig a contains (magyarul: tartalmaz) és click (magyarul: rákattint) metódusokkal történhet meg. Végezetül pedig egy átirányítása megvalósítása látszik, ha minden sikerrel zárult. Tehát véleményem szerint kijelenthető, hogy cypress tesztek írása egyszerű és nagyon érthető még akár egy hétköznapi ember számára is.
+		Itt a visit (magyarul: meglátogat) metódus segítségével lehetséges egy konkrét útvonalra eljutni. Ezután bejelentkezni szükség, mivel csak akkor van lehetőség hirdetés hozzáadására. Id, azaz valamilyen azonosító alapján szükséges megkeresni a form-on az adatok megadásának a helyét. Ahol mi adunk meg valamilyen információt, ott a type (magyarul: begépel) metódus segítségével tehetjük meg. Ahol legördülő menüből kell kiválasztani a szükséges adatokat, ott pedig a select (magyarul: kiválaszt) metódussal lehetséges. Ezen kívül még két darab kép hozzáadása is látható még, ezt az attachFile (magyarul: fájl csatolása) metódussal történik, azonban ehhez szükséges még egy csomagot letölteni, de ezt csak megemlítettem, mivel többet erről nem lesz szó. Gombokat lehetséges szöveg alapján megkeresni és utána rákattintani, ez pedig a contains (magyarul: tartalmaz) és click (magyarul: rákattint) metódusokkal történhet meg. Végezetül pedig egy átirányítása megvalósítása látszik, ha minden sikerrel zárult. Tehát véleményem szerint kijelenthető, hogy Cypress tesztek írása egyszerű és nagyon érthető még akár egy hétköznapi ember számára is.
 		
 	\chapter{Felhasználói dokumentáció}
 		Ebben a fejezetben szó lesz majd, arról, hogy különböző jogosultságú felhasználóknak milyen lehetőségei vannak a webes alkalmazásom használata során. Minden ebben a fejezetben lévő alfejezetben szereplő jogosultsághoz szinte csak azokat a funkciókat említem majd meg, amiket csak ők tudnák használni. A különböző szerepű felhasználókról \az{\ref{sc-plantuml}} alfejezetben már megemlítettem róluk pár szót.
@@ -349,35 +349,37 @@
 	\begin{thebibliography}{2}
 		\addcontentsline{toc}{chapter}{\bibname}
 		\bibitem{Laravel}
-		\textsc{Laravel:} \url{https://laravel.com/docs/10.x},  Megtekintve: 2023.11.15.
+		\textsc{Laravel:} \url{https://laravel.com/docs/10.x},  megtekintve: 2023.11.15.
 		\bibitem{Kusper}
 		\textsc{Kusper Gábor}: \emph{Programozási technológiák}, Eger, 2015.
 		\bibitem{Kusper Informatikai}
-		\textsc{Kusper Gábor}: \emph{Informatikai rendszerek tervezése}, Eger, Megtekintve: 2023, 0.8.7.2-es verzió.
+		\textsc{Kusper Gábor}: \emph{Informatikai rendszerek tervezése}, Eger, megtekintve: 2023, 0.8.7.2-es verzió.
 		\bibitem{Kusper Szoftvertesztles}
-		\textsc{Kusper Gábor}: \emph{Szoftvertesztelés}, Eger, 2023, Megtekintve: 2024, 2023.10.14-es verzió.
+		\textsc{Kusper Gábor}: \emph{Szoftvertesztelés}, Eger, 2023, megtekintve: 2024, 2023.10.14-es verzió.
 		\bibitem{MySQL}
-		\textsc{Oracle}: \url{https://dev.mysql.com/doc/refman/8.0/en/what-is-mysql.html}, Megtekintve: 2024.02.01.
+		\textsc{Oracle}: \url{https://dev.mysql.com/doc/refman/8.0/en/what-is-mysql.html}, megtekintve: 2024.02.01.
 		\bibitem{PhpMyAdmin}
-		\textsc{PhpMyAdmin}: \url{https://www.phpmyadmin.net/}, Megtekintve: 2024.02.01.
+		\textsc{PhpMyAdmin}: \url{https://www.phpmyadmin.net/}, megtekintve: 2024.02.01.
 		\bibitem{GitHubDesktop}
-		\textsc{GitHub Desktop}: \url{https://docs.github.com/en/desktop/overview/about-github-desktop}. Megtekintve: 2024.02.01.
+		\textsc{GitHub Desktop}: \url{https://docs.github.com/en/desktop/overview/about-github-desktop}. megtekintve: 2024.02.01.
 		\bibitem{PlantUML}
-		\textsc{PlantUML}: \emph{PlantUML Language Reference Guide}, \url{https://plantuml.com/guide}, Megtekintve: 2024.02.03.
+		\textsc{PlantUML}: \emph{PlantUML Language Reference Guide}, \url{https://plantuml.com/guide}, megtekintve: 2024.02.03.
 		\bibitem{Dbdiagram}
-		\textsc{Dbdiagram}: \url{https://dbml.dbdiagram.io/docs/},  Megtekintve: 2024.02.03.
+		\textsc{Dbdiagram}: \url{https://dbml.dbdiagram.io/docs/},  megtekintve: 2024.02.03.
 		\bibitem{Cypress}
-		\textsc{Cypress}: \url{https://docs.cypress.io/guides/overview/why-cypress},  Megtekintve: 2024.02.15.
+		\textsc{Cypress}: \url{https://docs.cypress.io/guides/overview/why-cypress},  megtekintve: 2024.02.15.
 		\bibitem{Katalon}
-		\textsc{Katalon}: \url{https://katalon.com/resources-center/blog/end-to-end-e2e-testing},  Megtekintve: 2024.02.15.
+		\textsc{Katalon}: \url{https://katalon.com/resources-center/blog/end-to-end-e2e-testing},  megtekintve: 2024.02.15.
 		\bibitem{Medium}
-		\textsc{Medium:} \url{https://skakarh.medium.com/advantages-and-disadvantages-of-cypress-end-to-end-testing-tool-before-choosing-it-as-your-347b6436dec8}, Megtekintve: 2024.02.15.
+		\textsc{Medium}: \url{https://skakarh.medium.com/advantages-and-disadvantages-of-cypress-end-to-end-testing-tool-before-choosing-it-as-your-347b6436dec8}, megtekintve: 2024.02.15.
 		\bibitem{PHP}
-		\textsc{PHP}: \url{https://www.php.net/docs.php},  Megtekintve: 2024.02.17.
+		\textsc{PHP}: \url{https://www.php.net/docs.php},  megtekintve: 2024.02.17.
 		\bibitem{tailwind}
-		\textsc{Tailwind CSS:} \url{https://tailwindcss.com/}, Megtekintve: 2024.02.18.
+		\textsc{Tailwind CSS}: \url{https://tailwindcss.com/}, megtekintve: 2024.02.18.
 		\bibitem{XAMPP}
-		\textsc{Site Gyaan} : \url{https://www.linkedin.com/pulse/what-xampp-how-does-work-everything-you-need-know-server-site-gyaa}, Megtekintve: 2024.03.23.
+		\textsc{Site Gyaan}: \url{https://www.linkedin.com/pulse/what-xampp-how-does-work-everything-you-need-know-server-site-gyaa}, megtekintve: 2024.03.23.
+		\bibitem{NodeJS}
+		\textsc{NodeJs}: \url{https://nodejs.org/en}, megtekintve: 2024.03.28.
 	\end{thebibliography}
 	
 	\includepdf{nyilatkozat.pdf}
