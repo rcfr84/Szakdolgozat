@@ -45,8 +45,8 @@
                     <input type="number" name="max_price" placeholder="Ft" class="mb-4">
                 </div>
                 <div class="mb-4">
-                    <label for="category" class="block text-sm font-medium text-gray-700">Rendezés:</label>
-                    <select class="form-select" name="sort_by">
+                    <label for="sort" class="block text-sm font-medium text-gray-700">Rendezés:</label>
+                    <select class="form-select" name="sort_by" id="sort_by">
                         <option value="default">Alapértelmezett</option>
                         <option value="asc">Növekvő ár</option>
                         <option value="desc">Csökkenő ár</option>
