@@ -22,7 +22,7 @@
                         @if ($remainingPicture > 0)
                             @include('pictures.components.createPicture')
                         @else
-                            <p>Maximum csak 5 kép engedélyezett.</p>
+                            <p><b>Maximum csak 5 kép engedélyezett.</b></p>
                         @endif
                     </form>
                     @include('pictures.components.errorMessage')
