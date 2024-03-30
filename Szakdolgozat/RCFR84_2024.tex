@@ -2,7 +2,8 @@
 \usepackage[T1]{fontenc}
 \PassOptionsToPackage{defaults=hu-min}{magyar.ldf}
 \usepackage[magyar]{babel}
-\usepackage{mathtools,amssymb,amsthm,pdfpages,listingsutf8,hyperref,url,xcolor,lmodern,caption,hyperref,longtable,array}
+\usepackage{mathtools,amssymb,amsthm,pdfpages,listingsutf8,hyperref,xurl,xcolor,lmodern,caption,hyperref,longtable,array}
+
 
 \footnotestyle{rule=fourth}
 
@@ -98,7 +99,7 @@
 		\item Admin: neki már van lehetősége a kategóriákkal kapcsolatos műveletek elvégésére is. Szintén képes üzenetet küldeni bárkinek, ő képes már felhasználókat és hirdetések törölni az adott esetben.
 	\end{enumerate}
 	\section{Logó}
-		Az adatbázis alapú webalkalmazásomhoz készítettem el egy logót is, ami látható a projektem bejelentkezés és regisztrációs oldalon, illetve magán a navigációs sávon is. A logó elkészítéséhez segítségül vettem az interneten található képeket, majd ezeket összeszerkesztettem, végül pedig Microsoft PowerPoint-ban található funkció segítségével adtam a logónak egy művészi effektust. \Aref{logo}.~ábrán megtekinthető a logó.
+		Az adatbázis alapú webalkalmazásomhoz készítettem el egy logót is, ami látható a projektem bejelentkezés és regisztrációs oldalon, illetve magán a navigációs sávon is. A logó elkészítéséhez segítségül vettem az interneten található képeket, majd ezeket összeszerkesztettem, végül pedig Microsoft PowerPoint-ban található funkció segítségével adtam a logónak egy művészi effektust. \Aref{logo}.~ábrán megtekinthető a logó. Az alkalmazásomban szintén egy, az interneten található képet használtam háttérképként. \cite{Logo, Hatterkep}
 		\begin{figure}[ht!]
 			\centering
 			\includegraphics[width=5cm]{./tervezes/logo}
@@ -107,7 +108,7 @@
 		\end{figure}
 	
 	\section{Egyéb}
-		Amit még érdekesnek tartotok megemlíteni az olvasóban felmerülhet az a kérdés, hogy a Magyarország területén található vármegyékben elhelyezkedő városokat honnan gyűjtöttem össze. Ezen szükséges információkat a KSH, azaz Központi Statisztikai Hivatal oldalán található Excel táblázat alapján sikerült összegyűjtenem. Azonban sajnálatos módon ez 2015-ös információk alapján lett elkészítve, azóta nagy valószínűséggel néhány adat már elavult benne. 
+		Amit még érdekesnek tartotok megemlíteni az olvasóban felmerülhet az a kérdés, hogy a Magyarország területén található vármegyékben elhelyezkedő városokat honnan gyűjtöttem össze. Ezen szükséges információkat a KSH, azaz Központi Statisztikai Hivatal oldalán található Excel táblázat alapján sikerült összegyűjtenem. Azonban sajnálatos módon ez 2015-ös információk alapján lett elkészítve, azóta nagy valószínűséggel néhány adat már elavult benne. \cite{KSH}
 
 	\chapter{Fejlesztés}		
 	\section{A fejlesztéshez alkalmazott eszközök és technológiák}
@@ -175,9 +176,12 @@
 		
 		A szemléltetés kedvéért szeretné, Önnek bemutatni, hogy hogyan is kell elképzelni egy ilyenféle tesztet. \Aref{cypress-teszt}.~kódon megtekinthető.
 		
-		\lstinputlisting[caption={Egy cypress teszt egy hirdetés hozzáadására}, label=cypress-teszt, style=user1, language=JavaScript]{./teszteles/add.js}
+		\lstinputlisting[caption={Egy Cypress teszt egy hirdetés hozzáadására}, label=cypress-teszt, style=user1, language=JavaScript]{./teszteles/add.js}
 		
 		Itt a visit (magyarul: meglátogat) metódus segítségével lehetséges egy konkrét útvonalra eljutni. Ezután bejelentkezni szükség, mivel csak akkor van lehetőség hirdetés hozzáadására. Id, azaz valamilyen azonosító alapján szükséges megkeresni a form-on az adatok megadásának a helyét. Ahol mi adunk meg valamilyen információt, ott a type (magyarul: begépel) metódus segítségével tehetjük meg. Ahol legördülő menüből kell kiválasztani a szükséges adatokat, ott pedig a select (magyarul: kiválaszt) metódussal lehetséges. Ezen kívül még két darab kép hozzáadása is látható még, ezt az attachFile (magyarul: fájl csatolása) metódussal történik, azonban ehhez szükséges még egy csomagot letölteni, de ezt csak megemlítettem, mivel többet erről nem lesz szó. Gombokat lehetséges szöveg alapján megkeresni és utána rákattintani, ez pedig a contains (magyarul: tartalmaz) és click (magyarul: rákattint) metódusokkal történhet meg. Végezetül pedig egy átirányítása megvalósítása látszik, ha minden sikerrel zárult. Tehát véleményem szerint kijelenthető, hogy Cypress tesztek írása egyszerű és nagyon érthető még akár egy hétköznapi ember számára is.
+		
+	\subsection{Tesztek eredménye}
+		Az elvégzett Cypress tesztek eredményessége alapján megállapítható, hogy jelentős mértékben sikeresek voltak. Néhányszor előfordult, hogy bizonyos esetek eleinte nem feleltek meg a teszteseteknek, de végül sikeresnek bizonyultak. Összességében a véleményem szerint a tesztek nagy sikerrel javították az apróhirdetés webalkalmazásomat.   
 		
 	\chapter{Felhasználói dokumentáció}\label{ch-felhasznaloi}
 		Ebben a fejezetben szó lesz majd, arról, hogy különböző jogosultságú felhasználóknak milyen lehetőségei vannak a webes alkalmazásom használata során. Minden ebben a fejezetben lévő alfejezetben szereplő jogosultsághoz szinte csak azokat a funkciókat említem majd meg, amiket csak ők tudnák használni. A különböző szerepű felhasználókról \az{\ref{sc-plantuml}} alfejezetben már megemlítettem róluk pár szót. Az alkalmazásomban található ikonokat egy interneten lévő oldalon találtam meg, az irodalomjegyzékben megtalálható a keresett oldal.\cite{Ikon} 
@@ -377,7 +381,7 @@
 		\bibitem{Dbdiagram}
 		\textsc{Dbdiagram}: \url{https://dbml.dbdiagram.io/docs/},  megtekintve: 2024.02.03.
 		\bibitem{Cypress}
-		\textsc{Cypress}: \url{https://docs.cypress.io/guides/overview/why-cypress},  megtekintve: 2024.02.15.
+		\textsc{Cypress}: \url{https://docs.cypress.io},  megtekintve: 2024.02.15.
 		\bibitem{Katalon}
 		\textsc{Katalon}: \url{https://katalon.com/resources-center/blog/end-to-end-e2e-testing},  megtekintve: 2024.02.15.
 		\bibitem{Medium}
@@ -392,8 +396,28 @@
 		\textsc{NodeJs}: \url{https://nodejs.org/en}, megtekintve: 2024.03.28.
 		\bibitem{Ikon}
 		\textsc{FontAwesome}: \url{https://fontawesome.com/}
-		\bibitem{FlowBite}:
+		\bibitem{FlowBite}
 		\textsc{FlowBite}: \url{https://flowbite.com/}
+		\bibitem{KSH}
+		\textsc{KSH}: \url{https://www.ksh.hu/docs/hun/hnk/hnk_2015.xls}
+		\bibitem{Hatterkep}
+		\textsc{Pixteller}: \url{https://pixteller.com/templates/custom-visuals/simple-background-backgrounds-passion-id1585825}
+		\bibitem{Logo}
+		\textsc{Logó}:
+			\begin{itemize}
+				\item \url{https://www.vecteezy.com/vector-art/6361809-car-icon-car-icon-vector-car-icon-simple-sign},
+				\item \url{https://pngtree.com/free-png-vectors/clothes-icon},
+				\item \url{https://hu.pinterest.com/pin/dog-logos--502292164691709590/},
+				\item \url{https://www.vecteezy.com/vector-art/4416880-simple-house-icon-on-white-background},
+				\item \url{https://images.vexels.com/media/users/3/157570/isolated/lists/4b39b362c76ea5a00de62f8ff839b5ed-simple-smartphone-icon.png},
+				\item \url{https://hu.pinterest.com/pin/51650726955966410/},
+				\item \url{https://hu.pinterest.com/pin/578923727087745719/},
+				\item \url{https://static.vecteezy.com/system/resources/thumbnails/017/764/046/small_2x/eps10-black-line-art-sofa-abstract-icon-or-logo-isolated-on-white-background-living-room-furniture-outline-symbol-in-a-simple-flat-trendy-modern-style-for-your-website-design-and-mobile-app-vector.jpg},
+				\item \url{https://depositphotos.com/hu/vector/hand-writing-soccer-ball-football-cartoon-12785922.html}
+			
+			\end{itemize}
+		
+		
 	\end{thebibliography}
 	
 	\includepdf{nyilatkozat.pdf}
