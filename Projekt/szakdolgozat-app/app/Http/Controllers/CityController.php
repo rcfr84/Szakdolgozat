@@ -38,6 +38,7 @@ class CityController extends Controller
         }
         $this->authorize('create', City::class);
         $county_id = $county->county_id;
+
         return view('cities.create', compact('county', 'county_id'));
     }
 
@@ -47,13 +48,16 @@ class CityController extends Controller
     public function store(Request $request, $countyId)
     {
         $this->authorize('store', City::class);
+
         $request->validate([
-            'name' => 'required'
+            'name' => 'required|unique:cities,name',
         ]);
+
         $city = new City();
         $city->name = $request->name;
         $city->county_id = $countyId;
         $city->save();
+
         return redirect()->route('cities.index', $countyId)->with('status', 'Sikeres hozzáadás!');
     }
     
@@ -100,11 +104,12 @@ class CityController extends Controller
             return redirect()->route('cities.index', $countyId)->with('error', 'Nem található a keresett város!');
         }
         $request->validate([
-            'name' => 'required'
+            'name' => 'required|unique:cities,name',
         ]);
         $this->authorize('update', $city);
         $city->name = $request->name;
         $city->save();
+
         return redirect()->route('cities.index', $countyId)->with('status', 'Sikeres módosítás!');
     }
 
@@ -121,6 +126,7 @@ class CityController extends Controller
         }
         $this->authorize('destroy', $city);
         $city->delete();
+        
         return redirect()->route('cities.index', $countyId)->with('status', 'Sikeres törlés!');
     }
     

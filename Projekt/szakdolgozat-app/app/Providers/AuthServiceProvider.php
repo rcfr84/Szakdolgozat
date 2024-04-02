@@ -8,12 +8,16 @@ use App\Models\Advertisement;
 use App\Models\Category;
 use App\Models\City;
 use App\Models\County;
+use App\Models\Picture;
 use App\Models\User;
+use App\Models\Message;
 use App\Policies\AdvertisementPolicy;
 use App\Policies\CategoryPolicy;
 use App\Policies\UserPolicy;
 use App\Policies\CountyPolicy;
 use App\Policies\CityPolicy;
+use App\Policies\PicturePolicy;
+use App\Policies\MessagePolicy;
 
 class AuthServiceProvider extends ServiceProvider
 {
@@ -28,6 +32,8 @@ class AuthServiceProvider extends ServiceProvider
         User::class => UserPolicy::class,
         County::class => CountyPolicy::class,
         City::class => CityPolicy::class,
+        Picture::class => PicturePolicy::class,
+        Message::class => MessagePolicy::class,
     ];
 
     /**

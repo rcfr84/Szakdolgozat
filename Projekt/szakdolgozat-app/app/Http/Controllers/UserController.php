@@ -12,12 +12,8 @@ class UserController extends Controller
      */
     public function index()
     {
-        if (auth()->user()->role->name !== 'admin') 
-        {
-            return redirect()->route('categories.index')->with('status', 'Nincsen megfelelő jogosultságod!');
-        }
-        //$users = User::all()->sortBy('name');
-
+        $this->authorize('index', User::class);
+        
         $users = User::where('role_id', '!=', 1)->orderBy('name', 'asc')->paginate(15);
 
         return view('users.index', compact('users'));
@@ -80,5 +76,19 @@ class UserController extends Controller
         $user->delete();
 
         return redirect()->route('users.index')->with('status', 'Sikeres törlés!');
+    }
+
+    public function searchByName(Request $request)
+    {
+        $this->authorize('searchByName', User::class);
+
+        $request->validate([
+            'search' => 'required|min:3',
+        ]);
+
+        $search = $request->search;
+        $names = User::where('name', 'LIKE', "%{$search}%")->paginate(15);
+
+        return view('users.search', compact('names'));
     }
 }

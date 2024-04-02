@@ -15,7 +15,7 @@
 
         <div class="flex items-center justify-end mt-4">
             <x-primary-button>
-                {{ __('Email jelszó reset link') }}
+                {{ __('Küldés') }}
             </x-primary-button>
         </div>
     </form>

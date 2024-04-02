@@ -15,19 +15,19 @@
 
                 <div>
                     <x-input-label for="current_password" :value="__('Jelenlegi jelszó')" />
-                    <x-text-input id="current_password" name="current_password" type="password" class="mt-1 block w-full" autocomplete="current-password" />
+                    <x-text-input id="current_password" name="current_password" type="password" class="mt-1 block w-full" autocomplete="current-password" required/>
                     <x-input-error :messages="$errors->updatePassword->get('current_password')" class="mt-2" />
                 </div>
 
                 <div>
                     <x-input-label for="password" :value="__('Új jelszó')" />
-                    <x-text-input id="password" name="password" type="password" class="mt-1 block w-full" autocomplete="new-password" />
+                    <x-text-input id="password" name="password" type="password" class="mt-1 block w-full" autocomplete="new-password" required/>
                     <x-input-error :messages="$errors->updatePassword->get('password')" class="mt-2" />
                 </div>
 
                 <div>
                     <x-input-label for="password_confirmation" :value="__('Jelszó megerősítése')" />
-                    <x-text-input id="password_confirmation" name="password_confirmation" type="password" class="mt-1 block w-full" autocomplete="new-password" />
+                    <x-text-input id="password_confirmation" name="password_confirmation" type="password" class="mt-1 block w-full" autocomplete="new-password" required/>
                     <x-input-error :messages="$errors->updatePassword->get('password_confirmation')" class="mt-2" />
                 </div>
 

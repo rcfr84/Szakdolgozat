@@ -29,6 +29,8 @@ class PictureController extends Controller
 
         $advertisement = Advertisement::find($advertisementId);
 
+        $this->authorize('create', [Picture::class, $advertisement]);
+
         return view('pictures.create', compact('advertisement'));
     }
 
@@ -39,16 +41,34 @@ class PictureController extends Controller
     {
         $user = auth()->user();
 
-        foreach ($request->file('pictures') as $picture) {
-            $filename = 'advertisement_image_' . uniqid() . '.' . $picture->getClientOriginalExtension();
-            $path = $picture->storeAs('advertisement_images', $filename, 'public');
+        $advertisement = Advertisement::find($advertisementId);
+
+        if (!$advertisement)
+        {
+            return redirect()->back()->with('error', 'Nincsne ilyen hirdetés!');
+        }
+        $this->authorize('store', [Picture::class, $advertisement]);
+
+        $request->validate([
+            'pictures.*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:10240',
+        ]);
+
+        if ($request->file('pictures') === null) 
+        {
+            return redirect()->back()->with('error', 'Nincs kiválasztva kép!');
+        }
+
+        foreach ($request->file('pictures') as $picture) 
+        {
+            $path = $picture->store('advertisement_images', 'public');
             Picture::create([
                 'advertisement_id' => $advertisementId,
                 'src' => $path,
-            ]);}
-
-            return redirect()->route('advertisements.edit', $advertisementId)->with('status', 'Sikeres módosítás!');
+            ]);
         }
+
+        return redirect()->route('advertisements.edit', $advertisementId)->with('status', 'Sikeres módosítás!');
+    }
 
     /**
      * Display the specified resource.
@@ -90,8 +110,9 @@ class PictureController extends Controller
 
         if ($picture) 
         {
+            $this->authorize('destroy', [Picture::class, $picture]);
             $picture->delete();
-            return redirect()->back()->with('success', 'Kép sikeresen törölve!');
+            return redirect()->back()->with('status', 'Kép sikeresen törölve!');
         } 
         else 
         {

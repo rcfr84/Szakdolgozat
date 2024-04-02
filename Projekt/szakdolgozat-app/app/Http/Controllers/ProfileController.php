@@ -44,6 +44,8 @@ class ProfileController extends Controller
     {
         $request->validateWithBag('userDeletion', [
             'password' => ['required', 'current_password'],
+        ], [
+            'password.current_password' => 'A megadott jelszó helytelen.',
         ]);
 
         $user = $request->user();

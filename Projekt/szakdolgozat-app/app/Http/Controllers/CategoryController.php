@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Gate;
 
 class CategoryController extends Controller
 {
@@ -35,7 +34,7 @@ class CategoryController extends Controller
         $this->authorize('store', Category::class);
 
         $request->validate([
-            'name' => 'required',
+            'name' => 'required|unique:categories,name',
         ]);
 
         $newCategory = new Category();
@@ -86,7 +85,7 @@ class CategoryController extends Controller
         }
 
         $request->validate([
-            'name' => 'required',
+            'name' => 'required|unique:categories,name',
         ]);
 
         $category->name = $request->name;
@@ -119,6 +118,7 @@ class CategoryController extends Controller
     {
         $this->authorize('action', Category::class);
         $categories = Category::all();
+        
         return view('categories.index', compact('categories'));
     }
 }

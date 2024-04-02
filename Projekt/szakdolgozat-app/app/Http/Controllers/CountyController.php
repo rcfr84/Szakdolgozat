@@ -14,6 +14,7 @@ class CountyController extends Controller
     {
         $this->authorize('index', County::class);
         $counties = County::all();
+
         return view('counties.list', compact('counties'));
     }
 
@@ -23,6 +24,7 @@ class CountyController extends Controller
     public function create()
     {
         $this->authorize('create', County::class);
+
         return view('counties.create');
     }
 
@@ -33,11 +35,13 @@ class CountyController extends Controller
     {
         $this->authorize('store', County::class);
         $request->validate([
-            'name' => 'required'
+            'name' => 'required|unique:counties,name',
         ]);
+
         $county = new County();
         $county->name = $request->name;
         $county->save();
+
         return redirect()->route('counties.index')->with('status', 'Sikeres hozzáadás!');
     }
 
@@ -55,10 +59,12 @@ class CountyController extends Controller
     public function edit($countyId)
     {
         $county = County::find($countyId);
-        if (!$county) {
+        if (!$county) 
+        {
             return redirect()->route('counties.index')->with('error', 'Nem található a keresett megye!');
         }
         $this->authorize('edit', County::class);
+
         return view('counties.edit', compact('county'));   
     }
 
@@ -74,10 +80,11 @@ class CountyController extends Controller
         }
         $this->authorize('update', County::class);
         $request->validate([
-            'name' => 'required'
+            'name' => 'required|unique:counties,name',
         ]);
         $county->name = $request->name;
         $county->save();
+
         return redirect()->route('counties.index')->with('status', 'Sikeres módosítás!');
     }
 
@@ -87,12 +94,14 @@ class CountyController extends Controller
     public function destroy($countyId)
     {
         $county = County::find($countyId);
-        if (!$county) {
+        if (!$county) 
+        {
             return redirect()->route('counties.index')->with('errorc', 'Nem található a keresett megye!');
         }
         $this->authorize('destroy', County::class);
 
         $county->delete();
+        
         return redirect()->route('counties.index')->with('status', 'Sikeres törlés!');
     }
 }

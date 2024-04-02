@@ -3,9 +3,8 @@
     <div class="min-h-screen container mx-auto mt-8">
         <div class="flex justify-center">
             <div class="w-3/2">
-                @if(session('status'))
-                    <div class="bg-green-500 text-white p-4 mb-4">{{ session('status') }}</div>
-                @endif
+                @include('components.statusAndError')
+                @include('advertisements.components.errorMessage')
                 <div class="bg-white p-6 rounded-lg shadow-md flex flex-col">
                     <form action="{{ route('advertisements.update', $advertisement->advertisement_id) }}" method="POST" enctype="multipart/form-data">
                         @csrf
@@ -44,7 +43,7 @@
                         </div>
                         <div class="mb-4">
                             <label class="form-label font-bold">Ár</label>
-                            <input type="number" class="form-control w-full" name="price" id="price" value="{{ old('price', $advertisement->price) }}">
+                            <input type="number" class="form-control w-full" name="price" id="price" value="{{ old('price', $advertisement->price) }}" max="2147483647">
                         </div>
                         <div class="mb-4">
                             <label class="form-label font-bold">Leírás</label>
@@ -54,36 +53,11 @@
                             <label class="form-label font-bold">Telefonszám</label>
                             <input type="text" class="form-control w-full" name="mobile_number" id="mobile_number" value="{{ old('mobile_number', $advertisement->mobile_number) }}">
                         </div>
-                        <table>
-                            <tbody>
-                                <td>
-                                    <a href="{{route('pictures.create', $advertisement->advertisement_id)}}" class="text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 shadow-lg shadow-green-500/50 dark:shadow-lg dark:shadow-green-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Új kép hozzáadása</a>
-
-                                </td>   
-                                <td>
-                                    <a href="{{ route('pictures.index', $advertisement->advertisement_id) }}" class="text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Képek törlése</a>
-
-                                </td>
-                                <td>
-                                    <a href="{{route('advertisements.editCountyAndCity', $advertisement->advertisement_id)}}" class="text-white bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Vármegye és város módosítása</a>
-                                </td>
-                            </tbody>
-                        </table>
+                        @include('advertisements.components.addOrDeletePictureAndeditCounytAndCity', ['advertisement' => $advertisement])     
                         <div class="flex flex-col items-center justify-center">
                             <button type="submit" class="mt-6 text-white bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Módosítás</button>
-
                         </div>
                     </form>
-                    @if ($errors->any())
-                        <div class="alert alert-danger">
-                            <strong>Hiba!</strong> Problámák vannak az adatokkal.<br><br>
-                            <ul>
-                                @foreach ($errors->all() as $error)
-                                    <li>{{ $error }}</li>
-                                @endforeach
-                            </ul>
-                        </div>
-                    @endif
                 </div>
             </div>
         </div>
