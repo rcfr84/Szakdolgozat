@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.12)  4 APR 2024 13:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.12)  4 APR 2024 16:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -799,7 +799,7 @@ File: ts1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 /texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{c:/texlive/2023/texmf-dist/fonts/
 enc/dvips/lm/lm-mathsy.enc}] [18]
 4. fejezet.
-<./felhasznaloi/kategoria.png, id=484, 328.72812pt x 437.635pt>
+<./felhasznaloi/kategoria.png, id=486, 328.72812pt x 437.635pt>
 File: ./felhasznaloi/kategoria.png Graphic file (type png)
 <use ./felhasznaloi/kategoria.png>
 Package pdftex.def Info: ./felhasznaloi/kategoria.png  used on input line 199.
@@ -807,24 +807,24 @@ Package pdftex.def Info: ./felhasznaloi/kategoria.png  used on input line 199.
 [19
 
 ]
-<./felhasznaloi/varmegye.png, id=494, 415.5525pt x 417.05812pt>
+<./felhasznaloi/varmegye.png, id=496, 415.5525pt x 417.05812pt>
 File: ./felhasznaloi/varmegye.png Graphic file (type png)
 <use ./felhasznaloi/varmegye.png>
 Package pdftex.def Info: ./felhasznaloi/varmegye.png  used on input line 207.
 (pdftex.def)             Requested size: 255.16063pt x 256.0748pt.
-<./felhasznaloi/hozzadas1.png, id=496, 381.425pt x 410.53375pt>
+<./felhasznaloi/hozzadas1.png, id=498, 381.425pt x 410.53375pt>
 File: ./felhasznaloi/hozzadas1.png Graphic file (type png)
 <use ./felhasznaloi/hozzadas1.png>
 Package pdftex.def Info: ./felhasznaloi/hozzadas1.png  used on input line 219.
 (pdftex.def)             Requested size: 185.04327pt x 199.16928pt.
-<./felhasznaloi/hozzadas2.png, id=497, 378.41376pt x 443.6575pt>
+<./felhasznaloi/hozzadas2.png, id=499, 378.41376pt x 443.6575pt>
 File: ./felhasznaloi/hozzadas2.png Graphic file (type png)
 <use ./felhasznaloi/hozzadas2.png>
 Package pdftex.def Info: ./felhasznaloi/hozzadas2.png  used on input line 220.
 (pdftex.def)             Requested size: 169.87465pt x 199.16928pt.
  [20 <./felhasznaloi/kategoria.PNG>] [21 <./felhasznaloi/varmegye.PNG> <./felha
 sznaloi/hozzadas1.PNG> <./felhasznaloi/hozzadas2.PNG>]
-<./felhasznaloi/kereses-szures.png, id=514, 803.50188pt x 293.59688pt>
+<./felhasznaloi/kereses-szures.png, id=516, 803.50188pt x 293.59688pt>
 File: ./felhasznaloi/kereses-szures.png Graphic file (type png)
 <use ./felhasznaloi/kereses-szures.png>
 Package pdftex.def Info: ./felhasznaloi/kereses-szures.png  used on input line 
@@ -942,7 +942,7 @@ File: latin2.def 2021/02/14 v1.3d Input encoding file
 [37] [38
 
 ]
-<nyilatkozat.pdf, id=806, 612.8496pt x 844.11362pt>
+<nyilatkozat.pdf, id=808, 612.8496pt x 844.11362pt>
 File: nyilatkozat.pdf Graphic file (type pdf)
 <use nyilatkozat.pdf>
 Package pdftex.def Info: nyilatkozat.pdf  used on input line 432.
@@ -951,7 +951,7 @@ File: nyilatkozat.pdf Graphic file (type pdf)
 <use nyilatkozat.pdf>
 Package pdftex.def Info: nyilatkozat.pdf  used on input line 432.
 (pdftex.def)             Requested size: 612.84808pt x 844.11156pt.
-<nyilatkozat.pdf, id=809, page=1, 612.8496pt x 844.11362pt>
+<nyilatkozat.pdf, id=811, page=1, 612.8496pt x 844.11362pt>
 File: nyilatkozat.pdf Graphic file (type pdf)
 <use nyilatkozat.pdf, page 1>
 Package pdftex.def Info: nyilatkozat.pdf , page1 used on input line 432.
@@ -986,8 +986,8 @@ Package rerunfilecheck Info: File `RCFR84_2024.out' has not changed.
 (rerunfilecheck)             Checksum: FA48B00F931F69CCA7D0D160162AEB8E;8743.
  ) 
 Here is how much of TeX's memory you used:
- 19303 strings out of 474933
- 309888 string characters out of 5763793
+ 19304 strings out of 474933
+ 309899 string characters out of 5763793
  2223801 words of memory out of 5000000
  40145 multiletter control sequences out of 15000+600000
  632452 words of font info for 98 fonts, out of 8000000 for 9000
@@ -1004,10 +1004,10 @@ live/2023/texmf-dist/fonts/type1/public/lm/lmtk10.pfb><c:/texlive/2023/texmf-di
 st/fonts/type1/public/lm/lmtt10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/pub
 lic/lm/lmtt12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmtti10.pfb
 >
-Output written on RCFR84_2024.pdf (40 pages, 2542158 bytes).
+Output written on RCFR84_2024.pdf (40 pages, 2542514 bytes).
 PDF statistics:
- 957 PDF objects out of 1000 (max. 8388607)
- 864 compressed objects within 9 object streams
- 341 named destinations out of 1000 (max. 500000)
+ 959 PDF objects out of 1000 (max. 8388607)
+ 866 compressed objects within 9 object streams
+ 342 named destinations out of 1000 (max. 500000)
  494 words of extra memory for PDF output out of 10000 (max. 10000000)
 
