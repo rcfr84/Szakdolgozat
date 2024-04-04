@@ -141,10 +141,12 @@ class AdvertisementController extends Controller
         
         $advertisement = Advertisement::find($id);
         $this->authorize('editCountyAndCity', $advertisement);
+
         if ($advertisement === null) 
         {
             return redirect()->route('advertisements.own')->with('error', 'Nincsen ilyen hirdetés!');
         }
+
         $counties = County::all();
         $cities = [];
 
@@ -154,6 +156,7 @@ class AdvertisementController extends Controller
     {
         $advertisement = Advertisement::find($id);
         $this->authorize('updateCountyAndCity', $advertisement);
+        
         $advertisement->city_id = $request->city_id;
         if ($advertisement === null) 
         {

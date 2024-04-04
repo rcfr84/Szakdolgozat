@@ -1989,15 +1989,15 @@ class CityTableSeeder extends Seeder
     
         $countyId = 1;
        
-             foreach ($cities as $countyId => $cityGroup) {
-                foreach ($cityGroup as $cityName) {
-                    DB::table('cities')->insert([
-                        'county_id' => $countyId + 1, 
-                        'name' => $cityName,
-                        'created_at' => now(),
-                        'updated_at' => now(),
-                    ]);
-                }
+        foreach ($cities as $countyId => $cityGroup) {
+            foreach ($cityGroup as $cityName) {
+                DB::table('cities')->insert([
+                    'county_id' => $countyId + 1, 
+                    'name' => $cityName,
+                    'created_at' => now(),
+                    'updated_at' => now(),
+                ]);
             }
+        }
     }
 }

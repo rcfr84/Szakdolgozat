@@ -13,29 +13,34 @@ class CountyTableSeeder extends Seeder
      */
     public function run(): void
     {
-        $counties = 
-        [
-            ['name' => 'Bács-Kiskun vármegye', 'created_at' => now(), 'updated_at' => now()],
-            ['name' => 'Baranya vármegye', 'created_at' => now(), 'updated_at' => now()],
-            ['name' => 'Békés vármegye', 'created_at' => now(), 'updated_at' => now()],
-            ['name' => 'Borsod-Abaúj-Zemplén vármegye', 'created_at' => now(), 'updated_at' => now()],
-            ['name' => 'Csongrád vármegye', 'created_at' => now(), 'updated_at' => now()],
-            ['name' => 'Fejér vármegye', 'created_at' => now(), 'updated_at' => now()],
-            ['name' => 'Győr-Moson-Sopron vármegye', 'created_at' => now(), 'updated_at' => now()],
-            ['name' => 'Hajdú-Bihar vármegye', 'created_at' => now(), 'updated_at' => now()],
-            ['name' => 'Heves vármegye', 'created_at' => now(), 'updated_at' => now()],
-            ['name' => 'Jász-Nagykun-Szolnok vármegye', 'created_at' => now(), 'updated_at' => now()],
-            ['name' => 'Komárom-Esztergom vármegye', 'created_at' => now(), 'updated_at' => now()],
-            ['name' => 'Nógrád vármegye', 'created_at' => now(), 'updated_at' => now()],
-            ['name' => 'Pest vármegye', 'created_at' => now(), 'updated_at' => now()],
-            ['name' => 'Somogy vármegye', 'created_at' => now(), 'updated_at' => now()],
-            ['name' => 'Szabolcs-Szatmár-Bereg vármegye', 'created_at' => now(), 'updated_at' => now()],
-            ['name' => 'Tolna vármegye', 'created_at' => now(), 'updated_at' => now()],
-            ['name' => 'Vas vármegye', 'created_at' => now(), 'updated_at' => now()],
-            ['name' => 'Veszprém vármegye', 'created_at' => now(), 'updated_at' => now()],
-            ['name' => 'Zala vármegye', 'created_at' => now(), 'updated_at' => now()],
+        $counties = [
+            'Bács-Kiskun vármegye',
+            'Baranya vármegye',
+            'Békés vármegye',
+            'Borsod-Abaúj-Zemplén vármegye',
+            'Csongrád vármegye',
+            'Fejér vármegye',
+            'Győr-Moson-Sopron vármegye',
+            'Hajdú-Bihar vármegye',
+            'Heves vármegye',
+            'Jász-Nagykun-Szolnok vármegye',
+            'Komárom-Esztergom vármegye',
+            'Nógrád vármegye',
+            'Pest vármegye',
+            'Somogy vármegye',
+            'Szabolcs-Szatmár-Bereg vármegye',
+            'Tolna vármegye',
+            'Vas vármegye',
+            'Veszprém vármegye',
+            'Zala vármegye',
         ];
         
-        DB::table('counties')->insert($counties);
+        foreach ($counties as $county) {
+            DB::table('counties')->insert([
+                'name' => $county,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ]);
+        }
     }
 }
