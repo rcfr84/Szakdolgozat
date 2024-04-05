@@ -2,8 +2,8 @@
 \usepackage[T1]{fontenc}
 \PassOptionsToPackage{defaults=hu-min}{magyar.ldf}
 \usepackage[magyar]{babel}
-\usepackage{mathtools,amssymb,amsthm,pdfpages,listingsutf8,hyperref,xurl,xcolor,lmodern,caption,hyperref,longtable,array}
-
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{mathtools,amssymb,amsthm,pdfpages,listingsutf8,hyperref,xurl,lmodern,caption,hyperref,longtable,array}
 
 \footnotestyle{rule=fourth}
 
@@ -13,9 +13,14 @@
 \theoremstyle{remark}
 \newtheorem{megjegyzes}[tetel]{Megjegyzés}
 
-\renewcommand{\lstlistingname}{kód}
-\lstdefinestyle{user1}{
+\definecolor{mylightgray}{rgb}{0.95, 0.95, 0.95}
+\definecolor{mydarkgreen}{rgb}{0.0, 0.5, 0.0}
+\definecolor{mydarkred}{rgb}{0.55, 0.0, 0.0}
+\definecolor{mydarkblue}{rgb}{0.176, 0.196, 1.0}
+
+\lstdefinestyle{php}{
 	inputencoding=utf8/latin2,
+	language=PHP,
 	basicstyle=\footnotesize\ttfamily,
 	columns=fullflexible,
 	numbers=left,
@@ -24,22 +29,49 @@
 	xrightmargin=1cm,
 	postbreak=\hbox{$\color{red}\hookrightarrow$\ },
 	backgroundcolor=\color{gray!10},
-	frame=tblr,
-	framesep=2pt,
-	keywordstyle=\bfseries\color{blue},
-	commentstyle=\itshape\color{red},
+	frame=ltrb,
+	keywordstyle=\bfseries\color{mydarkblue},
+	commentstyle=\itshape\color{mydarkgreen},
+	stringstyle=\bfseries\color{mydarkred},
+	identifierstyle=\bfseries\color{mydarkblue},
+	morekeywords=[1]{},
+	keywordstyle=[3]{\bfseries\color{mydarkblue}}
 }
+
 \lstdefinelanguage{JavaScript}{
-	keywords={cy, get, contains, describe, it, select, type, click, const, attachFile, next, location, should, visit},
-}
-\lstdefinelanguage{PHPOwn}{
-	keywords={use, return, new, class, extends, public, void, function, Schema, create, id, unsignedBigInteger, string, integer, text, nullable, timestamps, foreign, references, on, cascade, down,dropIfExists, @extends, @section, @foreach, @endforeach, @if, @else, @endif, {{, }}, asset, @endsection, th, td, div, tr, table, protected, \$table, \$primaryKey, \$fillable, \$this, hasMany, belongsTo, redirect, route, with, compact, view, namespace, if, find, \$advertisement, Advertisement, Route, get, require, name, mobile_number, user, description, price, category, city, county, title},
+	keywords={describe, cy, get, visit, it, contains, select, const, attachFile, click, type, next, location, should},
 	morecomment=[l]{//},
 	morecomment=[s]{/*}{*/},
 	morestring=[b]',
 	morestring=[b]",
-	sensitive=true,
+	keywordstyle=\color{blue}\bfseries,
+	ndkeywordstyle=\color{darkgray}\bfseries,
+	identifierstyle=\color{black},
+	commentstyle=\color{purple}\ttfamily,
+	stringstyle=\color{red}\ttfamily,
+	sensitive=true
 }
+
+\lstdefinestyle{js}{
+	inputencoding=utf8/latin2,
+	language=JavaScript,
+	basicstyle=\footnotesize\ttfamily,
+	columns=fullflexible,
+	numbers=left,
+	breaklines,
+	xleftmargin=1cm,
+	xrightmargin=1cm,
+	postbreak=\hbox{$\color{red}\hookrightarrow$\ },
+	backgroundcolor=\color{gray!10},
+	frame=ltrb,
+	keywordstyle=\bfseries\color{mydarkblue},
+	commentstyle=\itshape\color{mydarkgreen},
+	stringstyle=\bfseries\color{mydarkred},
+	identifierstyle=\bfseries\color{mydarkblue},
+	morekeywords=[1]{},
+	keywordstyle=[3]{\bfseries\color{mydarkblue}}
+}
+
 
 
 \begin{document}
@@ -179,7 +211,7 @@
 		
 		A szemléltetés kedvéért szeretné, Önnek bemutatni, hogy hogyan is kell elképzelni egy ilyenféle tesztet. \Aref{cypress-teszt}.~kódon megtekinthető.
 		
-		\lstinputlisting[caption={Egy Cypress teszt egy hirdetés hozzáadására}, label=cypress-teszt, style=user1, language=JavaScript]{./teszteles/add.js}
+		\lstinputlisting[caption={Egy Cypress teszt egy hirdetés hozzáadására}, label=cypress-teszt, style=js]{./teszteles/add.js}
 		
 		Itt a visit (magyarul: meglátogat) metódus segítségével lehetséges egy konkrét útvonalra eljutni. Ezután bejelentkezni szükség, mivel csak akkor van lehetőség hirdetés hozzáadására. Id, azaz valamilyen azonosító alapján szükséges megkeresni a form-on az adatok megadásának a helyét. Ahol mi adunk meg valamilyen információt, ott a type (magyarul: begépel) metódus segítségével tehetjük meg. Ahol legördülő menüből kell kiválasztani a szükséges adatokat, ott pedig a select (magyarul: kiválaszt) metódussal lehetséges. Ezen kívül még két darab kép hozzáadása is látható még, ezt az attachFile (magyarul: fájl csatolása) metódussal történik, azonban ehhez szükséges még egy csomagot letölteni, de ezt csak megemlítettem, mivel többet erről nem lesz szó. Gombokat lehetséges szöveg alapján megkeresni és utána rákattintani, ez pedig a contains (magyarul: tartalmaz) és click (magyarul: rákattint) metódusokkal történhet meg. Végezetül pedig egy átirányítása megvalósítása látszik, ha minden sikerrel zárult. Tehát véleményem szerint kijelenthető, hogy Cypress tesztek írása egyszerű és nagyon érthető még akár egy hétköznapi ember számára is.
 		
@@ -197,17 +229,13 @@
 		\begin{figure}[ht!]
 			\centering
 			\includegraphics[height=8cm]{./felhasznaloi/kategoria}
-			\caption{Kategóriák (Saját készítés)} 
+			\includegraphics[height=8cm]{./felhasznaloi/varmegye}
+			\caption{Kategóriák és Vármegyék (Saját készítés)} 
 			\label{kategoria-muveletek}
+			\label{varmegye-varos-muvelet}
 		\end{figure} 
 	\subsection{Vármegyével és városokkal kapcsolatos műveletek}
 		Itt az admin jogosultságú felhasználó képes új vármegyét hozzáadni, meglévőt módosítani, illetve törölni. Szintén képes még különböző vármegyékhez hozzáadni új városokat, meglévőt módosítani és törölni. \Aref{varmegye-varos-muvelet}.~ábrán a zöld színű ikon segítségével lehet megtekinteni az adott vármegyéhez tartozó városokat megjeleníteni, ez ugyan úgy épül fel, mint az imént említett kategóriák \aref{sc-kategoria}.~alfejezetben. A kék színű ikon segítségével módosítani lehet a kategóriát, a piros színűvel pedig törölni. A képen nem látszik viszont van ott egy gomb, aminek a segítségével tudunk új vármegyét hozzáadni.
-		\begin{figure}[ht!]
-			\centering
-			\includegraphics[height=9cm]{./felhasznaloi/varmegye}
-			\caption{Vármegyék (Saját készítés)} 
-			\label{varmegye-varos-muvelet}
-		\end{figure}
 	\subsection{Hirdetéssel kapcsolatos műveletek}
 		Ez lenne az egyetlen kivétel, itt a sima felhasználó is képes módosítani vagy törölni a saját hirdetéseit. Képes a már az összes meglévő hirdetéseket módosítani, illetve törölni azokat, ha valamilyen oknál fogva nem megfelelő nyelvezetet vagy képet használ, új képet nem tud hozzáadni az admin, csak és kizárólag törölni képes. Az adminisztrátor jogosultsággal rendelkező felhasználók nem képesek a vármegye, város megváltoztatására, hiszen ezt a hirdetés tulajdonosának a feladata, amennyiben szüksége lenne rá.
 	\section{Felhasználó}
@@ -262,7 +290,7 @@
 		\end{center}
 		Következőnek nézzük azt meg, hogy hogyan is épül fel egy migrációs fájlt, konkrétan az a hirdetéshez tartozó.
 	
-		\lstinputlisting[caption={Egy migrációra példa kód}, label=kod-migracio, style=user1, language=PHPOwn]{./fejlesztoi/hirdetes.php}
+		\lstinputlisting[caption={Egy migrációra példa kód}, label=kod-migracio, style=php]{./fejlesztoi/hirdetes.php}
 		
 		Látható tehát, hogy egy mezőt úgy szükséges megadni, hogy \$table-->mező típusa, majd zárójelbe a mező nevét. A 15.~sorban az elsődleges kulcs megadása látható. Az alatta lévő sorban pedig egy olyan mezőt hoztam létre, ami majd egy másik migrációs fájlból kapja majd meg az értékét, tehát ez egy idegen kulcs. A 25.~sorban pedig az imént említett mezőre így lehetséges hivatkozni. Itt ennek a sornak végén lévő kód az azt jelenti, hogy ha kitörlődik az adott felhasználó, akkor a hirdetés is törlődni fog vele együtt. Alapértelmezetten egyik mező értéke sem lehet nulla, ha azonban szükségünk van rá, akkor meglehet tenni úgy, ahogyan én a 22.~sorban csináltam. Ha elkészültünk a migrációs fájlokkal, akkor a következő parancs segítségével lehet majd végrehajtani azt:
 		\begin{center}
@@ -271,7 +299,7 @@
 	\subsection{Modell}
 		A Laravel már tartalmazza az Eloquent-et, ami egy ORM (angoul: Object-Relational Mapping, magyarul: objektum-relációs leképzés). Amikor ezt használjuk, akkor minden egyes adatbázis táblához tartozik egy modell is, aminek a segítségével interaktálni tudunk a táblával. Az ilyenféle modellek használatával lehetséges beszúrni, módosítani vagy törölni az adott adatbázis táblából. Itt a modellekben még megadhatunk különféle metódusokat is és még itt van lehetőség az Eloquent kapcsolatok megadására is. Ezekre még majd kitérek a példa bemutatása során.\cite{Laravel}
 		
-		\lstinputlisting[caption={Egy modellre példa kód részlet}, label=kod-modell, style=user1, language=PHPOwn]{./fejlesztoi/hirdetesModell.php}
+		\lstinputlisting[caption={Egy modellre példa kód részlet}, label=kod-modell, style=php]{./fejlesztoi/hirdetesModell.php}
 		
 		\Aref{kod-modell}.~kódrészleten a 6.~és 7.~sorban az adatbázis tábla neve és elsődleges kulcs megadása látható. Rögtön alatta pedig az látszik, hogy egy tömbbe megadom a kötelezően megadandó mezők nevét, amiknek az értékük nem lehet üres. Itt található még egy belongsTo és egy hasMany kapcsolatra egy példa. Az első azt röviden az azt jelenti, egy modell egy másik modellhez tartozik, azaz, hogy egy hirdetés egy felhasználóhoz tartozik. Míg az utóbbi azt azt jelenti, hogy egy modell több modellhez tartozik, azaz egy hirdetéshez több kép is tartozhat. Egy modell létrehozása a következő parancs segítségével történhet meg:
 		\begin{center} 
@@ -281,7 +309,7 @@
 	\subsection{Kontroller}\label{sc-kontroller}
 		A kontrollerek tulajdonképpen arra használatosak, hogy a különböző kérésékhez szükséges metódusokat itt definiálhatjuk. A kontrollerekben általában sokféle metódusokat írhatunk, azonban alap esetekben a következő lehetnek. Lehet index nevű, ami az összes adat vagy más néven erőforrások megjelenítésére szolgál, lehet még create (magyarul: létrehozás), ami az adatok bekéréséért felelős form, ehhez szorosan kapcsolódik a store (magyarul: tárol, mentés), ami pedig elmenti a kívánt erőforrást. Beszélhetünk még a show (magyarul: megnéz) és a destroy (magyarul: törlés) metódusokról, az előbbi egy konkrét erőforrást jelenít meg, míg utóbbi segítségével az erőforrást lehetséges kitörölni. Végezetül még két metódus van, az első az edit (magyarul: módosítás), ami a create metódushoz hasonlóan egy form-ot jelenít meg, aminek a segítségével lehetséges az adott erőforrás módosítása. A másik pedig az update (magyarul: módosítás), ez pedig konkrétan módosítja az imént említett edit form-on az eszközölt változtatásokat. Példa képen a show metódust mutatom be Önnek. \cite{Laravel}
 	
-		\lstinputlisting[caption={Egy kontrollerben lévő metódus}, label=kod-kontoller, style=user1, language=PHPOwn]{./fejlesztoi/hirdetesShow.php}
+		\lstinputlisting[caption={Egy kontrollerben lévő metódus}, label=kod-kontoller, style=php]{./fejlesztoi/hirdetesShow.php}
 	
 			A következőben röviden megmagyarázom \aref{kod-kontoller}.~kódot. Látható, hogy a hirdetéshez tartozó kontrollerben található a metódus, ami paraméterként kér egy id-t, az id segítségével tudom, hogy pontosan melyik hirdetést szeretném megjeleníteni. Ezután megkeressem az adott bekért id alapján a hirdetést, majd leellenőrzöm, hogy egyáltalán létezik-e, ha nem akkor hibát adok vissza, amit majd a blade tudunk majd felhasználni, ahhoz, hogy értesítsem a felhasználót a hibáról. Végül pedig, ha nincsen hiba, akkor megjelenítem egy másik bladen a felhasználó számára. A compact nevű metódusra, azért van szükségem, hogy a blade-n majd megjeleníteni tudjam a kívánt hirdetést. A bladek-ről többet \aref{sc-blade}.~alfejezetben tudhat meg.  Egy kontroller létrehozása a következő parancs segítségével történhet meg:
 		\begin{center} 
@@ -291,7 +319,7 @@
 	\subsection{Web.php}
 		A web.php nevű fájl, arra szolgál, hogy a kontrollerekben elkészített különböző metódusokhoz route-t (magyarul: útvonal) rendeljük hozzá. Ez azért szükséges, hogy a böngészőkben eltudjuk érni magát a konkrét blade-t, ami a kontrollerben definiált metódust fogja megvalósítani. Itt még annyit érdemes megemlítenem, hogy a middleware (magyarul: köztes szoftver) segítségével van lehetőség szabályozni, azt hogy ki férhessen hozzá az adott útvonalhoz. A következőben pedig egy útvonalat fogok mutatni, hogy eltudják képzelni, hogy hogyan is nézz ki.
 	
-		\lstinputlisting[caption={Egy web.php lévő útvonal}, label=kod-utvonal, style=user1, language=PHPOwn]{./fejlesztoi/hirdetesUtvonal.php}
+		\lstinputlisting[caption={Egy web.php lévő útvonal}, label=kod-utvonal, style=php]{./fejlesztoi/hirdetesUtvonal.php}
 	
 		Röviden az látható \aref{kod-utvonal}.~kód részleten, hogy a route és két darab kettőspont után van lehetőségünk a kérést típusát megadni, attól függően, hogy melyik metódust hívjuk meg. Jelen esetben most get (magyarul: kap) található ott, ami tulajdonképpen a listázásért felelős. Gyakran használatosan még a post (magyarul: hozzáadás, beszúrás), a put (magyarul: módosítás) és a delete (magyarul: törlés) elnevezések. Ezt követően következik az első paraméter, ami az elérési útvonal, a másik pedig azon az útvonalon található metódust lesz. Még megtalálható a végen ott egy name (magyarul: elnevezés) metódus, aminek a segítségével könnyeben tudunk majd hivatkozni a kívánt blade-n. Ennek a használata azért előnyös, mivel így nem kell a teljes útvonalat megadni, ha hivatkozni szeretnénk a metódusra és ha esetlegesen változtatni kellene az útvonalon, akkor azt csak egy helyen elég megtenni, itt a web.php-ben. Ha nem neveznénk el és több blade is használná ezt az útvonalat, akkor mindenhol meg kellene változtatni, ami nem lenne túl szerencsés. A bladek-ről többet \aref{sc-blade}.~alfejezetben tudhat meg.
 		
@@ -365,7 +393,7 @@
 				
 			\end{longtable}
 			\section{Blade}
-					\lstinputlisting[caption={Egy hirdetés megjelenítésére szolgáló felület}, label=kod-blade, style=user1, language=PHPOwn]{./fejlesztoi/hirdetesBlade.blade.php}
+					\lstinputlisting[caption={Egy hirdetés megjelenítésére szolgáló felület}, label=kod-blade, style=php]{./fejlesztoi/hirdetesBlade.blade.php}
 
 	
 	\begin{thebibliography}{2}
