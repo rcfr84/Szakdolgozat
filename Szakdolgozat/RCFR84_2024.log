@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.12)  5 APR 2024 10:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.12)  5 APR 2024 10:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -850,87 +850,87 @@ File: latin2.def 2021/02/14 v1.3d Input encoding file
 ]
 6. fejezet.
 
-Overfull \hbox (1.8891pt too wide) in alignment at lines 321--325
+Overfull \hbox (1.8891pt too wide) in alignment at lines 320--324
  [] [] [] [] 
  []
 
 
-Overfull \hbox (1.8891pt too wide) in alignment at lines 325--330
+Overfull \hbox (1.8891pt too wide) in alignment at lines 324--329
  [] [] [] [] 
  []
 
 
-Overfull \hbox (1.8891pt too wide) in alignment at lines 330--333
+Overfull \hbox (1.8891pt too wide) in alignment at lines 329--332
  [] [] [] [] 
  []
 
 
-Overfull \hbox (1.8891pt too wide) in alignment at lines 333--336
+Overfull \hbox (1.8891pt too wide) in alignment at lines 332--335
  [] [] [] [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 342--342
+Underfull \hbox (badness 10000) in paragraph at lines 341--341
 []|\T1/lmr/m/n/12 Jogosultsági
  []
 
 
-Underfull \hbox (badness 4366) in paragraph at lines 348--348
+Underfull \hbox (badness 4366) in paragraph at lines 347--347
 []|\T1/lmr/m/n/12 Hirdetések sz¶-
  []
 
 
-Underfull \hbox (badness 4341) in paragraph at lines 348--348
+Underfull \hbox (badness 4341) in paragraph at lines 347--347
 \T1/lmr/m/n/12 ré-se, ren-de-zé-se,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 353--353
+Underfull \hbox (badness 10000) in paragraph at lines 352--352
 []|\T1/lmr/m/n/12 Saját üze-ne-tek
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 353--353
+Underfull \hbox (badness 10000) in paragraph at lines 352--352
 \T1/lmr/m/n/12 meg-te-kin-té-se,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 354--354
+Underfull \hbox (badness 10000) in paragraph at lines 353--353
 []|\T1/lmr/m/n/12 Saját üze-ne-tek
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 357--357
+Underfull \hbox (badness 10000) in paragraph at lines 356--356
 []|\T1/lmr/m/n/12 Új ka-te-gó-ria
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 360--360
+Underfull \hbox (badness 10000) in paragraph at lines 359--359
 []|\T1/lmr/m/n/12 Vármegye hoz-
  []
 
 
-Underfull \hbox (badness 2409) in paragraph at lines 362--362
+Underfull \hbox (badness 2409) in paragraph at lines 361--361
 []|\T1/lmr/m/n/12 Városok meg-te-
  []
 
 
-Underfull \hbox (badness 5878) in paragraph at lines 363--363
+Underfull \hbox (badness 5878) in paragraph at lines 362--362
 []|\T1/lmr/m/n/12 Városok hoz-zá-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 365--365
+Underfull \hbox (badness 10000) in paragraph at lines 364--364
 []|\T1/lmr/m/n/12 Felhasználók
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 365--365
+Underfull \hbox (badness 10000) in paragraph at lines 364--364
 \T1/lmr/m/n/12 meg-te-kin-té-se,
  []
 
 
-Overfull \hbox (1.8891pt too wide) in alignment at lines 336--367
+Overfull \hbox (1.8891pt too wide) in alignment at lines 335--366
  [] [] [] [] 
  []
 
@@ -945,33 +945,33 @@ File: latin2.def 2021/02/14 v1.3d Input encoding file
 <nyilatkozat.pdf, id=811, 612.8496pt x 844.11362pt>
 File: nyilatkozat.pdf Graphic file (type pdf)
 <use nyilatkozat.pdf>
-Package pdftex.def Info: nyilatkozat.pdf  used on input line 432.
+Package pdftex.def Info: nyilatkozat.pdf  used on input line 431.
 (pdftex.def)             Requested size: 612.84808pt x 844.11156pt.
 File: nyilatkozat.pdf Graphic file (type pdf)
 <use nyilatkozat.pdf>
-Package pdftex.def Info: nyilatkozat.pdf  used on input line 432.
+Package pdftex.def Info: nyilatkozat.pdf  used on input line 431.
 (pdftex.def)             Requested size: 612.84808pt x 844.11156pt.
 <nyilatkozat.pdf, id=814, page=1, 612.8496pt x 844.11362pt>
 File: nyilatkozat.pdf Graphic file (type pdf)
 <use nyilatkozat.pdf, page 1>
-Package pdftex.def Info: nyilatkozat.pdf , page1 used on input line 432.
+Package pdftex.def Info: nyilatkozat.pdf , page1 used on input line 431.
 (pdftex.def)             Requested size: 612.84808pt x 844.11156pt.
 File: nyilatkozat.pdf Graphic file (type pdf)
 <use nyilatkozat.pdf, page 1>
-Package pdftex.def Info: nyilatkozat.pdf , page1 used on input line 432.
+Package pdftex.def Info: nyilatkozat.pdf , page1 used on input line 431.
 (pdftex.def)             Requested size: 598.33482pt x 824.1216pt.
  [39]
 File: nyilatkozat.pdf Graphic file (type pdf)
 <use nyilatkozat.pdf, page 1>
-Package pdftex.def Info: nyilatkozat.pdf , page1 used on input line 432.
+Package pdftex.def Info: nyilatkozat.pdf , page1 used on input line 431.
 (pdftex.def)             Requested size: 598.33482pt x 824.1216pt.
 File: nyilatkozat.pdf Graphic file (type pdf)
 <use nyilatkozat.pdf, page 1>
-Package pdftex.def Info: nyilatkozat.pdf , page1 used on input line 432.
+Package pdftex.def Info: nyilatkozat.pdf , page1 used on input line 431.
 (pdftex.def)             Requested size: 598.33482pt x 824.1216pt.
 File: nyilatkozat.pdf Graphic file (type pdf)
 <use nyilatkozat.pdf, page 1>
-Package pdftex.def Info: nyilatkozat.pdf , page1 used on input line 432.
+Package pdftex.def Info: nyilatkozat.pdf , page1 used on input line 431.
 (pdftex.def)             Requested size: 598.33482pt x 824.1216pt.
  [40 <./nyilatkozat.pdf
 
@@ -1004,7 +1004,7 @@ live/2023/texmf-dist/fonts/type1/public/lm/lmtk10.pfb><c:/texlive/2023/texmf-di
 st/fonts/type1/public/lm/lmtt10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/pub
 lic/lm/lmtt12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmtti10.pfb
 >
-Output written on RCFR84_2024.pdf (40 pages, 2542882 bytes).
+Output written on RCFR84_2024.pdf (40 pages, 2542914 bytes).
 PDF statistics:
  963 PDF objects out of 1000 (max. 8388607)
  870 compressed objects within 9 object streams
