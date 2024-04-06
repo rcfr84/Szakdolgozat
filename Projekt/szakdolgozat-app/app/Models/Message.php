@@ -59,7 +59,7 @@ class Message extends Model
         {
             $query->where('sender_id', $user2_id)->where('receiver_id', $user1_id);
         })
-        ->orderBy('created_at', 'asc')->get();
+        ->orderByDesc('created_at')->get();
     }
 
 }

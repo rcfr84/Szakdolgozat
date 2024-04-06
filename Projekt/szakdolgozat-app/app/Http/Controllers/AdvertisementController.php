@@ -252,7 +252,7 @@ class AdvertisementController extends Controller
             return redirect()->route('categories.index')->with('error', 'Nincsen ilyen kategória!');
         }
 
-        $advertisements = $category->advertisements()->paginate(15);
+        $advertisements = $category->advertisements()->orderByDesc('created_at')->paginate(15);
 
         return view('categories.show', compact('advertisements', 'category'));
     }
@@ -264,7 +264,7 @@ class AdvertisementController extends Controller
         ]);
 
         $search = $request->search;
-        $advertisements = Advertisement::where('title', 'LIKE', "%{$search}%")->paginate(15);
+        $advertisements = Advertisement::where('title', 'LIKE', "%{$search}%")->orderByDesc('created_at')->paginate(15);
 
         return view('advertisements.search', compact('advertisements'));
     }
@@ -276,7 +276,7 @@ class AdvertisementController extends Controller
         ]);
 
         $search = $request->search;
-        $advertisements = Advertisement::where('title', 'LIKE', "%{$search}%")->where('user_id', Auth::user()->user_id)->paginate(15);
+        $advertisements = Advertisement::where('title', 'LIKE', "%{$search}%")->where('user_id', Auth::user()->user_id)->orderByDesc('created_at')->paginate(15);
 
         return view('advertisements.searchOwnList', compact('advertisements'));
     }
@@ -346,7 +346,7 @@ class AdvertisementController extends Controller
         }
     
     
-        $advertisements = $query->paginate(15)->appends(request()->query());
+        $advertisements = $query->orderByDesc('created_at')->paginate(15)->appends(request()->query());
     
         return view('advertisements.filter', compact('advertisements'));
     }
