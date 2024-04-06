@@ -24,7 +24,7 @@
                             <tbody>
                                 @foreach ($advertisements as $advertisement)
                                     <tr>
-                                        <td class="px-4 py-2">
+                                        <td class="px-4 py-2 max-w-[150px]">
                                             @if ($advertisement->pictures->isNotEmpty())
                                                 <img src="{{ asset('storage/' . $advertisement->pictures->first()->src) }}" alt="Kép" class="h-32 w-32 object-contain">
                                             @else

@@ -25,7 +25,7 @@
                         <tbody>
                             @forelse ($advertisements as $advertisement)
                                 <tr>
-                                    <td class="px-4 py-2 text-center">
+                                    <td class="px-4 py-2 text-center max-w-[150px]">
                                         @if ($advertisement->pictures->isNotEmpty())
                                             <img src="{{ asset('storage/' . $advertisement->pictures->first()->src) }}" alt="Kép" style="width: auto; height: auto; display: block; margin: 0 auto;">
                                         @else
@@ -40,7 +40,8 @@
                                     <td class="px-4 py-2 break">{{ substr($advertisement->description, 0, 50) }}</td>
                                     <td class="px-4 py-2 break">{{ $advertisement->mobile_number }} </td>
                                     @include('advertisements.components.editAndDelete')
-                                </tr>   
+                                </tr>
+                            @empty   
                             @endforelse
                         </tbody>
                     </table>
