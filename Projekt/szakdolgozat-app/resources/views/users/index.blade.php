@@ -17,7 +17,7 @@
                         <tbody>
                             @foreach ($users as $user)
                                 <tr>
-                                    <td class="px-4 py-2" style="max-width: 300px; word-wrap: break-word;">{{ $user->name }}</td>
+                                    <td class="px-4 py-2 max-w-[300px] break-words">{{ $user->name }}</td>
                                     @include('users.components.delete')
                                 </tr>
                             @endforeach

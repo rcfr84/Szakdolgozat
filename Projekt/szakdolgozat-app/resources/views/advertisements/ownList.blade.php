@@ -12,8 +12,8 @@
                         <table class="table-auto w-full">
                             <thead>
                                 <tr>
-                                    <th class="px-4 py-2" style="width: 150px; height: 200px;">Kép</th>
-                                    <th class="px-4 py-2" style="width: 150px;">Cím</th>
+                                    <th class="px-4 py-2">Kép</th>
+                                    <th class="px-4 py-2">Cím</th>
                                     <th class="px-4 py-2">Város</th>
                                     <th class="px-4 py-2">Vármegye</th>
                                     <th class="px-4 py-2">Kategória</th>
@@ -32,7 +32,7 @@
                                                 <span>Nincs kép</span>
                                             @endif
                                         </td>
-                                        <td class="px-4 py-2 break">{{ $advertisement->title }}</td>
+                                        <td class="px-4 py-2 max-w-[150px] break-words">{{ $advertisement->title }}</td>
                                         <td class="px-4 py-2">{{ $advertisement->city->name}}</td>
                                         <td class="px-4 py-2">{{ $advertisement->city->county->name }}</td>
                                         <td class="px-4 py-2">{{ $advertisement->category->name }}</td>
@@ -47,7 +47,7 @@
                         </table>
                         {{ $advertisements->links() }}
                     @else
-                        <div class="text-center mb-4 text-lg font-bold">Nincs még saját hirdetésed.</div>
+                        @include('advertisements.components.adNotFoundYet')
                     @endif
                 </div>
             </div>

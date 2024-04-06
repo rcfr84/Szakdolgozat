@@ -12,7 +12,7 @@
                     <tbody>
                        @forelse ($categories as $category)
                            <tr>
-                                <td class="px-4 py-2">
+                                <td class="px-4 py-2 max-w-[200px] break-words">
                                     {{ $category->name}}  
                                 </td> 
                                     @include('categories.components.editOrDelete')

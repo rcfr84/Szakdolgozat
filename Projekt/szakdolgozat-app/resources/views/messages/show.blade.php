@@ -16,7 +16,7 @@
                             @foreach($conversation as $message)
                                 <tr>
                                     <td class="px-4 py-2">{{ $message->created_at->format('Y.m.d H:i') }}</td>
-                                    <td class="px-4 py-2" style="max-width: 300px; word-wrap: break-word;">{{ $message->message }}</td>
+                                    <td class="px-4 py-2 max-w-[300px] break-words">{{ $message->message }}</td>
                                     @include('messages.components.editOrDeleteOwnMessage')
                                 </tr>
                             @endforeach

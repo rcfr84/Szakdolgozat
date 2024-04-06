@@ -12,19 +12,13 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @if (count($cities) === 0)
+                            @foreach ($cities as $city)
                                 <tr>
-                                    <td class="px-4 py-2">Nincsenek városok.</td>
-                                </tr>  
-                            @else
-                                @foreach ($cities as $city)
-                                    <tr>
-                                        <td class="px-4 py-2">{{ $city->name }}</td>
-                                        <td class="px-4 py-2"></td>
-                                        @include('cities.components.editAndDelete')
-                                    </tr>
-                                @endforeach
-                            @endif
+                                    <td class="px-4 py-2 max-w-[200px] break-words">{{ $city->name }}</td>
+                                    <td class="px-4 py-2"></td>
+                                    @include('cities.components.editAndDelete')
+                                </tr>
+                            @endforeach
                         </tbody>
                     </table>
                     @include('cities.components.createCity')

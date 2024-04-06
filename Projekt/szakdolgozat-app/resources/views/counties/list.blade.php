@@ -14,13 +14,8 @@
                         <tbody>
                             @foreach ($counties as $county)
                                 <tr>
-                                    <td class="px-4 py-2">{{ $county->name }}</td>
-                                    <td class="px-4 py-2">
-                                        <a href="{{ route('cities.index', ['countyId' => $county->county_id]) }}">
-                                            @include('icons.show')
-                                        </a>
-                                    </td>
-                                    @include('counties.components.editAndDelete')
+                                    <td class="px-4 py-2 max-w-[300px] break-words">{{ $county->name }}</td>
+                                    @include('counties.components.actions')
                                 </tr>
                             @endforeach
                         </tbody>

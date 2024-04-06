@@ -1,4 +1,9 @@
 <td class="px-4 py-2">
+    <a href="{{ route('cities.index', ['countyId' => $county->county_id]) }}">
+        @include('icons.show')
+    </a>
+</td>
+<td class="px-4 py-2">
     <a href="{{ route('counties.edit', $county->county_id) }}">
         @include('icons.edit')
     </a>
