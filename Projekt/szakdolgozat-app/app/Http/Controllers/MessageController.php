@@ -28,7 +28,7 @@ class MessageController extends Controller
 
         if ($conversation->isEmpty()) 
         {
-            return redirect()->route('messages.index');
+            return redirect()->route('messages.index')->with('error', 'Nincs ilyen beszélgetés!');
         }
 
         return view('messages.show', ['conversation' => $conversation]);
