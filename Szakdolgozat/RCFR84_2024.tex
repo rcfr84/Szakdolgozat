@@ -94,11 +94,11 @@
 	\chapter{Tervezés}
 		A tervezés egy nagyon fontos, központi szerepet tölt be egy szoftvereknél. Az én meglátásom és tudásom szerint a következő okok miatt szükséges tervezni:
 		\begin{enumerate}
-			\item Tervezési célok meghatározása: fontos az, hogy mind a fejlesztő, mind a megrendelő egyértelműen megértse, hogy pontosan mit kell elérni a szoftverrel.
-			\item Költség- és időmegtakarítás: implementálás előtt, ha kellő alapossággal tervezzük meg a szoftvert, akkor segíthet kiszűrni a későbbi fázisokban esetleges előforduló hibákat. 
-			\item Bővíthetőség: ez alatt azt értem, hogy a szoftver úgy kell megtervezni, hogy fel legyen készítve arra, hogy lehessen hozzáadni könnyedén új funkciókat.
-			\item Funkciók és feladatok felosztása: ez azért lehet hasznos, mivel a fejlesztés során a fejlesztők pontosan csak az ő általuk elvállalt feladatokat valósítják meg.
-			\item Kommunikáció segítése: ha van egy jól kidolgozott terv, akkor ha a fejlesztők elakadnak valamiben vagy nem értik meg pontosan, hogy mit és hogyan kell implementálni, akkor elég, ha megnézik a tervben az adott dologhoz kapcsolódó részeket és ezáltal megtudják oldani a rájuk bízott feladatot.
+			\item \emph{Tervezési célok meghatározása}: fontos az, hogy mind a fejlesztő, mind a megrendelő egyértelműen megértse, hogy pontosan mit kell elérni a szoftverrel.
+			\item \emph{Költség- és időmegtakarítás}: implementálás előtt, ha kellő alapossággal tervezzük meg a szoftvert, akkor segíthet kiszűrni a későbbi fázisokban esetleges előforduló hibákat. 
+			\item \emph{Bővíthetőség}: ez alatt azt értem, hogy a szoftver úgy kell megtervezni, hogy fel legyen készítve arra, hogy lehessen hozzáadni könnyedén új funkciókat.
+			\item \emph{Funkciók és feladatok felosztása}: ez azért lehet hasznos, mivel a fejlesztés során a fejlesztők pontosan csak az ő általuk elvállalt feladatokat valósítják meg.
+			\item \emph{Kommunikáció segítése}: ha van egy jól kidolgozott terv, akkor ha a fejlesztők elakadnak valamiben vagy nem értik meg pontosan, hogy mit és hogyan kell implementálni, akkor elég, ha megnézik a tervben az adott dologhoz kapcsolódó részeket és ezáltal megtudják oldani a rájuk bízott feladatot.
 		\end{enumerate}
 		Azonban az imént felsoroltakon kívül még számtalan okok miatt szükséges a tervezni. A következőben az én általam készített adatbázis alapú webalkalmazásomnak a követelménylistája látható. A követelménylistában azokat a funkciókat szükséges dokumentálni, amikkel a programoknak rendelkeznie kell. Ez általában a különböző projektek esetében a követelmény specifikációban található meg. A követelmény specifikáció egy olyan dokumentáció, amelyben az igények, követelmények kerülnek meghatározásra, ennek az alapja a riportok. A riportok segítségével lehetséges felmérni a megrendelő követelményeit. \Aref{kovetelmenylista}.~táblázatban megtekinthető a projektem követelmény listája, ami \aref{ch-fugg}.~fejezetben található meg.
 		
@@ -129,9 +129,9 @@
 	\Aref{useCase}.~képen látható használati eset ábra magyarázata következik:
 	Fontosnak tartom megemlíteni azt, hogy itt ezen az ábrán nem minden funkció kerül megjelenítésére, csak az általam vélt  legfontosabbak. Többet megtudhat \aref{ch-felhasznaloi}.~fejezetben. Az ábrán három darab actor látható.
 	\begin{enumerate}
-		\item Nézelődő: ennek a szerepnek van a legkevesebb funkciója, ő az aki csak a már meglévő hirdetéseket és kategóriákat tudja megtekinteni, illetve képes még regisztrációra is, ami további meglévő funkciók használata miatt szükséges.
-		\item Felhasználó: ő képes a saját adatainak módosítására, a profil törlése is. Neki van már lehetősége saját hirdetéseket létrehozni és ezeket kezelni, valamint már van lehetősége üzenetetek küldeni különböző felhasználóknak.
-		\item Admin: neki már van lehetősége a kategóriákkal kapcsolatos műveletek elvégésére is. Szintén képes üzenetet küldeni bárkinek, ő képes már felhasználókat és hirdetések törölni az adott esetben.
+		\item \emph{Nézelődő}: ennek a szerepnek van a legkevesebb funkciója, ő az aki csak a már meglévő hirdetéseket és kategóriákat tudja megtekinteni, illetve képes még regisztrációra is, ami további meglévő funkciók használata miatt szükséges.
+		\item \emph{Felhasználó}: ő képes a saját adatainak módosítására, a profil törlése is. Neki van már lehetősége saját hirdetéseket létrehozni és ezeket kezelni, valamint már van lehetősége üzenetetek küldeni különböző felhasználóknak.
+		\item \emph{Admin}: neki már van lehetősége a kategóriákkal kapcsolatos műveletek elvégésére is. Szintén képes üzenetet küldeni bárkinek, ő képes már felhasználókat és hirdetések törölni az adott esetben.
 	\end{enumerate}
 	\section{Logó}
 		Az adatbázis alapú webalkalmazásomhoz készítettem el egy logót is, ami látható a projektem bejelentkezés és regisztrációs oldalon, illetve magán a navigációs sávon is. A logó elkészítéséhez segítségül vettem az interneten található képeket, majd ezeket összeszerkesztettem, végül pedig Microsoft PowerPoint-ban található funkció segítségével adtam a logónak egy művészi effektust. \Aref{logo}.~ábrán megtekinthető a logó. Az alkalmazásomban szintén egy, az interneten található képet használtam háttérképként. \cite{Hatterkep, Logo}
@@ -151,17 +151,17 @@
 	\subsection{Laravel}\label{sc-laravel}
 		A Laravel egy nyílt forráskódú, PHP webkeretrendszer, ami MVC tervezési mintán alapszik. Az MVC a Model-View-Controller rövidítése. Ez az egyik legősibb tervezési minta\footnote{A tervezési minták a gyakori problémákra nyújtanak kiforrott, általános megoldást.}.
 		\begin{enumerate}
-			\item Model (magyarul: modell): ez az adatokat kezelő réteg, az adatok tárolásáért és visszaolvasásáért felelős.
-			\item View (magyarul: nézet): ez a réteg felhasználói felületek megjelenítéséért illetékes. 
-			\item Controller (magyarul: vezérlő, kontroller): a felhasználói műveletek megfelelő kezeléséért ez a réteg a felelős.
+			\item \emph{Model (magyarul: modell)}: ez az adatokat kezelő réteg, az adatok tárolásáért és visszaolvasásáért felelős.
+			\item \emph{View (magyarul: nézet)}: ez a réteg felhasználói felületek megjelenítéséért illetékes. 
+			\item \emph{Controller (magyarul: vezérlő, kontroller)}: a felhasználói műveletek megfelelő kezeléséért ez a réteg a felelős.
 		\end{enumerate}
 		Az elképzelése röviden az, hogy van egy modell és ha ez módosul, akkor erről értesíteni kell az összes nézetet. Minden nézet pontosan ugyanazon a vezérlőn tudja módosítani a modellt. Mivel három részre van bontva, ezért van ennek a tervezési mintának néhány előnye is. Ilyen például ha lecseréljük az egyik réteget, akkor a többihez nem kell már hozzányúlni, amivel pénzt és időt is lehet spórolni. Előnye még az is, hogy egy modellnek lehet több nézete is. Pozitívumok közzé sorolható az még, hogy számos alapvetőnek tekinthető funkcióhoz lehetséges használni néhány szükséges parancs megadásával. Például a webes alkalmazásomban használtam a Laravel Breeze-hez\footnote{Ez tulajdonképpen egy alap funkciókat tartalmazó csomag.} tartozó funkciókat. Ezzel különféle autentikációhoz kapcsolódó funkciókat lehet használni, ebbe beletartozik például a bejelentkezés, a regisztráció és a felhasználóval kapcsolatos adatok módosítása is. Még használtam egy olyan parancs által megadható funkciót is, ami a lapozás megvalósítását teszi lehetővé. Ezeknek a pozitívumoknak köszönhetően szerintem a Laravel az nagyon megkönnyítheti a fejlesztők számára a munkavégzést. 
 		\cite{Kusper, Laravel}
 	\subsection{PHP}
 		A PHP egy szerveroldali szkriptnyelv, amelynek a segítségével dinamikus weboldalakat lehetséges vele létrehozni. Azt érdemes még róla tudni, hogy nyílt forráskódú. Ezen kívül még a következő feladatok megvalósítására lehet használni:
 		\begin{enumerate}
-			\item Parancssoros szkripttelés: itt lehetőségünk van arra, hogy úgy futtassunk egy PHP szkriptet, hogy nem használunk se böngészőt, se semmilyen szervert sem.
-			\item Asztali alkalmazások készítése: grafikus felhasználó felülettel ellátott asztali alkalmazások esetén a PHP nem a legjobb választás, azonban van lehetőségünk arra, hogy platformfüggetlen alkalmazások megvalósítsunk.
+			\item \emph{Parancssoros szkripttelés}: itt lehetőségünk van arra, hogy úgy futtassunk egy PHP szkriptet, hogy nem használunk se böngészőt, se semmilyen szervert sem.
+			\item \emph{Asztali alkalmazások készítése}: grafikus felhasználó felülettel ellátott asztali alkalmazások esetén a PHP nem a legjobb választás, azonban van lehetőségünk arra, hogy platformfüggetlen alkalmazások megvalósítsunk.
 		\end{enumerate}
 		\cite{PHP}
 	\subsection{MySQL}
@@ -180,17 +180,17 @@
 	\subsection{HTML}
 		A HTML egy angol eredetű mozaikszó, aminek a jelentése HyperText Markup Language (magyarul: hiperszöveges jelölőnyelv). Ezt a nyelvet weboldalak készítéséhez szokás használni. Az én projektemben ezt a nyelvet a blade-ek készítésénél használtam. A bladek-ről többet megtudhat \aref{sc-blade}.~alfejezetben.   
 	\subsection{Tailwind CSS}\label{sc-tailwind}
-		Tailwind CSS használatával a felhasználói felületeket lehet kialakítani, ez csak külsőleges formázást jelent, tehát csak és kizárólag esztétikai szépítésre szolgál. Érdemes még róla tudni, hogy gyors, megbízható, rugalmas és nincsen futási ideje, azaz azonnal megtörténik a változás, nem kell rá várni semmit sem. A fejlesztés során néhány a webalkalmazásomban található gomb kinézetét és figyelmeztetések esetén megjelenő stílust használtam fel, ezeknek a forrása megtekinthetőek az irodalomjegyzékben \cite{tailwind, FlowBite}
+		Tailwind CSS használatával a felhasználói felületeket lehet kialakítani, ez csak külsőleges formázást jelent, tehát csak és kizárólag esztétikai szépítésre szolgál. Érdemes még róla tudni, hogy gyors, megbízható, rugalmas és nincsen futási ideje, azaz azonnal megtörténik a változás, nem kell rá várni semmit sem. A fejlesztés során néhány a webalkalmazásomban található gomb kinézetét, figyelmeztetések és információk megjelenítése esetén megjelenő stílust használtam fel, ezeknek a forrása megtekinthetőek az irodalomjegyzékben \cite{tailwind, FlowBite}
 	\subsection{JavaScript}\label{javascript}
 		A JavaScript az egyik szkript- vagy programozási nyelv, aminek a segítségével van lehetőség bonyolultabb funkciók megjelenítésére a weboldalakon. Lehetővé teszi például egy dinamikusan frissülő tartalom létrehozását vagy akár képek animálását is. Ezeken kívül még nagyon sok mindenre használható még. A projektemben használtam a JavaScript-et ahhoz, hogy amikor vármegyét választok ki egy legördülő listából, akkor egy másik listában csak az előzőleg kiválasztott vármegyébe tartozó város jelenjenek meg. A másik ahol szintén használtam az pedig a szűréshez tartozó részeket jelenítem meg vagy nem, annak a tükrében, hogy be van pipálva egy checkbox (magyarul: jelölőnégyzet) vagy nem.
 		
 	\chapter{Tesztelés}
 		A tesztelésre azért van szükség, hogy az alkalmazásomban megtaláljam az esetleges hibákat, amiket kijavítva növelhetem a szoftverem minőségét és megbízhatóságát. Abban sajnos nem lehetek biztos, hogy a tesztelés elvégzése után nem lesznek már hibák. A tesztelés során kettőféle tesztelési technikát alkalmaztam. Ezek pedig a következők:
 		\begin{enumerate}
-			\item Fehérdobozos (angolul: white-box): a forráskód alapján íródnak a tesztesetek.
-			\item Szürkedobozos (angolul: grey-box): amikor a forráskódnak csak egy rész ismert és csak ez alapján íródnak a tesztesetek.
+			\item \emph{Fehérdobozos (angolul: white-box)}: a forráskód alapján íródnak a tesztesetek.
+			\item \emph{Szürkedobozos (angolul: grey-box)}: amikor a forráskódnak csak egy rész ismert és csak ez alapján íródnak a tesztesetek.
 		\end{enumerate}
-		Azonban van egy harmadik fajta is, amit nem alkalmaztam. Az nem más, mint a feketedobozos (angolul: black-box), amikor a tesztesetek a specifikáció alapján íródnak.
+		Azonban van egy harmadik fajta is, amit nem alkalmaztam. Az nem más, mint a \emph{feketedobozos (angolul: black-box)}, amikor a tesztesetek a specifikáció alapján íródnak.
 		\cite{Kusper}
 	\section{A teszteléshez alkalmazott eszközök és technológiák}
 			A következő alszakaszokban a teszteléshez használt eszközökről és technológiákról lesz majd szó. Kitérek majd arra is, hogy pontosan mit is jelentenek, miket lehet velük tesztelni és az előnyük és hátrányaikról is ejtek majd pár gondolatot.
@@ -201,10 +201,10 @@
 		A Cypress egy NodeJS-ben\footnote{Ez egy ingyenes, nyílt forráskódú futtatókörnyezet, amellyel webes alkalmazásokat, szervereket is lehetséges létrehozni.} írt frontend tesztelési keretrendszer. Ahhoz, hogy tudjuk futtatni a Cypress-t, ahhoz előtte telepíteni kell a NodeJS-t. A Cypress segítségével tudunk készíteni végponttól végpontig tartó-, komponens-, integrációs- valamint a unitteszteket is.
 		Az imént felsorolt teszt típusok jelentése a következő:
 		\begin{enumerate}
-			\item Végponttól végpontig tartó teszt: ennél a típusnál a szoftver funkcionalitását és teljesítményét teszteljük a kezdetektől a végéig, ami a vég felhasználok által megvalósított interakciókat szimulálja valós adatokkal.
-			\item Komponensteszt: ez nem más, mint, amikor a rendszernek csak egy önálló komponensét teszteljük.
-			\item Integrációs teszt: ez egy olyanféle teszt, aminél legalább kettő különböző komponens együttműködését teszteljük.
-			\item Unitteszt (magyarul: egységteszt): ez egy olyan teszt, ami a metódusokat teszteli le. Itt nézzük meg, hogy a tényleges visszatérési érték azonos-e az elvárttal. Ez a komponensteszt egyik fajtája.
+			\item \emph{Végponttól végpontig tartó teszt}: ennél a típusnál a szoftver funkcionalitását és teljesítményét teszteljük a kezdetektől a végéig, ami a vég felhasználok által megvalósított interakciókat szimulálja valós adatokkal.
+			\item \emph{Komponensteszt}: ez nem más, mint, amikor a rendszernek csak egy önálló komponensét teszteljük.
+			\item \emph{Integrációs teszt}: ez egy olyanféle teszt, aminél legalább kettő különböző komponens együttműködését teszteljük.
+			\item \emph{Unitteszt (magyarul: egységteszt)}: ez egy olyan teszt, ami a metódusokat teszteli le. Itt nézzük meg, hogy a tényleges visszatérési érték azonos-e az elvárttal. Ez a komponensteszt egyik fajtája.
 		\end{enumerate}
 		Ezzel a tesztelési keretrendszer segítségével bármit lehet tesztelni ami a böngészőben fut. Nézzük meg néhány előnyét és hátrányát is ennek használatára. Kezdjük a negatívumokkal először. A teszteknek JavaScript nyelven kell íródniuk. Erről többet megtudhat itt \aref{javascript}. Hátrány még az is, hogy egyszerre csak egy ablakban vagy csak egy böngészőben lehetséges a tesztek végrehajtása. Most nézzük meg a pozitívumait is. Az egyik legnyilvánvalóbb ha ránézzünk egy ilyen kódra az, hogy nagyon olvasható bárki számára. Előny még az is, hogy igazi böngészőt használ a tesztek végrehajtására. Ez azért hasznos, mivel a valódi végfelhasználók is igazi böngészőkben fogják használni az alkalmazást, ezért jól lehet velük szimulálni a működését. Még előnynek tekinthető az is, hogy a hálózatól érkező kéréseket lehetséges ellenőrizni a Cypress segítségével.
 		\cite{Kusper Szoftvertesztles, Cypress, Katalon, Medium, NodeJS}
@@ -262,19 +262,19 @@
 		Ő nem rendelkezik semmilyen jogosultsággal sem, ezért is nincsen egyedi funkciója ennek a szerepkörnek. Ő csak a kategóriákat képes megtekinteni, illetve a meglévő hirdetéseket tudja megnézni. Keresésre és szűrésre is van itt lehetősége, ezekről \aref{egyeb-funkciok}.~alfejezetben olvashat többet.
 	\section{Egyéb funkciók}\label{egyeb-funkciok}
 		\begin{enumerate}
-			\item Keresés: a hirdetéseknél van arra lehetőség, hogy keresni lehessen, ez a hirdetés címe alapján lehetséges.
-			\item Szűrés: van arra lehetőség, hogy szűrjünk ára, vármegyére, városra vagy kategóriára is.
-			\item Rendezés: a hirdetéseket rendezhetjük ár szerint növekvő, csökkenőbe vagy lehet alapértelmezett is.
+			\item \emph{Keresés}: a hirdetéseknél van arra lehetőség, hogy keresni lehessen, ez a hirdetés címe alapján lehetséges.
+			\item \emph{Szűrés}: van arra lehetőség, hogy szűrjünk ára, vármegyére, városra vagy kategóriára is.
+			\item \emph{Rendezés}: a hirdetéseket rendezhetjük ár szerint növekvő, csökkenőbe vagy lehet alapértelmezett is.
 				\begin{figure}[ht!]
 				\centering
 				\includegraphics[width=13cm]{./felhasznaloi/kereses-szures}
 				\caption{Keresés, szűrés és rendezés (Saját készítés)} 
 				\label{kereses-szures-muvelet}
 			\end{figure}
-			\item Üzenetek: a regisztrált felhasználók vagy adminisztrátorok képesek üzenetek küldeni egymásnak, ezeket megtekinteni, módosítani vagy törölni a saját maguk által korábban elküldött üzeneteket is. Itt a megkülönböztetés és a felismerés céljából az a felhasználó, aki adminisztrátor jogosultsággal rendelkezi, akkor annak zöld színnel jelenik meg a neve. Ezáltal a sima felhasználók tudhatják, hogy valóban egy ilyen jogosultságú felhasználótól kaptak szöveges üzentet.
-			\item Profil módosítása: a webes alkalmazásomban adva van a lehetőség arra, hogy a regisztrált felhasználó tudják módosítani a saját adataikat, illetve képesek törölni a profiljukat is. Az adminisztrátor nem képes arra, hogy módosítsa a felhasználók adatait, csak és kizárólag törölni tudja őket.
-			\item Saját hirdetések listázása: a felhasználó által létrehozott hirdetéseket megtekintésére, módosítására és törlésére ezen a helyen van lehetőség rá. Itt szinten van ara mód, hogy keresni tudjunk a saját hirdetéseink között, ez a hirdetés neve alapján történhet meg.
-			\item Hirdetések listázása kategóriák alapján: ez lenne azaz oldal, amit a felhasználók elsőnek látnának meg, tulajdonképpen ez a főoldal. Ez hasonló, mint a szűrés funkció, azonban itt a kategória nevére rákattintva már rögtön megjelenik az adott kategóriába tartozó hirdetéseket.
+			\item \emph{Üzenetek}: a regisztrált felhasználók vagy adminisztrátorok képesek üzenetek küldeni egymásnak, ezeket megtekinteni, módosítani vagy törölni a saját maguk által korábban elküldött üzeneteket is. Itt a megkülönböztetés és a felismerés céljából az a felhasználó, aki adminisztrátor jogosultsággal rendelkezi, akkor annak zöld színnel jelenik meg a neve. Ezáltal a sima felhasználók tudhatják, hogy valóban egy ilyen jogosultságú felhasználótól kaptak szöveges üzentet.
+			\item \emph{Profil módosítása}: a webes alkalmazásomban adva van a lehetőség arra, hogy a regisztrált felhasználó tudják módosítani a saját adataikat, illetve képesek törölni a profiljukat is. Az adminisztrátor nem képes arra, hogy módosítsa a felhasználók adatait, csak és kizárólag törölni tudja őket.
+			\item \emph{Saját hirdetések listázása}: a felhasználó által létrehozott hirdetéseket megtekintésére, módosítására és törlésére ezen a helyen van lehetőség rá. Itt szinten van ara mód, hogy keresni tudjunk a saját hirdetéseink között, ez a hirdetés neve alapján történhet meg.
+			\item \emph{Hirdetések listázása kategóriák alapján}: ez lenne azaz oldal, amit a felhasználók elsőnek látnának meg, tulajdonképpen ez a főoldal. Ez hasonló, mint a szűrés funkció, azonban itt a kategória nevére rákattintva már rögtön megjelenik az adott kategóriába tartozó hirdetéseket.
 		\end{enumerate}
 	
 	\chapter{Fejlesztői dokumentáció}
@@ -284,17 +284,17 @@
 	\subsection{Adatbázis kapcsolat létrehozása}
 		Magát az adatbázist többféle módon van lehetőségünk létrehozni, de ezekbe most nem mennék bele. Most itt még azt kell megemlítenem, hogy a projektemben ezt hogyan állítottam be. Ehhez meg kell keresni a projektben a .env nevű fájlt és meg kell adni néhány információt. A következőket szükséges megadni.
 		\begin{enumerate}
-			\item DB\_CONNECTION (magyarul: adatbázis kapcsolat): itt magát az adatbázis fajtáját kell megadnunk. Alapértelmezetten MySQL van megadva. 
-			\item DB\_HOST (magyarul: adatbázis kiszolgáló): ez az adatbázis IP-címe lenne.
-			\item DB\_PORT (magyarul: adatbázis port): ennek a segítségével tudunk kapcsolódni az adatbázis szerverhez. 
-			\item DB\_DATABASE (magyarul: adatbázis neve): itt az magát az elnevezését kell megadnunk.
-			\item DB\_USERNAME (magyarul: felhasználónév az adatbázishoz): meg kell adnunk egy felhasználónevet, amelyet az alkalmazás használ a belépéshez.
-			\item DB\_PASSWORD (magyarul: jelszó az adatbázishoz): a belépéshez meg kell adnunk még egy jelszót is.
+			\item \emph{DB\_CONNECTION (magyarul: adatbázis kapcsolat)}: itt magát az adatbázis fajtáját kell megadnunk. Alapértelmezetten MySQL van megadva. 
+			\item \emph{DB\_HOST (magyarul: adatbázis kiszolgáló)}: ez az adatbázis IP-címe lenne.
+			\item \emph{DB\_PORT (magyarul: adatbázis port)}: ennek a segítségével tudunk kapcsolódni az adatbázis szerverhez. 
+			\item \emph{DB\_DATABASE (magyarul: adatbázis neve)}: itt az magát az elnevezését kell megadnunk.
+			\item \emph{DB\_USERNAME (magyarul: felhasználónév az adatbázishoz)}: meg kell adnunk egy felhasználónevet, amelyet az alkalmazás használ a belépéshez.
+			\item \emph{DB\_PASSWORD (magyarul: jelszó az adatbázishoz)}: a belépéshez meg kell adnunk még egy jelszót is.
 		\end{enumerate}
 	\subsection{Migráció}
 		A migrációk segítségével tulajdonképpen az adatbázis struktúráját tudjuk definiálni. Van arra lehetőség, hogy egy migrációs fájlt egy parancs segítségével lelehessen generálni struktúra szintjén, de már a benne szükséges mezőket és az esetleges különböző megszorításokat már nekünk kell definiálni. A következő parancs segítségével lehetséges egy migrációs fájlt generálni:
 		\begin{center} 
-			php artisan make:migration create\_név\_table .
+			\emph{php artisan make:migration create\_név\_table} .
 		\end{center}
 		Következőnek nézzük azt meg, hogy hogyan is épül fel egy migrációs fájlt, konkrétan az a hirdetéshez tartozó.
 	
@@ -302,7 +302,7 @@
 		
 		Látható tehát, hogy egy mezőt úgy szükséges megadni, hogy \$table-->mező típusa, majd zárójelbe a mező nevét. A 15.~sorban az elsődleges kulcs megadása látható. Az alatta lévő sorban pedig egy olyan mezőt hoztam létre, ami majd egy másik migrációs fájlból kapja majd meg az értékét, tehát ez egy idegen kulcs. A 25.~sorban pedig az imént említett mezőre így lehetséges hivatkozni. Itt ennek a sornak végén lévő kód az azt jelenti, hogy ha kitörlődik az adott felhasználó, akkor a hirdetés is törlődni fog vele együtt. Alapértelmezetten egyik mező értéke sem lehet nulla, ha azonban szükségünk van rá, akkor meglehet tenni úgy, ahogyan én a 22.~sorban csináltam. Ha elkészültünk a migrációs fájlokkal, akkor a következő parancs segítségével lehet majd végrehajtani azt:
 		\begin{center}
-			php artisan migrate .
+			\emph{php artisan migrate} .
 		\end{center}
 	\subsection{Modell}
 		A Laravel már tartalmazza az Eloquent-et, ami egy ORM (angoul: Object-Relational Mapping, magyarul: objektum-relációs leképzés). Amikor ezt használjuk, akkor minden egyes adatbázis táblához tartozik egy modell is, aminek a segítségével interaktálni tudunk a táblával. Az ilyenféle modellek használatával lehetséges beszúrni, módosítani vagy törölni az adott adatbázis táblából. Itt a modellekben még megadhatunk különféle metódusokat is és még itt van lehetőség az Eloquent kapcsolatok megadására is. Ezekre még majd kitérek a példa bemutatása során.\cite{Laravel}
@@ -311,7 +311,7 @@
 		
 		\Aref{kod-modell}.~kódrészleten a 6.~és 7.~sorban az adatbázis tábla neve és elsődleges kulcs megadása látható. Rögtön alatta pedig az látszik, hogy egy tömbbe megadom a kötelezően megadandó mezők nevét, amiknek az értékük nem lehet üres. Itt található még egy belongsTo és egy hasMany kapcsolatra egy példa. Az első azt röviden az azt jelenti, egy modell egy másik modellhez tartozik, azaz, hogy egy hirdetés egy felhasználóhoz tartozik. Míg az utóbbi azt azt jelenti, hogy egy modell több modellhez tartozik, azaz egy hirdetéshez több kép is tartozhat. Egy modell létrehozása a következő parancs segítségével történhet meg:
 		\begin{center} 
-			php artisan make:model név .
+			\emph{php artisan make:model név} .
 		\end{center}
 	
 	\subsection{Kontroller}\label{sc-kontroller}
@@ -321,7 +321,7 @@
 	
 			A következőben röviden megmagyarázom \aref{kod-kontoller}.~kódot. Látható, hogy a hirdetéshez tartozó kontrollerben található a metódus, ami paraméterként kér egy id-t, az id segítségével tudom, hogy pontosan melyik hirdetést szeretném megjeleníteni. Ezután megkeressem az adott bekért id alapján a hirdetést, majd leellenőrzöm, hogy egyáltalán létezik-e, ha nem akkor hibát adok vissza, amit majd a blade tudunk majd felhasználni, ahhoz, hogy értesítsem a felhasználót a hibáról. Végül pedig, ha nincsen hiba, akkor megjelenítem egy másik bladen a felhasználó számára. A compact nevű metódusra, azért van szükségem, hogy a blade-n majd megjeleníteni tudjam a kívánt hirdetést. A bladek-ről többet \aref{sc-blade}.~alfejezetben tudhat meg.  Egy kontroller létrehozása a következő parancs segítségével történhet meg:
 		\begin{center} 
-			php artisan make:controller névController .
+			\emph{php artisan make:controller névController} .
 		\end{center}
 		  
 	\subsection{Web.php}
@@ -340,7 +340,7 @@
 	\section{Jogosultságkezelés}
 		A jogosultságkezelés minden projektnél egy nagyon kulcsfontosságú, lényeges szerepet tölt be, mivel általában szükség van arra, hogy lehessen szabályozni a különböző funkciók használatát. A Laravel keretrendszer számos lehetőséget ad számunkra ezen a téren. Ilyen opció például a middleware (magyarul: köztes réteg) vagy a policy (magyarul: szabályzat). Én az utóbbi mellett tettem le a voksomat. Ennek a használata nagyon egyszerű és érthető volt számomra. A policy-ben egy adott modellhez vagy erőforráshoz tartozó autentikációs logikát szükséges implementálni. Egy ilyen fájlt egy egyszerű parancs segítségével lehet generáltatni. Egy policy-ben azokat a metódusokat kell megírnunk, amelyben szeretnénk valamiféle jogosultságkezelést használni. Minden metódushoz külön kell őket definiálni. Miután elkészült egy policy, akkor tudatni kell a Laravellel, hogy az adott modellhez valamilyen autentikációs megszorítást hajtottunk végre, ezért szükséges regisztrálni ezeket a fájlokat az úgynevezett AuthServiceProvider fájlba. Ezek után pedig már csak annyit kell megtennünk, hogy a vezérlőkbe ezeket implementálni kell, ez nagyon egyszerűen végrehajtható. Például a hirdetés módosítása metódus esetében így lehetséges ezt végrehajtani: 
 		\begin{center}
-			\$this->authorize('edit', \$advertisement).
+			\emph{\$this->authorize('edit', \$advertisement)}.
 		\end{center}
 		\cite{Laravel}
 	\section{Seeder}
@@ -374,30 +374,30 @@
 				K2 & Jogosultság & Bejelentkezés & Email és jelszóval van lehetőség belépni. Hibák esetén visszajelzést kapnak a felhasználók. \\ \hline
 				K3 & Jogosultság & Kijelentkezés & \\ \hline
 				K4 & Jogosultság & Profillal kapcsolatos műveletek & A felhasználónak van lehetősége a nevét, email címét és jelszavát is módosítani, illetve törölni a saját profilját. Hibák esetén visszajelzést kapnak a felhasználók. \\ \hline
-				K5 & Jogosultság & Jogosultsági szintek & \emph{Admin}: vármegyékkel, városokkal, kategóriákkal kapcsolatos műveletek, azaz azok megtekintése, törlése, módosítása és hozzáadása. A hirdetések törlése, módosítása, megtekintése. A felhasználók törlése. Üzenetek küldése, megtekintése, sajátok módosítása és törlése. \\ 
-				& & & \emph{Felhasználó}: hirdetések megtekintése, sajátjai módosítása, törlése. Üzenetek küldése, megtekintése, sajátok módosítása és törlése. Kategóriák megtekintése. \\ 
-				& & & \emph{Nézelődő}: kategóriák és hirdetések megtekintése. \\ \hline
+				K5 & Jogosultság & Jogosultsági szintek & \emph{Admin}, \emph{Felhasználó}, \emph{Nézelődő}. \\ \hline
 				K6 & Felület & Regisztráció & Egy név, email cím és a jelszó kétszeri megadása szükséges. Hibák esetén visszajelzést kapnak a felhasználók. \\ \hline
 				K7 & Felület & Bejelentkezés & Email és jelszóval van lehetőség belépni. Hibák esetén visszajelzést kapnak a felhasználók. \\ \hline
 				K8 & Felület & Hirdetések & Az összes hirdetés kilistázva való megtekintése. \\ \hline
 				K9 & Felület & Hirdetések szűrése, rendezése, keresése & Az összes hirdetés kilistázva való megtekintése a szűrésre, keresésre vagy rendezésre. A keresés az a hirdetés neve alapján történik. \\ \hline
 				K10 & Felület & Saját hirdetések & A saját hirdetések kilistázva való megtekintése, törlése. \\ \hline
 				K11 & Felület & Saját hirdetések módosítása & A hirdetés összes adatát lehetséges megváltoztatni, kivéve a hirdető nevét. \\ \hline
-				K12 & Felület & Új hirdetés hozzáadása & ~ \\ \hline
-				K13 & Felület & Saját beszélgetések megtekintése & Az összes beszélgetés megtekintése, csak az utolsó üzenet látjuk. \\ \hline
-				K14 & Felület & Saját üzenetek megtekintése, törlése & ~ \\ \hline
-				K15 & Felület & Saját üzenetek módosítása & ~ \\ \hline
-				K16 & Felület & Saját beszélgetések megtekintése & ~ \\ \hline
-				K17 & Felület & Kategóriák megtekintése, törlése & A törlés csak admin jogosultsággal lehetséges. \\ \hline
-				K18 & Felület & Új kategória hozzáadása & ~ \\ \hline
-				K19 & Felület & Kategória módosítása & ~ \\ \hline
-				K20 & Felület & Vármegyék megtekintése, törlése & Csak admin jogosultsággal lehetséges. \\ \hline
-				K21 & Felület & Vármegye hozzáadása & Csak admin jogosultsággal lehetséges. \\ \hline
-				K22 & Felület & Vármegye nevének módosítása & Csak admin jogosultsággal lehetséges. \\ \hline
-				K23 & Felület & Városok megtekintése, törlése & Csak admin jogosultsággal lehetséges. \\ \hline
-				K24 & Felület & Városok hozzáadása & Csak admin jogosultsággal lehetséges. \\ \hline
-				K25 & Felület & Városok nevének módosítása & Csak admin jogosultsággal lehetséges. \\ \hline
-				K26 & Felület & Felhasználók megtekintése, törlése & Csak admin jogosultsággal lehetséges. Az adminok itt nem kerülnek kilistázásra. \\ \hline
+				K12 & Felület & Saját hirdetések keresése & A hirdetés neve alapján történik. \\ \hline
+				K13 & Felület & Új hirdetés hozzáadása & ~ \\ \hline
+				K14 & Felület & Saját beszélgetések megtekintése & Az összes beszélgetés megtekintése, csak az utolsó üzenet látjuk. \\ \hline
+				K15 & Felület & Saját üzenetek megtekintése, törlése & ~ \\ \hline
+				K16 & Felület & Saját üzenetek módosítása & ~ \\ \hline
+				K17 & Felület & Saját beszélgetések megtekintése & ~ \\ \hline
+				K18 & Felület & Kategóriák megtekintése, törlése & A törlés csak admin jogosultsággal lehetséges. \\ \hline
+				K19 & Felület & Új kategória hozzáadása & Csak admin jogosultsággal lehetséges. \\ \hline
+				K20 & Felület & Kategória módosítása & Csak admin jogosultsággal lehetséges. \\ \hline
+				K21 & Felület & Vármegyék megtekintése, törlése & Csak admin jogosultsággal lehetséges. \\ \hline
+				K22 & Felület & Vármegye hozzáadása & Csak admin jogosultsággal lehetséges. \\ \hline
+				K23 & Felület & Vármegye nevének módosítása & Csak admin jogosultsággal lehetséges. \\ \hline
+				K24 & Felület & Városok megtekintése, törlése & Csak admin jogosultsággal lehetséges. \\ \hline
+				K25 & Felület & Városok hozzáadása & Csak admin jogosultsággal lehetséges. \\ \hline
+				K26 & Felület & Városok nevének módosítása & Csak admin jogosultsággal lehetséges. \\ \hline
+				K27 & Felület & Felhasználók megtekintése, törlése & Csak admin jogosultsággal lehetséges. Az adminok itt nem kerülnek kilistázásra. \\ \hline
+				K28 & Felület & Felhasználók keresése & Csak admin jogosultsággal lehetséges. Az adminok itt nem kerülnek kilistázásra. A felhasználók neve alapján történik a keresés. \\ \hline
 				
 			\end{longtable}
 			\section{Blade}

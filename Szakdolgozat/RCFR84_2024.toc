@@ -49,4 +49,4 @@
 \select@language {magyar} \contentsline {chapter}{Függelékek}{33}{chapter.6}%
 \select@language {magyar} \contentsline {section}{\numberline {6.1}Követelménylista}{33}{section.6.1}%
 \select@language {magyar} \contentsline {section}{\numberline {6.2}Blade}{35}{section.6.2}%
-\select@language {magyar} \contentsline {chapter}{Irodalomjegyz\'ek}{38}{chapter*.11}%
+\select@language {magyar} \contentsline {chapter}{Irodalomjegyz\'ek}{37}{chapter*.11}%
