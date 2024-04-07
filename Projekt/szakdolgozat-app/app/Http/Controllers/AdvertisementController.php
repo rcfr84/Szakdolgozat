@@ -95,7 +95,7 @@ class AdvertisementController extends Controller
             }
         }
     
-        return redirect()->route('advertisements.index')->with('status', 'Sikeres hozzáadás!');
+        return redirect()->route('advertisements.own')->with('status', 'Sikeres hozzáadás!');
     }
 
     /**
@@ -238,8 +238,8 @@ class AdvertisementController extends Controller
         if ($this->authorize('destroy', $advertisement))
         {
             $advertisement->delete();
-            return redirect()->route('advertisements.own')->with('status', 'Sikeres törlés!');
-        } 
+            return redirect()->route('advertisements.index')->with('status', 'Sikeres törlés!');
+        }
         
     }
 

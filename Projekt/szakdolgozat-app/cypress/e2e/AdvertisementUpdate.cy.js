@@ -5,7 +5,7 @@ describe('template spec', () => {
     cy.get('input[id=email]').type('v@gmail.com')
     cy.get('input[id=password]').type('12345678')
 
-    cy.contains('Log in').click()
+    cy.contains('Bejelentkezés').click()
 
     cy.get('select[id=countySelect]').select('Heves vármegye')
     cy.get('select[id=citySelect]').select('Eger')
