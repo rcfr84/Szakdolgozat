@@ -355,9 +355,8 @@
 		
 	\chapter*{Függelékek}\label{ch-fugg}
 	\addcontentsline{toc}{chapter}{Függelékek}
-		\section*{Követelménylista}
+		\section*{Követelménylista}\label{kovetelmenylista}
 			\begin{longtable}{|l|l|p{3cm}|p{8cm}|}
-				\caption{Követelménylista} \label{kovetelmenylista} \\
 				\hline
 				\emph{Id} & \emph{Modul} & \emph{Név} & \emph{Leírás, megjegyzés} \\ \hline
 				\endfirsthead
@@ -403,8 +402,8 @@
 				K28 & Felület & Felhasználók keresése & Csak admin jogosultsággal lehetséges. Az adminok itt nem kerülnek kilistázásra. A felhasználók neve alapján történik a keresés. \\ \hline
 				
 			\end{longtable}
-			\section*{Blade}
-				\lstinputlisting[caption={Egy hirdetés megjelenítésére szolgáló felület}, label=kod-blade, style=php]{./fejlesztoi/hirdetesBlade.blade.php}
+			\section*{Egy hirdetés megjelenítésére szolgáló blade}
+				\lstinputlisting[label=kod-blade, style=php]{./fejlesztoi/hirdetesBlade.blade.php}
 
 	
 	\begin{thebibliography}{2}
