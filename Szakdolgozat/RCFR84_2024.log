@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.12)  9 APR 2024 16:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.12)  9 APR 2024 16:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -835,17 +835,17 @@ File: ./felhasznaloi/hozzadas2.png Graphic file (type png)
 <use ./felhasznaloi/hozzadas2.png>
 Package pdftex.def Info: ./felhasznaloi/hozzadas2.png  used on input line 259.
 (pdftex.def)             Requested size: 169.87465pt x 199.16928pt.
- [21 <./felhasznaloi/kategoria.PNG> <./felhasznaloi/varmegye.PNG>]
-<./felhasznaloi/kereses-szures.png, id=532, 803.50188pt x 293.59688pt>
+ [21 <./felhasznaloi/kategoria.PNG> <./felhasznaloi/varmegye.PNG>] [22 <./felha
+sznaloi/hozzadas1.PNG> <./felhasznaloi/hozzadas2.PNG>]
+<./felhasznaloi/kereses-szures.png, id=540, 803.50188pt x 293.59688pt>
 File: ./felhasznaloi/kereses-szures.png Graphic file (type png)
 <use ./felhasznaloi/kereses-szures.png>
 Package pdftex.def Info: ./felhasznaloi/kereses-szures.png  used on input line 
 273.
 (pdftex.def)             Requested size: 369.88582pt x 135.15923pt.
- [22 <./felhasznaloi/hozzadas1.PNG> <./felhasznaloi/hozzadas2.PNG>] [23 <./felh
-asznaloi/kereses-szures.PNG>]
+ [23 <./felhasznaloi/kereses-szures.PNG>] [24]
 5. fejezet.
-[24
+[25
 
 ] (c:/texlive/2023/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2023/02/27 1.9 listings language file
@@ -855,20 +855,20 @@ File: lstlang2.sty 2023/02/27 1.9 listings language file
 )
 (c:/texlive/2023/texmf-dist/tex/latex/base/latin2.def
 File: latin2.def 2021/02/14 v1.3d Input encoding file
-) [25]
-(c:/texlive/2023/texmf-dist/tex/latex/base/latin2.def
-File: latin2.def 2021/02/14 v1.3d Input encoding file
 ) [26]
 (c:/texlive/2023/texmf-dist/tex/latex/base/latin2.def
 File: latin2.def 2021/02/14 v1.3d Input encoding file
 ) [27]
 (c:/texlive/2023/texmf-dist/tex/latex/base/latin2.def
 File: latin2.def 2021/02/14 v1.3d Input encoding file
-) [28] [29] [30]
+) [28]
+(c:/texlive/2023/texmf-dist/tex/latex/base/latin2.def
+File: latin2.def 2021/02/14 v1.3d Input encoding file
+) [29] [30] [31]
 6. fejezet.
-[31
+[32
 
-] [32] [33
+] [33] [34
 
 ]
 Overfull \hbox (1.8891pt too wide) in alignment at lines 369--372
@@ -955,15 +955,15 @@ Overfull \hbox (1.8891pt too wide) in alignment at lines 383--414
  [] [] [] [] 
  []
 
-[34
+[35
 
-] [35] (c:/texlive/2023/texmf-dist/tex/latex/base/latin2.def
+] [36] (c:/texlive/2023/texmf-dist/tex/latex/base/latin2.def
 File: latin2.def 2021/02/14 v1.3d Input encoding file
-) [36] [37]
-[38
+) [37] [38]
+[39
 
 ]
-<nyilatkozat.pdf, id=789, 597.432pt x 844.11362pt>
+<nyilatkozat.pdf, id=793, 597.432pt x 844.11362pt>
 File: nyilatkozat.pdf Graphic file (type pdf)
 <use nyilatkozat.pdf>
 Package pdftex.def Info: nyilatkozat.pdf  used on input line 479.
@@ -972,7 +972,7 @@ File: nyilatkozat.pdf Graphic file (type pdf)
 <use nyilatkozat.pdf>
 Package pdftex.def Info: nyilatkozat.pdf  used on input line 479.
 (pdftex.def)             Requested size: 597.43054pt x 844.11156pt.
-<nyilatkozat.pdf, id=792, page=1, 597.432pt x 844.11362pt>
+<nyilatkozat.pdf, id=796, page=1, 597.432pt x 844.11362pt>
 File: nyilatkozat.pdf Graphic file (type pdf)
 <use nyilatkozat.pdf, page 1>
 Package pdftex.def Info: nyilatkozat.pdf , page1 used on input line 479.
@@ -981,7 +981,7 @@ File: nyilatkozat.pdf Graphic file (type pdf)
 <use nyilatkozat.pdf, page 1>
 Package pdftex.def Info: nyilatkozat.pdf , page1 used on input line 479.
 (pdftex.def)             Requested size: 597.93192pt x 844.81996pt.
- [39]
+ [40]
 File: nyilatkozat.pdf Graphic file (type pdf)
 <use nyilatkozat.pdf, page 1>
 Package pdftex.def Info: nyilatkozat.pdf , page1 used on input line 479.
@@ -994,7 +994,7 @@ File: nyilatkozat.pdf Graphic file (type pdf)
 <use nyilatkozat.pdf, page 1>
 Package pdftex.def Info: nyilatkozat.pdf , page1 used on input line 479.
 (pdftex.def)             Requested size: 597.93192pt x 844.81996pt.
- [40 <./nyilatkozat.pdf
+ [41 <./nyilatkozat.pdf
 
 pdfTeX warning: pdflatex.exe (file ./nyilatkozat.pdf): PDF inclusion: Subtype i
 n Resources dict is not a name (key 'Subtype', type <stream>); ignored.
@@ -1007,8 +1007,8 @@ Package rerunfilecheck Info: File `RCFR84_2024.out' has not changed.
 (rerunfilecheck)             Checksum: 5A16DDA8750E5D3DE3237D3BF4ED089C;9152.
  ) 
 Here is how much of TeX's memory you used:
- 21152 strings out of 474933
- 343107 string characters out of 5763793
+ 21153 strings out of 474933
+ 343114 string characters out of 5763793
  2220801 words of memory out of 5000000
  42015 multiletter control sequences out of 15000+600000
  632133 words of font info for 97 fonts, out of 8000000 for 9000
@@ -1024,10 +1024,10 @@ lmri12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><c:/tex
 live/2023/texmf-dist/fonts/type1/public/lm/lmtk10.pfb><c:/texlive/2023/texmf-di
 st/fonts/type1/public/lm/lmtt10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/pub
 lic/lm/lmtt12.pfb>
-Output written on RCFR84_2024.pdf (40 pages, 2700080 bytes).
+Output written on RCFR84_2024.pdf (41 pages, 2702171 bytes).
 PDF statistics:
- 933 PDF objects out of 1000 (max. 8388607)
- 839 compressed objects within 9 object streams
- 313 named destinations out of 1000 (max. 500000)
+ 937 PDF objects out of 1000 (max. 8388607)
+ 842 compressed objects within 9 object streams
+ 314 named destinations out of 1000 (max. 500000)
  515 words of extra memory for PDF output out of 10000 (max. 10000000)
 
