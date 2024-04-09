@@ -135,6 +135,7 @@ class AdvertisementController extends Controller
 
         return view('advertisements.edit', compact('advertisement', 'counties', 'cities', 'categories'));
     }
+
     public function editCountyAndCity(Request $request, $id)
     {
         auth()->user();
@@ -152,6 +153,7 @@ class AdvertisementController extends Controller
 
         return view('advertisements.countyCityEdit', compact('cities', 'advertisement', 'counties'));
     }
+
     public function updateCountyAndCity(Request $request, $id)
     {
         $advertisement = Advertisement::find($id);
@@ -344,7 +346,6 @@ class AdvertisementController extends Controller
         {
             $query->orderBy('price', 'desc');
         }
-    
     
         $advertisements = $query->orderByDesc('created_at')->paginate(15)->appends(request()->query());
     
