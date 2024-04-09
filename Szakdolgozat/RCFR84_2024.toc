@@ -45,9 +45,9 @@
 \select@language {magyar} \contentsline {section}{\numberline {5.2}Jogosultságkezelés}{30}{section.5.2}%
 \select@language {magyar} \contentsline {section}{\numberline {5.3}Seeder}{30}{section.5.3}%
 \select@language {magyar} \contentsline {chapter}{\numberline {6}Üzleti modell}{31}{chapter.6}%
-\select@language {magyar} \contentsline {section}{\numberline {6.1}Online hirdetések}{31}{section.6.1}%
+\select@language {magyar} \contentsline {section}{\numberline {6.1}Online reklámok}{31}{section.6.1}%
 \select@language {magyar} \contentsline {section}{\numberline {6.2}Kiemelés}{31}{section.6.2}%
-\select@language {magyar} \contentsline {section}{\numberline {6.3}Együttműködések}{31}{section.6.3}%
+\select@language {magyar} \contentsline {section}{\numberline {6.3}Együttműködések}{32}{section.6.3}%
 \select@language {magyar} \contentsline {chapter}{Összegzés}{33}{chapter*.10}%
 \select@language {magyar} \contentsline {chapter}{Függelékek}{34}{chapter*.11}%
 \select@language {magyar} \contentsline {chapter}{Irodalomjegyz\'ek}{38}{chapter*.14}%

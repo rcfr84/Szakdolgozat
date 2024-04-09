@@ -352,11 +352,11 @@
 		A seeder-ek segítségével van lehetőség az adatbázisban lévő táblák adatait feltölteni gyorsan és egyszerűen. Én ezt a lehetőséget azért használtam, mivel például a manuális tesztelés elvégzése közben a hirdetések törlésének a tesztelését végeztem el és, ha ezek elfogytak, akkor egy parancs lefuttatásának a segítségével újra megjelentek az adatbázisomban, amivel sok időt tudtam megspórolni, mivel nem kellett egyenként hozzáadnom a hirdetéseket. Ezenfelül már rendelkezik éles, valós tesztadatokkal, ami az általam készített alkalmazásom bemutatása során hasznos lehet.
 		
 	\chapter{Üzleti modell}
-		Az én meglátásom szerint az apróhirdetés weboldalak fenntartásához, működéséhez és karbantartásához szükség van némi anyagi forrásra. A következőben szeretném Önnek bemutatni, hogy milyen megoldások segítségével tudnám én ezt elképzelni. Azt kiemelném, hogy ha a következő javaslatok közül némelyik opció implementálására az adatbázis alapú webalkalmazásom jelenlegi formájában még nem lenne alkalmas rá.
-		 \section{Online hirdetések}
-		 	Tulajdonképpen ez az ötlet jutna a legtöbb ember számára eszébe, mint pénz szerzési lehetőség. Én is erre gondoltam legelőször, amikor ezt a kérdést tettem fel magamnak. A különböző hirdetések megjelenítését én előreláthatólag csak a főoldalon, egy hirdetés megtekintése oldalon és a saját hirdetések megnézése oldalon tenném lehetővé ezt az opciót.
+		Az én meglátásom szerint az apróhirdetés weboldalak fenntartásához, működéséhez és karbantartásához szükség van némi anyagi forrásra. A következőben szeretném Önnek bemutatni azt, hogy milyen megoldások segítségével tudnám én ezt elképzelni. Azt fontosnak tartom kiemelni, hogy a következő javaslatok közül némelyik opció implementálására az adatbázis alapú webalkalmazásom jelenlegi formájában még nem lenne alkalmas rá.
+		 \section{Online reklámok}
+		 	Tulajdonképpen ez az ötlet jutna a legtöbb ember számára eszébe, mint pénz szerzési lehetőség. Én is erre gondoltam legelőször, amikor ezt a kérdést tettem fel magamnak. A különböző reklámok megjelenítését én előreláthatólag csak a főoldalon, egy hirdetés megtekintése oldalon és a saját hirdetések megnézése oldalon tenném lehetővé ezt az opciót. A főoldalon abból az indíttatásból, hogy ha meglátogatják az oldalt, akkor ez fog számukra elsőnek megjelenni és itt érném el vele a legnagyobb célközönséget. Ezenkívül a hirdetések megtekintésénél, listázásánál is megjelennének, szintén itt érnék még el velük nagy célközönséget. Ezen az oldalak megtekintéséhez nem szükséges regisztrálni az alkalmazásomba, aminek köszönhetően szintén növelné a reklámok megtekintésének arányát.
 		 \section{Kiemelés}
-		 	A kiemelés opció alatt azt értem, hogy lenne a felhasználóknak olyan lehetőségük, hogy némi pénz reményében a saját hirdetéseiket előresorolná, kiemelné az alkalmazás, legyen szó akár a hirdetések böngészésekor vagy például akkor amikor szűrünk vagy keressünk egy adott hirdetésre.
+		 	A kiemelés opció alatt azt értem, hogy lenne a felhasználóknak olyan lehetőségük, hogy némi pénz reményében a saját hirdetéseiket előresorolná, kiemelné az alkalmazás, legyen szó akár a hirdetések böngészésekor. Emellett ez a kiemelés funkció hasznos lehetne például abban az esetben is, amikor a felhasználók a szűrési feltételek alapján keresnék a hirdetéseket. Ha egy hirdetés kiemelt pozícióban jelenne meg a keresések elvégzése után, akkor nagyobb eséllyel tekintik meg a felhasználók az adott kiemelt hirdetést, és ennek köszönhetően nagyobb valószínűséggel kerülhet megvásárlásra a kiemelt hirdetés két fél között.
 		 \section{Együttműködések}
 			Az együttműködés alatt én az érteném, hogy lenne olyan lehetőség az alkalmazásomban, hogy a különböző cégek termékeit lehessen reklámozni, és ezt úgy megjeleníteni, mint, ahogyan egy hétköznapi felhasználó saját hirdetését. Azonban pár változtatásra ilyenkor a véleményem szerint szükség lenne, ilyen változtatás lenne például az, hogy az ilyenféle hirdetésekhez valamiféle információ közlést tennék, hogy a felhasználók annak a tudatában nézzék meg a hirdetést vagy vegyék meg azt, hogy nem egy átlagos embertől szármozik, hanem egy nagyobb cégtől.
 	\chapter*{Összegzés}
@@ -426,6 +426,8 @@
 		\textsc{Kusper Gábor}: \emph{Informatikai rendszerek tervezése}, Eger, megtekintve: 2023, 0.8.7.2-es verzió.
 		\bibitem{Kusper Szoftvertesztles}
 		\textsc{Kusper Gábor}: \emph{Szoftvertesztelés}, Eger, 2023, megtekintve: 2024, 2023.10.14-es verzió.
+		\bibitem{KSH}
+		\textsc{KSH}: \url{https://www.ksh.hu/docs/hun/hnk/hnk_2015.xls}, megtekintve: 2023.11.04.
 		\bibitem{MySQL}
 		\textsc{Oracle}: \url{https://dev.mysql.com/doc/refman/8.0/en/what-is-mysql.html}, megtekintve: 2024.02.01.
 		\bibitem{PhpMyAdmin}
@@ -446,30 +448,28 @@
 		\textsc{PHP}: \url{https://www.php.net/docs.php},  megtekintve: 2024.02.17.
 		\bibitem{tailwind}
 		\textsc{Tailwind CSS}: \url{https://tailwindcss.com/}, megtekintve: 2024.02.18.
+		\bibitem{FlowBite}
+		\textsc{FlowBite}: \url{https://flowbite.com/} megtekintve: 2024.02.25.
+		\bibitem{Hatterkep}
+		\textsc{Pixteller}: \url{https://pixteller.com/templates/custom-visuals/simple-background-backgrounds-passion-id1585825}, megtekintve: 2024.02.27.
+		\bibitem{Ikon}
+		\textsc{FontAwesome}: \url{https://fontawesome.com/} megtekintve: 2024.03.01.
 		\bibitem{XAMPP}
 		\textsc{Site Gyaan}: \url{https://www.linkedin.com/pulse/what-xampp-how-does-work-everything-you-need-know-server-site-gyaa}, megtekintve: 2024.03.23.
 		\bibitem{NodeJS}
 		\textsc{NodeJs}: \url{https://nodejs.org/en}, megtekintve: 2024.03.28.
-		\bibitem{Ikon}
-		\textsc{FontAwesome}: \url{https://fontawesome.com/}
-		\bibitem{FlowBite}
-		\textsc{FlowBite}: \url{https://flowbite.com/}
-		\bibitem{KSH}
-		\textsc{KSH}: \url{https://www.ksh.hu/docs/hun/hnk/hnk_2015.xls}
-		\bibitem{Hatterkep}
-		\textsc{Pixteller}: \url{https://pixteller.com/templates/custom-visuals/simple-background-backgrounds-passion-id1585825}
 		\bibitem{Logo}
 		\textsc{Logó}:
 			\begin{itemize}
-				\item \url{https://www.vecteezy.com/vector-art/6361809-car-icon-car-icon-vector-car-icon-simple-sign},
-				\item \url{https://pngtree.com/free-png-vectors/clothes-icon},
-				\item \url{https://hu.pinterest.com/pin/dog-logos--502292164691709590/},
-				\item \url{https://www.vecteezy.com/vector-art/4416880-simple-house-icon-on-white-background},
-				\item \url{https://images.vexels.com/media/users/3/157570/isolated/lists/4b39b362c76ea5a00de62f8ff839b5ed-simple-smartphone-icon.png},
-				\item \url{https://hu.pinterest.com/pin/51650726955966410/},
-				\item \url{https://hu.pinterest.com/pin/578923727087745719/},
-				\item \url{https://static.vecteezy.com/system/resources/thumbnails/017/764/046/small_2x/eps10-black-line-art-sofa-abstract-icon-or-logo-isolated-on-white-background-living-room-furniture-outline-symbol-in-a-simple-flat-trendy-modern-style-for-your-website-design-and-mobile-app-vector.jpg},
-				\item \url{https://depositphotos.com/hu/vector/hand-writing-soccer-ball-football-cartoon-12785922.html}
+				\item \url{https://www.vecteezy.com/vector-art/6361809-car-icon-car-icon-vector-car-icon-simple-sign},  megtekintve: 2024.03.29.
+				\item \url{https://pngtree.com/free-png-vectors/clothes-icon}, megtekintve: 2024.03.29.
+				\item \url{https://hu.pinterest.com/pin/dog-logos--502292164691709590/}, megtekintve: 2024.03.29.
+				\item \url{https://www.vecteezy.com/vector-art/4416880-simple-house-icon-on-white-background}, megtekintve: 2024.03.29.
+				\item \url{https://images.vexels.com/media/users/3/157570/isolated/lists/4b39b362c76ea5a00de62f8ff839b5ed-simple-smartphone-icon.png}, megtekintve: 2024.03.29.
+				\item \url{https://hu.pinterest.com/pin/51650726955966410/}, megtekintve: 2024.03.29.
+				\item \url{https://hu.pinterest.com/pin/578923727087745719/}, megtekintve: 2024.03.29.
+				\item \url{https://static.vecteezy.com/system/resources/thumbnails/017/764/046/small_2x/eps10-black-line-art-sofa-abstract-icon-or-logo-isolated-on-white-background-living-room-furniture-outline-symbol-in-a-simple-flat-trendy-modern-style-for-your-website-design-and-mobile-app-vector.jpg}, megtekintve: 2024.03.29.
+				\item \url{https://depositphotos.com/hu/vector/hand-writing-soccer-ball-football-cartoon-12785922.html}, megtekintve: 2024.03.29.
 			
 			\end{itemize}
 		
