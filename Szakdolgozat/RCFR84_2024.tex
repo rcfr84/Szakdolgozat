@@ -270,6 +270,16 @@
 		\end{itemize}
 	\section{Nézelődő}
 		Ő nem rendelkezik semmilyen jogosultsággal sem, ezért is nincsen egyedi funkciója ennek a szerepkörnek. Ő csak a kategóriákat képes megtekinteni, illetve a meglévő hirdetéseket tudja megnézni. Keresésre és szűrésre is van itt lehetősége, ezekről \aref{egyeb-funkciok}.~alfejezetben olvashat többet.
+	\section{Információ közlés}
+		\begin{figure}[ht!]
+			\centering
+			\includegraphics[height=2cm]{./felhasznaloi/kategoriaUzenet}
+			\includegraphics[height=2cm]{./felhasznaloi/kategoria2}
+			\caption{Információ közlés (Saját készítés)} 
+			\label{informaciokozles}
+		\end{figure}
+		A következőkben szeretném bemutatni azt, hogy az előbbi alszakaszokban említett képernyőn megjelenő üzenet és az egyéb hiba-, vagy információ közlés, hogyan jelennek meg. \Aref{informaciokozles}.~ábrán megtekinthető a képek. Az első képen lévő információ közlés, akkor jelenik meg, amikor a főoldalon lévő kategóriák közül rákattintunk az egyikre és nincsen még olyan kategóriájú hirdetés meg. A másik kép pedig egy új kategória sikeres hozzáadásánál jelenik meg. Sikeres műveletek esetén zöld színű háttérrel jelenik meg az üzenet, sikertelen esetben pedig pirossal. Az első kép és a hozzá hasonlóan megjelenő stílusuk forrása megtekinthető az irodalomjegyzékben, de itt csak behivatkozom a sorszámát. \cite{FlowBite}
+		
 	\section{Egyéb funkciók}\label{egyeb-funkciok}
 		\begin{enumerate}
 			\item \emph{Keresés}: a hirdetéseknél van arra lehetőség, hogy keresni lehessen, ez a hirdetés címe alapján lehetséges. Legalább négy darab karakter megadása szükséges a keresés funkció használatához. Ha nem adunk meg négy darab karaktert, akkor a hiba leírása látható lesz majd. Ha nincsen a keresett szóra keresési találat, akkor az alkalmazás közölni fogja ezt a felhasználóval. Ha pedig a keresés sikerrel zárult, akkor megjeleníti az alkalmazás a hirdetéseket. A \emph{Keresés} szót tartalmazó gomb segítségével történhet meg a keresés funkció végrehajtása.
@@ -361,7 +371,7 @@
 			\emph{php artisan db:seed --class=RoleTableSeeder} .
 		\end{center}
 		
-		\lstinputlisting[caption={A web.php szereplő show metódus útvonala}, label=kod-seeder, style=php]{./fejlesztoi/RoleTableSeeder.php}
+		\lstinputlisting[caption={Jogosultsági szinthez tartozó seeder}, label=kod-seeder, style=php]{./fejlesztoi/RoleTableSeeder.php}
 		
 	\chapter{Üzleti modell}
 		Az én meglátásom szerint az apróhirdetés weboldalak fenntartásához, működéséhez és karbantartásához szükség van némi anyagi forrásra. A következőben szeretném Önnek bemutatni azt, hogy milyen megoldások segítségével tudnám én ezt elképzelni. Azt fontosnak tartom kiemelni, hogy a következő javaslatok közül némelyik opció implementálására az adatbázis alapú webalkalmazásom jelenlegi formájában még nem lenne alkalmas rá.
