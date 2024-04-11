@@ -292,7 +292,7 @@
 	\section{Az alkalmazás felépítése}
 		Ebben az alfejezetben beszeretném mutatni Önnek az alkalmazásom fő komponenseit kódrészletek segítségével a könnyebb megértés reményében. Egy nagyon keveset már megemlítettem korábban \aref{sc-laravel}.~alfejezetben, de nem mindent, most lépésről lépesre elmesélem, hogy hogyan lehetséges megjeleníteni egy konkrét információkat az adatbázisomból.
 	\subsection{Adatbázis kapcsolat létrehozása}
-		Magát az adatbázist többféle módon van lehetőségünk létrehozni, de ezekbe most nem mennék bele. Most itt még azt kell megemlítenem, hogy a projektemben ezt hogyan állítottam be. Ehhez meg kell keresni a projektben a \emph{.env} nevű fájlt és meg kell adni néhány információt. A következőket szükséges megadni.
+		Magát az adatbázishoz való csatlakozást többféle módon van lehetőségünk létrehozni, de ezekbe most bővebben nem mennék bele. Most csak azt a lehetőséget mutatom be, hogy a projektemben ezt én hogyan oldottam meg. Ehhez meg kell keresni a projektben a \emph{.env} nevű fájlt és meg kell adni néhány információt. A következőket szükséges megadni:
 		\begin{enumerate}
 			\item \emph{DB\_CONNECTION} (magyarul: adatbázis kapcsolat): itt magát az adatbázis fajtáját kell megadnunk. Alapértelmezetten MySQL van megadva. 
 			\item \emph{DB\_HOST} (magyarul: adatbázis kiszolgáló): ez az adatbázis IP-címe lenne.
@@ -302,7 +302,7 @@
 			\item \emph{DB\_PASSWORD} (magyarul: jelszó az adatbázishoz): a belépéshez meg kell adnunk még egy jelszót is.
 		\end{enumerate}
 	\subsection{Migráció}
-		A migrációk segítségével tulajdonképpen az adatbázis struktúráját tudjuk definiálni. Van arra lehetőség, hogy egy migrációs fájlt egy parancs segítségével lelehessen generálni struktúra szintjén, de már a benne szükséges mezőket és az esetleges különböző megszorításokat már nekünk kell definiálni. A következő parancs segítségével lehetséges egy migrációs fájlt generálni:
+		A migrációk segítségével tulajdonképpen az adatbázis struktúráját tudjuk definiálni. Minden táblához külön szükséges egy migrációs fájlt létrehozni. Van arra lehetőség, hogy egy migrációs fájlt egy parancs segítségével lelehessen generálni struktúra szintjén, de már a benne szükséges mezőket és az esetleges különböző megszorításokat már nekünk kell definiálni. A következő parancs segítségével lehetséges egy migrációs fájlt generálni:
 		\begin{center} 
 			\emph{php artisan make:migration create\_név\_table} .
 		\end{center}
@@ -310,7 +310,7 @@
 	
 		\lstinputlisting[caption={A hirdetéshez tartozó migráció}, label=kod-migracio, style=php]{./fejlesztoi/hirdetes.php}
 		
-		Látható tehát, hogy egy mezőt úgy szükséges megadni, hogy \emph{\$table-->mező típusa}, majd zárójelbe a mező nevét. A 15.~sorban az elsődleges kulcs megadása látható. Az alatta lévő sorban pedig egy olyan mezőt hoztam létre, ami majd egy másik migrációs fájlból kapja majd meg az értékét, tehát ez egy idegen kulcs. A 25.~sorban pedig az imént említett mezőre így lehetséges hivatkozni. Itt ennek a sornak végén lévő kód az azt jelenti, hogy ha kitörlődik az adott felhasználó, akkor a hirdetés is törlődni fog vele együtt. Alapértelmezetten egyik mező értéke sem lehet nulla, ha azonban szükségünk van rá, akkor meglehet tenni úgy, ahogyan én a 22.~sorban csináltam. Ha elkészültünk a migrációs fájlokkal, akkor a következő parancs segítségével lehet majd végrehajtani azt:
+		Látható tehát, hogy egy mezőt úgy szükséges megadni, hogy \emph{\$table-->mező típusa}, majd zárójelbe a mező nevét. A 2.~sorban az elsődleges kulcs megadása látható. Az alatta lévő sorban pedig egy olyan mezőt hoztam létre, ami majd egy másik táblából kapja majd meg az értékét, tehát ez egy idegen kulcs. A 12.~sorban pedig az imént említett mezőre így lehetséges hivatkozni. Itt ennek a sornak végén lévő kód az azt jelenti, hogy ha kitörlődik az adott felhasználó, akkor a hirdetés is törlődni fog vele együtt. Alapértelmezetten egyik mező értéke sem lehet nulla, ha azonban szükségünk van rá, akkor meglehet tenni úgy, ahogyan én a 9.~sorban csináltam. Ezenkívül látható még a 10.~sorban egy \emph{timestamps} nevű mező definiálása is, ez tulajdonképpen két darab plusz mezőt hoz létre az adott táblában, az egyiknek a neve \emph{created\_at} (magyarul: létrehozás dátuma), a másik pedig \emph{updated\_at} (magyarul: módosítása dátuma). Az utóbbi az adott hirdetés módosítás idejét fogja tartalmazni, míg az előbbi pedig egy hirdetés létrehozásának dátumát. Ennek a két mezőnek az értékük automatikusan kerülnek be az adatbázisba az imént említett két művelet elvégzése után. Ha elkészültünk a migrációs fájlokkal, akkor a következő parancs segítségével lehet majd végrehajtani azt:
 		\begin{center}
 			\emph{php artisan migrate} .
 		\end{center}
