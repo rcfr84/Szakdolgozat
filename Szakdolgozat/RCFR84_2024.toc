@@ -44,10 +44,10 @@
 \select@language {magyar} \contentsline {subsection}{\numberline {5.1.6}Blade}{31}{subsection.5.1.6}%
 \select@language {magyar} \contentsline {section}{\numberline {5.2}Jogosultságkezelés}{32}{section.5.2}%
 \select@language {magyar} \contentsline {section}{\numberline {5.3}Seeder}{32}{section.5.3}%
-\select@language {magyar} \contentsline {chapter}{\numberline {6}Üzleti modell}{33}{chapter.6}%
-\select@language {magyar} \contentsline {section}{\numberline {6.1}Online reklámok}{33}{section.6.1}%
-\select@language {magyar} \contentsline {section}{\numberline {6.2}Kiemelés}{33}{section.6.2}%
-\select@language {magyar} \contentsline {section}{\numberline {6.3}Együttműködések}{34}{section.6.3}%
-\select@language {magyar} \contentsline {chapter}{Összegzés}{35}{chapter*.10}%
-\select@language {magyar} \contentsline {chapter}{Függelékek}{36}{chapter*.11}%
-\select@language {magyar} \contentsline {chapter}{Irodalomjegyz\'ek}{40}{chapter*.14}%
+\select@language {magyar} \contentsline {chapter}{\numberline {6}Üzleti modell}{34}{chapter.6}%
+\select@language {magyar} \contentsline {section}{\numberline {6.1}Online reklámok}{34}{section.6.1}%
+\select@language {magyar} \contentsline {section}{\numberline {6.2}Kiemelés}{34}{section.6.2}%
+\select@language {magyar} \contentsline {section}{\numberline {6.3}Együttműködések}{35}{section.6.3}%
+\select@language {magyar} \contentsline {chapter}{Összegzés}{36}{chapter*.10}%
+\select@language {magyar} \contentsline {chapter}{Függelékek}{37}{chapter*.11}%
+\select@language {magyar} \contentsline {chapter}{Irodalomjegyz\'ek}{41}{chapter*.14}%

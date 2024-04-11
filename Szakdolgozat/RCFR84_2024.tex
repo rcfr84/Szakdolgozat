@@ -265,7 +265,7 @@
 			\item \emph{Név}: mező nem lehet hosszabb, mint negyven darab karakter.
 			\item \emph{Leírás}: mező nem lehet hosszabb, mint ezer darab karakter.
 			\item \emph{Telefonszám}:  mező nem lehet hosszabb, mint húsz darab karakter.
-			\item \emph{Ár}: a mező értéke valamivel több lehet, mint két milliárd.
+			\item \emph{Ár}: a mező értéke valamivel több lehet, mint két milliárd és nagyobbnak kell lennie, mint nulla.
 			\item \emph{Képek}: ebben az esetben a képek maximum tíz megabájtnyi méretűek lehetnek, ez egy darabra értetendő, illetve a feltölthető kép formátumára is tettem bele további megszorításokat.
 		\end{itemize}
 	\section{Nézelődő}
@@ -301,7 +301,7 @@
 			\item \emph{DB\_USERNAME} (magyarul: felhasználónév az adatbázishoz): meg kell adnunk egy felhasználónevet, amelyet az alkalmazás használ a belépéshez.
 			\item \emph{DB\_PASSWORD} (magyarul: jelszó az adatbázishoz): a belépéshez meg kell adnunk még egy jelszót is.
 		\end{enumerate}
-	\subsection{Migráció}
+	\subsection{Migráció}\label{sb-migracio}
 		A migrációk segítségével tulajdonképpen az adatbázis struktúráját tudjuk definiálni. Minden táblához külön szükséges egy migrációs fájlt létrehozni. Van arra lehetőség, hogy egy migrációs fájlt egy parancs segítségével lelehessen generálni struktúra szintjén, de már a benne szükséges mezőket és az esetleges különböző megszorításokat már nekünk kell definiálni. A következő parancs segítségével lehetséges egy migrációs fájlt generálni:
 		\begin{center} 
 			\emph{php artisan make:migration create\_név\_table} .
@@ -315,7 +315,7 @@
 			\emph{php artisan migrate} .
 		\end{center}
 	\subsection{Modell}
-		A Laravel már tartalmazza az \emph{Eloquent}-et, ami egy ORM (angoul: Object-Relational Mapping, magyarul: objektum-relációs leképzés). Amikor ezt használjuk, akkor minden egyes adatbázis táblához tartozik egy modell is, aminek a segítségével interaktálni tudunk a táblával. Az ilyenféle modellek használatával lehetséges beszúrni, módosítani vagy törölni az adott adatbázis táblából. Itt a modellekben még megadhatunk különféle metódusokat is és még itt van lehetőség az \emph{Eloquent} kapcsolatok megadására is. Ezekre még majd kitérek a példa bemutatása során.\cite{Laravel}
+		A Laravel már tartalmazza az úgynevezett \emph{Eloquent}-et, ami egy ORM (angoul: Object-Relational Mapping, magyarul: objektum-relációs leképzés). Amikor ezt használjuk, akkor minden egyes adatbázis táblához tartozik egy modell is, aminek a segítségével interaktálni tudunk a táblával. Az ilyenféle modellek használatával lehetséges beszúrni, módosítani vagy törölni az adott adatbázis táblából. Itt a modellekben még megadhatunk különféle metódusokat is és még itt van lehetőség az \emph{Eloquent} kapcsolatok megadására is. Ezekre még majd kitérek a példa bemutatása során.\cite{Laravel}
 		
 		\lstinputlisting[caption={A hirdetéshez tartozó modell}, label=kod-modell, style=php]{./fejlesztoi/hirdetesModell.php}
 		
@@ -329,7 +329,7 @@
 	
 		\lstinputlisting[caption={A hirdetéshez tartozó kontrollerben lévő metódus}, label=kod-kontoller, style=php]{./fejlesztoi/hirdetesShow.php}
 	
-			A következőben röviden megmagyarázom \aref{kod-kontoller}.~kódot. Látható, hogy a hirdetéshez tartozó kontrollerben található a metódus, ami paraméterként kér egy id-t, az id segítségével tudom, hogy pontosan melyik hirdetést szeretném megjeleníteni. Ezután megkeressem az adott bekért id alapján a hirdetést, majd leellenőrzöm, hogy egyáltalán létezik-e, ha nem akkor hibát adok vissza, amit majd a blade tudunk majd felhasználni, ahhoz, hogy értesítsem a felhasználót a hibáról. Végül pedig, ha nincsen hiba, akkor megjelenítem egy másik bladen a felhasználó számára. A \emph{compact} nevű metódusra, azért van szükségem, hogy a blade-n majd megjeleníteni tudjam a kívánt hirdetést. A bladek-ről többet \aref{sc-blade}.~alfejezetben tudhat meg.  Egy kontroller létrehozása a következő parancs segítségével történhet meg:
+			A következőben röviden megmagyarázom \aref{kod-kontoller}.~kódot. Látható, hogy a hirdetéshez tartozó kontrollerben található a metódus, ami paraméterként kér egy id-t, az id segítségével tudom, hogy pontosan melyik hirdetést szeretném megjeleníteni. Ezután megkeressem az adott bekért id alapján a hirdetést, majd leellenőrzöm, hogy egyáltalán létezik-e, ha nem akkor hibát adok vissza, amit majd a blade tudunk majd felhasználni, ahhoz, hogy értesítsem a felhasználót a hibáról. Végül pedig, ha nincsen hiba, akkor megjelenítem egy másik blade-n a felhasználó számára. A \emph{compact} nevű metódusra, azért van szükségem, hogy a blade-n majd megjeleníteni tudjam a kívánt hirdetést. A bladek-ről többet \aref{sc-blade}.~alfejezetben tudhat meg.  Egy kontroller létrehozása a következő parancs segítségével történhet meg:
 		\begin{center} 
 			\emph{php artisan make:controller névController} .
 		\end{center}
@@ -356,7 +356,12 @@
 		\cite{Laravel}
 		
 	\section{Seeder}
-		A seeder-ek segítségével van lehetőség az adatbázisban lévő táblák adatait feltölteni gyorsan és egyszerűen. Én ezt a lehetőséget azért használtam, mivel például a manuális tesztelés elvégzése közben a hirdetések törlésének a tesztelését végeztem el és, ha ezek elfogytak, akkor egy parancs lefuttatásának a segítségével újra megjelentek az adatbázisomban, amivel sok időt tudtam megspórolni, mivel nem kellett egyenként hozzáadnom a hirdetéseket. Ezenfelül már rendelkezik éles, valós tesztadatokkal, ami az általam készített alkalmazásom bemutatása során hasznos lehet.
+		A \emph{seeder}-ek segítségével van lehetőség az adatbázisban lévő táblák adatait feltölteni gyorsan és egyszerűen. Én ezt a lehetőséget azért használtam, mivel például a manuális tesztelés elvégzése közben a hirdetések törlésének a tesztelését végeztem el és, ha ezek elfogytak, akkor egy parancs lefuttatásának a segítségével újra megjelentek az adatbázisomban, amivel sok időt tudtam megspórolni, mivel nem kellett egyenként hozzáadnom a hirdetéseket. Ezenfelül már rendelkezik éles, valós tesztadatokkal, ami az általam készített alkalmazásom bemutatása során hasznos lehet. \Aref{kod-seeder}.~kódrészleten látható rá egy seeder az általam készített alkalmazásból. Ennek a rövid magyarázata következik most. Ennek a seeder-nek a segítségével a role-kat, azaz a különböző felhasználói jogosultsági szint elnevezéseit fogja majd beszúrni a \emph{roles} nevezetű adatbázis táblába. Látható, hogy a \emph{\$roles} elnevezésű tömbben megadom a két elérhető jogosultsági szint neveit. Majd ezt követően pedig egy foreach ciklus segítségével hozzáadom a táblához a már előbb említett deklarált tömbben szereplő neveket és a \emph{created\_at} és \emph{updated\_at} mezőket is, az utóbbi kettőnek az értékét pedig beállítom a jelenlegi dátumra, időre. Erről a két mezőről már tettem említést a \aref{sb-migracio}.~található részben. Ahhoz, hogy működőképes legyen, még annyit szükséges elvégezni, hogy a \emph{DatabaseSeeder} nevezetű fájlban hozzá kell adni egy referenciát az imént elkészített osztályhoz a \emph{call} metóduson belül. Annak az érdekében, hogy bekerüljön az adatbázisba, ahhoz szükséges még egy parancs lefuttatása is. Többféleképpen is lehetséges ezt elvégezni, lehet úgy is, hogy egyszerre az összes seeder kerüljön lefuttatása vagy úgy, hogy csak egy darab. Az utóbbit a következőképpen lehet megadni:
+		\begin{center}
+			\emph{php artisan db:seed --class=RoleTableSeeder} .
+		\end{center}
+		
+		\lstinputlisting[caption={A web.php szereplő show metódus útvonala}, label=kod-seeder, style=php]{./fejlesztoi/RoleTableSeeder.php}
 		
 	\chapter{Üzleti modell}
 		Az én meglátásom szerint az apróhirdetés weboldalak fenntartásához, működéséhez és karbantartásához szükség van némi anyagi forrásra. A következőben szeretném Önnek bemutatni azt, hogy milyen megoldások segítségével tudnám én ezt elképzelni. Azt fontosnak tartom kiemelni, hogy a következő javaslatok közül némelyik opció implementálására az adatbázis alapú webalkalmazásom jelenlegi formájában még nem lenne alkalmas rá.
