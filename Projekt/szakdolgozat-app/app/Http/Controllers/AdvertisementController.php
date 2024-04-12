@@ -41,8 +41,8 @@ class AdvertisementController extends Controller
     {
         $this->authorize('create', Advertisement::class);
 
-        $categories = Category::all();
-        $counties = County::all();
+        $categories = Category::orderBy('name')->get();
+        $counties = County::orderBy('name')->get();
         $cities = [];
 
         return view('advertisements.create', compact('categories', 'counties', 'cities'));
@@ -50,7 +50,7 @@ class AdvertisementController extends Controller
 
     public function getCitiesByCounty($countyId)
     {
-        $cities = City::where('county_id', $countyId)->get();
+        $cities = City::where('county_id', $countyId)->orderBy('name')->get();
         return response()->json($cities);
     }
 
@@ -95,7 +95,7 @@ class AdvertisementController extends Controller
             }
         }
     
-        return redirect()->route('advertisements.index')->with('status', 'Sikeres hozzáadás!');
+        return redirect()->route('advertisements.own')->with('status', 'Sikeres hozzáadás!');
     }
 
     /**
@@ -129,31 +129,36 @@ class AdvertisementController extends Controller
 
         $advertisement->load('pictures');
 
-        $categories = Category::all();
-        $counties = County::all();
-        $cities = City::where('county_id', $advertisement->county_id)->get();
+        $categories = Category::orderBy('name')->get();
+        $counties = County::orderBy('name')->get();
+        $cities = City::where('county_id', $advertisement->county_id)->orderBy('name')->get();
 
         return view('advertisements.edit', compact('advertisement', 'counties', 'cities', 'categories'));
     }
+
     public function editCountyAndCity(Request $request, $id)
     {
         auth()->user();
         
         $advertisement = Advertisement::find($id);
         $this->authorize('editCountyAndCity', $advertisement);
+
         if ($advertisement === null) 
         {
             return redirect()->route('advertisements.own')->with('error', 'Nincsen ilyen hirdetés!');
         }
-        $counties = County::all();
+
+        $counties = County::orderBy('name')->get();
         $cities = [];
 
         return view('advertisements.countyCityEdit', compact('cities', 'advertisement', 'counties'));
     }
+
     public function updateCountyAndCity(Request $request, $id)
     {
         $advertisement = Advertisement::find($id);
         $this->authorize('updateCountyAndCity', $advertisement);
+        
         $advertisement->city_id = $request->city_id;
         if ($advertisement === null) 
         {
@@ -235,8 +240,8 @@ class AdvertisementController extends Controller
         if ($this->authorize('destroy', $advertisement))
         {
             $advertisement->delete();
-            return redirect()->route('advertisements.own')->with('status', 'Sikeres törlés!');
-        } 
+            return redirect()->route('advertisements.index')->with('status', 'Sikeres törlés!');
+        }
         
     }
 
@@ -249,7 +254,7 @@ class AdvertisementController extends Controller
             return redirect()->route('categories.index')->with('error', 'Nincsen ilyen kategória!');
         }
 
-        $advertisements = $category->advertisements()->paginate(15);
+        $advertisements = $category->advertisements()->orderByDesc('created_at')->paginate(15);
 
         return view('categories.show', compact('advertisements', 'category'));
     }
@@ -261,7 +266,7 @@ class AdvertisementController extends Controller
         ]);
 
         $search = $request->search;
-        $advertisements = Advertisement::where('title', 'LIKE', "%{$search}%")->paginate(15);
+        $advertisements = Advertisement::where('title', 'LIKE', "%{$search}%")->orderByDesc('created_at')->paginate(15);
 
         return view('advertisements.search', compact('advertisements'));
     }
@@ -273,7 +278,7 @@ class AdvertisementController extends Controller
         ]);
 
         $search = $request->search;
-        $advertisements = Advertisement::where('title', 'LIKE', "%{$search}%")->where('user_id', Auth::user()->user_id)->paginate(15);
+        $advertisements = Advertisement::where('title', 'LIKE', "%{$search}%")->where('user_id', Auth::user()->user_id)->orderByDesc('created_at')->paginate(15);
 
         return view('advertisements.searchOwnList', compact('advertisements'));
     }
@@ -342,8 +347,7 @@ class AdvertisementController extends Controller
             $query->orderBy('price', 'desc');
         }
     
-    
-        $advertisements = $query->paginate(15)->appends(request()->query());
+        $advertisements = $query->orderByDesc('created_at')->paginate(15)->appends(request()->query());
     
         return view('advertisements.filter', compact('advertisements'));
     }

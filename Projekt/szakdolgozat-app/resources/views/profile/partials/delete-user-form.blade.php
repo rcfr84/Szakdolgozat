@@ -12,7 +12,7 @@
                         </h2>
 
                         <p class="mt-2 text-sm text-gray-600">
-                            {{ __('Amint a fiókodat törlöd, az összes adatod véglegesen törlésre fog majd kerülni. Mielőtt törölnéd a fiókodat, kérjük, töltsd le azokat az adatokat vagy információkat, amelyeket meg szeretnél őrizni.') }}
+                            {{ __('Amint a fiókodat törlöd, az összes adatod véglegesen törlésre fog majd kerülni.') }}
                         </p>
                     </header>
 
@@ -33,7 +33,7 @@
                             </h2>
 
                             <p class="mt-1 text-sm text-gray-600">
-                                {{ __('Miután a fiókod törlésre kerül, az összes adata véglegesen törlődik. Kérjük, add meg a jelszavadat annak megerősítéséhez, hogy véglegesen törölni szeretnéd a fiókodat.') }}
+                                {{ __('Add meg a jelszavadat annak a megerősítéséhez, hogy véglegesen törölhesd a fiókodat.') }}
                             </p>
 
                             <x-input-label for="password" value="{{ __('Jelszó') }}" class="sr-only" />

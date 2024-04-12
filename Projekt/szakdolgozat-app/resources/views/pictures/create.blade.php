@@ -15,14 +15,14 @@
                         @for ($i = 1; $i <= $remainingPicture; $i++)
                             <div class="mb-4">
                                 <label for="pictures" class="form-label font-bold">Kép {{ $i }}</label>
-                                <input type="file" class="form-input w-full" name="pictures[]" id="pictures{{ $i }}">
+                                <input type="file" class="form-input w-full border-gray-300 focus:border-sky-500 focus:ring-sky-500 rounded-md shadow-sm" name="pictures[]" id="pictures{{ $i }}">
                             </div>
                         @endfor
 
                         @if ($remainingPicture > 0)
                             @include('pictures.components.createPicture')
                         @else
-                            <p><b>Maximum csak 5 kép engedélyezett.</b></p>
+                            @include('pictures.components.max5pictureMessage')
                         @endif
                     </form>
                     @include('pictures.components.errorMessage')

@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         data.forEach(function (city) {
                             var option = document.createElement("option");
                             option.value = city.city_id;
-                            option.text = city.name;
+                            option.text = city.name.length > 35 ? city.name.slice(0, 35) : city.name;
                             citySelect.appendChild(option);
                         });
                     })

@@ -29,6 +29,11 @@ class PictureController extends Controller
 
         $advertisement = Advertisement::find($advertisementId);
 
+        if (!$advertisement)
+        {
+            return redirect()->back()->with('error', 'Nincsen ilyen hirdetés!');
+        }
+
         $this->authorize('create', [Picture::class, $advertisement]);
 
         return view('pictures.create', compact('advertisement'));
@@ -45,7 +50,7 @@ class PictureController extends Controller
 
         if (!$advertisement)
         {
-            return redirect()->back()->with('error', 'Nincsne ilyen hirdetés!');
+            return redirect()->back()->with('error', 'Nincsen ilyen hirdetés!');
         }
         $this->authorize('store', [Picture::class, $advertisement]);
 

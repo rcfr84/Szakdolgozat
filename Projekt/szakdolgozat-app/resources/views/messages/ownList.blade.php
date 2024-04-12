@@ -18,26 +18,27 @@
                                 @php $conversations = []; @endphp
                                 @foreach($messages as $message)
                                     @php
-                                        $conversationKey = $message->sender_id < $message->receiver_id ? $message->sender_id . '-' . $message->receiver_id : $message->receiver_id . '-' . $message->sender_id;
+                                        $senderId = $message->sender_id;
+                                        $receiverId = $message->receiver_id;
+                                        $conversationKey = $senderId < $receiverId ? "$senderId-$receiverId" : "$receiverId-$senderId";
                                     @endphp
-
                                     @if(!in_array($conversationKey, $conversations))
                                         <tr>
-                                            <td class="px-4 py-2">
+                                            <td class="px-4 py-2 max-w-[300px] break-words">
                                                 @if($message->sender->role->name === 'admin')
                                                     <span class="text-green-500">{{ $message->sender->name }}</span>
                                                 @else
                                                     {{ $message->sender->name }}
                                                 @endif
                                             </td>
-                                            <td class="px-4 py-2">
+                                            <td class="px-4 py-2 max-w-[300px] break-words">
                                                 @if($message->receiver->role->name === 'admin')
                                                     <span class="text-green-500">{{ $message->receiver->name }}</span>
                                                 @else
                                                     {{ $message->receiver->name }}
                                                 @endif
                                             </td>
-                                            <td class="px-4 py-2" style="max-width: 300px; word-wrap: break-word;">{{ $message->getLastMessage()->message }}</td>
+                                            <td class="px-4 py-2 max-w-[300px] break-words">{{ $message->getLastMessage()->message }}</td>
                                             @include('messages.components.showConversation')
                                         </tr>
                                         @php $conversations[] = $conversationKey @endphp
@@ -46,7 +47,7 @@
                             </tbody>
                         </table>
                     @else
-                        <div class="text-center mb-4 text-lg font-bold">Nincsen még üzeneteid.</div>
+                        @include('messages.components.messageNotFoundYet')
                     @endif
                 </div>
             </div>

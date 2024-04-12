@@ -13,7 +13,7 @@ class CountyController extends Controller
     public function index()
     {
         $this->authorize('index', County::class);
-        $counties = County::all();
+        $counties = County::orderBy('name')->get();
 
         return view('counties.list', compact('counties'));
     }
@@ -61,7 +61,7 @@ class CountyController extends Controller
         $county = County::find($countyId);
         if (!$county) 
         {
-            return redirect()->route('counties.index')->with('error', 'Nem található a keresett megye!');
+            return redirect()->route('counties.index')->with('error', 'Nem található a keresett vármegye!');
         }
         $this->authorize('edit', County::class);
 
@@ -76,7 +76,7 @@ class CountyController extends Controller
         $county = County::find($countyId);
         if (!$county) 
         {
-            return redirect()->route('counties.index')->with('error', 'Nem található a keresett megye!');
+            return redirect()->route('counties.index')->with('error', 'Nem található a keresett vármegye!');
         }
         $this->authorize('update', County::class);
         $request->validate([
@@ -96,7 +96,7 @@ class CountyController extends Controller
         $county = County::find($countyId);
         if (!$county) 
         {
-            return redirect()->route('counties.index')->with('errorc', 'Nem található a keresett megye!');
+            return redirect()->route('counties.index')->with('errorc', 'Nem található a keresett vármegye!');
         }
         $this->authorize('destroy', County::class);
 

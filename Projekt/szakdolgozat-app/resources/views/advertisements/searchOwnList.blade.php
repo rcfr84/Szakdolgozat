@@ -6,14 +6,14 @@
                 @include('components.statusAndError')
                 <div class="bg-white p-6 rounded-lg shadow-md">
                     @if ($advertisements->isEmpty())
-                        <div class="text-center mb-4 text-lg font-bold">Nincs találat.</div>
+                        @include('components.searchNotFound')
                     @else
-                    <div class="text-center mb-4 text-lg font-bold"> {{$advertisements->total()}} db találat.</div>
+                        @include('advertisements.components.totalAd')
                     <table class="table-auto w-full">
                         <thead>
                             <tr>
-                                <th class="px-4 py-2" style="width: 150px; height: 200px;">Kép</th>
-                                <th class="px-4 py-2" style="width: 150px;">Cím</th>
+                                <th class="px-4 py-2">Kép</th>
+                                <th class="px-4 py-2">Cím</th>
                                 <th class="px-4 py-2">Város</th>
                                 <th class="px-4 py-2">Vármegye</th>
                                 <th class="px-4 py-2">Kategória</th>
@@ -25,14 +25,14 @@
                         <tbody>
                             @forelse ($advertisements as $advertisement)
                                 <tr>
-                                    <td class="px-4 py-2 text-center">
+                                    <td class="px-4 py-2 text-center max-w-[150px]">
                                         @if ($advertisement->pictures->isNotEmpty())
-                                            <img src="{{ asset('storage/' . $advertisement->pictures->first()->src) }}" alt="Kép" style="width: auto; height: auto; display: block; margin: 0 auto;">
+                                            <img src="{{ asset('storage/' . $advertisement->pictures->first()->src) }}" alt="Kép" class="h-32 w-32 object-contain">
                                         @else
                                             <span>Nincs kép</span>
                                         @endif
                                     </td>
-                                    <td class="px-4 py-2 break">{{ $advertisement->title }}</td>
+                                    <td class="px-4 py-2 max-w-[150px] break-words">{{ $advertisement->title }}</td>
                                     <td class="px-4 py-2">{{ $advertisement->city->name}}</td>
                                     <td class="px-4 py-2">{{ $advertisement->city->county->name }}</td>
                                     <td class="px-4 py-2">{{ $advertisement->category->name }}</td>
@@ -41,10 +41,7 @@
                                     <td class="px-4 py-2 break">{{ $advertisement->mobile_number }} </td>
                                     @include('advertisements.components.editAndDelete')
                                 </tr>
-                            @empty
-                                <tr>
-                                    <td colspan="10" class="text-center mb-4 text-lg font-bold">Nincs még hirdetésed.</td>
-                                </tr>
+                            @empty   
                             @endforelse
                         </tbody>
                     </table>

@@ -9,14 +9,13 @@
                         <thead>
                             <tr>
                                 <th class="px-4 py-2">Kép</th>
-                                <th class="px-4 py-2"></th>
                             </tr>
                         </thead>
                         <tbody>
                             @foreach ($advertisementPictures as $picture)
                             <tr>
                                 <td class="px-4 py-2">
-                                    <img src="{{ asset('storage/' . $picture->src) }}" alt="Kép" style="width: 8cm; height: auto; display: block; margin-left: auto; margin-right: auto;">
+                                    <img src="{{ asset('storage/' . $picture->src) }}" alt="Kép" class="h-40 w-auto mx-auto mb-1 block">
                                 </td>
                                 @include('pictures.components.delete')
                             </tr>

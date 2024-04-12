@@ -6,9 +6,9 @@
                 @include('components.statusAndError')
                 <div class="bg-white p-6 rounded-lg shadow-md">
                     @if($names->isEmpty())
-                        <div class="text-center mb-4 text-lg font-bold">Nincs találat.</div>
+                        @include('components.searchNotFound')
                     @else
-                        <div class="text-center mb-4 text-lg font-bold"> {{$names->total()}} db találat.</div>
+                        <div class="text-center mb-4 text-lg font-bold">@include('users.components.userCountForSearch')</div>
                             <table class="table-auto w-full">
                                 <thead>
                                     <tr>
@@ -18,7 +18,7 @@
                                 <tbody>
                                     @foreach ($names as $name)
                                         <tr>
-                                            <td class="px-4 py-2" style="max-width: 300px; word-wrap: break-word;">{{ $name->name }}</td>
+                                            <td class="px-4 py-2 max-w-[300px] break-words">{{ $name->name }}</td>
                                             <td class="px-4 py-2">
                                                 <form method="POST" action="{{ route('users.destroy', ['userId' => $name->user_id])}}">
                                                     @csrf

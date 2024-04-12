@@ -3,8 +3,8 @@ describe('template spec', () => {
 
     cy.visit('http://127.0.0.1:8000/advertisements/create')
 
-    cy.get('input[id=email]').type('v@gmail.com')
-    cy.get('input[id=password]').type('12345678')
+    cy.get('input[id=email]').type('toth.jozsef@gmail.com')
+    cy.get('input[id=password]').type('password')
     cy.contains('Bejelentkezés').click()
 
     cy.get('select[id=countySelect]').select('Heves vármegye')
@@ -23,7 +23,8 @@ describe('template spec', () => {
 
     cy.contains('Hozzáadás').click()
     
-    cy.location('href').should('eq', 'http://127.0.0.1:8000/advertisements')
+    cy.location('href').should('eq', 'http://127.0.0.1:8000/advertisements/own')
+    cy.get('.bg-green-500').should('be.visible').contains('Sikeres hozzáadás!').should('have.length', 1);
     
   })
 })

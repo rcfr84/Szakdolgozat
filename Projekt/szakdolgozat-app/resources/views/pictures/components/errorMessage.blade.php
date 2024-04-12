@@ -7,7 +7,7 @@
         <div>
             <span class="font-medium">Hiba történt, lehetséges okok:</span>
             <ul class="mt-1.5 list-disc list-inside">
-                <li>A képek nem jó formátumban vannak vagy nem lehet nagyobbak 10 megabájtnál.</li>
+                <li>A képek nem jó formátumban vannak vagy nem lehet nagyobbak 10 megabájtnál!</li>
             </ul>
         </div>
     </div>
