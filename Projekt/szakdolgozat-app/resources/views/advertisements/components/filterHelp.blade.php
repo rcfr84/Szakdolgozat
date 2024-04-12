@@ -1,6 +1,6 @@
 <div class="flex flex-col items-center justify-center">
     <label>
-        <input type="checkbox" id="filterCheckbox"> Szűrés megjelenítése
+        <input type="checkbox" id="filterCheckbox" class="rounded border-gray-300 text-sky-500 shadow-sm focus:ring-sky-500"> Szűrés megjelenítése
     </label>
     <div id="filterSection" style="display: none;">
         <form action="{{ route('advertisements.filter') }}" method="GET" class="mb-4">

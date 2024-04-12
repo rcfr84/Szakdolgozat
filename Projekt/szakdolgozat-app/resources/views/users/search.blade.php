@@ -8,7 +8,7 @@
                     @if($names->isEmpty())
                         @include('components.searchNotFound')
                     @else
-                        <div class="text-center mb-4 text-lg font-bold"> {{$names->total()}} db találat.</div>
+                        <div class="text-center mb-4 text-lg font-bold">@include('users.components.userCountForSearch')</div>
                             <table class="table-auto w-full">
                                 <thead>
                                     <tr>
