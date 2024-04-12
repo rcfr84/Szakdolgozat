@@ -14,7 +14,7 @@ class CityController extends Controller
      */
     public function index($countyId)
     {
-        $cities = City::where('county_id', $countyId)->get();
+        $cities = City::where('county_id', $countyId)->orderBy('name')->get();
         
         if ($cities->count() === 0) 
         {

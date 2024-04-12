@@ -41,8 +41,8 @@ class AdvertisementController extends Controller
     {
         $this->authorize('create', Advertisement::class);
 
-        $categories = Category::all();
-        $counties = County::all();
+        $categories = Category::orderBy('name')->get();
+        $counties = County::orderBy('name')->get();
         $cities = [];
 
         return view('advertisements.create', compact('categories', 'counties', 'cities'));
@@ -50,7 +50,7 @@ class AdvertisementController extends Controller
 
     public function getCitiesByCounty($countyId)
     {
-        $cities = City::where('county_id', $countyId)->get();
+        $cities = City::where('county_id', $countyId)->orderBy('name')->get();
         return response()->json($cities);
     }
 
@@ -129,9 +129,9 @@ class AdvertisementController extends Controller
 
         $advertisement->load('pictures');
 
-        $categories = Category::all();
-        $counties = County::all();
-        $cities = City::where('county_id', $advertisement->county_id)->get();
+        $categories = Category::orderBy('name')->get();
+        $counties = County::orderBy('name')->get();
+        $cities = City::where('county_id', $advertisement->county_id)->orderBy('name')->get();
 
         return view('advertisements.edit', compact('advertisement', 'counties', 'cities', 'categories'));
     }
@@ -148,7 +148,7 @@ class AdvertisementController extends Controller
             return redirect()->route('advertisements.own')->with('error', 'Nincsen ilyen hirdetés!');
         }
 
-        $counties = County::all();
+        $counties = County::orderBy('name')->get();
         $cities = [];
 
         return view('advertisements.countyCityEdit', compact('cities', 'advertisement', 'counties'));

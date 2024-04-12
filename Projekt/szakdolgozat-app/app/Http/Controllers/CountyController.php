@@ -13,7 +13,7 @@ class CountyController extends Controller
     public function index()
     {
         $this->authorize('index', County::class);
-        $counties = County::all();
+        $counties = County::orderBy('name')->get();
 
         return view('counties.list', compact('counties'));
     }

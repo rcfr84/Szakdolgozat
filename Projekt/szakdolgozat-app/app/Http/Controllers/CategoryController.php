@@ -12,7 +12,7 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        $categories = Category::all();
+        $categories = Category::orderBy('name')->get();
         return view('categories.list', compact('categories'));
     }
 
@@ -117,7 +117,7 @@ class CategoryController extends Controller
     public function action()
     {
         $this->authorize('action', Category::class);
-        $categories = Category::all();
+        $categories = Category::orderBy('name')->get();
         
         return view('categories.index', compact('categories'));
     }
