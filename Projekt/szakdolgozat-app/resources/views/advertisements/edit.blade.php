@@ -31,7 +31,7 @@
                             @foreach ($advertisement->pictures as $key => $picture)
                                 <div class="grid">
                                     <a href="{{ asset('storage/' . $picture->src) }}" data-lightbox="advertisement" data-title="Kép {{ $key + 1 }}">
-                                        <img src="{{ asset('storage/' . $picture->src) }}" alt="Kép" style="width: 10cm; height: auto; display: block; margin-left: auto; margin-right: auto; margin-bottom: 5px">
+                                        <img src="{{ asset('storage/' . $picture->src) }}" alt="Kép" class="h-40 w-auto mx-auto mb-1 block">
                                     </a>
                                 </div>
                             @endforeach

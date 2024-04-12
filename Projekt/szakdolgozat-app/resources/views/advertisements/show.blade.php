@@ -14,7 +14,7 @@
                                     <div class="grid grid-cols-5 gap-2">
                                         @foreach ($advertisement->pictures as $i => $picture)    
                                             <a href="{{ asset('storage/' . $picture->src) }}" data-title="Image {{ $i + 1 }}">
-                                                <img src="{{ asset('storage/' . $picture->src) }}" alt="Kép" style="width: 100%; height: auto; object-fit: cover; display: block; margin: 0 auto;" class="max-w-full rounded-lg">
+                                                <img src="{{ asset('storage/' . $picture->src) }}" alt="Kép" class="max-w-full h-auto object-cover block mx-auto rounded-lg">
                                             </a>
                                         @endforeach
                                     </div>

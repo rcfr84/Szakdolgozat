@@ -13,7 +13,7 @@
                             <select class="form-select w-full" name="county_id" id="countySelect">
                                 <option value="">Válassz vármegyét</option>
                                 @foreach ($counties as $county)
-                                    <option value="{{ $county->county_id }}">{{ $county->name }}</option>
+                                    <option value="{{ $county->county_id }}">{{ substr($county->name, 0, 35) }}</option>
                                 @endforeach
                             </select>
                         </div>

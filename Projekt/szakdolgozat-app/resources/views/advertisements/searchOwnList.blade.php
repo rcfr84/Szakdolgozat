@@ -27,7 +27,7 @@
                                 <tr>
                                     <td class="px-4 py-2 text-center max-w-[150px]">
                                         @if ($advertisement->pictures->isNotEmpty())
-                                            <img src="{{ asset('storage/' . $advertisement->pictures->first()->src) }}" alt="Kép" style="width: auto; height: auto; display: block; margin: 0 auto;">
+                                            <img src="{{ asset('storage/' . $advertisement->pictures->first()->src) }}" alt="Kép" class="h-32 w-32 object-contain">
                                         @else
                                             <span>Nincs kép</span>
                                         @endif
