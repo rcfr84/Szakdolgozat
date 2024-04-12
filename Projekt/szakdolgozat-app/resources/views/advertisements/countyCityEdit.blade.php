@@ -10,7 +10,7 @@
                         @method('PUT')
                         <div class="mb-4">
                             <label for="countySelect" class="form-label font-bold">Vármegye</label>
-                            <select class="form-select w-full" name="county_id" id="countySelect">
+                            <select class="form-select w-full border-gray-300 focus:border-sky-500 focus:ring-sky-500 rounded-md shadow-sm" name="county_id" id="countySelect">
                                 <option value="">Válassz vármegyét</option>
                                 @foreach ($counties as $county)
                                     <option value="{{ $county->county_id }}">{{ substr($county->name, 0, 35) }}</option>
@@ -19,7 +19,7 @@
                         </div>
                         <div class="mb-4">
                             <label for="citySelect" class="form-label font-bold">Város</label>
-                            <select class="form-select w-full" name="city_id" id="citySelect">
+                            <select class="form-select w-full border-gray-300 focus:border-sky-500 focus:ring-sky-500 rounded-md shadow-sm" name="city_id" id="citySelect">
                                 <option value="">Válassz várost</option>
                             </select>
                         </div>

@@ -19,7 +19,7 @@
                         </div>                        
                         <div class="mb-4">
                             <label class="form-label font-bold">Kategória</label>
-                            <select class="form-control w-full" name="category_id" id="category">
+                            <select class="form-control w-full border-gray-300 focus:border-sky-500 focus:ring-sky-500 rounded-md shadow-sm" name="category_id" id="category">
                                 <option value="">Válassz kategóriát</option>
                                 @foreach ($categories as $category)
                                     <option value="{{ $category->category_id }}" {{ $category->category_id == $advertisement->category_id ? 'selected' : '' }}>{{ $category->name }}</option>
@@ -39,19 +39,19 @@
                                               
                         <div class="mb-4">
                             <label class="form-label font-bold">Cím</label>
-                            <input type="text" class="form-control w-full" name="title" id="title" value="{{ old('title', $advertisement->title) }}">
+                            <input type="text" class="form-control w-full border-gray-300 focus:border-sky-500 focus:ring-sky-500 rounded-md shadow-sm" name="title" id="title" value="{{ old('title', $advertisement->title) }}">
                         </div>
                         <div class="mb-4">
                             <label class="form-label font-bold">Ár</label>
-                            <input type="number" class="form-control w-full" name="price" id="price" value="{{ old('price', $advertisement->price) }}" max="2147483647">
+                            <input type="number" class="form-control w-full border-gray-300 focus:border-sky-500 focus:ring-sky-500 rounded-md shadow-sm" name="price" id="price" value="{{ old('price', $advertisement->price) }}" max="2147483647">
                         </div>
                         <div class="mb-4">
                             <label class="form-label font-bold">Leírás</label>
-                            <textarea class="form-control w-full" rows="10" id="description" name="description">{{ old('description', $advertisement->description) }}</textarea>
+                            <textarea class="form-control w-full border-gray-300 focus:border-sky-500 focus:ring-sky-500 rounded-md shadow-sm" rows="10" id="description" name="description">{{ old('description', $advertisement->description) }}</textarea>
                         </div>
                         <div class="mb-4">
                             <label class="form-label font-bold">Telefonszám</label>
-                            <input type="text" class="form-control w-full" name="mobile_number" id="mobile_number" value="{{ old('mobile_number', $advertisement->mobile_number) }}">
+                            <input type="text" class="form-control w-full border-gray-300 focus:border-sky-500 focus:ring-sky-500 rounded-md shadow-sm" name="mobile_number" id="mobile_number" value="{{ old('mobile_number', $advertisement->mobile_number) }}">
                         </div>
                         @include('advertisements.components.addOrDeletePictureAndeditCounytAndCity', ['advertisement' => $advertisement])     
                         <div class="flex flex-col items-center justify-center">

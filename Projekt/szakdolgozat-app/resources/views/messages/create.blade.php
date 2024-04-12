@@ -9,7 +9,7 @@
 
                         <div class="mb-4">
                             <label for="message" class="form-label font-bold" id="message">Üzenet</label>
-                            <textarea class="form-input w-full" rows="5" id="message" name="message">{{ old('message', '') }}</textarea>
+                            <textarea class="form-input w-full border-gray-300 focus:border-sky-500 focus:ring-sky-500 rounded-md shadow-sm" rows="5" id="message" name="message">{{ old('message', '') }}</textarea>
                         </div>
 
                         <div class="form-group text-center">
