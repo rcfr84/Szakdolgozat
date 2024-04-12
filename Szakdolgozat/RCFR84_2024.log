@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.12)  11 APR 2024 12:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.12)  12 APR 2024 12:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -849,12 +849,12 @@ Package pdftex.def Info: ./felhasznaloi/kategoria2.jpg  used on input line 277.
 
 (pdftex.def)             Requested size: 256.76094pt x 56.9055pt.
  [23 <./felhasznaloi/kategoriaUzenet.JPG> <./felhasznaloi/kategoria2.JPG>]
-<./felhasznaloi/kereses-szures.png, id=553, 803.50188pt x 293.59688pt>
+<./felhasznaloi/kereses-szures.png, id=553, 743.27687pt x 277.035pt>
 File: ./felhasznaloi/kereses-szures.png Graphic file (type png)
 <use ./felhasznaloi/kereses-szures.png>
 Package pdftex.def Info: ./felhasznaloi/kereses-szures.png  used on input line 
 290.
-(pdftex.def)             Requested size: 369.88582pt x 135.15923pt.
+(pdftex.def)             Requested size: 369.88582pt x 137.86617pt.
  [24 <./felhasznaloi/kereses-szures.PNG>] [25]
 5. fejezet.
 [26
@@ -1039,7 +1039,7 @@ lmri12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><c:/tex
 live/2023/texmf-dist/fonts/type1/public/lm/lmtk10.pfb><c:/texlive/2023/texmf-di
 st/fonts/type1/public/lm/lmtt10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/pub
 lic/lm/lmtt12.pfb>
-Output written on RCFR84_2024.pdf (43 pages, 2733355 bytes).
+Output written on RCFR84_2024.pdf (43 pages, 2734533 bytes).
 PDF statistics:
  978 PDF objects out of 1000 (max. 8388607)
  879 compressed objects within 9 object streams
