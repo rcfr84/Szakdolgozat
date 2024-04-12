@@ -1,5 +1,4 @@
 @extends('layouts.app')
-
 @section('content')
     <div class="min-h-screen container mx-auto mt-8">
         <div class="flex justify-center">

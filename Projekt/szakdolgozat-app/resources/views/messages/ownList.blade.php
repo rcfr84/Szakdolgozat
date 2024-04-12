@@ -18,9 +18,10 @@
                                 @php $conversations = []; @endphp
                                 @foreach($messages as $message)
                                     @php
-                                        $conversationKey = $message->sender_id < $message->receiver_id ? $message->sender_id . '-' . $message->receiver_id : $message->receiver_id . '-' . $message->sender_id;
+                                        $senderId = $message->sender_id;
+                                        $receiverId = $message->receiver_id;
+                                        $conversationKey = $senderId < $receiverId ? "$senderId-$receiverId" : "$receiverId-$senderId";
                                     @endphp
-
                                     @if(!in_array($conversationKey, $conversations))
                                         <tr>
                                             <td class="px-4 py-2 max-w-[300px] break-words">

@@ -15,7 +15,6 @@
                             @foreach ($cities as $city)
                                 <tr>
                                     <td class="px-4 py-2 max-w-[200px] break-words">{{ $city->name }}</td>
-                                    <td class="px-4 py-2"></td>
                                     @include('cities.components.editAndDelete')
                                 </tr>
                             @endforeach

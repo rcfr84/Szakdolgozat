@@ -9,7 +9,6 @@
                         <thead>
                             <tr>
                                 <th class="px-4 py-2">Kép</th>
-                                <th class="px-4 py-2"></th>
                             </tr>
                         </thead>
                         <tbody>

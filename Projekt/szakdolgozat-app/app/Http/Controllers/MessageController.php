@@ -15,7 +15,7 @@ class MessageController extends Controller
     public function index()
     {
         $user_id = auth()->user()->user_id;
-        $userMessages = Message::userMessages($user_id)->get();
+        $userMessages = Message::userMessages($user_id)->orderBy('created_at', 'desc')->get();
     
         return view('messages.ownList', ['messages' => $userMessages]);
     }

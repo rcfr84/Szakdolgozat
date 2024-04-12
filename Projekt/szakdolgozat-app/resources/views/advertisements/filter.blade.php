@@ -17,7 +17,6 @@
                                     <th class="px-4 py-2">Kategória</th>
                                     <th class="px-4 py-2">Ár</th>
                                     <th class="px-4 py-2">Eladó</th>
-                                    <th class="px-4 py-2"></th>
                                 </tr>
                             </thead>
                             <tbody>
