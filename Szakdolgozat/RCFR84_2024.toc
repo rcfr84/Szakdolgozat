@@ -32,9 +32,10 @@
 \select@language {magyar} \contentsline {subsection}{\numberline {4.1.4}Hirdetéssel kapcsolatos műveletek}{22}{subsection.4.1.4}%
 \select@language {magyar} \contentsline {section}{\numberline {4.2}Felhasználó}{22}{section.4.2}%
 \select@language {magyar} \contentsline {subsection}{\numberline {4.2.1}Hirdetéssel kapcsolatos műveletek}{22}{subsection.4.2.1}%
+\select@language {magyar} \contentsline {subsection}{\numberline {4.2.2}Saját hirdetések listázása}{23}{subsection.4.2.2}%
 \select@language {magyar} \contentsline {section}{\numberline {4.3}Nézelődő}{23}{section.4.3}%
-\select@language {magyar} \contentsline {section}{\numberline {4.4}Információ közlés}{23}{section.4.4}%
-\select@language {magyar} \contentsline {section}{\numberline {4.5}Egyéb funkciók}{24}{section.4.5}%
+\select@language {magyar} \contentsline {section}{\numberline {4.4}Egyéb funkciók}{24}{section.4.4}%
+\select@language {magyar} \contentsline {section}{\numberline {4.5}Információ közlés}{25}{section.4.5}%
 \select@language {magyar} \contentsline {chapter}{\numberline {5}Fejlesztői dokumentáció}{26}{chapter.5}%
 \select@language {magyar} \contentsline {section}{\numberline {5.1}Az alkalmazás felépítése}{26}{section.5.1}%
 \select@language {magyar} \contentsline {subsection}{\numberline {5.1.1}Adatbázis kapcsolat létrehozása}{26}{subsection.5.1.1}%

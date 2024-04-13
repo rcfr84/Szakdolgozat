@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.12)  13 APR 2024 10:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.12)  13 APR 2024 11:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -726,7 +726,7 @@ Package caption Info: End \AtBeginDocument code.
 LaTeX Info: Redefining \cal on input line 577.
 LaTeX Info: Redefining \mit on input line 578.
 )
-<eszterhazy-logo-hu.pdf, id=226, 256.07971pt x 88.04292pt>
+<eszterhazy-logo-hu.pdf, id=230, 256.07971pt x 88.04292pt>
 File: eszterhazy-logo-hu.pdf Graphic file (type pdf)
 <use eszterhazy-logo-hu.pdf>
 Package pdftex.def Info: eszterhazy-logo-hu.pdf  used on input line 85.
@@ -755,19 +755,19 @@ File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 [6
 
 ]
-<./tervezes/dbdiagram.png, id=332, 1295.84125pt x 621.32124pt>
+<./tervezes/dbdiagram.png, id=337, 1295.84125pt x 621.32124pt>
 File: ./tervezes/dbdiagram.png Graphic file (type png)
 <use ./tervezes/dbdiagram.png>
 Package pdftex.def Info: ./tervezes/dbdiagram.png  used on input line 113.
 (pdftex.def)             Requested size: 426.79134pt x 204.63846pt.
  [7 <./tervezes/dbdiagram.png>]
-<./tervezes/useCase.png, id=355, 569.12625pt x 2015.53pt>
+<./tervezes/useCase.png, id=360, 569.12625pt x 2015.53pt>
 File: ./tervezes/useCase.png Graphic file (type png)
 <use ./tervezes/useCase.png>
 Package pdftex.def Info: ./tervezes/useCase.png  used on input line 128.
 (pdftex.def)             Requested size: 170.71652pt x 604.57141pt.
  [8] [9 <./tervezes/useCase.png>]
-<./tervezes/logo.png, id=374, 652.4375pt x 371.3875pt>
+<./tervezes/logo.png, id=379, 652.4375pt x 371.3875pt>
 File: ./tervezes/logo.png Graphic file (type png)
 <use ./tervezes/logo.png>
 Package pdftex.def Info: ./tervezes/logo.png  used on input line 143.
@@ -805,57 +805,58 @@ LaTeX Font Info:    Font shape `TS1/lmtt/bx/n' in size <10> not available
  [17{c:/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}{c:/texlive/2023/
 texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{c:/texlive/2023/texmf-dist/fonts/e
 nc/dvips/lm/lm-mathsy.enc}]
-<./teszteles/teszt.png, id=507, 963.6pt x 505.38812pt>
+<./teszteles/teszt.png, id=512, 963.6pt x 505.38812pt>
 File: ./teszteles/teszt.png Graphic file (type png)
 <use ./teszteles/teszt.png>
 Package pdftex.def Info: ./teszteles/teszt.png  used on input line 224.
 (pdftex.def)             Requested size: 379.74298pt x 199.16928pt.
 [18 <./teszteles/teszt.PNG>] [19]
 4. fejezet.
-<./felhasznaloi/kategoria.png, id=522, 328.72812pt x 437.635pt>
+<./felhasznaloi/kategoria.png, id=527, 328.72812pt x 437.635pt>
 File: ./felhasznaloi/kategoria.png Graphic file (type png)
 <use ./felhasznaloi/kategoria.png>
 Package pdftex.def Info: ./felhasznaloi/kategoria.png  used on input line 242.
 (pdftex.def)             Requested size: 170.97972pt x 227.62204pt.
-<./felhasznaloi/varmegye.png, id=523, 415.5525pt x 417.05812pt>
+<./felhasznaloi/varmegye.png, id=528, 415.5525pt x 417.05812pt>
 File: ./felhasznaloi/varmegye.png Graphic file (type png)
 <use ./felhasznaloi/varmegye.png>
 Package pdftex.def Info: ./felhasznaloi/varmegye.png  used on input line 243.
 (pdftex.def)             Requested size: 226.80452pt x 227.62204pt.
 [20
 
-] [21 <./felhasznaloi/kategoria.PNG> <./felhasznaloi/varmegye.PNG>]
-<./felhasznaloi/hozzadas1.png, id=539, 394.97563pt x 414.04688pt>
+] [21 <./felhasznaloi/kategoria.PNG> <./felhasznaloi/varmegye.PNG>] [22]
+<./felhasznaloi/hozzadas1.png, id=550, 394.97563pt x 414.04688pt>
 File: ./felhasznaloi/hozzadas1.png Graphic file (type png)
 <use ./felhasznaloi/hozzadas1.png>
-Package pdftex.def Info: ./felhasznaloi/hozzadas1.png  used on input line 258.
+Package pdftex.def Info: ./felhasznaloi/hozzadas1.png  used on input line 267.
 (pdftex.def)             Requested size: 190.00198pt x 199.16928pt.
-<./felhasznaloi/hozzadas2.png, id=540, 399.4925pt x 446.66875pt>
+<./felhasznaloi/hozzadas2.png, id=551, 399.4925pt x 446.66875pt>
 File: ./felhasznaloi/hozzadas2.png Graphic file (type png)
 <use ./felhasznaloi/hozzadas2.png>
-Package pdftex.def Info: ./felhasznaloi/hozzadas2.png  used on input line 259.
+Package pdftex.def Info: ./felhasznaloi/hozzadas2.png  used on input line 268.
 (pdftex.def)             Requested size: 178.13629pt x 199.16928pt.
- [22 <./felhasznaloi/hozzadas1.PNG> <./felhasznaloi/hozzadas2.PNG>]
-<./felhasznaloi/kategoriaUzenet.jpg, id=550, 317.68687pt x 107.90312pt>
-File: ./felhasznaloi/kategoriaUzenet.jpg Graphic file (type jpg)
-<use ./felhasznaloi/kategoriaUzenet.jpg>
-Package pdftex.def Info: ./felhasznaloi/kategoriaUzenet.jpg  used on input line
- 276.
-(pdftex.def)             Requested size: 167.53946pt x 56.9055pt.
-<./felhasznaloi/kategoria2.jpg, id=551, 287.57437pt x 63.73813pt>
-File: ./felhasznaloi/kategoria2.jpg Graphic file (type jpg)
-<use ./felhasznaloi/kategoria2.jpg>
-Package pdftex.def Info: ./felhasznaloi/kategoria2.jpg  used on input line 277.
 
-(pdftex.def)             Requested size: 256.76094pt x 56.9055pt.
- [23 <./felhasznaloi/kategoriaUzenet.JPG> <./felhasznaloi/kategoria2.JPG>]
-<./felhasznaloi/kereses-szures.png, id=559, 743.27687pt x 277.035pt>
+[23 <./felhasznaloi/hozzadas1.PNG> <./felhasznaloi/hozzadas2.PNG>]
+<./felhasznaloi/kereses-szures.png, id=562, 743.27687pt x 277.035pt>
 File: ./felhasznaloi/kereses-szures.png Graphic file (type png)
 <use ./felhasznaloi/kereses-szures.png>
 Package pdftex.def Info: ./felhasznaloi/kereses-szures.png  used on input line 
-290.
+285.
 (pdftex.def)             Requested size: 369.88582pt x 137.86617pt.
- [24 <./felhasznaloi/kereses-szures.PNG>] [25]
+ [24 <./felhasznaloi/kereses-szures.PNG>]
+<./felhasznaloi/kategoriaUzenet.jpg, id=575, 317.68687pt x 107.90312pt>
+File: ./felhasznaloi/kategoriaUzenet.jpg Graphic file (type jpg)
+<use ./felhasznaloi/kategoriaUzenet.jpg>
+Package pdftex.def Info: ./felhasznaloi/kategoriaUzenet.jpg  used on input line
+ 297.
+(pdftex.def)             Requested size: 167.53946pt x 56.9055pt.
+<./felhasznaloi/kategoria2.jpg, id=576, 287.57437pt x 63.73813pt>
+File: ./felhasznaloi/kategoria2.jpg Graphic file (type jpg)
+<use ./felhasznaloi/kategoria2.jpg>
+Package pdftex.def Info: ./felhasznaloi/kategoria2.jpg  used on input line 298.
+
+(pdftex.def)             Requested size: 256.76094pt x 56.9055pt.
+ [25 <./felhasznaloi/kategoriaUzenet.JPG> <./felhasznaloi/kategoria2.JPG>]
 5. fejezet.
 [26
 
@@ -886,87 +887,87 @@ File: latin2.def 2021/02/14 v1.3d Input encoding file
 ] [35] [36
 
 ]
-Overfull \hbox (1.8891pt too wide) in alignment at lines 391--394
+Overfull \hbox (1.8891pt too wide) in alignment at lines 395--398
  [] [] [] [] 
  []
 
 
-Overfull \hbox (1.8891pt too wide) in alignment at lines 394--399
+Overfull \hbox (1.8891pt too wide) in alignment at lines 398--403
  [] [] [] [] 
  []
 
 
-Overfull \hbox (1.8891pt too wide) in alignment at lines 399--402
+Overfull \hbox (1.8891pt too wide) in alignment at lines 403--406
  [] [] [] [] 
  []
 
 
-Overfull \hbox (1.8891pt too wide) in alignment at lines 402--405
+Overfull \hbox (1.8891pt too wide) in alignment at lines 406--409
  [] [] [] [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 411--411
+Underfull \hbox (badness 10000) in paragraph at lines 415--415
 []|\T1/lmr/m/n/12 Jogosultsági
  []
 
 
-Underfull \hbox (badness 4366) in paragraph at lines 415--415
+Underfull \hbox (badness 4366) in paragraph at lines 419--419
 []|\T1/lmr/m/n/12 Hirdetések sz¶-
  []
 
 
-Underfull \hbox (badness 4341) in paragraph at lines 415--415
+Underfull \hbox (badness 4341) in paragraph at lines 419--419
 \T1/lmr/m/n/12 ré-se, ren-de-zé-se,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 421--421
-[]|\T1/lmr/m/n/12 Saját üze-ne-tek
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 421--421
-\T1/lmr/m/n/12 meg-te-kin-té-se,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 422--422
+Underfull \hbox (badness 10000) in paragraph at lines 425--425
 []|\T1/lmr/m/n/12 Saját üze-ne-tek
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 425--425
-[]|\T1/lmr/m/n/12 Új ka-te-gó-ria
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 428--428
-[]|\T1/lmr/m/n/12 Vármegye hoz-
- []
-
-
-Underfull \hbox (badness 2409) in paragraph at lines 430--430
-[]|\T1/lmr/m/n/12 Városok meg-te-
- []
-
-
-Underfull \hbox (badness 5878) in paragraph at lines 431--431
-[]|\T1/lmr/m/n/12 Városok hoz-zá-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 433--433
-[]|\T1/lmr/m/n/12 Felhasználók
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 433--433
 \T1/lmr/m/n/12 meg-te-kin-té-se,
  []
 
 
-Overfull \hbox (1.8891pt too wide) in alignment at lines 405--436
+Underfull \hbox (badness 10000) in paragraph at lines 426--426
+[]|\T1/lmr/m/n/12 Saját üze-ne-tek
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 429--429
+[]|\T1/lmr/m/n/12 Új ka-te-gó-ria
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 432--432
+[]|\T1/lmr/m/n/12 Vármegye hoz-
+ []
+
+
+Underfull \hbox (badness 2409) in paragraph at lines 434--434
+[]|\T1/lmr/m/n/12 Városok meg-te-
+ []
+
+
+Underfull \hbox (badness 5878) in paragraph at lines 435--435
+[]|\T1/lmr/m/n/12 Városok hoz-zá-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 437--437
+[]|\T1/lmr/m/n/12 Felhasználók
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 437--437
+\T1/lmr/m/n/12 meg-te-kin-té-se,
+ []
+
+
+Overfull \hbox (1.8891pt too wide) in alignment at lines 409--440
  [] [] [] [] 
  []
 
@@ -978,36 +979,36 @@ File: latin2.def 2021/02/14 v1.3d Input encoding file
 [41
 
 ]
-<nyilatkozat.pdf, id=838, 597.432pt x 844.11362pt>
+<nyilatkozat.pdf, id=846, 597.432pt x 844.11362pt>
 File: nyilatkozat.pdf Graphic file (type pdf)
 <use nyilatkozat.pdf>
-Package pdftex.def Info: nyilatkozat.pdf  used on input line 507.
+Package pdftex.def Info: nyilatkozat.pdf  used on input line 511.
 (pdftex.def)             Requested size: 597.43054pt x 844.11156pt.
 File: nyilatkozat.pdf Graphic file (type pdf)
 <use nyilatkozat.pdf>
-Package pdftex.def Info: nyilatkozat.pdf  used on input line 507.
+Package pdftex.def Info: nyilatkozat.pdf  used on input line 511.
 (pdftex.def)             Requested size: 597.43054pt x 844.11156pt.
-<nyilatkozat.pdf, id=841, page=1, 597.432pt x 844.11362pt>
+<nyilatkozat.pdf, id=849, page=1, 597.432pt x 844.11362pt>
 File: nyilatkozat.pdf Graphic file (type pdf)
 <use nyilatkozat.pdf, page 1>
-Package pdftex.def Info: nyilatkozat.pdf , page1 used on input line 507.
+Package pdftex.def Info: nyilatkozat.pdf , page1 used on input line 511.
 (pdftex.def)             Requested size: 597.43054pt x 844.11156pt.
 File: nyilatkozat.pdf Graphic file (type pdf)
 <use nyilatkozat.pdf, page 1>
-Package pdftex.def Info: nyilatkozat.pdf , page1 used on input line 507.
+Package pdftex.def Info: nyilatkozat.pdf , page1 used on input line 511.
 (pdftex.def)             Requested size: 597.93192pt x 844.81996pt.
  [42] [43]
 File: nyilatkozat.pdf Graphic file (type pdf)
 <use nyilatkozat.pdf, page 1>
-Package pdftex.def Info: nyilatkozat.pdf , page1 used on input line 507.
+Package pdftex.def Info: nyilatkozat.pdf , page1 used on input line 511.
 (pdftex.def)             Requested size: 597.93192pt x 844.81996pt.
 File: nyilatkozat.pdf Graphic file (type pdf)
 <use nyilatkozat.pdf, page 1>
-Package pdftex.def Info: nyilatkozat.pdf , page1 used on input line 507.
+Package pdftex.def Info: nyilatkozat.pdf , page1 used on input line 511.
 (pdftex.def)             Requested size: 597.93192pt x 844.81996pt.
 File: nyilatkozat.pdf Graphic file (type pdf)
 <use nyilatkozat.pdf, page 1>
-Package pdftex.def Info: nyilatkozat.pdf , page1 used on input line 507.
+Package pdftex.def Info: nyilatkozat.pdf , page1 used on input line 511.
 (pdftex.def)             Requested size: 597.93192pt x 844.81996pt.
  [44 <./nyilatkozat.pdf
 
@@ -1019,13 +1020,13 @@ LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-29>
  ***********
 Package rerunfilecheck Info: File `RCFR84_2024.out' has not changed.
-(rerunfilecheck)             Checksum: F1B9C4794A127F760F73D8FA57B51C54;9335.
+(rerunfilecheck)             Checksum: F395BC7DFD3755695E551F5EA613A6B8;9583.
  ) 
 Here is how much of TeX's memory you used:
- 21222 strings out of 474933
- 344795 string characters out of 5763793
+ 21223 strings out of 474933
+ 344822 string characters out of 5763793
  2220801 words of memory out of 5000000
- 42058 multiletter control sequences out of 15000+600000
+ 42059 multiletter control sequences out of 15000+600000
  632133 words of font info for 97 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  78i,17n,81p,3192b,3621s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1039,10 +1040,10 @@ lmri12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><c:/tex
 live/2023/texmf-dist/fonts/type1/public/lm/lmtk10.pfb><c:/texlive/2023/texmf-di
 st/fonts/type1/public/lm/lmtt10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/pub
 lic/lm/lmtt12.pfb>
-Output written on RCFR84_2024.pdf (44 pages, 2745407 bytes).
+Output written on RCFR84_2024.pdf (44 pages, 2746396 bytes).
 PDF statistics:
- 993 PDF objects out of 1000 (max. 8388607)
- 893 compressed objects within 9 object streams
+ 1002 PDF objects out of 1200 (max. 8388607)
+ 901 compressed objects within 10 object streams
  338 named destinations out of 1000 (max. 500000)
- 533 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 541 words of extra memory for PDF output out of 10000 (max. 10000000)
 
