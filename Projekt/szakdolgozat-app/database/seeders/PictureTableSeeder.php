@@ -80,7 +80,8 @@ class PictureTableSeeder extends Seeder
             ],
         ];
 
-        foreach ($pictures as $picture) {
+        foreach ($pictures as $picture) 
+        {
             DB::table('pictures')->insert([
                 'advertisement_id' => $picture['advertisement_id'],
                 'src' => $picture['src'],

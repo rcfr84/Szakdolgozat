@@ -16,6 +16,14 @@ class PictureController extends Controller
         $user = auth()->user();
 
         $advertisement = Advertisement::find($advertisementId);
+
+        if (!$advertisement)
+        {
+            return redirect()->back()->with('error', 'Nincsen ilyen hirdetés!');
+        }
+
+        $this->authorize('index', [Picture::class, $advertisement]);
+
         $advertisementPictures = $advertisement->pictures;
 
         return view('pictures.list', compact('advertisement', 'advertisementPictures'));

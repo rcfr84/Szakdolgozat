@@ -76,7 +76,8 @@ class MessageTableSeeder extends Seeder
             ],
         ];
 
-        foreach ($messages as $message){
+        foreach ($messages as $message)
+        {
             DB::table('messages')->insert($message);
         }
     }

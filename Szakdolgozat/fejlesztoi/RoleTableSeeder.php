@@ -5,7 +5,8 @@ public function run(): void
             'user',
         ];
 
-    foreach ($roles as $role){
+    foreach ($roles as $role)
+    {
         DB::table('roles')->insert([
             'name' => $role,
             'created_at' => now(),

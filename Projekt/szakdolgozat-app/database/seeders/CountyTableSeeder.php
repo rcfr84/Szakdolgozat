@@ -35,7 +35,8 @@ class CountyTableSeeder extends Seeder
             'Zala vármegye',
         ];
         
-        foreach ($counties as $county) {
+        foreach ($counties as $county) 
+        {
             DB::table('counties')->insert([
                 'name' => $county,
                 'created_at' => now(),

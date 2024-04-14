@@ -122,6 +122,10 @@ class AdvertisementController extends Controller
 
         if (!$advertisement) 
         {
+            if (auth()->user()->role->name === 'admin') 
+            {
+                return redirect()->route('advertisements.index')->with('error', 'Nincsen ilyen hirdetés!');
+            }
             return redirect()->route('advertisements.own')->with('error', 'Nincsen ilyen hirdetés!');
         }
 
