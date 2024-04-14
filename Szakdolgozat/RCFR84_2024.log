@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.12)  14 APR 2024 11:23
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.12)  14 APR 2024 17:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -983,37 +983,37 @@ File: latin2.def 2021/02/14 v1.3d Input encoding file
 [43
 
 ]
-<nyilatkozat.pdf, id=862, 597.432pt x 844.11362pt>
+<nyilatkozat.pdf, id=862, 593.57759pt x 844.11362pt>
 File: nyilatkozat.pdf Graphic file (type pdf)
 <use nyilatkozat.pdf>
 Package pdftex.def Info: nyilatkozat.pdf  used on input line 509.
-(pdftex.def)             Requested size: 597.43054pt x 844.11156pt.
+(pdftex.def)             Requested size: 593.57614pt x 844.11156pt.
 File: nyilatkozat.pdf Graphic file (type pdf)
 <use nyilatkozat.pdf>
 Package pdftex.def Info: nyilatkozat.pdf  used on input line 509.
-(pdftex.def)             Requested size: 597.43054pt x 844.11156pt.
-<nyilatkozat.pdf, id=865, page=1, 597.432pt x 844.11362pt>
+(pdftex.def)             Requested size: 593.57614pt x 844.11156pt.
+<nyilatkozat.pdf, id=865, page=1, 593.57759pt x 844.11362pt>
 File: nyilatkozat.pdf Graphic file (type pdf)
 <use nyilatkozat.pdf, page 1>
 Package pdftex.def Info: nyilatkozat.pdf , page1 used on input line 509.
-(pdftex.def)             Requested size: 597.43054pt x 844.11156pt.
+(pdftex.def)             Requested size: 593.57614pt x 844.11156pt.
 File: nyilatkozat.pdf Graphic file (type pdf)
 <use nyilatkozat.pdf, page 1>
 Package pdftex.def Info: nyilatkozat.pdf , page1 used on input line 509.
-(pdftex.def)             Requested size: 597.93192pt x 844.81996pt.
+(pdftex.def)             Requested size: 594.30977pt x 845.15485pt.
  [44] [45]
 File: nyilatkozat.pdf Graphic file (type pdf)
 <use nyilatkozat.pdf, page 1>
 Package pdftex.def Info: nyilatkozat.pdf , page1 used on input line 509.
-(pdftex.def)             Requested size: 597.93192pt x 844.81996pt.
+(pdftex.def)             Requested size: 594.30977pt x 845.15485pt.
 File: nyilatkozat.pdf Graphic file (type pdf)
 <use nyilatkozat.pdf, page 1>
 Package pdftex.def Info: nyilatkozat.pdf , page1 used on input line 509.
-(pdftex.def)             Requested size: 597.93192pt x 844.81996pt.
+(pdftex.def)             Requested size: 594.30977pt x 845.15485pt.
 File: nyilatkozat.pdf Graphic file (type pdf)
 <use nyilatkozat.pdf, page 1>
 Package pdftex.def Info: nyilatkozat.pdf , page1 used on input line 509.
-(pdftex.def)             Requested size: 597.93192pt x 844.81996pt.
+(pdftex.def)             Requested size: 594.30977pt x 845.15485pt.
  [46 <./nyilatkozat.pdf
 
 pdfTeX warning: pdflatex.exe (file ./nyilatkozat.pdf): PDF inclusion: Subtype i
@@ -1023,8 +1023,15 @@ n Resources dict is not a name (key 'Subtype', type <stream>); ignored.
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-29>
  ***********
-Package rerunfilecheck Info: File `RCFR84_2024.out' has not changed.
-(rerunfilecheck)             Checksum: 71BC4E0E6DDAAF31B095B786F73664DE;9593.
+
+
+Package rerunfilecheck Warning: File `RCFR84_2024.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `RCFR84_2024.out':
+(rerunfilecheck)             Before: 49EC640A22ED5507A1809206C52D59C1;9648
+(rerunfilecheck)             After:  71BC4E0E6DDAAF31B095B786F73664DE;9593.
  ) 
 Here is how much of TeX's memory you used:
  21237 strings out of 474933
@@ -1044,7 +1051,7 @@ lmri12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><c:/tex
 live/2023/texmf-dist/fonts/type1/public/lm/lmtk10.pfb><c:/texlive/2023/texmf-di
 st/fonts/type1/public/lm/lmtt10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/pub
 lic/lm/lmtt12.pfb>
-Output written on RCFR84_2024.pdf (46 pages, 2749639 bytes).
+Output written on RCFR84_2024.pdf (46 pages, 2757944 bytes).
 PDF statistics:
  1018 PDF objects out of 1200 (max. 8388607)
  915 compressed objects within 10 object streams
