@@ -59,7 +59,8 @@ class UserTableSeeder extends Seeder
 
         ];
 
-        foreach ($users as $user){
+        foreach ($users as $user)
+        {
             DB::table('users')->insert([
                 'role_id' => $user['role_id'],
                 'name' => $user['name'],

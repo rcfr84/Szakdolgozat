@@ -37,7 +37,8 @@ class CategoryTableSeeder extends Seeder
             'Szépségáplás és egészség',
         ];
 
-        foreach ($categories as $category){
+        foreach ($categories as $category)
+        {
             DB::table('categories')->insert([
                 'name' => $category,
                 'created_at' => now(),

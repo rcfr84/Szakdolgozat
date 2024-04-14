@@ -3,6 +3,7 @@
     <div class="min-h-screen container mx-auto mt-8">
         <div class="flex justify-center">
             <div class="w-2/3">
+                @include('components.statusAndError')
                 <div class="bg-white p-6 rounded-lg shadow-md">
                     <table class="table-auto w-full">
                         <thead>
@@ -12,7 +13,7 @@
                                 <td class="px-4 py-2">
                                     <div class="grid grid-cols-5 gap-2">
                                         @foreach ($advertisement->pictures as $i => $picture)    
-                                            <a href="{{ asset('storage/' . $picture->src) }}" data-title="Image {{ $i + 1 }}">
+                                            <a href="{{ asset('storage/' . $picture->src) }}">
                                                 <img src="{{ asset('storage/' . $picture->src) }}">
                                             </a>
                                         @endforeach
@@ -53,6 +54,7 @@
                             </tr>
                         </thead>
                     </table>
+                    @include('advertisements.components.sendMessage')
                 </div>
             </div>
         </div>
