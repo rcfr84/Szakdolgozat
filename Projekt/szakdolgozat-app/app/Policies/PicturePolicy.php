@@ -31,4 +31,9 @@ class PicturePolicy
     {
         return PolicyHelper::canDeletePicture($user, $picture);
     }
+
+    public function index(User $user, Advertisement $advertisement)
+    {
+        return PolicyHelper::isUserOwner($user, $advertisement) || PolicyHelper::isAdmin($user);
+    }
 }
