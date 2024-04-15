@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.12)  14 APR 2024 17:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.12)  15 APR 2024 14:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1023,24 +1023,17 @@ n Resources dict is not a name (key 'Subtype', type <stream>); ignored.
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-29>
  ***********
-
-
-Package rerunfilecheck Warning: File `RCFR84_2024.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `RCFR84_2024.out':
-(rerunfilecheck)             Before: 49EC640A22ED5507A1809206C52D59C1;9648
-(rerunfilecheck)             After:  71BC4E0E6DDAAF31B095B786F73664DE;9593.
+Package rerunfilecheck Info: File `RCFR84_2024.out' has not changed.
+(rerunfilecheck)             Checksum: AB64425601E30EFE7FB9B39910D21B86;9602.
  ) 
 Here is how much of TeX's memory you used:
  21237 strings out of 474933
- 345146 string characters out of 5763793
+ 345126 string characters out of 5763793
  2220801 words of memory out of 5000000
  42064 multiletter control sequences out of 15000+600000
  632133 words of font info for 97 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 78i,17n,81p,3152b,3621s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 78i,17n,81p,3114b,3621s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/texlive/2023
 /texmf-dist/fonts/type1/public/lm/lmcsc10.pfb><c:/texlive/2023/texmf-dist/fonts
 /type1/public/lm/lmmi10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/l
@@ -1051,7 +1044,7 @@ lmri12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><c:/tex
 live/2023/texmf-dist/fonts/type1/public/lm/lmtk10.pfb><c:/texlive/2023/texmf-di
 st/fonts/type1/public/lm/lmtt10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/pub
 lic/lm/lmtt12.pfb>
-Output written on RCFR84_2024.pdf (46 pages, 2757944 bytes).
+Output written on RCFR84_2024.pdf (46 pages, 2757983 bytes).
 PDF statistics:
  1018 PDF objects out of 1200 (max. 8388607)
  915 compressed objects within 10 object streams

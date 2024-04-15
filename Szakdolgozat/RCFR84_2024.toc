@@ -22,8 +22,8 @@
 \select@language {magyar} \contentsline {section}{\numberline {3.1}A teszteléshez alkalmazott eszközök és technológiák}{15}{section.3.1}%
 \select@language {magyar} \contentsline {subsection}{\numberline {3.1.1}Manuális teszt}{15}{subsection.3.1.1}%
 \select@language {magyar} \contentsline {subsection}{\numberline {3.1.2}Cypress}{16}{subsection.3.1.2}%
-\select@language {magyar} \contentsline {subsection}{\numberline {3.1.3}Tesztek végrehajtása}{18}{subsection.3.1.3}%
-\select@language {magyar} \contentsline {subsection}{\numberline {3.1.4}Tesztek eredménye}{19}{subsection.3.1.4}%
+\select@language {magyar} \contentsline {section}{\numberline {3.2}Cypress tesztek végrehajtása}{18}{section.3.2}%
+\select@language {magyar} \contentsline {section}{\numberline {3.3}Tesztek eredménye}{19}{section.3.3}%
 \select@language {magyar} \contentsline {chapter}{\numberline {4}Felhasználói dokumentáció}{20}{chapter.4}%
 \select@language {magyar} \contentsline {section}{\numberline {4.1}Admin}{20}{section.4.1}%
 \select@language {magyar} \contentsline {subsection}{\numberline {4.1.1}Felhasználókkal kapcsolatos művelet}{20}{subsection.4.1.1}%
