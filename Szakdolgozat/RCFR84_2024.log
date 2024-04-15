@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.12)  15 APR 2024 15:31
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.12)  15 APR 2024 15:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -982,37 +982,37 @@ File: latin2.def 2021/02/14 v1.3d Input encoding file
 ) [41] [42]
 [43
 
-]
-<nyilatkozat.pdf, id=862, 593.57759pt x 844.11362pt>
+] [44]
+<nyilatkozat.pdf, id=880, 593.57759pt x 844.11362pt>
 File: nyilatkozat.pdf Graphic file (type pdf)
 <use nyilatkozat.pdf>
-Package pdftex.def Info: nyilatkozat.pdf  used on input line 509.
+Package pdftex.def Info: nyilatkozat.pdf  used on input line 511.
 (pdftex.def)             Requested size: 593.57614pt x 844.11156pt.
 File: nyilatkozat.pdf Graphic file (type pdf)
 <use nyilatkozat.pdf>
-Package pdftex.def Info: nyilatkozat.pdf  used on input line 509.
+Package pdftex.def Info: nyilatkozat.pdf  used on input line 511.
 (pdftex.def)             Requested size: 593.57614pt x 844.11156pt.
-<nyilatkozat.pdf, id=865, page=1, 593.57759pt x 844.11362pt>
+<nyilatkozat.pdf, id=883, page=1, 593.57759pt x 844.11362pt>
 File: nyilatkozat.pdf Graphic file (type pdf)
 <use nyilatkozat.pdf, page 1>
-Package pdftex.def Info: nyilatkozat.pdf , page1 used on input line 509.
+Package pdftex.def Info: nyilatkozat.pdf , page1 used on input line 511.
 (pdftex.def)             Requested size: 593.57614pt x 844.11156pt.
 File: nyilatkozat.pdf Graphic file (type pdf)
 <use nyilatkozat.pdf, page 1>
-Package pdftex.def Info: nyilatkozat.pdf , page1 used on input line 509.
+Package pdftex.def Info: nyilatkozat.pdf , page1 used on input line 511.
 (pdftex.def)             Requested size: 594.30977pt x 845.15485pt.
- [44] [45]
+ [45]
 File: nyilatkozat.pdf Graphic file (type pdf)
 <use nyilatkozat.pdf, page 1>
-Package pdftex.def Info: nyilatkozat.pdf , page1 used on input line 509.
-(pdftex.def)             Requested size: 594.30977pt x 845.15485pt.
-File: nyilatkozat.pdf Graphic file (type pdf)
-<use nyilatkozat.pdf, page 1>
-Package pdftex.def Info: nyilatkozat.pdf , page1 used on input line 509.
+Package pdftex.def Info: nyilatkozat.pdf , page1 used on input line 511.
 (pdftex.def)             Requested size: 594.30977pt x 845.15485pt.
 File: nyilatkozat.pdf Graphic file (type pdf)
 <use nyilatkozat.pdf, page 1>
-Package pdftex.def Info: nyilatkozat.pdf , page1 used on input line 509.
+Package pdftex.def Info: nyilatkozat.pdf , page1 used on input line 511.
+(pdftex.def)             Requested size: 594.30977pt x 845.15485pt.
+File: nyilatkozat.pdf Graphic file (type pdf)
+<use nyilatkozat.pdf, page 1>
+Package pdftex.def Info: nyilatkozat.pdf , page1 used on input line 511.
 (pdftex.def)             Requested size: 594.30977pt x 845.15485pt.
  [46 <./nyilatkozat.pdf
 
@@ -1027,10 +1027,10 @@ Package rerunfilecheck Info: File `RCFR84_2024.out' has not changed.
 (rerunfilecheck)             Checksum: AB64425601E30EFE7FB9B39910D21B86;9602.
  ) 
 Here is how much of TeX's memory you used:
- 21237 strings out of 474933
- 345126 string characters out of 5763793
+ 21239 strings out of 474933
+ 345139 string characters out of 5763793
  2220801 words of memory out of 5000000
- 42064 multiletter control sequences out of 15000+600000
+ 42065 multiletter control sequences out of 15000+600000
  632133 words of font info for 97 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  78i,17n,81p,3114b,3621s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1044,10 +1044,10 @@ lmri12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><c:/tex
 live/2023/texmf-dist/fonts/type1/public/lm/lmtk10.pfb><c:/texlive/2023/texmf-di
 st/fonts/type1/public/lm/lmtt10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/pub
 lic/lm/lmtt12.pfb>
-Output written on RCFR84_2024.pdf (46 pages, 2757918 bytes).
+Output written on RCFR84_2024.pdf (46 pages, 2758130 bytes).
 PDF statistics:
- 1018 PDF objects out of 1200 (max. 8388607)
- 915 compressed objects within 10 object streams
- 345 named destinations out of 1000 (max. 500000)
+ 1021 PDF objects out of 1200 (max. 8388607)
+ 918 compressed objects within 10 object streams
+ 346 named destinations out of 1000 (max. 500000)
  541 words of extra memory for PDF output out of 10000 (max. 10000000)
 
