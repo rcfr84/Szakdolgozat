@@ -1,9 +1,12 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () 
+{
     var countySelect = document.getElementById("countySelect");
     var citySelect = document.getElementById("citySelect");
 
-    if (countySelect && citySelect) {
-        countySelect.addEventListener("change", function () {
+    if (countySelect && citySelect) 
+    {
+        countySelect.addEventListener("change", function () 
+        {
             var selectedCounty = countySelect.value;
             citySelect.innerHTML = "<option value=''>Válassz várost</option>";
 

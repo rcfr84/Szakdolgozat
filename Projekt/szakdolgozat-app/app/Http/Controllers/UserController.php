@@ -70,7 +70,11 @@ class UserController extends Controller
 
         if (!$user) 
         {
-            return redirect()->route('users.index')->with('status', 'Nincsen ilyen felhasználó!');
+            return redirect()->route('users.index')->with('error', 'Nincsen ilyen felhasználó!');
+        }
+        if ($user->role_id == 1) 
+        {
+            return redirect()->route('users.index')->with('error', 'Adminisztrátort nem lehet törölni!');
         }
 
         $user->delete();
