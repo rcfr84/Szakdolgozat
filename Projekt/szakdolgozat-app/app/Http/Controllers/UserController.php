@@ -91,7 +91,8 @@ class UserController extends Controller
         ]);
 
         $search = $request->search;
-        $names = User::where('name', 'LIKE', "%{$search}%")->paginate(15);
+
+        $names = User::where('name', 'LIKE', "%{$search}%")->where('role_id', '!=', 1)->paginate(15);
 
         return view('users.search', compact('names'));
     }
